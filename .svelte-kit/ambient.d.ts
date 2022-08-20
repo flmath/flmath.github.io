@@ -1,0 +1,87 @@
+// this file is generated — do not edit it
+/// <reference types="@sveltejs/kit" />
+
+declare module '$env/static/public' {
+
+}
+
+declare module '$env/static/private' {
+	export const SHELL: string;
+	export const npm_command: string;
+	export const SESSION_MANAGER: string;
+	export const npm_config_userconfig: string;
+	export const COLORTERM: string;
+	export const npm_config_cache: string;
+	export const HISTCONTROL: string;
+	export const XDG_MENU_PREFIX: string;
+	export const no_proxy: string;
+	export const HOSTNAME: string;
+	export const HISTSIZE: string;
+	export const NODE: string;
+	export const SSH_AUTH_SOCK: string;
+	export const COLOR: string;
+	export const npm_config_local_prefix: string;
+	export const XMODIFIERS: string;
+	export const DESKTOP_SESSION: string;
+	export const npm_config_globalconfig: string;
+	export const EDITOR: string;
+	export const ERL_LIBS: string;
+	export const PWD: string;
+	export const XDG_SESSION_DESKTOP: string;
+	export const LOGNAME: string;
+	export const XDG_SESSION_TYPE: string;
+	export const npm_config_init_module: string;
+	export const SYSTEMD_EXEC_PID: string;
+	export const _: string;
+	export const XAUTHORITY: string;
+	export const GDM_LANG: string;
+	export const HOME: string;
+	export const USERNAME: string;
+	export const SSH_ASKPASS: string;
+	export const LANG: string;
+	export const LS_COLORS: string;
+	export const XDG_CURRENT_DESKTOP: string;
+	export const npm_package_version: string;
+	export const VTE_VERSION: string;
+	export const WAYLAND_DISPLAY: string;
+	export const GNOME_TERMINAL_SCREEN: string;
+	export const https_proxy: string;
+	export const INIT_CWD: string;
+	export const npm_lifecycle_script: string;
+	export const MOZ_GMP_PATH: string;
+	export const GNOME_SETUP_DISPLAY: string;
+	export const XDG_SESSION_CLASS: string;
+	export const PYTHONPATH: string;
+	export const TERM: string;
+	export const npm_package_name: string;
+	export const npm_config_prefix: string;
+	export const LESSOPEN: string;
+	export const USER: string;
+	export const NO_PROXY: string;
+	export const GNOME_TERMINAL_SERVICE: string;
+	export const DISPLAY: string;
+	export const npm_lifecycle_event: string;
+	export const SHLVL: string;
+	export const HTTPS_PROXY: string;
+	export const HTTP_PROXY: string;
+	export const QT_IM_MODULE: string;
+	export const http_proxy: string;
+	export const npm_config_user_agent: string;
+	export const npm_execpath: string;
+	export const XDG_RUNTIME_DIR: string;
+	export const DEBUGINFOD_URLS: string;
+	export const npm_package_json: string;
+	export const which_declare: string;
+	export const KDEDIRS: string;
+	export const XDG_DATA_DIRS: string;
+	export const npm_config_noproxy: string;
+	export const PATH: string;
+	export const npm_config_metrics_registry: string;
+	export const npm_config_node_gyp: string;
+	export const GDMSESSION: string;
+	export const DBUS_SESSION_BUS_ADDRESS: string;
+	export const npm_config_python: string;
+	export const npm_config_global_prefix: string;
+	export const MAIL: string;
+	export const npm_node_execpath: string;
+}

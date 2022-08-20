@@ -1,0 +1,6 @@
+* NOTES
+** Setup
+*** Steps
+    **** Create github repo <name>.github.io
+*** Refs
+**** https://dev.to/p_carlose/getting-started-with-sveltekit-and-typescript-4maa

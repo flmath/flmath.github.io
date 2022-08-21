@@ -1,6 +1,8 @@
 import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-static';
 
+const dev = process.env.APP_ENV === 'development';
+
 /** @type {import('@sveltejs/kit').Config} */
 const config =  {
   // Consult https://github.com/sveltejs/svelte-preprocess
@@ -17,7 +19,7 @@ const config =  {
       // these options are set automatically — see below
       pages: 'build',
       assets: 'build',
-      fallback: null,
+      fallback: '200.html',
       precompress: false
     }),
 

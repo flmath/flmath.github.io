@@ -6,6 +6,7 @@ declare module '$env/static/public' {
 }
 
 declare module '$env/static/private' {
+	export const APP_ENV: string;
 	export const SHELL: string;
 	export const npm_command: string;
 	export const SESSION_MANAGER: string;
@@ -99,4 +100,5 @@ declare module '$env/static/private' {
 	export const npm_node_execpath: string;
 	export const GIO_LAUNCHED_DESKTOP_FILE: string;
 	export const TERM_PROGRAM: string;
+	export const NODE_ENV: string;
 }

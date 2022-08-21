@@ -100,5 +100,4 @@ declare module '$env/static/private' {
 	export const npm_node_execpath: string;
 	export const GIO_LAUNCHED_DESKTOP_FILE: string;
 	export const TERM_PROGRAM: string;
-	export const NODE_ENV: string;
 }

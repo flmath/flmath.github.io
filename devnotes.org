@@ -2,5 +2,12 @@
 ** Setup
 *** Steps
     **** Create github repo <name>.github.io
+    **** git clone <REPO>
+    **** cd <REPO>
+    **** npm create svelte@latest //choose ts, no playwright
+    **** npm install
+    **** npm run check:watch in separate tab/window
+    **** npm run dev -- --open // check in browser
+    *** 
 *** Refs
 **** https://dev.to/p_carlose/getting-started-with-sveltekit-and-typescript-4maa

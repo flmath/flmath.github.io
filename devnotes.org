@@ -9,7 +9,10 @@
     **** npm run check:watch in separate tab/window
     **** npm run dev -- --open // check in browser
     **** add https://www.npmjs.com/package/@sveltejs/adapter-static keep svelte-preprocess' for typescript
+    **** you will have to prevent GitHub's provided Jekyll from managing your site by putting an empty .nojekyll [2]
+    **** setup github path in svetle.conf.js [2]
     **** 
 
 *** Refs
-**** https://dev.to/p_carlose/getting-started-with-sveltekit-and-typescript-4maa
+**** [1]https://dev.to/p_carlose/getting-started-with-sveltekit-and-typescript-4maa
+**** [2]https://www.npmjs.com/package/@sveltejs/adapter-static

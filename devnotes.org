@@ -8,6 +8,8 @@
     **** npm install
     **** npm run check:watch in separate tab/window
     **** npm run dev -- --open // check in browser
-    *** 
+    **** add https://www.npmjs.com/package/@sveltejs/adapter-static keep svelte-preprocess' for typescript
+    **** 
+
 *** Refs
 **** https://dev.to/p_carlose/getting-started-with-sveltekit-and-typescript-4maa

@@ -12,8 +12,11 @@
     **** you will have to prevent GitHub's provided Jekyll from managing your site by putting an empty .nojekyll [2]
     **** setup github path in svetle.conf.js [2]
     **** Fix process app [3]
+    **** create https://github.com/flmath/flmath.github.io/blob/main/.github/workflows/pages.yml and set repo to get static pages from branch gh-pages/ [4, 5]
 
 *** Refs
 **** [1] https://dev.to/p_carlose/getting-started-with-sveltekit-and-typescript-4maa
 **** [2] https://www.npmjs.com/package/@sveltejs/adapter-static
 **** [3] https://github.com/vitejs/vite/issues/512#issuecomment-656547187
+**** [4] https://github.com/JamesIves/github-pages-deploy-action https://github.com/marketplace/actions/deploy-to-github-pages
+**** [5] 

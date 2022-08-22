@@ -11,7 +11,7 @@ const config =  {
   preprocess: preprocess(),	
  
   kit: {
-	paths: { base: dev ? '' : '/flmath.github.io',
+	paths: { base: dev ? '' : '',
 	},
 	appDir: 'internal',
     adapter: adapter({

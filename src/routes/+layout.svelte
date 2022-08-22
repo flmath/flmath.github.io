@@ -1,9 +1,13 @@
+<script>
+    import { base } from '$app/paths';
+</script>
+
 <body>
     <nav class="navbar">
         <ul class="navbar-nav">
 
             <li class="logo">
-                <a href="/" class="nav-link">
+                <a href="{base}/" class="nav-link">
                   <span class="link-text logo-text">Main</span>
                   <svg
                     aria-hidden="true"
@@ -42,17 +46,17 @@
 
             <li class="nav-item">
                 <span class="link-text">
-                    <a href="/" class="nav-item">Home</a></span
+                    <a href="{base}/" class="nav-item">Home</a></span
                 >
             </li>
             <li class="nav-item">
                 <span class="link-text">
-                    <a href="/cv" class="nav-item">CV</a></span
+                    <a href="{base}/cv" class="nav-item">CV</a></span
                 >
             </li>
             <li class="nav-item">
                 <span class="link-text">
-                    <a href="/error" class="nav-item">Error</a></span
+                    <a href="{base}/error" class="nav-item">Error</a></span
                 >
             </li>
         </ul>

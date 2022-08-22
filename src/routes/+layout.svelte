@@ -5,7 +5,7 @@
 
 
             <li class="logo">
-                <a href="{base}/" class="nav-link">
+                <a href="/" class="nav-link">
                   <span class="link-text logo-text">Main</span>
                   <svg
                     aria-hidden="true"

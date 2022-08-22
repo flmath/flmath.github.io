@@ -37,13 +37,6 @@
 
 
 
-
-
-
-
-
-
-
             <li class="nav-item">
                 <span class="link-text">
                     <a href="{base}/" class="nav-item">Home</a></span
@@ -163,11 +156,11 @@ body::-webkit-scrollbar-thumb {
         margin: 0 1.5rem;
     }
     .fa-primary {
-  color: #ff7eee;
+  color: #fafafa;
 }
 
 .fa-secondary {
-  color: #df49a6;
+  color: #cabec6;
 }
 
 .fa-primary,

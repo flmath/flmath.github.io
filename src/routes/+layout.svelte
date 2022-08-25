@@ -1,16 +1,24 @@
 <script>
-  import LogoElement from "./LogoElement.svelte";
+	import NavLink from '../lib/NavLink.svelte';
+  import LogoElement from "../lib/LogoElement.svelte";
+
   /**
-   * @type {LogoElement}
-   */
-  let logo;
+* @type {LogoElement[] | NavLink[]}
+*/
+  let hover = [];
 
   function handleMouseOver(e) {
-    logo.handleMouseOver();
+    hover.forEach(element => {
+      element.handleMouseOver()
+    })
+   
   }
   function handleMouseOut(e) {
-    logo.handleMouseOut();
+    hover.forEach(element => {
+      element.handleMouseOut()
+    })
   }
+
 </script>
 
 <body>
@@ -21,8 +29,9 @@
     on:mouseout={handleMouseOut}
   >
     <ul class="navbar-nav">
-      <LogoElement bind:this={logo}>
+      <LogoElement bind:this={hover[0]}>
         <span slot="text"> Main </span>
+
         <g class="fa-group" slot="svg">
           <path
             fill="currentColor"
@@ -36,6 +45,8 @@
           />
         </g>
       </LogoElement>
+
+<NavLink href="/" bind:this={hover[1]}>Home</NavLink>
 
       <li class="nav-item">
         <span class="link-text"> <a href="/" class="nav-item">Home</a></span>
@@ -118,32 +129,12 @@
     margin-top: auto;
   }
 
-  .nav-link {
-    display: flex;
-    align-items: center;
-    height: 5rem;
-    color: var(--text-primary);
-    text-decoration: none;
-    filter: grayscale(100%) opacity(0.7);
-    transition: var(--transition-speed);
-  }
-
-  .nav-link:hover {
-    filter: grayscale(0%) opacity(1);
-    background: var(--bg-secondary);
-    color: var(--text-secondary);
-  }
 
   .link-text {
     display: none;
     margin-left: 1rem;
   }
 
-  .nav-link svg {
-    width: 2rem;
-    min-width: 2rem;
-    margin: 0 1.5rem;
-  }
 
   .fa-primary {
     color: #ff7eee;
@@ -157,45 +148,13 @@
   .fa-secondary {
     transition: var(--transition-speed);
   }
-
-  .logo {
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: var(--text-secondary);
-    background: var(--bg-secondary);
-    font-size: 1.5rem;
-    letter-spacing: 0.3ch;
-    width: 100%;
-  }
-
-  .logo svg {
-    transform: rotate(0deg);
-    transition: var(--transition-speed);
-  }
-
-  .logo-text {
-    display: inline;
-    position: absolute;
-    left: -999px;
-    transition: var(--transition-speed);
-  }
-
-  .navbar:hover .logo svg {
-    transform: rotate(-180deg);
-  }
-
+ 
   /* Small screens */
   @media only screen and (max-width: 600px) {
     .navbar {
       bottom: 0;
       width: 100vw;
       height: 5rem;
-    }
-
-    .logo {
-      display: none;
     }
 
     .navbar-nav {

@@ -28,16 +28,6 @@
 </li>
 
 <style>
-  :root {
-    font-size: 16px;
-    font-family: "MS Open Sans";
-    --text-primary: #b6b6b6;
-    --text-secondary: #ececec;
-    --bg-primary: #23232e;
-    --bg-secondary: #141418;
-    --transition-speed: 600ms;
-  }
-
   .nav-link {
     display: flex;
     align-items: center;
@@ -67,11 +57,11 @@
   }
 
   .fa-primary {
-    color: #ff7eee;
+    color: #fdfdfd;
   }
 
   .fa-secondary {
-    color: #df49a6;
+    color: #f0e2ea;
   }
 
   .fa-primary,

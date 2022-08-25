@@ -3,14 +3,14 @@
   export let href = "/";
 
   export function handleMouseOver() {
-    active = " active";
+    active = " active ";
   }
   export function handleMouseOut() {
     active = "";
   }
 </script>
 
-<li class={"nav-item" + active}>
+<li class={"nav-item" + active + $$props.class}>
   <span class={"link-text" + active}>
     <a {href} class="nav-item"><slot>Missing</slot></a></span
   >

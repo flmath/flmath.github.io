@@ -2,14 +2,14 @@
   let active = "";
 
   export function handleMouseOver() {
-    active = "active";
+    active = " active ";
   }
   export function handleMouseOut() {
     active = "";
   }
 </script>
 
-<li class={"logo " + active}>
+<li class={"logo" + active}>
   <a href="/" class="nav-link">
     <span class="link-text logo-text"><slot name="text">Missing</slot></span>
     <svg

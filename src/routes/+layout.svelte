@@ -47,18 +47,11 @@
       </LogoElement>
 
 <NavLink href="/" bind:this={hover[1]}>Home</NavLink>
+<NavLink href="/cv" bind:this={hover[2]}>CV</NavLink>
+ 
+<NavLink class="last" href="error" bind:this={hover[3]}>Error</NavLink>
 
-      <li class="nav-item">
-        <span class="link-text"> <a href="/" class="nav-item">Home</a></span>
-      </li>
-      <li class="nav-item">
-        <span class="link-text"> <a href="/cv" class="nav-item">CV</a></span>
-      </li>
-      <li class="nav-item">
-        <span class="link-text">
-          <a href="/error" class="nav-item">Error</a></span
-        >
-      </li>
+
     </ul>
   </nav>
 
@@ -125,7 +118,7 @@
     width: 100%;
   }
 
-  .nav-item:last-child {
+  .navbar-nav :global(.last){
     margin-top: auto;
   }
 

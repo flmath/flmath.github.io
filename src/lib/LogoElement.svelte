@@ -56,13 +56,8 @@
     margin: 0 1.5rem;
   }
 
-  .fa-primary {
-    color: #fdfdfd;
-  }
+ 
 
-  .fa-secondary {
-    color: #f0e2ea;
-  }
 
   .fa-primary,
   .fa-secondary {

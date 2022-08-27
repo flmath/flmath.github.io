@@ -1,6 +1,7 @@
 <script>
 	import NavLink from '../lib/NavLink.svelte';
   import LogoElement from "../lib/LogoElement.svelte";
+  import LogoSvg from '$lib/LogoSvg.svelte';
 
   /**
 * @type {LogoElement[] | NavLink[]}
@@ -31,19 +32,7 @@
     <ul class="navbar-nav">
       <LogoElement bind:this={hover[0]}>
         <span slot="text"> Main </span>
-
-        <g class="fa-group" slot="svg">
-          <path
-            fill="currentColor"
-            d="M224 273L88.37 409a23.78 23.78 0 0 1-33.8 0L32 386.36a23.94 23.94 0 0 1 0-33.89l96.13-96.37L32 159.73a23.94 23.94 0 0 1 0-33.89l22.44-22.79a23.78 23.78 0 0 1 33.8 0L223.88 239a23.94 23.94 0 0 1 .1 34z"
-            class="fa-secondary"
-          />
-          <path
-            fill="currentColor"
-            d="M415.89 273L280.34 409a23.77 23.77 0 0 1-33.79 0L224 386.26a23.94 23.94 0 0 1 0-33.89L320.11 256l-96-96.47a23.94 23.94 0 0 1 0-33.89l22.52-22.59a23.77 23.77 0 0 1 33.79 0L416 239a24 24 0 0 1-.11 34z"
-            class="fa-primary"
-          />
-        </g>
+       <LogoSvg slot="svg"></LogoSvg>
       </LogoElement>
 
 <NavLink href="/" bind:this={hover[1]}>Home</NavLink>
@@ -61,15 +50,7 @@
 </body>
 
 <style>
-  :root {
-    font-size: 16px;
-    font-family: "MS Open Sans";
-    --text-primary: #b6b6b6;
-    --text-secondary: #ececec;
-    --bg-primary: #23232e;
-    --bg-secondary: #141418;
-    --transition-speed: 600ms;
-  }
+
 
   body {
     color: black;

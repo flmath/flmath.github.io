@@ -2,10 +2,31 @@
   import Penrose8 from "./svg/Penrose8.svelte";
   import Penrose3 from "./png/Penrose3.svelte";
   import { fade } from 'svelte/transition';
+  import { expoOut } from 'svelte/easing';
 
   let active = "";
   let status = 0;
-  
+
+  function spin(node, { duration, delay, rotations }) {
+    const dd = duration + delay;
+		return {
+			duration : dd,      
+			css: t => {
+        const eased = expoOut(t-delay);
+         if (t<delay)
+         return `display: none;`
+         else
+				return `transform: rotate(${rotations * eased * 360}deg);`
+			}
+		};
+	}
+
+  function spinBack(node, { duration, delay }) {
+    return spin(node, { duration: duration, delay: delay, rotations: -8 }); 
+  }
+  function spinForward(node, { duration, delay }) {
+    return spin(node, { duration: duration, delay: delay, rotations: 8 }); 
+  }
   export function handleMouseOver() {
     active = " active ";
   }
@@ -18,10 +39,11 @@
   <a href="/" class="nav-link">
    
     {#if (active === "" && (status === 0 || status === 2 || status === 4))} 
-    <span class="button" ><Penrose3 /></span>    
-    {:else if status !== 3}
-      <span class="button" > <Penrose8 /></span>
-      <span class="link-text logo-text" transition:fade={{duration: 2000}} 
+    <span class="button" transition:spinBack="{{duration: 2000, delay: 0}}"><Penrose3 /></span>    
+    {:else if status !== 3}     
+      <span class="button" out:spinForward="{{delay: 0, duration: 2000}}" in:spinForward="{{delay: 2000, duration: 2000}}"> <Penrose8 /></span>
+      <span class="link-text logo-text" 
+        transition:fade={{duration: 2000}} 
         on:introstart="{() => status=1}"
         on:introend="{() => status=2}" 
         on:outrostart="{() => status=3}"
@@ -40,8 +62,7 @@
     height: 5rem;
     color: var(--text-primary);
     text-decoration: none;
-    background: none;
-    filter: grayscale(100%) opacity(0.7);
+    background: none;    
     transition: var(--transition-speed);
 
   }
@@ -103,6 +124,7 @@
     height: 5rem; 
     margin-top: 1rem;
     margin-left: 0.5rem;
+  
 
     
   }

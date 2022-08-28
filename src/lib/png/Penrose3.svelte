@@ -8,6 +8,7 @@
 
 <style>
   img {
+    translate: -5% -5%;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;

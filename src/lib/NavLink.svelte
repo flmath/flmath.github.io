@@ -12,8 +12,10 @@
 
 <li class={"nav-item" + active + $$props.class}>
   <span class={"link-text" + active}>
+    
     <a {href} class="nav-item"><slot>Missing</slot></a></span
   >
+  
 </li>
 
 <style>
@@ -22,9 +24,19 @@
   }
 
   .nav-item {
+    height: 5rem;
     width: 100%;
   }
-
+ .nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    background: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+  }
   .link-text {
     display: none;
     margin-left: 1rem;

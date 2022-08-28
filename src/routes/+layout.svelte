@@ -1,7 +1,7 @@
 <script>
 	import NavLink from '../lib/NavLink.svelte';
   import LogoElement from "../lib/LogoElement.svelte";
-  import LogoSvg from '$lib/LogoSvg.svelte';
+  import LogoSvg from '$lib/svg/LogoSvg.svelte';
 
   /**
 * @type {LogoElement[] | NavLink[]}
@@ -53,8 +53,7 @@
 
 
   body {
-    color: black;
-    background-color: white;
+
     margin: 0;
     padding: 0;
   }
@@ -74,72 +73,47 @@
   }
 
   main {
-    margin-left: 5rem;
+    margin-left: 8rem;
     padding: 1rem;
   }
 
   .navbar {
     position: fixed;
     background-color: var(--bg-primary);
-    transition: width 600ms ease;
+    transition: width var(--transition-speed) ease;
     /*overflow: scroll;*/
   }
 
   .navbar-nav {
     list-style: none;
     padding: 0;
+    margin-left: 1rem;
     margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     height: 100%;
-  }
-
-  .nav-item {
-    width: 100%;
   }
 
   .navbar-nav :global(.last){
     margin-top: auto;
   }
 
-
-  .link-text {
-    display: none;
-    margin-left: 1rem;
-  }
-
-
-  .fa-primary {
-    color: #ff7eee;
-  }
-
-  .fa-secondary {
-    color: #df49a6;
-  }
-
-  .fa-primary,
-  .fa-secondary {
-    transition: var(--transition-speed);
-  }
  
   /* Small screens */
   @media only screen and (max-width: 600px) {
     .navbar {
       bottom: 0;
       width: 100vw;
-      height: 5rem;
+      height: 8rem;
     }
 
     .navbar-nav {
       flex-direction: row;
+      
     }
 
-    .nav-link {
-      justify-content: center;
-    }
-
-    main {
+      main {
       margin: 0;
     }
   }
@@ -148,53 +122,26 @@
   @media only screen and (min-width: 600px) {
     .navbar {
       top: 0;
-      width: 5rem;
+      width: 8rem;
       height: 100vh;
+      
     }
 
     .navbar:hover {
-      width: 16rem;
+      width: 17rem;      
     }
 
-    .navbar:hover .link-text {
-      display: inline;
-    }
+
+     .navbar:hover .navbar-nav {
+    margin-left: 0rem;
   }
 
-  .dark {
-    --text-primary: #b6b6b6;
-    --text-secondary: #ececec;
-    --bg-primary: #23232e;
-    --bg-secondary: #141418;
   }
 
-  .light {
-    --text-primary: #1f1f1f;
-    --text-secondary: #000000;
-    --bg-primary: #ffffff;
-    --bg-secondary: #e4e4e4;
-  }
-
-  .solar {
-    --text-primary: #576e75;
-    --text-secondary: #35535c;
-    --bg-primary: #fdf6e3;
-    --bg-secondary: #f5e5b8;
-  }
+ 
 
   .theme-icon {
     display: none;
   }
 
-  .dark #darkIcon {
-    display: block;
-  }
-
-  .light #lightIcon {
-    display: block;
-  }
-
-  .solar #solarIcon {
-    display: block;
-  }
 </style>

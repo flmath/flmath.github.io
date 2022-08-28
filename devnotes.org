@@ -106,14 +106,7 @@ https://stackoverflow.com/questions/24307401/window-history-pushstate-refreshing
 ```javascript
 window.history.pushState({urlPath:'/page1'},"",'/page1')
 ```
-**** https://stackoverflow.com/questions/49022516/detecting-that-the-back-button-was-pressed-in-react-router?noredirect=1&lq=1
-```javascript
-componentDidUpdate(){
-  window.onpopstate  = (e) => {
- //your code...
- }
-}
-```
+
 
 **** Non breaking space
 ```

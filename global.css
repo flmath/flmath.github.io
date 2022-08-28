@@ -1,8 +1,8 @@
 :root {
     font-size: 16px;
     font-family: "MS Open Sans";
-    --text-primary: #b6b6b6;
-    --text-secondary: #ececec;
+    --text-primary: #000000;
+    --text-secondary: #00a2e2a6;
     --bg-primary: #7e7eeb;
     --bg-secondary: #141418;
     --transition-speed: 600ms;

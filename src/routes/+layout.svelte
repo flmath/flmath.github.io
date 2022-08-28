@@ -2,6 +2,7 @@
 	import NavLink from '../lib/NavLink.svelte';
   import LogoElement from "../lib/LogoElement.svelte";
   import LogoSvg from '$lib/svg/LogoSvg.svelte';
+   
 
   /**
 * @type {LogoElement[] | NavLink[]}
@@ -52,8 +53,7 @@
 <style>
 
 
-  body {
-
+  body {    
     margin: 0;
     padding: 0;
   }
@@ -63,12 +63,12 @@
   }
 
   body::-webkit-scrollbar-track {
-    background: #1e1e24;
+    background: #ffffff;
     display: none;
   }
 
   body::-webkit-scrollbar-thumb {
-    background: #6649b8;
+    background: #ffffff;
     display: none;
   }
 
@@ -81,6 +81,8 @@
     position: fixed;
     background-color: var(--bg-primary);
     transition: width var(--transition-speed) ease;
+    background-image: url('$lib/assets/bg.webp');
+    background-size: cover;
     /*overflow: scroll;*/
   }
 

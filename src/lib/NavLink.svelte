@@ -13,8 +13,7 @@
 <li class={"nav-item" + active + $$props.class}>
   <span class={"link-text" + active}>
     
-    <a {href} class="nav-item"><slot>Missing</slot></a></span
-  >
+    <a {href} class="nav-item"><slot>Missing</slot></a></span>
   
 </li>
 

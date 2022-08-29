@@ -8,14 +8,15 @@
 
 <style>
   img {
-    translate: -5% -5%;
+   
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-     background: none;
+    background: none;
     font-size: 1rem;
     letter-spacing: 0.3ch;
     height: 5rem;
+    width: 5rem;
     margin: 0;
     padding: 0;
   }

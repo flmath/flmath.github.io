@@ -1,4 +1,5 @@
 <script>
+    import { fade } from 'svelte/transition';
   let active = "";
   export let href = "/";
 
@@ -6,27 +7,28 @@
     active = " active ";
   }
   export function handleMouseOut() {
-    active = "";
+    active = " ";
   }
 </script>
 
-<li class={"nav-item" + active + $$props.class}>
-  <span class={"link-text" + active}>
-    
-    <a {href} class="nav-item"><slot>Missing</slot></a></span>
+<!-- <div>{"nav-item " + active + (undefined == $$props.class ? " " : $$props.class)}</div> -->
+<li class={"nav-item " + active + (undefined == $$props.class ? " " : $$props.class)}>
+  
+    <a {href}>
+      <slot name="picture"> Picture</slot> </a>
+    {
+      #if (active === " active " )} 
+         <a {href} class="item-text" in:fade={{duration: 300, delay: 200}}> <slot name="text">Missing</slot>  </a>
+    {/if}
+ 
   
 </li>
 
 <style>
-  .link-text.active {
-    filter: grayscale(0%) opacity(1);
-  }
 
-  .nav-item {
-    height: 5rem;
-    width: 100%;
-  }
- .nav-link {
+ .nav-item {
+    margin-left: 1rem;
+    margin-bottom: 2rem;
     display: flex;
     align-items: center;
     height: 5rem;
@@ -36,42 +38,39 @@
     filter: grayscale(100%) opacity(0.7);
     transition: var(--transition-speed);
   }
-  .link-text {
-    display: none;
-    margin-left: 1rem;
+
+  .nav-item.active {
+
+ 
+    filter: opacity(1);
+ 
   }
 
-  .fa-primary {
-    color: #ff7eee;
+
+  .nav-item .last{
+    margin-top: auto;
+    margin-bottom: 1rem;
   }
 
-  .fa-secondary {
-    color: #df49a6;
-  }
+    .item-text{
 
-  .fa-primary,
-  .fa-secondary {
-    transition: var(--transition-speed);
-  }
-
-  .logo {
     font-weight: bold;
     text-transform: uppercase;
+
+    margin-top: 1rem;
     margin-bottom: 1rem;
     text-align: center;
+    vertical-align: middle;
+     background: none;
     color: var(--text-secondary);
-    background: none;
-    font-size: 1.5rem;
-    letter-spacing: 0.3ch;
     width: 100%;
+    font-size: 2rem;
+    letter-spacing: 0.3ch;
+    text-decoration: none;
+
   }
 
-  .logo-text {
-    display: inline;
-    position: absolute;
-    left: -999px;
-    transition: var(--transition-speed);
-  }
+
 
   /* Small screens */
   @media only screen and (max-width: 600px) {
@@ -81,13 +80,13 @@
       height: 5rem;
     }
 
-    .logo {
-      display: none;
-    }
+   
 
     .navbar-nav {
       flex-direction: row;
     }
+   
+
 
     .nav-link {
       justify-content: center;
@@ -96,16 +95,8 @@
 
   /* Large screens */
   @media only screen and (min-width: 600px) {
-    .active.link-text {
-      display: inline;
-      transition: var(--transition-speed);
-    }
 
-    .active.logo .nav-link svg {
-      margin-left: 11rem;
-    }
-    .active.nav-link .logo-text {
-      left: 0px;
-    }
+
+
   }
 </style>

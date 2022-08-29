@@ -175,6 +175,28 @@ In ES6:
 import someObject from ('./somefile.json')
 ```
 **** iframe
+*** CSS
+https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3
+http://dahlström.net/svg/filters/arrow-with-dropshadow.svg
+https://stackoverflow.com/questions/19484707/how-can-i-make-an-svg-scale-with-its-parent-container
+https://www.youtube.com/watch?v=biOMz4puGt8 flexbox sidemenu
+
+
+*** Svelte
+https://www.sanity.io/guides/using-typescript-with-svelte
+https://www.closingtags.com/global-css-in-sveltekit/
+https://kit.svelte.dev/docs/hooks#handle
+https://svelte.dev/tutorial/svelte-head
+https://natclark.com/tutorials/svelte-working-with-svgs/
+https://stackoverflow.com/questions/56895865/how-to-use-local-static-images-in-svelte
+https://svelte.dev/docs#template-syntax-element-directives-transition-fn
+https://svelte.dev/repl/bdc788a7d5dd4f8685e50326fa11ea0e?version=3.49.0
+https://stackoverflow.com/questions/70531875/svelte-crossfade-transition-between-pages
+https://dev.to/buhrmi/svelte-component-transitions-5ie
+https://svelte.dev/repl/2594c50ed8f94798898e11416951babc?version=3.44.2
+https://svelte.dev/examples/hacker-news
+
+
 
 
 *** How to make drawing from picture with GIMP:
@@ -266,6 +288,47 @@ https://pixabay.com/vectors/note-notes-memo-cards-cards-learn-1399152/
 https://pixabay.com/illustrations/fractal-abstract-background-physics-1280076/
 https://pixabay.com/illustrations/mandala-coloring-picture-imagine-3225164/
 
+** Other pictures 2022:
+https://pixabay.com/images/search/victorian%20architecture/
+https://pixabay.com/illustrations/search/texture/
+https://pixabay.com/users/gdj-1086657/
+https://pixabay.com/illustrations/grid-hex-hexagonal-hexagon-pattern-3227320/
+https://pixabay.com/illustrations/search/checkered/
+https://pixabay.com/illustrations/search/abstract/
+https://pixabay.com/get/g5671d5dc3d85651868ef3f24e7d576f75e95fb91448b3cf99fc8c3fd9d18cc0e9c32a18bc2e7925dc0d4753aa4a2c216.jpg
+https://pixabay.com/illustrations/search/the%20polygon/
+https://pixabay.com/illustrations/wormhole-space-time-light-tunnel-739872/
+https://pixabay.com/users/sergei_spas-9611130/
+https://pixabay.com/photos/search/water%20white/
+https://pixabay.com/vectors/search/binary/
+https://pixabay.com/users/geralt-9301/?tab=most-relevant&pagi=4
+https://pixabay.com/illustrations/network-work-gear-gears-blockchain-3539325/
+https://pixabay.com/illustrations/blockchain-network-networking-web-4728471/
+https://pixabay.com/vectors/bitcoin-digital-currency-3163494/
+https://pixabay.com/illustrations/abstract-mock-up-wallpaper-form-3291293/
+https://pixabay.com/vectors/search/guilloche/
+https://pixabay.com/users/creativemagic-480360/
+https://pixabay.com/users/manuchi-1728328/
+https://pixabay.com/illustrations/honeycomb-structure-honeycomb-4608274/
+https://pixabay.com/illustrations/turquoise-background-leaves-texture-2065460/
+https://pixabay.com/photos/clouds-sky-bright-daylight-light-1282314/
+https://pixabay.com/illustrations/cube-background-background-pattern-2484131/
+https://pixabay.com/vectors/network-communication-technology-4348660/
+https://pixabay.com/collections/technology-backgrounds-878206/?pagi=5
+
+** Intresting art:
+https://en.wikipedia.org/wiki/Guilloch%C3%A9
+M.C.Escher
+Penrose
+Reutersvärd
+Calabi-Yau
+Fractals
+Kanizsa triangle
+Necker cube - possible views
+Mueller-Lyer arrows
+https://archive.bridgesmathart.org/2019/bridges2019-327.pdf
+False perspective
+
 
 ** Other interesting colors:
 https://visme.co/blog/color-combinations/
@@ -283,3 +346,5 @@ http://www.color-hex.com/color/505961
 
 https://www.slickwrite.com
 https://app.grammarly.com
+https://hemingwayapp.com/
+

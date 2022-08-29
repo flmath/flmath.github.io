@@ -1,26 +1,25 @@
 <script>
-	import NavLink from '../lib/NavLink.svelte';
+  import ImposibleCubeSvg from "$lib/svg/ImposibleCubeSvg.svelte";
+  import NavLink from "../lib/NavLink.svelte";
   import LogoElement from "../lib/LogoElement.svelte";
-  import LogoSvg from '$lib/svg/LogoSvg.svelte';
-   
+  import Penrose3 from "$lib/png/Penrose3.svelte";
+  import Reutersward from "$lib/svg/Reutersward.svelte";
 
   /**
-* @type {LogoElement[] | NavLink[]}
-*/
+   * @type {LogoElement[] | NavLink[]}
+   */
   let hover = [];
 
   function handleMouseOver(e) {
-    hover.forEach(element => {
-      element.handleMouseOver()
-    })
-   
+    hover.forEach((element) => {
+      element.handleMouseOver();
+    });
   }
   function handleMouseOut(e) {
-    hover.forEach(element => {
-      element.handleMouseOut()
-    })
+    hover.forEach((element) => {
+      element.handleMouseOut();
+    });
   }
-
 </script>
 
 <body>
@@ -33,15 +32,19 @@
     <ul class="navbar-nav">
       <LogoElement bind:this={hover[0]}>
         <span slot="text"> Main </span>
-       <LogoSvg slot="svg"></LogoSvg>
       </LogoElement>
 
-<NavLink href="/" bind:this={hover[1]}>Home</NavLink>
-<NavLink href="/cv" bind:this={hover[2]}>CV</NavLink>
- 
-<NavLink class="last" href="error" bind:this={hover[3]}>Error</NavLink>
+      <NavLink href="/" bind:this={hover[1]}>
+        <Penrose3 slot="picture" /> <span slot="text">Home</span></NavLink
+      >
+      <NavLink href="/cv" bind:this={hover[2]}
+        ><ImposibleCubeSvg slot="picture" />
+        <span slot="text">CV</span></NavLink
+      >
 
-
+      <NavLink class="last" href="error" bind:this={hover[3]}
+        ><Reutersward slot="picture" /><span slot="text">Out</span></NavLink
+      >
     </ul>
   </nav>
 
@@ -51,9 +54,7 @@
 </body>
 
 <style>
-
-
-  body {    
+  body {
     margin: 0;
     padding: 0;
   }
@@ -81,8 +82,10 @@
     position: fixed;
     background-color: var(--bg-primary);
     transition: width var(--transition-speed) ease;
-    background-image: url('$lib/assets/bg.webp');
+    background-image: url("$lib/assets/bg.webp");
     background-size: cover;
+    filter: opacity(0.8);
+
     /*overflow: scroll;*/
   }
 
@@ -94,14 +97,15 @@
     display: flex;
     flex-direction: column;
     align-items: left;
-    height: 100%;
+    height: 100vh;
   }
 
-  .navbar-nav :global(.last){
+  .navbar-nav :global(.last) {
+     
     margin-top: auto;
+    margin-bottom: 1rem;
   }
 
- 
   /* Small screens */
   @media only screen and (max-width: 600px) {
     .navbar {
@@ -112,10 +116,9 @@
 
     .navbar-nav {
       flex-direction: row;
-      
     }
 
-      main {
+    main {
       margin: 0;
     }
   }
@@ -125,25 +128,12 @@
     .navbar {
       top: 0;
       width: 8rem;
-      height: 100vh;
-      
     }
 
     .navbar:hover {
-      width: 17rem;      
+      width: 17rem;
+      filter: opacity(1);
     }
 
-
-     .navbar:hover .navbar-nav {
-    margin-left: 0rem;
-  }
-
-  }
-
- 
-
-  .theme-icon {
-    display: none;
-  }
-
+     }
 </style>

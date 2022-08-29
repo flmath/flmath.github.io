@@ -1,1 +1,7 @@
-<h1>The main page</h1>
+<body><h1>The main page</h1></body>
+
+<style>
+    body{
+ 
+    }
+</style>

@@ -1,6 +1,5 @@
 <script>
   import Penrose8 from "./svg/Penrose8.svelte";
-  import Penrose3 from "./png/Penrose3.svelte";
   import { fade } from 'svelte/transition';
   import { sineOut } from 'svelte/easing';
 
@@ -35,13 +34,13 @@
 <li class={"logo" + active}>
     <a href="/" class="nav-link">
       {#if (active === "" )} 
-      <span class="button" in:spinBack="{{duration: 3000, delay: 0}}" > <Penrose8 /></span>    
+      <span class="button" in:spinBack="{{duration: 1000, delay: 0}}" > <Penrose8 /></span>    
       {:else }
-      <span class="button" in:spinForward="{{duration: 3000, delay: 0}}"  > <Penrose8 /></span>   
+      <span class="button" in:spinForward="{{duration: 1000, delay: 0}}"  > <Penrose8 /></span>   
       {/if}
     {#if (active !== "" )} 
       <span class="link-text logo-text" 
-        transition:fade={{duration: 1600, delay: 300}}>
+        in:fade={{duration: 300, delay: 200}}>
         <slot name="text">Missing</slot></span>
     {/if}
   
@@ -69,7 +68,7 @@
     font-weight: bold;
     text-transform: uppercase;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-align: center;
     vertical-align: middle;
     color: var(--text-secondary);

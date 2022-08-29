@@ -1,15 +1,22 @@
 :root {
-    font-size: 16px;
-    font-family: "MS Open Sans";
-    --text-primary: #000000;
-    --text-secondary: #00a2e2a6;
-    --bg-primary: #7e7eeb;
-    --bg-secondary: #141418;
-    --transition-speed: 600ms;
+  font-size: 16px;
+  font-family: "MS Open Sans";
+  --text-primary: #000000;
+  --text-secondary: #00a2e2a6;
+  --bg-primary: #f2f2f2;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
 
 
-    --fa-primary: #ff7eee;
-    --fa-secondary: #df49a6;
-  }
+  --fa-primary: #ff7eee;
+  --fa-secondary: #df49a6;
+}
 
-  
+body {
+  background-color: var(--bg-primary);
+  transition: width var(--transition-speed) ease;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%
+}

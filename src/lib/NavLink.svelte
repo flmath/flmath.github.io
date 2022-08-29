@@ -27,6 +27,7 @@
 <style>
 
  .nav-item {
+
     margin-left: 1rem;
     margin-bottom: 2rem;
     display: flex;

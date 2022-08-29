@@ -9,26 +9,30 @@
    * @type {LogoElement[] | NavLink[]}
    */
   let hover = [];
+ 
 
-  function handleMouseOver(e) {
+  function handleMouseOver(e) { 
     hover.forEach((element) => {
       element.handleMouseOver();
     });
   }
   function handleMouseOut(e) {
-    hover.forEach((element) => {
+
+    hover.forEach((element) => {      
       element.handleMouseOut();
-    });
+    })  
   }
 </script>
 
 <body>
   <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+
   <nav
     class="navbar"
-    on:mouseover={handleMouseOver}
-    on:mouseout={handleMouseOut}
-  >
+    on:mouseenter={handleMouseOver}
+    on:mouseleave={handleMouseOut}
+     >
+
     <ul class="navbar-nav">
       <LogoElement bind:this={hover[0]}>
         <span slot="text"> Main </span>

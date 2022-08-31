@@ -109,7 +109,7 @@
   .nav-link .button {   
     height: 5rem; 
     margin-top: 1rem;
-    margin-left: 0.5rem;    
+    margin-left: 1rem;    
   }
   .active .nav-link .link-text {
       margin-left: 2rem;

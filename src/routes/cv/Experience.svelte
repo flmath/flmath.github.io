@@ -1,5 +1,3 @@
-import {Container} from "reactstrap";
-
 
     <div>
       <Container className="my_transparent_container">

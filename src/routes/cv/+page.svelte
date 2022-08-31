@@ -17,7 +17,7 @@ import CvHeader from './CvHeader.svelte';
     <section id="Skills">
       <CvHeader>Skills</CvHeader>
       <Skills />
-    </section>
+    <!-- </section>
     <section id="Experience">
     <CvHeader>Experience</CvHeader>
       <Experience />
@@ -29,7 +29,7 @@ import CvHeader from './CvHeader.svelte';
     <section id="Certificates">
     <CvHeader>Certificates</CvHeader>
       <Certificates />
-    </section>
+    </section> -->
     <section id="Interests">
     <CvHeader>Interests</CvHeader>
       <Interests />

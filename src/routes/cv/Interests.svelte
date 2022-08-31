@@ -1,5 +1,5 @@
-
-    <div className="my_cv_container">
+   
+   <div >
         <p>
         Most of my interest is focused around developing my skills of gathering, processing and analyzing information.
         This is why I went to study mathematics and chose to learn software development. I also do not despise other intellectual pursuits like

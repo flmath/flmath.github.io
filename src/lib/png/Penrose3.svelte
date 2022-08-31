@@ -16,7 +16,7 @@
     font-size: 1rem;
     letter-spacing: 0.3ch;
     height: 5rem;
-
+    width: 5.5rem;
     margin: 0;
     padding: 0;
   }

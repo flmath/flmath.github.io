@@ -1,6 +1,5 @@
 
-import {ColOff} from "../ReactstrapSupport";
-import {Col, Row} from "reactstrap";
+
 
 import IntroToLogic from '../certs/introtologic.pdf'
 import MachineLearning from '../certs/machinelearning.pdf'
@@ -9,7 +8,7 @@ import UStats from '../certs/ustats.pdf'
 import Erlang from '../certs/erlang.pdf'
 
 
-       <div className="my_cv_container">
+       <div>
 
         <Row>
           <ColOff>2018:</ColOff>

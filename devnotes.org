@@ -203,8 +203,9 @@ https://svelte.dev/examples/hacker-news
 https://www.youtube.com/watch?v=eLgsSN2MsMo
 
 ** Other pictures:
+https://pixabay.com/illustrations/banner-jigsaw-pattern-design-5190182/
 https://pixabay.com/vectors/impossible-optical-illusion-triangle-161955/
-
+https://pixabay.com/vectors/pattern-illusion-optical-depth-3d-4060286/
 
 https://pixabay.com/vectors/cube-escher-gradient-mc-escher-1293954/
 https://pixabay.com/photos/tree-silhouette-mysterious-407256/
@@ -289,6 +290,7 @@ https://pixabay.com/illustrations/fractal-abstract-background-physics-1280076/
 https://pixabay.com/illustrations/mandala-coloring-picture-imagine-3225164/
 
 ** Other pictures 2022:
+https://pixabay.com/users/kerttu-569708/?tab=most-relevant&pagi=2
 https://pixabay.com/images/search/victorian%20architecture/
 https://pixabay.com/illustrations/search/texture/
 https://pixabay.com/users/gdj-1086657/
@@ -315,8 +317,37 @@ https://pixabay.com/photos/clouds-sky-bright-daylight-light-1282314/
 https://pixabay.com/illustrations/cube-background-background-pattern-2484131/
 https://pixabay.com/vectors/network-communication-technology-4348660/
 https://pixabay.com/collections/technology-backgrounds-878206/?pagi=5
+https://pixabay.com/illustrations/background-cloister-brocade-885434/
+https://pixabay.com/illustrations/background-rectangles-pattern-4973341/
+https://pixabay.com/illustrations/polygon-background-blue-design-2189646/
+https://pixabay.com/vectors/circuit-boards-electronic-158375/
+https://pixabay.com/vectors/circuit-board-background-wallpaper-5962474/
+
+https://pixabay.com/users/shabinh-7862477/
+https://pixabay.com/users/mindofmush-4961970/
+
+https://pixabay.com/illustrations/banner-header-fractal-complexity-1762895/
+https://pixabay.com/illustrations/comb-abstract-modern-pattern-cell-2373170/
+https://pixabay.com/vectors/mosaic-pattern-wall-stones-145830/
+https://pixabay.com/vectors/americana-abstract-graphic-mosaic-1512910/
+https://pixabay.com/illustrations/americana-modern-abstract-design-1501711/
+https://pixabay.com/illustrations/fractal-art-3d-fractals-3206739/
+https://pixabay.com/illustrations/flower-magnolia-watercolor-floral-3350053/
+https://pixabay.com/vectors/pattern-illusion-optical-depth-3d-4060286/
+https://pixabay.com/vectors/fibonacci-spiral-science-golden-1601158/
+
+
+** Freepik
+https://www.freepik.com/vectors/guilloche
+
+** Freevectors
+https://www.123freevectors.com/free-vector-guilloche-patterns-illustrator-brushes/
 
 ** Intresting art:
+https://en.wikipedia.org/wiki/Curve_of_constant_width
+https://en.wikipedia.org/wiki/Reuleaux_triangle
+https://en.wikipedia.org/wiki/The_Scream
+https://medium.com/@shivamchawla3011/types-of-guilloch%C3%A9-90d6b1460970
 https://en.wikipedia.org/wiki/Guilloch%C3%A9
 M.C.Escher
 Penrose
@@ -328,6 +359,9 @@ Necker cube - possible views
 Mueller-Lyer arrows
 https://archive.bridgesmathart.org/2019/bridges2019-327.pdf
 False perspective
+Tesselation
+https://www.twinkl.pl/teaching-wiki/tessellation
+
 
 
 ** Other interesting colors:

@@ -1,6 +1,4 @@
 
-import {ColOff} from "../ReactstrapSupport";
-import {Col, Row} from "reactstrap";
 
     <div className="my_cv_container">
         <Row>

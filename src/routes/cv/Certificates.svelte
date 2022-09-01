@@ -1,62 +1,62 @@
 
 
-
-import IntroToLogic from '../certs/introtologic.pdf'
-import MachineLearning from '../certs/machinelearning.pdf'
-import ComputerNet from '../certs/comnet.pdf'
-import UStats from '../certs/ustats.pdf'
-import Erlang from '../certs/erlang.pdf'
-
+<script>
+import IntroToLogic from '$lib/assets/certs/introtologic.pdf'
+import MachineLearning from '$lib/assets/certs/machinelearning.pdf'
+import ComputerNet from '$lib/assets/certs/comnet.pdf'
+import UStats from '$lib/assets/certs/ustats.pdf'
+import Erlang from '$lib/assets/certs/erlang.pdf'
+</script>
 <div class="table-main">
   <div class="grid-output">
     
-          <ColOff>2018:</ColOff>
-          <Col>
+          <div>2018:</div>
+          <div>
             <a href={IntroToLogic}>
               Coursera online certificate: Introduction to Logic
             </a>
-          </Col>
-        </Row>
-        <Row>
-          <ColOff>2017:</ColOff>
-          <Col>
+          </div>
+        </div>
+        <div>
+          <div>2017:</div>
+          <div>
             <a href={MachineLearning}>
               Coursera online certificate: Machine Learning
             </a>
-          </Col>
-        </Row>
-        <Row>
-          <ColOff>2014:</ColOff>
+          </div>
+        </div>
+        <div>
+          <div>2014:</div>
 
-          <Col>
+          <div>
             <a href={MachineLearning}>
               Coursera online certificate: Model Thinking
             </a>
-          </Col>
-        </Row>
-        <Row>
-          <ColOff>2013:</ColOff>
-          <Col>
+          </div>
+        </div>
+        <div>
+          <div>2013:</div>
+          <div>
             <a href={ComputerNet}>
               Coursera online certificate: Computer Networks
             </a>
-          </Col>
-        </Row>
-        <Row>
-          <ColOff>2013:</ColOff>
-          <Col>
+          </div>
+        </div>
+        <div>
+          <div>2013:</div>
+          <div>
             <a href={UStats}>
               Udacity online certificate: Statistic
             </a>
-          </Col>
-        </Row>
-        <Row>
-          <ColOff>2012:</ColOff>
-          <Col>
+          </div>
+        </div>
+        <div>
+          <div>2012:</div>
+          <div>
             <a href={Erlang}>
               Erlang Solution: Foundation Certificate
             </a>
-          </Col>
+          </div>
 
       </div>
     </div>

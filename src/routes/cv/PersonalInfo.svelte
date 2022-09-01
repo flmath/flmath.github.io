@@ -96,7 +96,8 @@
     background: none;
     font-size: 1rem;
     letter-spacing: 0.3ch;
-
+    width: 200px;
+    height: 200px;
     margin: 5%;
     padding: 0;
   }

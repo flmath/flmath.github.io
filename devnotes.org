@@ -180,6 +180,7 @@ https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3
 http://dahlström.net/svg/filters/arrow-with-dropshadow.svg
 https://stackoverflow.com/questions/19484707/how-can-i-make-an-svg-scale-with-its-parent-container
 https://www.youtube.com/watch?v=biOMz4puGt8 flexbox sidemenu
+https://www.freecodecamp.org/news/create-gantt-chart-using-css-grid/
 
 
 *** Svelte

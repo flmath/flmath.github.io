@@ -100,5 +100,6 @@
     height: 200px;
     margin: 5%;
     padding: 0;
+    
   }
 </style>

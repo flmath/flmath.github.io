@@ -1,7 +1,7 @@
 <div>
   <hr />
   <h2><slot>" "</slot></h2>
-  <hr />
+  <hr />  
 </div>
 
 <style></style>

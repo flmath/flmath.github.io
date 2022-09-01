@@ -9,11 +9,11 @@ import CvHeader from './CvHeader.svelte';
 </script>
 
 
-<div id = "cvmainbody">
-  <!--   <section id="PersonalInfo">
+<div>
+  <section id="PersonalInfo">
     <CvHeader>Personal Info</CvHeader>
       <PersonalInfo />
-    </section> -->
+    </section> 
     <section id="Skills">
       <CvHeader>Skills</CvHeader>
       <Skills />
@@ -21,11 +21,13 @@ import CvHeader from './CvHeader.svelte';
     <section id="Experience">
     <CvHeader>Experience</CvHeader>
       <Experience />
-    </section>
+    </section>-->
+
     <section id="Education">
     <CvHeader>Education</CvHeader>
       <Education />
     </section>
+      <!-- 
     <section id="Certificates">
     <CvHeader>Certificates</CvHeader>
       <Certificates />

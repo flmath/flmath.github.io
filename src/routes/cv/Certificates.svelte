@@ -7,6 +7,8 @@ import ComputerNet from '$lib/assets/certs/comnet.pdf'
 import UStats from '$lib/assets/certs/ustats.pdf'
 import Erlang from '$lib/assets/certs/erlang.pdf'
 </script>
+
+
 <div class="table-main">
   <div class="grid-output">
     
@@ -16,16 +18,14 @@ import Erlang from '$lib/assets/certs/erlang.pdf'
               Coursera online certificate: Introduction to Logic
             </a>
           </div>
-        </div>
-        <div>
+  
           <div>2017:</div>
           <div>
             <a href={MachineLearning}>
               Coursera online certificate: Machine Learning
             </a>
           </div>
-        </div>
-        <div>
+     
           <div>2014:</div>
 
           <div>
@@ -33,24 +33,21 @@ import Erlang from '$lib/assets/certs/erlang.pdf'
               Coursera online certificate: Model Thinking
             </a>
           </div>
-        </div>
-        <div>
+   
           <div>2013:</div>
           <div>
             <a href={ComputerNet}>
               Coursera online certificate: Computer Networks
             </a>
           </div>
-        </div>
-        <div>
+    
           <div>2013:</div>
           <div>
             <a href={UStats}>
               Udacity online certificate: Statistic
             </a>
           </div>
-        </div>
-        <div>
+    
           <div>2012:</div>
           <div>
             <a href={Erlang}>
@@ -60,23 +57,8 @@ import Erlang from '$lib/assets/certs/erlang.pdf'
 
       </div>
     </div>
-
-
-
-      <div class="table-main">
-        <div class="grid-output">
-  
-            <div>2011:    </div>
-              <div>
-              Faculty of Mathematics and Computer Science of the Jagiellonian
-              University:
-              <br />
-              Master of Science in Computational Mathematics
-            </div>
-  
-      </div>
-  
-    </div>
+ 
+   
   
     
     <style>

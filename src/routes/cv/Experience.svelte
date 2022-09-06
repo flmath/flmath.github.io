@@ -1,135 +1,62 @@
-<div class="container">
-  <div class="chart">
-    <div class="chart-row chart-period">
-      <div class="chart-row-item" />
-      <span>02/2012</span><span>05/2012</span>
-      <span>12/2013</span><span>01/2014</span><span>06/2015</span><span
-        >07/2015</span      >
-      <span>08/2015</span><span>07/2017</span><span>08/2017</span><span
-        >03/2022</span>
-      <span>04/2022</span><span>Present</span>
-    </div>
 
-    <div class="chart-row">  
-      <div class="chart-row-item">Ericpol</div> 
-      <ul class="chart-row-bars">    
-        <li class="chart-li-one">Planning</li>
-        
-      </ul>
-    </div>
+<svelte:head>
+	
+</svelte:head>
+
+<script>
+  import "$lib/assets/ExternalLibs/loader.js";  
+
+  google.charts.load('current', {'packages':['gantt']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Task ID');
+      data.addColumn('string', 'Task Name');
+      data.addColumn('string', 'Resource');
+      data.addColumn('date', 'Start Date');
+      data.addColumn('date', 'End Date');
+      data.addColumn('number', 'Duration');
+      data.addColumn('number', 'Percent Complete');
+      data.addColumn('string', 'Dependencies');
+
+      data.addRows([
+        ['Ericpol', 'Ericpol', 'Ericpol',
+         new Date(2012, 2, 1), new Date(2015, 7, 1), null, 100, null],
+        ['EricssonMTAS', 'Ericsson MTAS', 'MTAS',
+         new Date(2012, 5, 1), new Date(2013, 12, 31), null, 100, null],
+         ['EricssonSBG', 'Ericsson SBG', 'ESBG',
+         new Date(2014, 1, 1), new Date(2022, 3, 31), null, 100, null],
+         ['DEK Q-team', 'DEK Q-team', 'DEKQ',
+         new Date(2015, 8, 1), new Date(2017, 7, 1), null, 100, null],
+         ['DEK UNI', 'DEK UNI', 'DEKUNI',
+         new Date(2017, 7, 1), new Date(2022, 3, 31), null, 100, null],
+         ['Telia', 'Telia ACE Core', 'TeliaAce',
+         new Date(2022, 4, 1), new Date(), null, 100, null],
+      ]);
+
+      var options = {
+        height: 300,
+        gantt: {
+          trackHeight: 30
+        }
+      };
+
+      var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
+
+  
+ 
+</script>
+
+<div id="chart_div"></div>
 
 
-  </div>
-</div>
 
-<!--<div>
-      <Container className="my_transparent_container">
-      <div className="timeline">
-        <div className="container_leafs left">
-          <div className="content">
-            <h2>
-              08/2015 to present
-              <br />
-              Ericsson SBG
-            </h2>
-            <p>
-              <br />
-              Developing SBG (Session Border Gateway) as a Consultant from DEK
-              Sweden.
-            </p>
-          </div>
-        </div>
-        <div className="container_leafs right">
-          <div className="content">
-            <h2>
-              07/2017 to present
-              <br />
-              DEK Sweden - UNI team
-            </h2>
-            <p>
-              <br />
-              Developing SBG (Session Border Gateway) at Ericsson.
-              Extending registration fault measuring capabilities,
-              Support for terminating calls to unregistered users,
-              Removal of not compliant headers from incoming SIP messages.
-              <br />
-              Researching "Matrixes implementations in Erlang" article.
-              The office timer extended calculator.
-              DEK Machine Learning group participant.
-            </p>
-          </div>
-        </div>
-        <div className="container_leafs right">
-          <div className="content">
-            <h2>
-              08/2015 to 07/2017
-              <br />
-              DEK Sweden - Q team
-            </h2>
-            <p>
-              <br />
-              Developing SBG (Session Border Gateway) at Ericsson.
-              Introducing features: Media Security Control, Overload Control, Network
-              Provided Location Information, and extending WiFi access.
-              <br />
-              Creating a tool parsing test logs to a SQL database.
-              Creating a web GUI for OTP Common Test.
-            </p>
-          </div>
-        </div>
-        <div className="container_leafs left">
-          <div className="content">
-            <h2>
-              01/2014 to 06/2015
-              <br />
-              Ericsson SBG
-            </h2>
-            <p>
-              <br />
-                Expanding TLS support for the project. Assessing the efficiency of
-                    throttling algorithms for SIP messages with a simulation of nodes (in R language).
-                    <br />
-                    Writing support scripts for tagging PTA language.
-            </p>
-          </div>
-        </div>
-        <div className="container_leafs left">
-          <div className="content">
-            <h2>
-              05/2012 to 12/2013
-              <br />
-              Ericsson MTAS
-            </h2>
-            <p>
-              <br />
-              Developing MTAS (Multimedia Telephony Application Server). Working
-              within agile methodology on design (C++), test (TTCN-3), and
-              documentation of the IMS node.
-            </p>
-          </div>
-        </div>
-        <div className="container_leafs right">
-          <div className="content">
-            <h2>
-              02/2012 to 07/2015
-              <br />
-              Ericpol
-            </h2>
-            <p>
-              <br />
-              Participate in training events and examinations preparing for a supplier role in
-              external companies. <br />
-              Passed exams from Erlang, TTCN-3, and C++ languages.
-              <br />
-              Internal in-house training. <br />
-              A supplier for MTAS and SBG projects.
-              <br />
-            </p>
-          </div>
-        </div>
-      </div>{" "}
-      </Container>
-    </div> -->
+
 <style>
   .container {
     max-width: 100vw;

@@ -66,12 +66,12 @@
 <style>
   .grid-output-external {
     display: grid;
-    grid-template-columns: repeat(2, 10%);
-    grid-gap: 30%;
+    grid-template-columns: repeat(2, 20%);
+    grid-gap: 20%;
   }
   .grid-output {
     display: grid;
-    grid-template-columns: repeat(2, 10rem);
+    grid-template-columns: repeat(2, 20rem);
     grid-template-rows: repeat(2, 3rem);
     grid-gap: 0.5rem;
   }
@@ -83,7 +83,7 @@
   }
 
   .table-main {
-    margin-left: auto;
+    margin-left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,10 +96,9 @@
     background: none;
     font-size: 1rem;
     letter-spacing: 0.3ch;
-    width: 200px;
-    height: 200px;
-    margin: 5%;
+    width: 250px;
+    height: 250px;
+    margin: 0;
     padding: 0;
-    
   }
 </style>

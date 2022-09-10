@@ -175,6 +175,11 @@ In ES6:
 import someObject from ('./somefile.json')
 ```
 **** iframe
+
+*** SEO
+https://github.com/GoogleWebComponents/google-analytics
+
+
 *** CSS
 https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3
 http://dahlström.net/svg/filters/arrow-with-dropshadow.svg
@@ -185,6 +190,9 @@ https://www.freecodecamp.org/news/create-gantt-chart-using-css-grid/
 
 
 *** Svelte
+https://rodneylab.com/getting-started-with-sveltekit/#10-getting-started-with-sveltekit-sveltekit-seo
+https://www.koderhq.com/tutorial/svelte/
+https://www.nielsvandermolen.com/external-javascript-sveltejs/
 https://www.sanity.io/guides/using-typescript-with-svelte
 https://www.closingtags.com/global-css-in-sveltekit/
 https://kit.svelte.dev/docs/hooks#handle
@@ -197,12 +205,28 @@ https://stackoverflow.com/questions/70531875/svelte-crossfade-transition-between
 https://dev.to/buhrmi/svelte-component-transitions-5ie
 https://svelte.dev/repl/2594c50ed8f94798898e11416951babc?version=3.44.2
 https://svelte.dev/examples/hacker-news
+https://svelte.dev/tutorial/dimensions
+https://codesandbox.io/s/cvu5h?file=/App.svelte
+https://svelte.dev/tutorial/bind-this
+https://developers.google.com/chart/interactive/docs/roles#stylerole
+https://groups.google.com/g/google-visualization-api/c/OaG0wS2k2N0
+https://stackoverflow.com/questions/69064178/google-charts-timeline-change-bar-height-with-react-google-charts
+https://svelte.dev/repl/76389084c0e241e8b1e5bd910897c468?version=3.50.1
+
 
 *** svg
 https://stackoverflow.com/questions/34201318/trying-to-make-a-for-loop-to-draw-an-svg
 *** graph
 plotply
 https://developers.google.com/chart/interactive/docs/gallery/ganttchart
+https://developers.google.com/chart/interactive/docs/gallery/timeline#overlapping-gridlines
+https://stackoverflow.com/questions/52993106/google-chart-timeline-with-different-moments-in-row
+https://blog.stranianelli.com/how-to-interact-with-google-chart/
+https://fslab.org/XPlot//chart/plotly-time-series.html
+https://developers.google.com/chart/interactive/docs/gallery/sankey
+https://codemyui.com/tag/timeline/
+https://github.com/microsoft/vscode-webview-ui-toolkit
+https://betterprogramming.pub/visualize-your-medium-stats-with-svelte-and-javascript-eb1ef7c71a63
 
 
 *** How to make drawing from picture with GIMP:

@@ -9,18 +9,16 @@
    * @type {LogoElement[] | NavLink[]}
    */
   let hover = [];
- 
 
-  function handleMouseOver(e) { 
+  function handleMouseOver(e) {
     hover.forEach((element) => {
       element.handleMouseOver();
     });
   }
   function handleMouseOut(e) {
-
-    hover.forEach((element) => {      
+    hover.forEach((element) => {
       element.handleMouseOut();
-    })  
+    });
   }
 </script>
 
@@ -31,8 +29,7 @@
     class="navbar"
     on:mouseenter={handleMouseOver}
     on:mouseleave={handleMouseOut}
-     >
-
+  >
     <ul class="navbar-nav">
       <LogoElement bind:this={hover[0]}>
         <span slot="text"> Main </span>
@@ -84,6 +81,7 @@
 
   .navbar {
     position: fixed;
+    z-index: 100;
     background-color: var(--bg-primary);
     transition: width var(--transition-speed) ease;
     background-image: url("$lib/assets/bg.webp");
@@ -105,7 +103,6 @@
   }
 
   .navbar-nav :global(.last) {
-     
     margin-top: auto;
     margin-bottom: 1rem;
   }
@@ -138,6 +135,5 @@
       width: 17rem;
       filter: opacity(1);
     }
-
-     }
+  }
 </style>

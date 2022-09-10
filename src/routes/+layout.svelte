@@ -1,21 +1,19 @@
-<script>
+<script lang="ts">
   import ImposibleCubeSvg from "$lib/svg/ImposibleCubeSvg.svelte";
   import NavLink from "../lib/NavLink.svelte";
   import LogoElement from "../lib/LogoElement.svelte";
   import Penrose3 from "$lib/png/Penrose3.svelte";
   import Reutersward from "$lib/svg/Reutersward.svelte";
 
-  /**
-   * @type {LogoElement[] | NavLink[]}
-   */
-  let hover = [];
+  type NavElement = LogoElement | NavLink;
+  let hover : NavElement[] = [];
 
-  function handleMouseOver(e) {
+  function handleMouseOver(e : Event) {
     hover.forEach((element) => {
       element.handleMouseOver();
     });
   }
-  function handleMouseOut(e) {
+  function handleMouseOut(e : Event) {
     hover.forEach((element) => {
       element.handleMouseOut();
     });

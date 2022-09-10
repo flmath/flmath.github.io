@@ -14,7 +14,7 @@
 
     let mainWidth: number;
 
-    function handleMainResize(node) {
+    function handleMainResize(node: HTMLElement) {
         mainWidth = node.clientWidth;
     }
 

@@ -1,6 +1,6 @@
 
 
-<script>
+<script lang="ts">
 import IntroToLogic from '$lib/assets/certs/introtologic.pdf'
 import MachineLearning from '$lib/assets/certs/machinelearning.pdf'
 import ComputerNet from '$lib/assets/certs/comnet.pdf'

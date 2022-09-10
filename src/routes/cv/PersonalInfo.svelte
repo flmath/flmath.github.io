@@ -1,6 +1,7 @@
-<script>
+<script lang="ts">
   import face from "$lib/assets/face.png";
   import resumePdf from "$lib/assets/resumes/resume.pdf";
+  // @ts-ignore
   import resumeOdt from "$lib/assets/resumes/resume.odt";
 </script>
 

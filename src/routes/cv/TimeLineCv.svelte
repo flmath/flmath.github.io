@@ -59,7 +59,7 @@
                 groupByRowLabel: false,
             },
             width: mainWidth * 0.9 - 150,
-            height: 200 * rows.length,
+            height: 70 * (rows.length + 1),
             title,
             backgroundColor: "transparent",
             titleTextStyle: { fontSize: 19, color: "#737373" },

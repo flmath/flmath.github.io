@@ -76,7 +76,6 @@
     margin-left: 8rem;
     padding: 1rem;
   }
-
   .navbar {
     position: fixed;
     z-index: 100;

@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
   import Penrose8 from "./svg/Penrose8.svelte";
   import { fade } from 'svelte/transition';
   import { sineOut } from 'svelte/easing';
 
   let active = "";
 
-  function spin(node, { duration, delay, rotations }) {
+  function spin(node: HTMLElement, { duration, delay, rotations }) {
     
 		return {
 			duration, 
@@ -17,10 +17,10 @@
 		};
 	}
 
-  function spinBack(node, { duration, delay }) {
+  function spinBack(node: HTMLElement, { duration, delay }) {
     return spin(node, { duration: duration, delay: delay, rotations: -3 }); 
   }
-  function spinForward(node, { duration, delay }) {
+  function spinForward(node: HTMLElement, { duration, delay }) {
     return spin(node, { duration: duration, delay: delay, rotations: 3 }); 
   }
   export function handleMouseOver() {

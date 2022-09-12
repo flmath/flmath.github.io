@@ -14,14 +14,20 @@ import Erlang from '$lib/assets/certs/erlang.pdf'
     
           <div>2018:</div>
           <div>
-            <a href={IntroToLogic}>
+            <a 
+            target="_blank"
+            rel="noopener noreferrer"
+            href={IntroToLogic}>
               Coursera online certificate: Introduction to Logic
             </a>
           </div>
   
           <div>2017:</div>
           <div>
-            <a href={MachineLearning}>
+            <a 
+            target="_blank"
+            rel="noopener noreferrer"
+            href={MachineLearning}>
               Coursera online certificate: Machine Learning
             </a>
           </div>
@@ -29,28 +35,40 @@ import Erlang from '$lib/assets/certs/erlang.pdf'
           <div>2014:</div>
 
           <div>
-            <a href={MachineLearning}>
+            <a 
+            target="_blank"
+            rel="noopener noreferrer"
+            href={MachineLearning}>
               Coursera online certificate: Model Thinking
             </a>
           </div>
    
           <div>2013:</div>
           <div>
-            <a href={ComputerNet}>
+            <a 
+            target="_blank"
+            rel="noopener noreferrer"
+            href={ComputerNet}>
               Coursera online certificate: Computer Networks
             </a>
           </div>
     
           <div>2013:</div>
           <div>
-            <a href={UStats}>
+            <a 
+            target="_blank"
+            rel="noopener noreferrer"
+            href={UStats}>
               Udacity online certificate: Statistic
             </a>
           </div>
     
           <div>2012:</div>
           <div>
-            <a href={Erlang}>
+            <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={Erlang}>
               Erlang Solution: Foundation Certificate
             </a>
           </div>

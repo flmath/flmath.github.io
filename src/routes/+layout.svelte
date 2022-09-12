@@ -33,7 +33,7 @@
         <span slot="text"> Main </span>
       </LogoElement>
 
-      <NavLink href="/" bind:this={hover[1]}>
+      <NavLink href="/posts" bind:this={hover[1]}>
         <Penrose3 slot="picture" /> <span slot="text">Home</span></NavLink
       >
       <NavLink href="/cv" bind:this={hover[2]}
@@ -41,7 +41,7 @@
         <span slot="text">CV</span></NavLink
       >
 
-      <NavLink class="last" href="error" bind:this={hover[3]}
+      <NavLink class="last" href="out" bind:this={hover[3]}
         ><Reutersward slot="picture" /><span slot="text">Out</span></NavLink
       >
     </ul>

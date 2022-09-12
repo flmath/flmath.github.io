@@ -3,8 +3,8 @@
    <style>
       svg{
  
-         width: 5rem;
+         width: 4.5rem;
          margin-left: 0.5rem;
-         margin-bottom: 2rem;
+         margin-bottom: 2.5rem;
       }
     </style>

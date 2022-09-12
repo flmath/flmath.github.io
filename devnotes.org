@@ -191,6 +191,7 @@ https://www.freecodecamp.org/news/create-gantt-chart-using-css-grid/
 
 *** Svelte
 https://rodneylab.com/getting-started-with-sveltekit/#10-getting-started-with-sveltekit-sveltekit-seo
+https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript
 https://www.koderhq.com/tutorial/svelte/
 https://www.nielsvandermolen.com/external-javascript-sveltejs/
 https://www.sanity.io/guides/using-typescript-with-svelte

@@ -186,13 +186,25 @@ http://dahlström.net/svg/filters/arrow-with-dropshadow.svg
 https://stackoverflow.com/questions/19484707/how-can-i-make-an-svg-scale-with-its-parent-container
 https://www.youtube.com/watch?v=biOMz4puGt8 flexbox sidemenu
 https://www.freecodecamp.org/news/create-gantt-chart-using-css-grid/
-
-
+https://blog.logrocket.com/how-to-style-forms-with-css-a-beginners-guide/
+https://www.w3schools.com/w3css/w3css_panels.asp
 
 *** Svelte
+https://www.npmjs.com/package/html-minifier
+https://www.kudadam.com/blog/sveltekit-minify-rendered-html
+
+https://kit.svelte.dev/docs/migrating#endpoints
+https://fantinel.dev/blog-development-sveltekit/
+https://svelte.dev/repl/1a86d6f3df7b41f69f0fc93ba1ad0fd3?version=3.31.2
+https://stackblitz.com/edit/sveltekit-starter?file=src%2Flib%2Fform.ts
+https://github.com/ivanhofer/sveltekit-typescript-showcase
+https://alexxnb.github.io/svelte-preprocess-markdown/
+
+https://svelte.dev/examples/dom-events
 https://rodneylab.com/getting-started-with-sveltekit/#10-getting-started-with-sveltekit-sveltekit-seo
 https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript
 https://www.koderhq.com/tutorial/svelte/
+https://kit.svelte.dev/docs/routing
 https://www.nielsvandermolen.com/external-javascript-sveltejs/
 https://www.sanity.io/guides/using-typescript-with-svelte
 https://www.closingtags.com/global-css-in-sveltekit/
@@ -213,6 +225,7 @@ https://developers.google.com/chart/interactive/docs/roles#stylerole
 https://groups.google.com/g/google-visualization-api/c/OaG0wS2k2N0
 https://stackoverflow.com/questions/69064178/google-charts-timeline-change-bar-height-with-react-google-charts
 https://svelte.dev/repl/76389084c0e241e8b1e5bd910897c468?version=3.50.1
+https://www.kudadam.com/blog/svelte-reading-progress
 
 
 *** svg

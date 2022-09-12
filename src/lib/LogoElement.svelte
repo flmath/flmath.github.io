@@ -30,7 +30,6 @@
     active = "";
   }
 </script>
-
 <li class={"logo" + active}>
     <a href="/" class="nav-link">
       {#if (active === "" )} 

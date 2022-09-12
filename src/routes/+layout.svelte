@@ -6,14 +6,14 @@
   import Reutersward from "$lib/svg/Reutersward.svelte";
 
   type NavElement = LogoElement | NavLink;
-  let hover : NavElement[] = [];
+  let hover: NavElement[] = [];
 
-  function handleMouseOver(e : Event) {
+  function handleMouseOver(e: Event) {
     hover.forEach((element) => {
       element.handleMouseOver();
     });
   }
-  function handleMouseOut(e : Event) {
+  function handleMouseOut(e: Event) {
     hover.forEach((element) => {
       element.handleMouseOut();
     });
@@ -30,11 +30,11 @@
   >
     <ul class="navbar-nav">
       <LogoElement bind:this={hover[0]}>
-        <span slot="text"> Main </span>
+        <span slot="text">Start</span>
       </LogoElement>
 
       <NavLink href="/posts" bind:this={hover[1]}>
-        <Penrose3 slot="picture" /> <span slot="text">Home</span></NavLink
+        <Penrose3 slot="picture" /> <span slot="text">Posts</span></NavLink
       >
       <NavLink href="/cv" bind:this={hover[2]}
         ><ImposibleCubeSvg slot="picture" />
@@ -130,7 +130,7 @@
     }
 
     .navbar:hover {
-      width: 17rem;
+      width: 18rem;
       filter: opacity(1);
     }
   }

@@ -48,11 +48,7 @@
   }
 
 
-  .nav-item .last{
-    margin-top: auto;
-    margin-bottom: 1rem;
-  }
-
+ 
     .item-text{
 
     font-weight: bold;

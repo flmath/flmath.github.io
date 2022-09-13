@@ -23,12 +23,18 @@
     It is just a loading page for SEO. Click to go to the postlist.
 </a>
 <main>
-    <Particles
-        id="tsparticles"
-        options={particlesConfig}
-        on:particlesLoaded={onParticlesLoaded}
-        {particlesInit}
-    />
+    {#await particlesInit}
+        " "
+    {:then res}
+        <Particles
+            id="tsparticles"
+            options={particlesConfig}
+            on:particlesLoaded={onParticlesLoaded}
+            {particlesInit}
+        />
+    {:catch error}
+        <p style="color: red">{error.message}</p>
+    {/await}
 </main>
 
 <style>

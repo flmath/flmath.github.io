@@ -32,6 +32,8 @@
 	"type": "module",
 	"dependencies": {
 		"@google-web-components/google-chart": "^5.0.2",
-		"svelte-watch-resize": "^1.0.3"
+		"svelte-particles": "^2.3.1",
+		"svelte-watch-resize": "^1.0.3",
+		"tsparticles": "^2.3.1"
 	}
 }

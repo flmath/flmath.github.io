@@ -174,6 +174,12 @@ In ES6:
 ```javascript
 import someObject from ('./somefile.json')
 ```
+**** Check functions list
+https://stackoverflow.com/questions/25529290/node-js-module-how-to-get-list-of-exported-functions
+```javascript
+var myExports = require('./exported-file.js');
+console.log(Object.keys(myExports));
+```
 **** iframe
 
 *** SEO
@@ -181,6 +187,14 @@ https://github.com/GoogleWebComponents/google-analytics
 
 
 *** CSS
+https://github.com/beauhaus/Nephele#readme
+https://www.nephele.cloud/
+https://css-tricks.com/drawing-realistic-clouds-with-svg-and-css/
+https://www.npmjs.com/package/canvas-particle-network
+https://codegolf.stackexchange.com/questions/35569/tweetable-mathematical-art/
+https://codepen.io/rw1982/pen/LWzdMb
+
+
 https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3
 http://dahlström.net/svg/filters/arrow-with-dropshadow.svg
 https://stackoverflow.com/questions/19484707/how-can-i-make-an-svg-scale-with-its-parent-container
@@ -241,6 +255,26 @@ https://developers.google.com/chart/interactive/docs/gallery/sankey
 https://codemyui.com/tag/timeline/
 https://github.com/microsoft/vscode-webview-ui-toolkit
 https://betterprogramming.pub/visualize-your-medium-stats-with-svelte-and-javascript-eb1ef7c71a63
+
+*** Paricle svelte library
+https://codepen.io/matteobruni/pen/ZExaQyB
+https://github.com/matteobruni/tsparticles/tree/main/components/svelte
+https://particles.js.org/samples/presets/triangles.html
+https://particles.js.org/samples/presets/index.html
+https://codepen.io/matteobruni/pen/ZExaQyB
+https://codepen.io/matteobruni/details/YzWOjyK black hole
+https://particles.js.org/
+https://github.com/matteobruni/tsparticles/blob/main/demo/svelte/src/App.svelte
+https://codesandbox.io/s/svelte-particles-h6lb5?file=/App.svelte
+https://github.com/tsparticles/templates
+https://codesandbox.io/search?refinementList%5Btemplate%5D=&refinementList%5Bnpm_dependencies.dependency%5D%5B0%5D=svelte-particles&page=2&configure%5BhitsPerPage%5D=12
+https://codepen.io/collection/DPOage
+https://dev.to/tsparticles/tsparticles-easily-add-highly-customizable-particles-animations-to-your-website-3l2g
+https://github.com/matteobruni/tsparticles/blob/main/components/svelte/README.md
+https://www.skypack.dev/view/svelte-particles
+https://github.com/JulianLaval/canvas-particle-network#readme
+https://github.com/VincentGarreau/particles.js
+https://vincentgarreau.com/particles.js/
 
 
 *** How to make drawing from picture with GIMP:
@@ -380,7 +414,35 @@ https://pixabay.com/illustrations/flower-magnolia-watercolor-floral-3350053/
 https://pixabay.com/vectors/pattern-illusion-optical-depth-3d-4060286/
 https://pixabay.com/vectors/fibonacci-spiral-science-golden-1601158/
 
+https://pixabay.com/vectors/mesh-background-triangles-polygon-1430107/
+https://pixabay.com/illustrations/search/crystal/
+https://pixabay.com/users/activedia-665768/
+https://pixabay.com/illustrations/cog-wheels-gear-wheel-machine-2125183/
+https://pixabay.com/illustrations/cog-wheels-gear-wheels-machine-2125169/
+https://pixabay.com/vectors/triangles-polygon-color-pink-1430105/
+https://pixabay.com/vectors/jigsaw-puzzle-game-shape-puzzle-152865/
 
+
+https://pixabay.com/illustrations/maze-labyrinth-solution-lost-1804499/
+https://pixabay.com/vectors/maze-circular-labyrinth-lost-3312540/
+https://pixabay.com/images/search/labyrinth/
+https://pixabay.com/vectors/maze-puzzle-riddle-quiz-labyrinth-2094070/
+https://pixabay.com/users/pheee-1680284/
+https://pixabay.com/illustrations/maze-puzzle-riddle-quiz-labyrinth-1560302/
+https://pixabay.com/photos/puzzle-delimitation-exact-fit-654962/
+https://pixabay.com/images/search/puzzle/
+
+https://pixabay.com/vectors/geometry-design-art-symbol-7239268/
+https://pixabay.com/vectors/geometry-design-circle-7236399/
+https://pixabay.com/vectors/symbol-meditation-mandala-circle-7250853/
+
+https://pixabay.com/vectors/triangles-triangular-low-poly-1289379/
+https://pixabay.com/vectors/fibonacci-spiral-golden-ratio-7225635/
+
+
+https://pixabay.com/illustrations/triangle-sky-abstract-wallpaper-2136288/
+https://pixabay.com/illustrations/abstract-dust-background-wallpaper-5719221/
+https://pixabay.com/vectors/border-celtic-corner-floral-vine-32966/
 ** Freepik
 https://www.freepik.com/vectors/guilloche
 
@@ -405,8 +467,14 @@ https://archive.bridgesmathart.org/2019/bridges2019-327.pdf
 False perspective
 Tesselation
 https://www.twinkl.pl/teaching-wiki/tessellation
+https://commons.wikimedia.org/wiki/User:David_Eppstein/Gallery
 
-
+https://svelte.dev/repl/db316e2b250a4c53845e5a795ad8a11e?version=3.19.2
+https://en.wikipedia.org/wiki/Antimatroid
+https://en.wikipedia.org/wiki/Self-organized_criticality
+https://en.wikipedia.org/wiki/Abelian_sandpile_model
+https://en.wikipedia.org/wiki/Tamari_lattice#/media/File:Tamari_lattice.svg
+https://en.wikipedia.org/wiki/Power_set#/media/File:Hasse_diagram_of_powerset_of_3.svg
 
 ** Other interesting colors:
 https://visme.co/blog/color-combinations/

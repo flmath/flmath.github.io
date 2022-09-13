@@ -1,70 +1,77 @@
 <script lang="ts">
-    import Particles from "svelte-particles";
-    import { loadFull } from "tsparticles";
-    import particlesConfig from "$lib/assets/json/particles.json";
-
-    particlesConfig.background.color.value = "var(--bg-primary)";
-
-    let onParticlesLoaded = (event) => {
-        const particlesContainer = event.detail.particles;
-        // you can use particlesContainer to call all the Container class
-        // (from the core library) methods like play, pause, refresh, start, stop
-    };
-
-    let particlesInit = async (engine) => {
-        // you can use main to customize the tsParticles instance adding presets or custom shapes
-        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-        // starting from v2 you can add only the features you need reducing the bundle size
-        await loadFull(engine);
-    };
+    
 </script>
 
 <a href="/posts">
     It is just a loading page for SEO. Click to go to the postlist.
 </a>
-<main>
-    {#await particlesInit}
-        " "
-    {:then res}
-        <Particles
-            id="tsparticles"
-            options={particlesConfig}
-            on:particlesLoaded={onParticlesLoaded}
-            {particlesInit}
-        />
-    {:catch error}
-        <p style="color: red">{error.message}</p>
-    {/await}
-</main>
+    <div class="triangle-container">
+        <svg height="600" width="80%">
+            <g  class="triangle" width="80%">       
+              <circle class="circle-yellow" cx="250" cy="60"   r="20" fill="rgba(255, 255, 0)" />
+              <circle class="circle-red" cx="100" cy="400"   r="25" fill="rgba(240, 20, 11,0.8)" />
+              <circle class="circle-blue" cx="400" cy="400" r="40" fill="rgba(24, 240, 211)" /></g>
+              Sorry, your browser does not support inline SVG.
+        </svg>
+  </div>
 
 <style>
-    a {
-        z-index: 1;
+  .circle-yellow {
+   filter: drop-shadow( 0px 0px 20px rgba(255, 255, 0, .9));
+   }  
+   .circle-red {
+   filter: drop-shadow( 0px 0px 20px rgba(255, 0, 0, .9));
+   }  
+ .circle-blue {
+   filter: drop-shadow( 0px 0px 20px rgba(24, 240, 211, 0.9));
+   }  
+
+.triangle-container{
+    animation: myshift 15s infinite;
+    fill:transparent;
+  width: 100%;
+  
+  text-align:center;
+  
+} 
+.triangle{
+    margin-left: 50%;
+    animation: mymove 7s infinite;
+    transform-origin: 250px 250px;
+    
+}
+
+@keyframes mymove {
+     
+ 0%   {transform: rotate(0deg);}
+ 30%   {transform: rotate(-180deg);}
+ 100% {transform: rotate(-360deg);}
+
+
+}
+@keyframes myshift {
+     
+     0%   {margin-left: 0;}
+     70%   {margin-left: 80%;}
+     100% {margin-left: 0;}
+    
+     
+    
+    }
+
+  a {
+     
+        margin-right: 5%;
         font-size: 2rem;
         text-align: center;
         letter-spacing: 0.3ch;
         text-decoration: none;
         color: var(--text-secondary);
         background-color: none;
-        height: 100vh;
-        width: 100%;
+        height: 5vh;
+        width: 95%;
         position: absolute;
     }
-    main {
-        color: var(--text-secondary);
-        width: 100%;
-        font-size: 2rem;
-        letter-spacing: 0.3ch;
-        text-decoration: none;
-        background-color: var(--bg-primary);
-        text-align: center;
-        padding: 1em;
-        max-width: 240px;
-        margin: 0 auto;
-    }
-    @media (min-width: 640px) {
-        main {
-            max-width: none;
-        }
-    }
+  
+
 </style>

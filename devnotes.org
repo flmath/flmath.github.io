@@ -194,6 +194,7 @@ http://jsfiddle.net/encounter/UHQ4t/
 https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3
 
 *** CSS dynamics
+https://www.youtube.com/watch?v=X6JQzEnw994
 https://gist.github.com/trongthanh/2403656
 https://www.w3schools.com/cssref/tryit.asp?filename=trycss_anim_transform
 https://redstapler.co/realistic-water-effect-svg-turbulence-filter/
@@ -237,6 +238,7 @@ https://www.kudadam.com/blog/sveltekit-minify-rendered-html
 https://kit.svelte.dev/docs/assets#importing
 https://kit.svelte.dev/docs/seo#out-of-the-box
 
+https://svelte.dev/repl/d3d48eb4106c4b24b984c4b70fd32271?version=3.46.2
 https://svelte.dev/repl/d7680b8f5aee4d86846b0982e6c0c01d?version=3.31.0
 https://pass-composer.vercel.app/
 https://www.youtube.com/watch?v=4Mp-EQnJSTw

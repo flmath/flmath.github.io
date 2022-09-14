@@ -185,16 +185,31 @@ console.log(Object.keys(myExports));
 *** SEO
 https://github.com/GoogleWebComponents/google-analytics
 
-
 *** CSS
+https://css-tricks.com/snippets/css/css-triangle/
+
+
+*** CSS shadows
+http://jsfiddle.net/encounter/UHQ4t/
+https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3
+
+*** CSS dynamics
+https://gist.github.com/trongthanh/2403656
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss_anim_transform
+https://redstapler.co/realistic-water-effect-svg-turbulence-filter/
+https://www.youtube.com/watch?v=q-i0rZBZvBk
 https://github.com/beauhaus/Nephele#readme
 https://www.nephele.cloud/
 https://css-tricks.com/drawing-realistic-clouds-with-svg-and-css/
 https://www.npmjs.com/package/canvas-particle-network
 https://codegolf.stackexchange.com/questions/35569/tweetable-mathematical-art/
 https://codepen.io/rw1982/pen/LWzdMb
+https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feBlend
+
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_animation
 
 
+*** CSS flexpbox
 https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3
 http://dahlström.net/svg/filters/arrow-with-dropshadow.svg
 https://stackoverflow.com/questions/19484707/how-can-i-make-an-svg-scale-with-its-parent-container
@@ -203,9 +218,29 @@ https://www.freecodecamp.org/news/create-gantt-chart-using-css-grid/
 https://blog.logrocket.com/how-to-style-forms-with-css-a-beginners-guide/
 https://www.w3schools.com/w3css/w3css_panels.asp
 
+*** CSS resizing
+https://developer.mozilla.org/en-US/docs/Web/CSS/background-size
+https://www.w3schools.com/cssref/pr_background-position.asp
+https://www.w3schools.com/cssref/pr_pos_overflow.asp
+https://www.w3schools.com/cssref/playdemo.asp?filename=playcss_overflow&preval=clip
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss_play_overflow
+https://css-tricks.com/perfect-full-page-background-image/
+https://developer.mozilla.org/en-US/docs/Web/CSS/calc
+https://css-tricks.com/perfect-full-page-background-image/
+https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-y
+
 *** Svelte
+
+***8 SEO
 https://www.npmjs.com/package/html-minifier
 https://www.kudadam.com/blog/sveltekit-minify-rendered-html
+https://kit.svelte.dev/docs/assets#importing
+https://kit.svelte.dev/docs/seo#out-of-the-box
+
+
+https://svelte.dev/repl/286559382580492c8288e53a3597d7e1?version=3.28.0
+https://svelte.dev/repl/5fab983a191d459da149ef55e7962cf8?version=3.2.1
+https://svelte.dev/tutorial/onmount
 
 https://kit.svelte.dev/docs/migrating#endpoints
 https://fantinel.dev/blog-development-sveltekit/
@@ -443,6 +478,17 @@ https://pixabay.com/vectors/fibonacci-spiral-golden-ratio-7225635/
 https://pixabay.com/illustrations/triangle-sky-abstract-wallpaper-2136288/
 https://pixabay.com/illustrations/abstract-dust-background-wallpaper-5719221/
 https://pixabay.com/vectors/border-celtic-corner-floral-vine-32966/
+https://pixabay.com/photos/spark-steel-wool-whirl-circle-1948011/
+https://pixabay.com/photos/ice-planet-winter-moon-snow-crater-7160751/
+
+stockholm
+https://pixabay.com/images/search/stockholm/?pagi=6
+https://pixabay.com/photos/stockholm-sweden-old-town-3897532/
+
+** pexel
+https://www.pexels.com/photo/city-view-photography-2129886/
+
+
 ** Freepik
 https://www.freepik.com/vectors/guilloche
 
@@ -450,6 +496,8 @@ https://www.freepik.com/vectors/guilloche
 https://www.123freevectors.com/free-vector-guilloche-patterns-illustrator-brushes/
 
 ** Intresting art:
+https://observablehq.com/@mbostock/epicyclic-gearing
+https://en.wikipedia.org/wiki/Three-body_problem
 https://en.wikipedia.org/wiki/Curve_of_constant_width
 https://en.wikipedia.org/wiki/Reuleaux_triangle
 https://en.wikipedia.org/wiki/The_Scream

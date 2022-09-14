@@ -20,7 +20,8 @@
 </script>
 
 <a href="/posts">
-   <div> It was planed as main page, but it is to heavy. Bad performance,bad SEO.</div>
+   <div> It was planed as the main page, but it is to resource heavy.
+     Bad performance,bad SEO.</div>
 </a>
 <main>
     {#await particlesInit}
@@ -48,7 +49,7 @@
         color: var(--text-secondary);
         background-color: none;
         height: 100vh;
-        width: 95%;
+        width: 90%;
         position: absolute;
     }
     main {
@@ -59,7 +60,7 @@
         text-decoration: none;
         background-color: var(--bg-primary);
         text-align: center;
-        padding: 1em;
+      
         max-width: 240px;
         margin: 0 auto;
     }

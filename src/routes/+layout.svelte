@@ -74,6 +74,8 @@
 
   main {
     margin-left: 8rem;
+    width: 100vw-8rem;
+    max-width: 100%-8rem;
     padding: 1rem;
   }
   .navbar {
@@ -108,7 +110,7 @@
   @media only screen and (max-width: 600px) {
     .navbar {
       bottom: 0;
-      width: 100vw;
+      width: 100%-8rem;
       height: 8rem;
     }
 
@@ -118,6 +120,9 @@
 
     main {
       margin: 0;
+      width: 100%-8rem;
+    max-width: 100%-8rem;
+   
     }
   }
 
@@ -127,6 +132,11 @@
       top: 0;
       width: 8rem;
     }
+    main {
+    width: 100%-8rem;
+    max-width: 100%-8rem;
+   
+  }
 
     .navbar:hover {
       width: 18rem;

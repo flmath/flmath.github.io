@@ -1,9 +1,18 @@
+<svelte:head>
+  <title> Mathias Green personal pages</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="My questions to life, the universe, and everything.">
+  <meta name="keywords" content="Erlang, Programming, Mathematics">
+  <meta name="author" content="Mathias Green">
+</svelte:head>
+
 <script lang="ts">
   import ImposibleCubeSvg from "$lib/svg/ImposibleCubeSvg.svelte";
   import NavLink from "../lib/NavLink.svelte";
   import LogoElement from "../lib/LogoElement.svelte";
   import Penrose3 from "$lib/png/Penrose3.svelte";
   import Reutersward from "$lib/svg/Reutersward.svelte";
+import { npm_lifecycle_event } from "$env/static/private";
 
   type NavElement = LogoElement | NavLink;
   let hover: NavElement[] = [];

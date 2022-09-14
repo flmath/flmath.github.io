@@ -2,18 +2,16 @@
      import { onMount } from 'svelte'
     import front from "$lib/png/small.webp";
     import back from "$lib/png/smallmask.webp";
-    
+
+    function sleep(ms : number) {return new Promise(resolve => setTimeout(resolve, ms));}
+
     let loaded = false;
-    function mark_loaded(e: Event) {
-    loaded = true;
-    };
+    
     onMount( async () => {
+    await sleep(2000)
        loaded  = true;
     });
-    
-  
-    
-</script>
+ </script>
 
 <div class="container" >
     <a href="/posts">

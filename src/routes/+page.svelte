@@ -8,7 +8,7 @@
     let loaded = false;
     
     onMount( async () => {
-    await sleep(2000)
+    await sleep(4000)
        loaded  = true;
     });
  </script>
@@ -21,7 +21,7 @@
     <div class="background" style="background-image: url('{front}')">
         <div class="water" style="background-image: url('{back}')" />
     </div>
-    <!-- svelte-ignore empty-block -->
+
     {#if loaded}
     <svg>
         <filter id="turbulence" x="0" y="0" width="100%" height="100%">

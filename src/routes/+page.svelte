@@ -1,8 +1,9 @@
 <script lang="ts">
+	import { writable } from 'svelte/store';
     import front from "$lib/png/small.webp";
     import back from "$lib/png/smallmask.webp";
-
-  
+    
+    export const loading = writable(false);
 </script>
 
 <div class="container">
@@ -13,7 +14,31 @@
     <div class="background" style="background-image: url('{front}')">
         <div class="water" style="background-image: url('{back}')" />
     </div>
- 
+    <!-- svelte-ignore empty-block -->
+    {#await !loading}
+    {:then res}
+    <svg>
+        <filter id="turbulence" x="0" y="0" width="100%" height="100%">
+            <feTurbulence
+                id="sea-filter"
+                numOctaves="3"
+                seed="2"
+                baseFrequency="0.02 0.05"
+            />
+            <feDisplacementMap scale="20" in="SourceGraphic" />
+            <animate
+                xlink:href="#sea-filter"
+                attributeName="baseFrequency"
+                dur="300s"
+                keyTimes="0;0.5;1"
+                values="0.02 0.06;0.04 0.08;0.02 0.06"
+                repeatCount="indefinite"
+            />
+        </filter>
+    </svg>
+    {:catch error}
+    {console.log(error)}
+    {/await}
 </div>
 
 <style>

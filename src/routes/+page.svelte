@@ -1,5 +1,6 @@
 <script lang="ts">
      import { onMount } from 'svelte'
+    
     import front from "$lib/png/small.webp";
     import back from "$lib/png/smallmask.webp";
 
@@ -20,8 +21,8 @@
 
     <div class="background" style="background-image: url('{front}')">
         <div class="water" style="background-image: url('{back}')" />
-    </div>
 
+    </div>
     {#if loaded}
     <svg>
         <filter id="turbulence" x="0" y="0" width="100%" height="100%">
@@ -31,8 +32,8 @@
                 seed="2"
                 baseFrequency="0.02 0.05"
             />
-            <feDisplacementMap scale="20" in="SourceGraphic" />
-            <animate
+            <feDisplacementMap scale="20" in="SourceGraphic"/>
+            <animate 
                 xlink:href="#sea-filter"
                 attributeName="baseFrequency"
                 dur="300s"
@@ -42,7 +43,20 @@
             />
         </filter>
     </svg>
+    {:else}
+    <svg>
+        <filter id="turbulence" x="0" y="0" width="100%" height="100%">
+            <feTurbulence
+                id="sea-filter"
+                numOctaves="3"
+                seed="2"
+                baseFrequency="0.02 0.05"
+            />            
+            <feDisplacementMap scale="20" in="SourceGraphic"/>          
+        </filter>
+    </svg>
     {/if}
+
 </div>
 
 <style>

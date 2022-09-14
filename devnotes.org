@@ -237,6 +237,10 @@ https://www.kudadam.com/blog/sveltekit-minify-rendered-html
 https://kit.svelte.dev/docs/assets#importing
 https://kit.svelte.dev/docs/seo#out-of-the-box
 
+https://svelte.dev/repl/d7680b8f5aee4d86846b0982e6c0c01d?version=3.31.0
+https://pass-composer.vercel.app/
+https://www.youtube.com/watch?v=4Mp-EQnJSTw
+https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores
 
 https://svelte.dev/repl/286559382580492c8288e53a3597d7e1?version=3.28.0
 https://svelte.dev/repl/5fab983a191d459da149ef55e7962cf8?version=3.2.1

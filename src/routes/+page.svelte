@@ -1,12 +1,21 @@
 <script lang="ts">
-	import { writable } from 'svelte/store';
+     import { onMount } from 'svelte'
     import front from "$lib/png/small.webp";
     import back from "$lib/png/smallmask.webp";
     
-    export const loading = writable(false);
+    let loaded = false;
+    function mark_loaded(e: Event) {
+    loaded = true;
+    };
+    onMount( async () => {
+       loaded  = true;
+    });
+    
+  
+    
 </script>
 
-<div class="container">
+<div class="container" >
     <a href="/posts">
         It is just a loading page for SEO. Click to go to the postlist.
     </a>
@@ -15,8 +24,7 @@
         <div class="water" style="background-image: url('{back}')" />
     </div>
     <!-- svelte-ignore empty-block -->
-    {#await !loading}
-    {:then res}
+    {#if loaded}
     <svg>
         <filter id="turbulence" x="0" y="0" width="100%" height="100%">
             <feTurbulence
@@ -36,9 +44,7 @@
             />
         </filter>
     </svg>
-    {:catch error}
-    {console.log(error)}
-    {/await}
+    {/if}
 </div>
 
 <style>

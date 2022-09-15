@@ -68,17 +68,14 @@
     width: none;
     display: none;
   }
-
   body::-webkit-scrollbar-track {
     background: #ffffff;
     display: none;
   }
-
   body::-webkit-scrollbar-thumb {
     background: #ffffff;
     display: none;
   }
-
   main {
     margin-left: 8rem;
     width: 100vw-8rem;
@@ -96,7 +93,6 @@
 
     /*overflow: scroll;*/
   }
-
   .navbar-nav {
     list-style: none;
     padding: 0;
@@ -112,7 +108,6 @@
     margin-top: auto;
     margin-bottom: 1rem;
   }
-
   /* Small screens */
   @media only screen and (max-width: 600px) {
     .navbar {
@@ -120,11 +115,9 @@
       width: 100%-8rem;
       height: 8rem;
     }
-
     .navbar-nav {
       flex-direction: row;
     }
-
     main {
       margin: 0;
       width: 100%-8rem;
@@ -132,7 +125,6 @@
    
     }
   }
-
   /* Large screens */
   @media only screen and (min-width: 600px) {
     .navbar {

@@ -17,7 +17,7 @@
     });
 </script>
 {#if animate}
-    <div class="container" in:fade>
+    <div class="container" >
         <a href="/posts">
             It is just a loading page for SEO. Click to go to the postlist.
         </a>
@@ -25,6 +25,11 @@
         <div class="background" style="background-image: url('{front}')">
             <div class="water" style="background-image: url('{back}')" />
         </div>
+    </div>
+  {/if}
+ 
+  {#if animate}
+  <div in:fade>
         {#if loaded}
             <svg>
                 <filter id="turbulence" x="0" y="0" width="100%" height="100%">
@@ -58,7 +63,7 @@
                 </filter>
             </svg>
         {/if}
-    </div>
+ </div>
 {/if}
 
 <style>

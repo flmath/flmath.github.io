@@ -1,63 +1,66 @@
 <script lang="ts">
-     import { onMount } from 'svelte'
-    
+    import { onMount } from "svelte";
+    import { fade } from "svelte/transition";
     import front from "$lib/png/small.webp";
     import back from "$lib/png/smallmask.webp";
 
-    function sleep(ms : number) {return new Promise(resolve => setTimeout(resolve, ms));}
+    function sleep(ms: number) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+    }
 
     let loaded = false;
-    
-    onMount( async () => {
-    await sleep(4000)
-       loaded  = true;
+    let animate = false;
+    onMount(async () => {
+        animate = true;
+        await sleep(4000);
+        loaded = true;
     });
- </script>
+</script>
 
-<div class="container" >
-    <a href="/posts">
-        It is just a loading page for SEO. Click to go to the postlist.
-    </a>
+{#if animate}
+    <div class="container" in:fade>
+        <a href="/posts">
+            It is just a loading page for SEO. Click to go to the postlist.
+        </a>
 
-    <div class="background" style="background-image: url('{front}')">
-        <div class="water" style="background-image: url('{back}')" />
-
+        <div class="background" style="background-image: url('{front}')">
+            <div class="water" style="background-image: url('{back}')" />
+        </div>
+        {#if loaded}
+            <svg>
+                <filter id="turbulence" x="0" y="0" width="100%" height="100%">
+                    <feTurbulence
+                        id="sea-filter"
+                        numOctaves="3"
+                        seed="2"
+                        baseFrequency="0.02 0.05"
+                    />
+                    <feDisplacementMap scale="20" in="SourceGraphic" />
+                    <animate
+                        xlink:href="#sea-filter"
+                        attributeName="baseFrequency"
+                        dur="300s"
+                        keyTimes="0;0.5;1"
+                        values="0.02 0.06;0.04 0.08;0.02 0.06"
+                        repeatCount="indefinite"
+                    />
+                </filter>
+            </svg>
+        {:else}
+            <svg>
+                <filter id="turbulence" x="0" y="0" width="100%" height="100%">
+                    <feTurbulence
+                        id="sea-filter"
+                        numOctaves="3"
+                        seed="2"
+                        baseFrequency="0.02 0.05"
+                    />
+                    <feDisplacementMap scale="20" in="SourceGraphic" />
+                </filter>
+            </svg>
+        {/if}
     </div>
-    {#if loaded}
-    <svg>
-        <filter id="turbulence" x="0" y="0" width="100%" height="100%">
-            <feTurbulence
-                id="sea-filter"
-                numOctaves="3"
-                seed="2"
-                baseFrequency="0.02 0.05"
-            />
-            <feDisplacementMap scale="20" in="SourceGraphic"/>
-            <animate 
-                xlink:href="#sea-filter"
-                attributeName="baseFrequency"
-                dur="300s"
-                keyTimes="0;0.5;1"
-                values="0.02 0.06;0.04 0.08;0.02 0.06"
-                repeatCount="indefinite"
-            />
-        </filter>
-    </svg>
-    {:else}
-    <svg>
-        <filter id="turbulence" x="0" y="0" width="100%" height="100%">
-            <feTurbulence
-                id="sea-filter"
-                numOctaves="3"
-                seed="2"
-                baseFrequency="0.02 0.05"
-            />            
-            <feDisplacementMap scale="20" in="SourceGraphic"/>          
-        </filter>
-    </svg>
-    {/if}
-
-</div>
+{/if}
 
 <style>
     .container {
@@ -68,7 +71,7 @@
         top: 0;
         overflow: clip;
         left: 8rem;
-        
+
         min-width: calc(100vw - 8rem);
         min-height: 100vh;
     }
@@ -96,7 +99,8 @@
         filter: url("#turbulence");
     }
 
-    a {overflow: clip;
+    a {
+        overflow: clip;
         z-index: 2;
         margin-right: 5%;
         margin-left: 5%;
@@ -108,10 +112,6 @@
         background-color: none;
         height: 100vh;
         width: 90%;
-        position:absolute;
+        position: absolute;
     }
-
-
-
- 
 </style>

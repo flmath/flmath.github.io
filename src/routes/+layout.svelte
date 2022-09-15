@@ -12,7 +12,6 @@
   import LogoElement from "../lib/LogoElement.svelte";
   import Penrose3 from "$lib/png/Penrose3.svelte";
   import Reutersward from "$lib/svg/Reutersward.svelte";
-import { npm_lifecycle_event } from "$env/static/private";
 
   type NavElement = LogoElement | NavLink;
   let hover: NavElement[] = [];
@@ -30,8 +29,7 @@ import { npm_lifecycle_event } from "$env/static/private";
 </script>
 
 <body>
-  <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-
+  
   <nav
     class="navbar"
     on:mouseenter={handleMouseOver}
@@ -45,7 +43,7 @@ import { npm_lifecycle_event } from "$env/static/private";
       <NavLink href="/posts" bind:this={hover[1]}>
         <Penrose3 slot="picture" /> <span slot="text">Posts</span></NavLink
       >
-      <NavLink href="/cv" bind:this={hover[2]}
+      <NavLink href="/curriculum_vitae" bind:this={hover[2]}
         ><ImposibleCubeSvg slot="picture" />
         <span slot="text">CV</span></NavLink
       >

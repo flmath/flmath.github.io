@@ -16,7 +16,6 @@
         loaded = true;
     });
 </script>
-
 {#if animate}
     <div class="container" in:fade>
         <a href="/posts">

@@ -29,6 +29,7 @@
   {/if}
  
   {#if animate}
+  
   <div in:fade>
         {#if loaded}
             <svg>

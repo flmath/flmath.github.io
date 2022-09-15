@@ -48,7 +48,7 @@
         <span slot="text">CV</span></NavLink
       >
 
-      <NavLink class="last" href="out" bind:this={hover[3]}
+      <NavLink class="last" href="exit_page" bind:this={hover[3]}
         ><Reutersward slot="picture" /><span slot="text">Out</span></NavLink
       >
     </ul>

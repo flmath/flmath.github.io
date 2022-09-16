@@ -246,6 +246,21 @@ https://kit.svelte.dev/docs/seo
 
 https://layercake.graphics/components
 
+https://blog.logrocket.com/comprehensive-guide-svelte-components-slots/
+https://www.anycodings.com/1questions/1382311/in-sveltekit-how-to-pass-props-in-slot-using-layoutsvelte-file
+https://svelte.dev/tutorial/slots
+https://svelte.dev/tutorial/component-bindings
+https://svelte.dev/tutorial/slot-props
+https://ashutosh.dev/comprehensive-guide-of-events-handling-in-svelte/
+https://stackoverflow.com/questions/66982839/is-it-possible-to-dispatch-a-svelte-custom-event-with-a-target-object
+https://jumpwire.ai/blog/sveltekit-path-based-navigation
+https://stackoverflow.com/questions/69271131/sveltekit-run-function-at-route-change-for-access-token-without-doing-it-at-a
+https://kit.svelte.dev/docs/routing#page-page-js
+https://ashutosh.dev/comprehensive-guide-of-events-handling-in-svelte/
+https://svelte.dev/tutorial/component-events
+https://stackoverflow.com/questions/69271131/sveltekit-run-function-at-route-change-for-access-token-without-doing-it-at-a
+https://kit.svelte.dev/docs/routing#layout
+
 https://www.reddit.com/r/sveltejs/comments/qx95ge/how_can_i_get_the_current_route_in_a_svelte_kit/
 https://kit.svelte.dev/docs/introduction#modules-$app-stores
 https://svelte.dev/tutorial/reactive-declarations

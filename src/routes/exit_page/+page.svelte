@@ -5,7 +5,7 @@
 
     particlesConfig.background.color.value = "var(--bg-primary)";
 
-    let onParticlesLoaded = (event) => {
+    let onParticlesLoaded = (event : Event) => {
         const particlesContainer = event.detail.particles;
         // you can use particlesContainer to call all the Container class
         // (from the core library) methods like play, pause, refresh, start, stop

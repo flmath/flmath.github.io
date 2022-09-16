@@ -12,7 +12,7 @@
         <div>Name:</div>
         <div>Mathias Green</div>
         <div>Address:</div>
-        <div>Uppsala, Sweden</div>
+        <div>Sweden</div>
 
         <div>Mail:</div>
         <div>

@@ -16,8 +16,9 @@
         loaded = true;
     });
 </script>
+
 {#if animate}
-    <div class="container" >
+    <div class="container">
         <a href="/posts">
             It is just a loading page for SEO. Click to go to the postlist.
         </a>
@@ -26,11 +27,10 @@
             <div class="water" style="background-image: url('{back}')" />
         </div>
     </div>
-  {/if}
- 
-  {#if animate}
+{/if}
 
-  <div in:fade>
+{#if animate}
+    <div in:fade>
         {#if loaded}
             <svg>
                 <filter id="turbulence" x="0" y="0" width="100%" height="100%">
@@ -64,7 +64,7 @@
                 </filter>
             </svg>
         {/if}
- </div>
+    </div>
 {/if}
 
 <style>
@@ -76,20 +76,19 @@
         padding: 0;
         padding-top: 1rem;
         top: 0;
-       
+
         margin: 0;
 
         left: 8rem;
         min-width: calc(100% - 8rem);
         overflow: clip;
-     
     }
     .background {
         margin-bottom: 0;
         margin-top: auto;
         height: 100%;
         width: 100%;
-      
+
         background-repeat: no-repeat;
         background-size: 100vw auto;
         background-position: bottom;
@@ -101,7 +100,7 @@
         margin-top: auto;
         background-repeat: no-repeat;
         background-size: 100% auto;
-        background-position: bottom;        
+        background-position: bottom;
         height: 100%;
         width: 100vw;
         min-width: 100vw;
@@ -121,6 +120,5 @@
         position: absolute;
         overflow: clip;
         z-index: 2;
-        
     }
 </style>

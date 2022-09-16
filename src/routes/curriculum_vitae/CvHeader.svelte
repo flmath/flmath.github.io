@@ -15,9 +15,10 @@
   }
 
   h2 {
-    opacity: 0.65;
+    opacity: 0.85;
     height: 3rem;
     margin: 0;
+    text-indent: 1rem;
     display: table;
     background: rgb(0, 191, 255);
     background: linear-gradient(

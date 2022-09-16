@@ -28,8 +28,7 @@
   }
 </script>
 
-<body>
-  
+<body>  
   <nav
     class="navbar"
     on:mouseenter={handleMouseOver}
@@ -48,7 +47,7 @@
         <span slot="text">CV</span></NavLink
       >
 
-      <NavLink class="last" href="exit_page" bind:this={hover[3]}
+      <NavLink class="last" href="/exit_page" bind:this={hover[3]}
         ><Reutersward slot="picture" /><span slot="text">Out</span></NavLink
       >
     </ul>
@@ -78,8 +77,8 @@
   }
   main {
     margin-left: 8rem;
-    width: 100vw-8rem;
-    max-width: 100%-8rem;
+    width: calc(100vw - 8rem);
+    max-width: calc(100% - 8rem);
     padding: 1rem;
   }
   .navbar {
@@ -112,7 +111,7 @@
   @media only screen and (max-width: 600px) {
     .navbar {
       bottom: 0;
-      width: 100%-8rem;
+      width: calc(100% - 8rem);
       height: 8rem;
     }
     .navbar-nav {
@@ -120,7 +119,7 @@
     }
     main {
       margin: 0;
-      width: 100%-8rem;
+      width: calc(100% - 8rem);
     max-width: 100%-8rem;
    
     }
@@ -132,8 +131,8 @@
       width: 8rem;
     }
     main {
-    width: 100%-8rem;
-    max-width: 100%-8rem;
+    width: calc(100% - 8rem);
+    max-width: calc(100% - 8rem);
    
   }
 

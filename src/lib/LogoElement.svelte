@@ -4,8 +4,10 @@
   import Penrose8 from "./svg/Penrose8.svelte";
   import { fade } from 'svelte/transition';
   import { sineOut } from 'svelte/easing';
+  import { page } from '$app/stores';
   
   let active: string = "";
+  let activeText: string = "";
 
   function spin(node: HTMLElement, spin : SpinOptions) {
     let duration = spin.duration;
@@ -28,19 +30,24 @@
   }
   export function handleMouseOver() {
     active = " active ";
+    activeText = " active ";
+    
   }
   export function handleMouseOut() {
+    activeText = "";
+    if ($page.routeId !== "")
     active = "";
   }
 </script>
+
 <li class={"logo" + active}>
-    <a href="/" class="nav-link">
+      <a href="/" class="nav-link">
       {#if (active === "" )} 
       <span class="button" in:spinBack="{new SpinOptions(1000, 0)}" > <Penrose8 /></span>    
       {:else }
-      <span class="button" in:spinForward="{new SpinOptions(1000, 0)}"  > <Penrose8 /></span>   
+      <span class="button" in:spinForward="{new SpinOptions(1000, 0)}" > <Penrose8 /></span>   
       {/if}
-    {#if (active !== "" )} 
+    {#if (activeText !== "" )} 
       <span class="link-text logo-text" 
         in:fade={{duration: 300, delay: 200}}>
         <slot name="text">Missing</slot></span>
@@ -56,6 +63,7 @@
     color: var(--text-primary);
     text-decoration: none;
     background: none;    
+    filter: grayscale(100%) opacity(0.7);
     transition: var(--transition-speed);
 
   }
@@ -74,7 +82,7 @@
     color: var(--text-secondary);
     background: none;
     font-size: 2rem;
-    letter-spacing: 0.3ch;
+    letter-spacing: 0.3ch;    
     width: 100%;
 
   }

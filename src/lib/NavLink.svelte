@@ -1,16 +1,21 @@
-<script>
+<script lang="ts">
   import { fade } from "svelte/transition";
-  let active = "";
+  import { page } from '$app/stores';
+  let active: string = "";
+  let activeText: string = "";
+
   export let href = "/";
 
   export function handleMouseOver() {
     active = " active ";
+    activeText = " active ";
   }
   export function handleMouseOut() {
+    activeText = " ";
+    if ("/" + $page.routeId !== href)
     active = " ";
-  }
+    }
 </script>
-
 <!-- <div>{"nav-item " + active + (undefined == $$props.class ? " " : $$props.class)}</div> -->
 <li
   class={"nav-item " +
@@ -20,7 +25,7 @@
   <a {href}>
     <slot name="picture">Picture</slot>
   </a>
-  {#if active === " active "}
+  {#if activeText === " active "}
     <a {href} class="item-text" in:fade={{ duration: 300, delay: 200 }}>
       <slot name="text">Missing</slot>
     </a>

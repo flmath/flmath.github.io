@@ -1,8 +1,8 @@
 <script lang="ts">
   import face from "$lib/assets/face.png";
-  import resumePdf from "$lib/assets/resumes/resume.pdf";
+  import resumePdf from "$lib/assets/resumes/mathias_green.pdf";
   // @ts-ignore
-  import resumeOdt from "$lib/assets/resumes/resume.odt";
+  import resumeOdt from "$lib/assets/resumes/mathias_green.odt";
 </script>
 
 <div class="table-main">

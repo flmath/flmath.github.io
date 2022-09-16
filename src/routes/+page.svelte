@@ -29,7 +29,7 @@
   {/if}
  
   {#if animate}
-  
+
   <div in:fade>
         {#if loaded}
             <svg>
@@ -73,10 +73,10 @@
         background-color: #d2d9df;
         width: calc(100vw - 8rem);
         height: 100vh;
+        padding-top: 1rem;
         top: 0;
         overflow: clip;
         left: 8rem;
-
         min-width: calc(100vw - 8rem);
         min-height: 100vh;
     }

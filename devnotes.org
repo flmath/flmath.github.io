@@ -237,7 +237,7 @@ https://www.npmjs.com/package/html-minifier
 https://www.kudadam.com/blog/sveltekit-minify-rendered-html
 https://kit.svelte.dev/docs/assets#importing
 https://kit.svelte.dev/docs/seo#out-of-the-box
-
+https://kit.svelte.dev/docs/seo
 
 https://svelte.dev/repl/d3d48eb4106c4b24b984c4b70fd32271?version=3.46.2
 https://svelte.dev/repl/d7680b8f5aee4d86846b0982e6c0c01d?version=3.31.0

@@ -21,6 +21,8 @@
             target="_top">flmathematic</a
           >
         </div>
+      <div> </div> <div class="grid-output-small"> </div> 
+      
         <div>Linkedin profile:</div>
         <div>
           <a
@@ -29,22 +31,26 @@
             href="https://www.linkedin.com/in/mathias-green">mathias-green</a
           >
         </div>
-        <div>Github accounts:</div>
+
+        <div>Github account:</div>
+        <div>
+          <div>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/flmath">flmath</a
+            >
+          </div>         
+        </div>
+        <div>Coursera profile:</div>
         <div class="grid-output-small">
           <div>
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/flmath">main</a
+              href="https://www.coursera.org/user/6a9b2e7f08e09268e6db78d8289c30b1">link</a
             >
-          </div>
-          <div>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/flmath-dirty">secondary</a
-            >
-          </div>
+          </div>         
         </div>
 
         <div>Resume:</div>
@@ -59,34 +65,36 @@
         </div>
       </div>
     </div>
+    
   </div>
 
   <img src={face} alt="Face" />
+  
 </div>
 
 <style>
   .grid-output-external {
     display: grid;
-    grid-template-columns: repeat(2, 20%);
-    grid-gap: 20%;
-  }
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    
+     }
   .grid-output {
     display: grid;
-    grid-template-columns: repeat(2, 20rem);
-    grid-template-rows: repeat(2, 3rem);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-gap: 0.5rem;
   }
   .grid-output-small {
     display: grid;
-    grid-template-columns: repeat(2, 3rem);
-    grid-template-rows: repeat(2, 3rem);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-gap: 0.5rem;
   }
 
   .table-main {
     margin-left: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
   }
 
@@ -101,5 +109,18 @@
     height: 250px;
     margin: 0;
     padding: 0;
+    
+    position: inline;
   }
+
+  @media (max-width: 640px) {
+        img {
+        display: none;    
+        }
+        .grid-output-external {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    
+     }
+    }
 </style>

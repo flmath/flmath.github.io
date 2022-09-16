@@ -107,7 +107,6 @@ https://stackoverflow.com/questions/24307401/window-history-pushstate-refreshing
 window.history.pushState({urlPath:'/page1'},"",'/page1')
 ```
 
-
 **** Non breaking space
 ```
 <div>&nbsp;•Hello•World</div>
@@ -189,6 +188,12 @@ https://github.com/GoogleWebComponents/google-analytics
 https://css-tricks.com/snippets/css/css-triangle/
 https://observablehq.com/@pstuffa/svg-filters-feturbulence
 
+https://www.makeuseof.com/css-background-patterns-examples/
+
+*** CSS gradient
+https://css-tricks.com/css3-gradients/
+https://www.w3docs.com/tools/code-editor/266
+
 *** CSS shadows
 http://jsfiddle.net/encounter/UHQ4t/
 https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3
@@ -239,6 +244,13 @@ https://kit.svelte.dev/docs/assets#importing
 https://kit.svelte.dev/docs/seo#out-of-the-box
 https://kit.svelte.dev/docs/seo
 
+https://layercake.graphics/components
+
+https://www.reddit.com/r/sveltejs/comments/qx95ge/how_can_i_get_the_current_route_in_a_svelte_kit/
+https://kit.svelte.dev/docs/introduction#modules-$app-stores
+https://svelte.dev/tutorial/reactive-declarations
+
+https://kit.svelte.dev/docs/routing#layout
 https://svelte.dev/repl/d3d48eb4106c4b24b984c4b70fd32271?version=3.46.2
 https://svelte.dev/repl/d7680b8f5aee4d86846b0982e6c0c01d?version=3.31.0
 https://pass-composer.vercel.app/
@@ -286,6 +298,7 @@ https://www.kudadam.com/blog/svelte-reading-progress
 
 *** svg
 https://stackoverflow.com/questions/34201318/trying-to-make-a-for-loop-to-draw-an-svg
+
 *** graph
 plotply
 https://developers.google.com/chart/interactive/docs/gallery/ganttchart

@@ -7,8 +7,7 @@
   import PersonalInfo from "./PersonalInfo.svelte";
   import CvHeader from "./CvHeader.svelte";
 </script>
-
-<div>
+<div class="cv">
   <section id="PersonalInfo">
     <CvHeader>Personal Info</CvHeader>
     <PersonalInfo />
@@ -36,3 +35,11 @@
     <Interests />
   </section>
 </div>
+
+<style>
+   .cv {
+    position: relative;
+    margin: 0;
+    overflow-x: clip;
+  }
+</style>

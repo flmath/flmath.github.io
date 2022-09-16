@@ -71,44 +71,45 @@
     .container {
         position: absolute;
         background-color: #d2d9df;
-        width: calc(100vw - 8rem);
+        width: calc(100% - 8rem);
         height: 100vh;
+        padding: 0;
         padding-top: 1rem;
         top: 0;
-        overflow: clip;
+       
+        margin: 0;
+
         left: 8rem;
-        min-width: calc(100vw - 8rem);
-        min-height: 100vh;
+        min-width: calc(100% - 8rem);
+        overflow: clip;
+     
     }
     .background {
         margin-bottom: 0;
         margin-top: auto;
         height: 100%;
         width: 100%;
-        overflow: clip;
+      
         background-repeat: no-repeat;
         background-size: 100vw auto;
         background-position: bottom;
-        min-width: 100%-8rem;
+        min-width: calc(100vw-8rem);
+        overflow: clip;
     }
     .background .water {
         margin-bottom: 0;
         margin-top: auto;
         background-repeat: no-repeat;
-        background-size: 100vw auto;
-        background-position: bottom;
-        overflow: clip;
+        background-size: 100% auto;
+        background-position: bottom;        
         height: 100%;
-        width: 100%;
-        min-width: 100%;
+        width: 100vw;
+        min-width: 100vw;
         filter: url("#turbulence");
+        overflow: clip;
     }
 
     a {
-        overflow: clip;
-        z-index: 2;
-        margin-right: 5%;
-        margin-left: 5%;
         font-size: 2rem;
         text-align: center;
         letter-spacing: 0.3ch;
@@ -116,7 +117,10 @@
         color: var(--text-primary);
         background-color: none;
         height: 100vh;
-        width: 90%;
+        width: calc(100% - 10rem);
         position: absolute;
+        overflow: clip;
+        z-index: 2;
+        
     }
 </style>

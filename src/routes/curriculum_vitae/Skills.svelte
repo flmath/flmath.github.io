@@ -1,7 +1,19 @@
+  <!-- <svelte:head>
+  <script src="$lib/assets/jslibs/wordcloud2.js" on:load={wordclLoaded}></script>
+  </svelte:head> -->
+  
+
+<script>
+import D3Cloud from "./D3Cloud.svelte";
+     //let wordcloud = new WordCloud(words);
+
+    
+  </script>
+     
+    <D3Cloud></D3Cloud>
 <div>
   <p>
-    Professionally I work as an Erlang programmer developing Session Border
-    Controller node in IMS network. The technical stack is based on Linux, the
+    I always was interested in automating tasAfter I graduade in mathematics I wanted to find job The most of my I have been working as an Erlang programmer in telecommunication. The technical stack is based on Linux, the
     above mentioned Erlang, Git/Gerrit as the project version control system,
     and Jenkins for CI/CD. Throughout my career, I was working in Agile teams
     (usually in SCRUM methodology) tasked with the end-to-end process of
@@ -42,6 +54,7 @@
 </div>
 
 <style>
+
   .grid-output {
     display: grid;
     grid-template-columns: repeat(2, 20rem);

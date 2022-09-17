@@ -193,6 +193,8 @@ https://www.makeuseof.com/css-background-patterns-examples/
 *** CSS gradient
 https://css-tricks.com/css3-gradients/
 https://www.w3docs.com/tools/code-editor/266
+https://css-tricks.com/snippets/css/complete-guide-grid/
+
 
 *** CSS shadows
 http://jsfiddle.net/encounter/UHQ4t/

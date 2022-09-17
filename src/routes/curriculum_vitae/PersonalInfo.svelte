@@ -68,6 +68,7 @@
 <style>
   .grid-output-external {
     display: grid;
+    margin-left: 15%;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     

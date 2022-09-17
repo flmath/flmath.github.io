@@ -9,10 +9,8 @@
   <div class="grid-output-external">
     <div class="table-main">
       <div class="grid-output">
-        <div>Name:</div>
-        <div>Mathias Green</div>
-        <div>Address:</div>
-        <div>Sweden</div>
+        <div>Name:</div> <div>Mathias Green</div>
+        <div>Address:</div> <div>Sweden</div>
 
         <div>Mail:</div>
         <div>
@@ -21,44 +19,39 @@
             target="_top">flmathematic</a
           >
         </div>
-      <div> </div> <div class="grid-output-small"> </div> 
+
+      <div> </div> <div class="grid-output-small"> </div>  
       
         <div>Linkedin profile:</div>
         <div>
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/mathias-green">mathias-green</a
-          >
+            href="https://www.linkedin.com/in/mathias-green">mathias-green</a>
         </div>
 
         <div>Github account:</div>
-        <div>
           <div>
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://github.com/flmath">flmath</a
             >
-          </div>         
         </div>
+
         <div>Coursera profile:</div>
-        <div class="grid-output-small">
-          <div>
+        <div>
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.coursera.org/user/6a9b2e7f08e09268e6db78d8289c30b1">link</a
-            >
+              href="https://www.coursera.org/user/6a9b2e7f08e09268e6db78d8289c30b1">link</a>
           </div>         
-        </div>
+        
 
         <div>Resume:</div>
         <div class="grid-output-small">
-          <div>
             <a target="_blank" rel="noopener noreferrer" href={resumePdf}>PDF</a
             >
-          </div>
           <div>
             <a href={resumeOdt}>ODT</a>
           </div>
@@ -84,13 +77,17 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 0.5rem;
+    
   }
   .grid-output-small {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 0.5rem;
+    text-align: right;
+        
   }
+  div {text-align: right;}
 
   .table-main {
     margin-left: 0;

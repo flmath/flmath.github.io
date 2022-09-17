@@ -4,7 +4,7 @@ import { onMount } from 'svelte';
 onMount(async () => {
 (await import('$lib/assets/jslibs/d3.v7.js')).default;
 loadwordElements()
-WordCloud = true;
+
 
 });        
 
@@ -90,10 +90,9 @@ groups.append("text")
 
 <style>
  #my_canvas{
-   z-index: 1;
-   margin-left: 20%;
-   width: 100%;
+   z-index: 1;   
    position:inline;
    padding: 0;
+   margin: 0;
 }
 </style>

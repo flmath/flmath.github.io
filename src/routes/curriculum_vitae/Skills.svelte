@@ -1,16 +1,9 @@
-  <!-- <svelte:head>
-  <script src="$lib/assets/jslibs/wordcloud2.js" on:load={wordclLoaded}></script>
-  </svelte:head> -->
-  
-
 <script>
-import D3Cloud from "./D3Cloud.svelte";
-     //let wordcloud = new WordCloud(words);
-
-    
-  </script>
-     
-    <D3Cloud></D3Cloud>
+  import D3Cloud from "./D3Cloud.svelte";
+</script>
+      <div class="d3">
+      
+    <D3Cloud ></D3Cloud></div>
 <div>
   <p>
     I always was interested in automating tasAfter I graduade in mathematics I wanted to find job The most of my I have been working as an Erlang programmer in telecommunication. The technical stack is based on Linux, the
@@ -54,7 +47,14 @@ import D3Cloud from "./D3Cloud.svelte";
 </div>
 
 <style>
+ .d3{
+  display: flex;
+  align-items: center;
+  margin: 0;
 
+  justify-content: center;
+padding: 0;  
+ }
   .grid-output {
     display: grid;
     grid-template-columns: repeat(2, 20rem);

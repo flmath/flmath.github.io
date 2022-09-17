@@ -1,12 +1,15 @@
 <script>
   import D3Cloud from "./D3Cloud.svelte";
 </script>
-      <div class="d3">
-      
-    <D3Cloud ></D3Cloud></div>
+
+<div class="d3">
+  <D3Cloud width={800} height={400} />
+</div>
 <div>
   <p>
-    I always was interested in automating tasAfter I graduade in mathematics I wanted to find job The most of my I have been working as an Erlang programmer in telecommunication. The technical stack is based on Linux, the
+    I always was interested in automating tasAfter I graduade in mathematics I
+    wanted to find job The most of my I have been working as an Erlang
+    programmer in telecommunication. The technical stack is based on Linux, the
     above mentioned Erlang, Git/Gerrit as the project version control system,
     and Jenkins for CI/CD. Throughout my career, I was working in Agile teams
     (usually in SCRUM methodology) tasked with the end-to-end process of
@@ -47,14 +50,14 @@
 </div>
 
 <style>
- .d3{
-  display: flex;
-  align-items: center;
-  margin: 0;
+  .d3 {
+    display: flex;
+    align-items: center;
+    margin: 0;
 
-  justify-content: center;
-padding: 0;  
- }
+    justify-content: center;
+    padding: 0;
+  }
   .grid-output {
     display: grid;
     grid-template-columns: repeat(2, 20rem);

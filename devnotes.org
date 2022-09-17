@@ -183,6 +183,8 @@ console.log(Object.keys(myExports));
 
 *** SEO
 https://github.com/GoogleWebComponents/google-analytics
+https://web.dev/
+
 
 *** CSS
 https://css-tricks.com/snippets/css/css-triangle/
@@ -237,14 +239,43 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/calc
 https://css-tricks.com/perfect-full-page-background-image/
 https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-y
 
+*** D3
+https://gramener.github.io/d3js-playbook/layouts/pie.html
+https://observablehq.com/@d3/hexbin-centers?collection=@d3/d3-hexbin
+https://observablehq.com/@d3?tab=collections&type=public&page=2
+https://github.com/d3/d3
+https://www.dataviscourse.net/tutorials/lectures/lecture-d3-layouts/
+
+https://observablehq.com/explore
+https://observablehq.com/@bensimonds/perlin-snakes
+https://observablehq.com/@peatroot/stars-and-constellations
+
+*** LIT
+https://lit.dev/docs/tools/development/#development-and-production-builds
+
+*** javascript
+https://code.tutsplus.com/articles/how-to-check-if-a-function-exists-in-javascript--cms-40249
+
 *** Svelte
+https://github-vis.ably.dev/?ref=madewithsvelte.com
+https://www.nielsvandermolen.com/external-javascript-sveltejs/
+https://github.com/metonym/svelte-highlight
+https://svelte.dev/repl/28f4b2e36e4244b8b23cae3d584c4c88?version=3.16.6 remarkable
 
 **** SEO
+https://stackoverflow.com/questions/69295473/svelte-sveltekit-dynamic-import-of-components-with-variable
+https://svelte.dev/repl/16b375da9b39417dae837b5006799cb4?version=3.25.0
+https://nuclia.com/blog/how-to-build-lazy-loaded-custom-elements-with-svelte/
+
+
+https://stackoverflow.com/questions/56839098/import-javascript-file-in-svelte
 https://www.npmjs.com/package/html-minifier
 https://www.kudadam.com/blog/sveltekit-minify-rendered-html
 https://kit.svelte.dev/docs/assets#importing
 https://kit.svelte.dev/docs/seo#out-of-the-box
 https://kit.svelte.dev/docs/seo
+
+https://www.tiny.cloud/blog/svelte-rich-text-editor/
 
 https://layercake.graphics/components
 

@@ -40,6 +40,9 @@
    .cv {
     position: relative;
     margin: 0;
+    /* -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px); */
+  
     overflow-x: clip;
   }
 </style>

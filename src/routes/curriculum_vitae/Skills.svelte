@@ -3,7 +3,7 @@
 </script>
 
 <div class="d3">
-  <D3Cloud width={800} height={400} />
+  <D3Cloud width={500} height={500} />
 </div>
 <div>
   <p>
@@ -52,9 +52,7 @@
 <style>
   .d3 {
     display: flex;
-    align-items: center;
     margin: 0;
-
     justify-content: center;
     padding: 0;
   }

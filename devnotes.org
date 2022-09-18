@@ -199,6 +199,7 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 
 
 *** CSS shadows
+https://css.glass/
 http://jsfiddle.net/encounter/UHQ4t/
 https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3
 
@@ -240,15 +241,26 @@ https://css-tricks.com/perfect-full-page-background-image/
 https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-y
 
 *** D3
+https://www.dataviscourse.net/tutorials/lectures/lecture-d3-layouts/
+https://github.com/flmath/flmath.github.io/blob/f46cdc87fb73372e48935bf0cba8cfede83a05e9/src/routes/curriculum_vitae/D3Cloud.svelte
+
+https://d3js.org/d3.v7.js
 https://gramener.github.io/d3js-playbook/layouts/pie.html
 https://observablehq.com/@d3/hexbin-centers?collection=@d3/d3-hexbin
 https://observablehq.com/@d3?tab=collections&type=public&page=2
 https://github.com/d3/d3
 https://www.dataviscourse.net/tutorials/lectures/lecture-d3-layouts/
+https://rockcontent.com/blog/creating-animations-and-transitions-with-d3-js/
 
+https://css-tricks.com/lodge/svg/
+https://css-tricks.com/guide-svg-animations-smil/
 https://observablehq.com/explore
 https://observablehq.com/@bensimonds/perlin-snakes
 https://observablehq.com/@peatroot/stars-and-constellations
+
+http://jsfiddle.net/fHBsS/
+https://carbondesignsystem.com/data-visualization/simple-charts/#word-cloud
+https://qdmana.com/2021/09/20210917213527189o.html
 
 *** LIT
 https://lit.dev/docs/tools/development/#development-and-production-builds
@@ -266,7 +278,8 @@ https://svelte.dev/repl/28f4b2e36e4244b8b23cae3d584c4c88?version=3.16.6 remarkab
 https://stackoverflow.com/questions/69295473/svelte-sveltekit-dynamic-import-of-components-with-variable
 https://svelte.dev/repl/16b375da9b39417dae837b5006799cb4?version=3.25.0
 https://nuclia.com/blog/how-to-build-lazy-loaded-custom-elements-with-svelte/
-
+https://www.chrsjxn.io/svelte/dynamic-imports
+https://svelte.dev/repl/4517b2961a7e466d99d994f043448a82?version=3.18.1
 
 https://stackoverflow.com/questions/56839098/import-javascript-file-in-svelte
 https://www.npmjs.com/package/html-minifier

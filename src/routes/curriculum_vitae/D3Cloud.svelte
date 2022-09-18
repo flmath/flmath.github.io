@@ -1,10 +1,9 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    let layout;
-    var cloud;
+    export let texts : string[];
     onMount(async () => {
         (await import("$lib/assets/jslibs/d3.v7.js")).default;
-        cloud = (await import("../../lib/assets/jslibs/d3.layout.cloud.js")).default;
+        (await import("../../lib/assets/jslibs/d3.layout.cloud.js")).default;
         
         loadwordElements();
         
@@ -13,31 +12,23 @@
     export let height: number;
     
     function loadwordElements() {
-      
-    layout = cloud()
-    .size([width, height])
-    .words([
-      "Hello", "world", "normally", "you", "want", "more", "words",
-      "than", "this"].map(function(d) {
-      return {text: d, size: 10 + Math.random() * 90, test: "haha"};
+    
+   d3.layout.cloud().size([width, height])
+    .words(texts.map(function(d) {
+      return {text: d, size: 10 + Math.random() * 90};
     }))
-    .padding(5)
     .rotate(function() { return ~~(Math.random() * 2) * 90; })
     .font("Impact")
     .fontSize(function(d) { return d.size; })
-    .on("end", draw);
-
-layout.start();
-
-
-    }
+    .on("end", draw)
+    .start();
 
     function draw(words : string[]) {
        d3.select("#my_canvas")
-      .attr("width", layout.size()[0])
-      .attr("height", layout.size()[1])
+      .attr("width", width)
+      .attr("height", height)
     .append("g")
-      .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
     .selectAll("text")
       .data(words)
     .enter().append("text")
@@ -49,6 +40,12 @@ layout.start();
       })
       .text(function(d) { return d.text; });
 }
+
+    }
+
+    
+
+
 
 
 </script>

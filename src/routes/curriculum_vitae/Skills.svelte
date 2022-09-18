@@ -1,10 +1,35 @@
 <script>
-  import D3Cloud from "./D3Cloud.svelte";
-</script>
+// import D3Cloud from './D3Cloud.svelte';
+import { onMount } from "svelte";
+    /**
+* @type {typeof import("./D3Cloud.svelte").default}
+*/
+    let D3Cloud;
+    let loaded = false;
+    const text = [
+      "Hello", "world", "normally", "you", "want", "more", "words",
+      "than", "this"];
+  onMount(async () => {
+    setTimeout(async () => {
+		D3Cloud = (await import('./D3Cloud.svelte')).default;
+    loaded = true;}, 1000);
+	});
 
-<div class="d3">
-  <D3Cloud width={500} height={500} />
+$: innerWidth = 0
+</script>
+<svelte:window bind:innerWidth/>
+
+<div class="d3">  
+{#if loaded}  
+<svelte:component this={D3Cloud} height={200} width={innerWidth/2} texts={text}/>
+{:else}
+<div class="d3" />
+{/if}
 </div>
+
+
+  
+
 <div>
   <p>
     I always was interested in automating tasAfter I graduade in mathematics I
@@ -51,6 +76,7 @@
 
 <style>
   .d3 {
+    height: 200px;
     display: flex;
     margin: 0;
     justify-content: center;

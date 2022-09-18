@@ -120,7 +120,7 @@
     margin-left: 1rem;    
   }
   .active .nav-link .link-text {
-      margin-left: 2rem;
+      margin-left: 1rem;
        display: inline;   
      }
   }

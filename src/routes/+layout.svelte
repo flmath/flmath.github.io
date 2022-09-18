@@ -122,7 +122,7 @@
     background-color: var(--bg-primary);
     transition: width var(--transition-speed) ease;
     background-image: url("$lib/assets/bg.webp");
-    background-size: cover;
+    background-size: 18rem auto;
     filter: opacity(0.8) brightness(1.1);
     
 

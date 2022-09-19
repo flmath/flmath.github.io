@@ -1,42 +1,42 @@
 <script lang="ts">
-import { fade } from 'svelte/transition';
-import { onMount } from "svelte";
-    /**
-* @type {typeof import("./D3Cloud.svelte").default}
-*/
+// import { fade } from 'svelte/transition';
+// import { onMount } from "svelte";
+//     /**
+// * @type {typeof import("./D3Cloud.svelte").default}
+// */
     
-    let wordcloud = 0;  
-    let D3Cloud;
-    let loaded = false;
-    $: refresh = true; 
-    const text = ["Erlang", "Linux", "Python", "Svelte", "React", "Numpy", "Javascript", "IMS", "Agile", "Git", "SIP", "R" ];
-    function sleep(ms: number) {
-        return new Promise((resolve) => setTimeout(resolve, ms));
-    }
+//     let wordcloud = 0;  
+//     let D3Cloud;
+//     let loaded = false;
+//     $: refresh = true; 
+//     const text = ["Erlang", "Linux", "Python", "Svelte", "React", "Numpy", "Javascript", "IMS", "Agile", "Git", "SIP", "R" ];
+//     function sleep(ms: number) {
+//         return new Promise((resolve) => setTimeout(resolve, ms));
+//     }
 
-    onMount(async () => {
-      await sleep(4000); 
-    setTimeout(async () => {
-		D3Cloud = (await import('./D3Cloud.svelte')).default;
-    }, 2000);
+    // onMount(async () => {
+    //   await sleep(4000); 
+    // setTimeout(async () => {
+		// D3Cloud = (await import('./D3Cloud.svelte')).default;
+    // }, 2000);
     
-    loaded = true;
-    while (loaded && (wordcloud===0))
-    {
-      await sleep(5000);
-      refresh = false;
-      await sleep(500);
+    // loaded = true;
+    // while (loaded && (wordcloud===0))
+    // {
+    //   await sleep(5000);
+    //   refresh = false;
+    //   await sleep(500);
       
-      refresh = true;
-     }
-    });
+    //   refresh = true;
+    //  }
+    // });
 
 $: innerWidth = 0
 </script>
 <svelte:window bind:innerWidth/>
   <!-- {refresh} {loaded} -->
   
-  {#if wordcloud < 2 }
+  <!-- {#if wordcloud < 2 }
   <div><p> If you want to get rid of the wordcloud below, click once to set it on pause, the second click removes it.</p></div>
   <div class="d3" on:click={() => wordcloud+=1}>  
     {#if (loaded && refresh) || wordcloud===1}   
@@ -49,7 +49,7 @@ $: innerWidth = 0
     </div>
  {:else}
  <div transition:fade />
-   {/if}
+   {/if} -->
 
 <div class="table-main">
   <div class="grid-output">

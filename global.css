@@ -6,7 +6,7 @@
   --bg-primary: #ffffff;
   --bg-secondary: #141418;
   --transition-speed: 600ms;
-
+  --the-font-size: larger;
 
   --fa-primary: #ff7eee;
   --fa-secondary: #df49a6;
@@ -20,3 +20,13 @@ body {
   width: 100%;
   height: 100%
 }
+p{
+font-size: var(--the-font-size);
+
+}
+ul{
+  font-size: var(--the-font-size);
+  
+  }
+
+  

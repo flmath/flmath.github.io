@@ -74,6 +74,8 @@
     
      }
   .grid-output {
+    font-size: var(--the-font-size);
+  
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -88,8 +90,15 @@
     text-align: right;
         
   }
-  div {text-align: right;}
+  div {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: right;
 
+    visibility:visible;
+    background-color: rgba(255,255,255,0.8);
+
+    }
   .table-main {
     margin-left: 0;
     display: flex;

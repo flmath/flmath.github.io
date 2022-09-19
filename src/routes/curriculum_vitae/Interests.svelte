@@ -2,12 +2,22 @@
    <div >
         <p>
         Most of my interest is focused around developing my skills of gathering, processing and analyzing information.
-        This is why I went to study mathematics and chose to learn software development. I also do not despise other intellectual pursuits like
-        a game of chess, <a target="_blank" rel="noopener noreferrer" href='https://en.wikipedia.org/wiki/Set_(card_game)'>set</a>,
-        an <a target="_blank" rel="noopener noreferrer" href='https://en.wikipedia.org/wiki/Rubik%27s_Cube'>interesting puzzle</a>,
-        a <a target="_blank" rel="noopener noreferrer" href='https://en.wikipedia.org/wiki/Torment:_Tides_of_Numenera'>computer game</a>,
-        a <a target="_blank" rel="noopener noreferrer" href='https://en.wikipedia.org/wiki/Snow_Crash'>book</a>,
-        or a <a target="_blank" rel="noopener noreferrer" href='https://en.wikipedia.org/wiki/Star_Trek:_Discovery'>movie</a>.
-        I have created this page to write down the notes I have produced during my pursuits.
+        In that aspect right now I am reading about  <a target="_blank" rel="noopener noreferrer" href='https://en.wikipedia.org/wiki/Formal_concept_analysis'> Formal Concept Analysis</a>.
+        I do not despise other intellectual pursuits like the game of chess or the <a target="_blank" rel="noopener noreferrer" href='https://en.wikipedia.org/wiki/Set_(card_game)'>set game</a>.
+        My favourite computer game is <a target="_blank" rel="noopener noreferrer" href='https://en.wikipedia.org/wiki/Torment:_Tides_of_Numenera'>Torment:_Tides_of_Numenera</a>.
+        I like SciFi books, like  <a target="_blank" rel="noopener noreferrer" href='https://en.wikipedia.org/wiki/Snow_Crash'>Snow Crash</a>. I have created this page to write down the notes I have produced during my pursuits.        
         </p>
     </div>
+
+
+    <style>
+         div {
+    margin-left: 5%;
+    margin-right: 5%;
+    
+
+    visibility:visible;
+    background-color: rgba(255,255,255,0.8);
+
+    }
+    </style>

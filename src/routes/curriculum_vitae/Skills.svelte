@@ -1,80 +1,101 @@
-<script>
-// import D3Cloud from './D3Cloud.svelte';
+<script lang="ts">
+import { fade } from 'svelte/transition';
 import { onMount } from "svelte";
     /**
 * @type {typeof import("./D3Cloud.svelte").default}
 */
+    
+    let wordcloud = 0;  
     let D3Cloud;
     let loaded = false;
-    const text = [
-      "Hello", "world", "normally", "you", "want", "more", "words",
-      "than", "this"];
-  onMount(async () => {
+    $: refresh = true; 
+    const text = ["Erlang", "Linux", "Python", "Svelte", "React", "Numpy", "Javascript", "IMS", "Agile", "Git", "SIP", "R" ];
+    function sleep(ms: number) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    onMount(async () => {
     setTimeout(async () => {
 		D3Cloud = (await import('./D3Cloud.svelte')).default;
     loaded = true;}, 1000);
-	});
+    await sleep(2000);
+    while (loaded && (wordcloud===0))
+    {
+      await sleep(5000);
+      refresh = false;
+      await sleep(500);
+      
+      refresh = true;
+     }
+    });
 
 $: innerWidth = 0
 </script>
 <svelte:window bind:innerWidth/>
-
-<div class="d3">  
-{#if loaded}  
-<svelte:component this={D3Cloud} height={200} width={innerWidth/2} texts={text}/>
-{:else}
-<div class="d3" />
-{/if}
-</div>
-
-
+  <!-- {refresh} {loaded} -->
   
+  {#if wordcloud < 2 }
+  <div><p> If you want to get rid of the wordcloud below, click once to set it on pause, the second click removes it.</p></div>
+  <div class="d3" on:click={() => wordcloud+=1}>  
+    {#if (loaded && refresh) || wordcloud===1}   
+    <div class="d3" transition:fade>
+    <svelte:component this={D3Cloud} height={200} width={innerWidth} texts={text}/>
+  </div>
+    {:else}
+    <div class="d3" transition:fade />
+    {/if}
+    </div>
+ {:else}
+ <div transition:fade />
+   {/if}
 
+<div class="table-main">
+  <div class="grid-output">
+    <div>Profession related:</div>
+    <div>Erlang, Telco, Linux, Agile, Git</div>
+
+    <div>For personal projects:</div>
+    <div>Python, Svelte, R</div>
+
+</div>
+</div>
 <div>
   <p>
-    I always was interested in automating tasAfter I graduade in mathematics I
-    wanted to find job The most of my I have been working as an Erlang
-    programmer in telecommunication. The technical stack is based on Linux, the
-    above mentioned Erlang, Git/Gerrit as the project version control system,
-    and Jenkins for CI/CD. Throughout my career, I was working in Agile teams
-    (usually in SCRUM methodology) tasked with the end-to-end process of
-    delivering requested feature. I was usually responsible for: analyzing
-    requirements, evaluating feasibility and designing solutions, implementing
-    solutions, writing function tests.
+    I graduated in mathematics. I started as a C++ developer. Soon after I transitioned to an Erlang based project. Since then my professional career is connected to it. 
+    I was part of Agile teams developing telecommunication solutions. The technical stack based on Linux, Git as the project version control system, and Jenkins for CI/CD. 
+    The teams I worked in were tasked with the end-to-end process of delivering solutions. I was usually responsible for:
   </p>
+    <ul>
+      <li> analyzing requirements </li>
+      <li>evaluating feasibility, designing, and implementing solutions</li>
+        <li>writing automated tests.</li>
+        </ul>
   <p>
-    Outside of feature work I also implement tools for development environments
-    I work in. For example, I have written in Python a tool to parse HTML test
-    logs into an SQLite database (to enable more advanced analysis'). Python is
-    my favorite scripting language, I usually use Anaconda to have access to
-    libraries like Numpy, Pandas, and Jupyter. Participation in various projects
-    and courses taught me a lot of different languages (and frameworks). Among
-    ones I have used recently are React, Matlab/Octave, R, and SQL(SQLite). I
-    have two GitHub accounts where I'm keeping my public projects. The main
-    repository contains accomplished projects and active ones like this blog.
-    The "dirty" repository contains less clean code and projects queued for
-    cleaning. For example, web graphics application for Erlang Common Test is in
-    the "dirty" repository because it uses an outdated front end framework
-    (AngularJs) and a back end framework (Cowboy) with broken dependency.
+Outside of the job, from time to time, I also program my projects. Python is my favorite scripting language. 
+I usually use Anaconda to have access to libraries like Numpy, Pandas, and Jupyter. The page you are reading now is written in Svelte. 
+It is converted from my old React page. I also used AngularJs a long time ago. I'm keeping most of my projects on Github, sometimes Gitlab. 
+Of course, I tried a lot more various technologies and languages, but there is no goal to list them all. I am open to learning more.
   </p>
-  <p>
-    The first programming language I have learned was C++, I have been some time
-    since I have used it, but it does not mean I have anything against it.
-  </p>
-  <hr />
+    
 
-  <div class="table-main">
-    <div class="grid-output">
-      <div>Professional product development:</div>
-      <div>Erlang, IMS, Linux, SCRUM, Git/Gerrit</div>
-
-      <div>Scripting for professional purpose:</div>
-      <div>Python, Sqlite, Javascript, R language</div>
-    </div>
-  </div>
 </div>
 
 <style>
+    ul {
+     margin-left: 10%;
+     text-align: justify;
+     
+    }
+    li { 
+   margin-bottom: 0.5rem;  
+}
+  p {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: justify;    
+    padding-top: 1rem;
+    margin-top: 0;
+  }
   .d3 {
     height: 200px;
     display: flex;
@@ -84,15 +105,29 @@ $: innerWidth = 0
   }
   .grid-output {
     display: grid;
-    grid-template-columns: repeat(2, 20rem);
-    grid-template-rows: repeat(2, 3rem);
+    margin-left: 15%;
+    padding: 0;
+    grid-template-columns: 1fr 2fr ;
+    grid-template-rows: 1fr;
     grid-gap: 0.5rem;
+    margin-bottom: 0;
   }
 
+ 
+  div {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: right;
+
+    visibility:visible;
+    background-color: rgba(255,255,255,0.8);
+
+    }
   .table-main {
-    margin-left: 0;
+    font-size: var(--the-font-size);
+  
+    
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: left;
   }
 </style>

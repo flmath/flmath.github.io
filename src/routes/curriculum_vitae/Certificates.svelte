@@ -85,7 +85,18 @@ import Erlang from '$lib/assets/certs/erlang.pdf'
         grid-template-columns: repeat(2, 20rem);
         grid-template-rows: repeat(2, 3rem);
         grid-gap: 0.5rem;
+        font-size: var(--the-font-size);
+  
       }
+      div {
+    margin-left: 5%;
+    margin-right: 5%;
+    
+
+    visibility:visible;
+    background-color: rgba(255,255,255,0.8);
+
+    }
     
       .table-main {
         margin-left: 0;

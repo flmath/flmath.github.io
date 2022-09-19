@@ -43,8 +43,10 @@
 <div
     class="div-chart"
     style="height: {20 * rows.length}px;
-    margin-left: {0.05 * mainWidth}px;
-    margin-bottom: {250 + 20 * rows.length}px;"
+    padding-left: {0.03 * mainWidth}px;
+    
+    
+    padding-bottom: {250 + 20 * rows.length}px;"
     use:watchResize={handleMainResize}
 >
     <google-chart
@@ -77,6 +79,9 @@
         align-items: center;
         padding: 0;
         display: block;
+visibility: visible;
+background-color: white;
+
     }
     .mainContent {
         margin: 0;

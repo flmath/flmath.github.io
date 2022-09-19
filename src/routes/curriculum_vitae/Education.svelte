@@ -23,5 +23,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: var(--the-font-size);
   }
+
+  div {
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    
+  
+    visibility:visible;
+    background-color: rgba(255,255,255,0.8);
+
+    }
 </style>

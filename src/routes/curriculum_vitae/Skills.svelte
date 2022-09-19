@@ -15,6 +15,7 @@ import { onMount } from "svelte";
     }
 
     onMount(async () => {
+      await sleep(4000); 
     setTimeout(async () => {
 		D3Cloud = (await import('./D3Cloud.svelte')).default;
     loaded = true;}, 1000);

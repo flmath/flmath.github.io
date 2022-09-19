@@ -31,7 +31,7 @@
     <Certificates />
   </section>
   <section id="Interests">
-    <CvHeader>Interests</CvHeader>
+    <CvHeader>Pursuits</CvHeader>
     <Interests />
   </section>
 </div>

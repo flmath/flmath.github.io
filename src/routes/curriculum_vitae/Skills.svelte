@@ -97,6 +97,7 @@ Of course, I tried a lot more various technologies and languages, but there is n
     text-align: justify;    
     padding-top: 1rem;
     margin-top: 0;
+    text-indent: 0rem;
   }
   .d3 {
     height: 200px;

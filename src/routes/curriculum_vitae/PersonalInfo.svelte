@@ -74,7 +74,7 @@
     
      }
   .grid-output {
-    font-size: var(--the-font-size);
+  
   
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -100,6 +100,7 @@
 
     }
   .table-main {
+    font-size: var(--the-font-size);
     margin-left: 0;
     display: flex;
     justify-content: center;

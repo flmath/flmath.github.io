@@ -85,7 +85,7 @@ import Erlang from '$lib/assets/certs/erlang.pdf'
         grid-template-columns: repeat(2, 20rem);
         grid-template-rows: repeat(2, 3rem);
         grid-gap: 0.5rem;
-        font-size: var(--the-font-size);
+        
   
       }
       div {
@@ -99,6 +99,7 @@ import Erlang from '$lib/assets/certs/erlang.pdf'
     }
     
       .table-main {
+        font-size: var(--the-font-size);
         margin-left: 0;
         display: flex;
         align-items: center;

@@ -23,8 +23,8 @@
     ];
     const clrs_lenght = clrs.length;
     onMount(async () => {
-        (await import("../../lib/assets/jslibs/d3.v7.js")).default;
-        (await import("../../lib/assets/jslibs/d3.layout.cloud.js")).default;
+        (await import("$lib/assets/jslibs/d3.v7.js")).default;
+        (await import("$lib/assets/jslibs/d3.layout.cloud.js")).default;
         loadwordElements();
     });
     export let width: number;

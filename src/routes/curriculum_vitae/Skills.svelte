@@ -15,11 +15,12 @@ import { onMount } from "svelte";
     }
 
     onMount(async () => {
-      await sleep(4000); 
+    
     setTimeout(async () => {
 		D3Cloud = (await import('./D3Cloud.svelte')).default;
-    loaded = true;}, 1000);
-    await sleep(2000);
+    }, 1000);
+    await sleep(4000); 
+    loaded = true;
     while (loaded && (wordcloud===0))
     {
       await sleep(5000);

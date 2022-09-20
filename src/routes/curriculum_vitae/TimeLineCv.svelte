@@ -43,9 +43,10 @@
 <div
     class="div-chart"
     style="height: {20 * rows.length}px;
-    padding-left: {0.03 * mainWidth}px;
+    padding-left: {0.01 * mainWidth}px;
+    padding-right: {0.01 * mainWidth}px;
     
-    
+    padding-top: 30px;
     padding-bottom: {250 + 20 * rows.length}px;"
     use:watchResize={handleMainResize}
 >
@@ -77,6 +78,7 @@
         margin-left: auto;
         margin-right: auto;
         align-items: center;
+       
         padding: 0;
         display: block;
 visibility: visible;

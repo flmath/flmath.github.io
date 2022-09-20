@@ -9,7 +9,7 @@ import Erlang from '$lib/assets/certs/erlang.pdf'
 </script>
 
 
-<div class="table-main">
+<div class="glass table-main">
   <div class="grid-output">
     
           <div>2018:</div>
@@ -99,6 +99,7 @@ import Erlang from '$lib/assets/certs/erlang.pdf'
     }
     
       .table-main {
+        padding: 1rem;
         font-size: var(--the-font-size);
         margin-left: 0;
         display: flex;

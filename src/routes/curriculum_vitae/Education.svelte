@@ -1,4 +1,4 @@
-<div class="table-main">
+<div class="glass table-main">
   <div class="grid-output">
     <div>2011:</div>
     <div>
@@ -19,6 +19,7 @@
   }
 
   .table-main {
+    padding: 1rem;;
     margin-left: 0;
     display: flex;
     align-items: center;
@@ -33,7 +34,6 @@
     
   
     visibility:visible;
-    background-color: rgba(255,255,255,0.8);
-
+    
     }
 </style>

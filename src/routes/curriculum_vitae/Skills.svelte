@@ -51,7 +51,7 @@ $: innerWidth = 0
  <div transition:fade />
    {/if} -->
 
-<div class="table-main">
+<div class="glass table-main">
   <div class="grid-output">
     <div>Profession related:</div>
     <div>Erlang, Telco, Linux, Agile, Git</div>
@@ -61,7 +61,7 @@ $: innerWidth = 0
 
 </div>
 </div>
-<div>
+<div class="glass">
   <p>
     I graduated in mathematics. I started as a C++ developer. Soon after I transitioned to an Erlang based project. Since then my professional career is connected to it. 
     I was part of Agile teams developing telecommunication solutions. The technical stack based on Linux, Git as the project version control system, and Jenkins for CI/CD. 
@@ -85,8 +85,7 @@ Of course, I tried a lot more various technologies and languages, but there is n
 <style>
     ul {
      margin-left: 10%;
-     text-align: justify;
-     
+     text-align: justify;     
     }
     li { 
    margin-bottom: 0.5rem;  
@@ -121,7 +120,7 @@ Of course, I tried a lot more various technologies and languages, but there is n
     margin-left: 5%;
     margin-right: 5%;
     text-align: right;
-
+    padding: 1rem;
     visibility:visible;
     background-color: rgba(255,255,255,0.8);
 

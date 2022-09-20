@@ -1,5 +1,5 @@
    
-   <div >
+   <div class="glass" >
         <p>
         Most of my interest is focused around developing my skills of gathering, processing and analyzing information.
         In that aspect right now I am reading about  <a target="_blank" rel="noopener noreferrer" href='https://en.wikipedia.org/wiki/Formal_concept_analysis'> Formal Concept Analysis</a>.
@@ -15,7 +15,7 @@
          div {
     margin-left: 5%;
     margin-right: 5%;
-    
+    padding: 1rem;
 
     visibility:visible;
     background-color: rgba(255,255,255,0.8);

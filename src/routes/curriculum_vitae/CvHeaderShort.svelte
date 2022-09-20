@@ -8,7 +8,7 @@
  
 
   div {
-    width: 100vw;
+    width: 100% ;
     display: table-cell;
     vertical-align: middle;
 
@@ -17,16 +17,16 @@
   }
 
   h2 {
-    width: 100%;
+    width: 98%;
     opacity: 0.85;
     height: 2rem;
     font-size: 1rem;
     margin: 0;
     margin-left: 1rem;
-    
     padding: 0;
     text-indent: 1rem;
     display: table;
+    margin-top: 1rem;
     background: rgb(0, 191, 255);
     background: linear-gradient(
       27deg,

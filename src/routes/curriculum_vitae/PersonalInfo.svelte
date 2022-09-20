@@ -5,7 +5,7 @@
   import resumeOdt from "$lib/assets/resumes/mathias_green.odt";
 </script>
 
-<div class="table-main">
+<div class="glass table-main">
   <div class="grid-output-external">
     <div class="table-main">
       <div class="grid-output">
@@ -100,6 +100,7 @@
 
     }
   .table-main {
+    padding: 1rem;
     font-size: var(--the-font-size);
     margin-left: 0;
     display: flex;

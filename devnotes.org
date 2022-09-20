@@ -187,6 +187,7 @@ https://web.dev/
 
 
 *** CSS
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss_font-family
 https://css-tricks.com/snippets/css/css-triangle/
 https://observablehq.com/@pstuffa/svg-filters-feturbulence
 
@@ -196,14 +197,18 @@ https://www.makeuseof.com/css-background-patterns-examples/
 https://css-tricks.com/css3-gradients/
 https://www.w3docs.com/tools/code-editor/266
 https://css-tricks.com/snippets/css/complete-guide-grid/
-
+https://9elements.com/blog/pure-css-diagonal-layouts/
 
 *** CSS shadows
 https://css.glass/
 http://jsfiddle.net/encounter/UHQ4t/
 https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3
+https://www.w3schools.com/cssref/css3_pr_perspective.asp
+
 
 *** CSS dynamics
+https://www.w3schools.com/howto/howto_css_loader.asp
+https://dev.to/sobhandash/lets-build-a-night-sky-using-pure-scss-2g0n
 https://www.youtube.com/watch?v=X6JQzEnw994
 https://gist.github.com/trongthanh/2403656
 https://www.w3schools.com/cssref/tryit.asp?filename=trycss_anim_transform
@@ -220,7 +225,9 @@ https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feBlend
 https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_animation
 
 
-*** CSS flexpbox
+*** CSS flexbox
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://www.w3schools.com/howto/howto_css_parallax.asp
 https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3
 http://dahlström.net/svg/filters/arrow-with-dropshadow.svg
 https://stackoverflow.com/questions/19484707/how-can-i-make-an-svg-scale-with-its-parent-container
@@ -230,6 +237,8 @@ https://blog.logrocket.com/how-to-style-forms-with-css-a-beginners-guide/
 https://www.w3schools.com/w3css/w3css_panels.asp
 
 *** CSS resizing
+https://css-tricks.com/transforms-on-svg-elements/
+
 https://developer.mozilla.org/en-US/docs/Web/CSS/background-size
 https://www.w3schools.com/cssref/pr_background-position.asp
 https://www.w3schools.com/cssref/pr_pos_overflow.asp
@@ -269,6 +278,11 @@ https://lit.dev/docs/tools/development/#development-and-production-builds
 https://code.tutsplus.com/articles/how-to-check-if-a-function-exists-in-javascript--cms-40249
 
 *** Svelte
+https://svelte.dev/tutorial/svelte-component
+https://svelte.dev/repl/e2adc9ea596c457ebd2ae230c22b2b0b?version=3.32.1
+https://github.com/Schum123/svelte-loading-spinners
+
+
 https://github-vis.ably.dev/?ref=madewithsvelte.com
 https://www.nielsvandermolen.com/external-javascript-sveltejs/
 https://github.com/metonym/svelte-highlight

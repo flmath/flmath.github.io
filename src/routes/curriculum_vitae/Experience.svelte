@@ -101,12 +101,15 @@
 </div>
 
 <style>
+  
   p {
     text-align: justify;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
+    margin-left: 15%;
+    margin-right: 15%;
+   
+   
 
+    }
   div {
     width: 96%;
     margin-left: 2rem;

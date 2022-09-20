@@ -1,20 +1,31 @@
    
    <div class="glass" >
         <p>
-        Most of my interest is focused around developing my skills of gathering, processing and analyzing information.
-        In that aspect right now I am reading about  <a target="_blank" rel="noopener noreferrer" href='https://en.wikipedia.org/wiki/Formal_concept_analysis'> Formal Concept Analysis</a>.
+            This is a translation of a puzzle from a probablity textbook ISBN: 978-83-89716-19-4 by J. Jakubowski and R. Sztencel. Page 16.
+
+           
         </p><p>
-        I do not despise other intellectual pursuits like the game of chess or the <a target="_blank" rel="noopener noreferrer" href='https://en.wikipedia.org/wiki/Set_(card_game)'>set game</a>.
-        My favourite computer game is <a target="_blank" rel="noopener noreferrer" href='https://en.wikipedia.org/wiki/Torment:_Tides_of_Numenera'>Torment:_Tides_of_Numenera</a>.
-        I like SciFi books, like  <a target="_blank" rel="noopener noreferrer" href='https://en.wikipedia.org/wiki/Snow_Crash'>Snow Crash</a>.</p><p>I have created this page to write down the notes I have produced during my pursuits, so soon there will be more to explore.        
+            Adam and Bolek play the following game. Automaton generates pair of consecutive natural numbers. Then gives one to Adam and the other to Bolek. Adam knows the number Bolek got, and Bolek knows the number Adam got. But none of them knows the number assigned to themselves. The person that has the lower number, pays the number of coins to the other person. Each of the players can pass the round, and ask for new pair of numbers.
+            Adam thinks: "I can see Bolek has number K, so  I have K-1 or K+1. If I win I gain K coins, if I lose I give K-1 coins. So on average I gain  a half of coin."
+            Boleks thoughts follow the same reasoning.
+            So nobody passes. But that would mean, it is not zero sum game.
+        </p><p>
+            Intresting isn't it?
         </p>
     </div>
 
 
     <style>
          div {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 1rem;
+
+    visibility:visible; 
+}
+p {
+    margin-left: 15%;
+    margin-right: 15%;
     padding: 1rem;
 
     visibility:visible; 

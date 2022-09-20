@@ -85,15 +85,15 @@ Of course, I tried a lot more various technologies and languages, but there is n
 
 <style>
     ul {
-     margin-left: 10%;
+     margin-left: 15%;
      text-align: justify;     
     }
     li { 
    margin-bottom: 0.5rem;  
 }
   p {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 10%;
+    margin-right: 10%;
     text-align: justify;    
     padding-top: 1rem;
     margin-top: 0;
@@ -116,7 +116,9 @@ Of course, I tried a lot more various technologies and languages, but there is n
     margin-bottom: 0;
   }
 
- 
+
+   
+
   div {
     margin-left: 5%;
     margin-right: 5%;

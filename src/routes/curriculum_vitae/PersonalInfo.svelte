@@ -68,7 +68,7 @@
 <style>
   .grid-output-external {
     display: grid;
-    margin-left: 15%;
+    margin-left: 5%;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
     
@@ -77,7 +77,7 @@
   
   
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 0.5rem;
     

@@ -1,0 +1,1 @@
+import{default as e}from"../components/pages/curriculum_vitae/_page.svelte-7394b0b3.js";import"./index-77e5e040.js";import"./preload-helper-0ffe6af8.js";import"./index-195f0fe2.js";export{e as component};

@@ -1,6 +1,6 @@
 :root {
   font-size: 16px;
-  font-family: "MS Open Sans";
+  font-family: Arial, Helvetica, sans-serif;
   --text-primary: #000000;
   --text-secondary: #00a2e2a6;
   --bg-primary: #ffffff;
@@ -33,11 +33,11 @@ ul{
  .glass{
   visibility: visible;
 
-  background: rgba(255, 255, 255, 0.16);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(9.1px);
--webkit-backdrop-filter: blur(9.1px);
-border: 1px solid rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.33);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6.4px);
+  -webkit-backdrop-filter: blur(6.4px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 
  } 

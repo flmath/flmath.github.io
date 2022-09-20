@@ -94,14 +94,15 @@ import Erlang from '$lib/assets/certs/erlang.pdf'
     
 
     visibility:visible;
-    background-color: rgba(255,255,255,0.8);
+  
 
     }
     
       .table-main {
+
         padding: 1rem;
         font-size: var(--the-font-size);
-        margin-left: 0;
+        margin-left: 1rem;
         display: flex;
         align-items: center;
         justify-content: center;

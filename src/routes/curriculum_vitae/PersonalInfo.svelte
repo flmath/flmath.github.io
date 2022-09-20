@@ -69,7 +69,7 @@
   .grid-output-external {
     display: grid;
     margin-left: 15%;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
     
      }
@@ -91,18 +91,17 @@
         
   }
   div {
-    margin-left: 5%;
+    margin-left: 2%;
     margin-right: 5%;
     text-align: right;
 
-    visibility:visible;
-    background-color: rgba(255,255,255,0.8);
+ 
 
     }
   .table-main {
     padding: 1rem;
     font-size: var(--the-font-size);
-    margin-left: 0;
+    margin-left: 1rem;
     display: flex;
     justify-content: center;
   }

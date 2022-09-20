@@ -61,6 +61,7 @@ $: innerWidth = 0
 
 </div>
 </div>
+<br/>
 <div class="glass">
   <p>
     I graduated in mathematics. I started as a C++ developer. Soon after I transitioned to an Erlang based project. Since then my professional career is connected to it. 
@@ -121,8 +122,7 @@ Of course, I tried a lot more various technologies and languages, but there is n
     margin-right: 5%;
     text-align: right;
     padding: 1rem;
-    visibility:visible;
-    background-color: rgba(255,255,255,0.8);
+   
 
     }
   .table-main {

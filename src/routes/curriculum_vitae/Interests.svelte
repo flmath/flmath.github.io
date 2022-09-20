@@ -17,8 +17,8 @@
     margin-right: 5%;
     padding: 1rem;
 
-    visibility:visible;
-    background-color: rgba(255,255,255,0.8);
+    visibility:visible; 
+   
 
     }
     </style>

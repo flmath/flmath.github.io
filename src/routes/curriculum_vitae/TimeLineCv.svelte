@@ -44,7 +44,7 @@
     class="div-chart"
     style="height: {20 * rows.length}px;
     padding-left: {0.01 * mainWidth}px;
-    padding-right: {0.01 * mainWidth}px;
+   
     
     padding-top: 30px;
     padding-bottom: {250 + 20 * rows.length}px;"
@@ -61,7 +61,7 @@
                 showRowLabels: true,
                 groupByRowLabel: false,
             },
-            width: mainWidth * 0.9 - 150,
+            width: mainWidth * 0.98,
             height: 70 * (rows.length + 1),
             title,
             backgroundColor: "transparent",
@@ -73,17 +73,21 @@
 
 <style>
     .div-chart {
-        width: 100vw;
+        width: 96%;
 
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 0;
+        margin-right: 0;
         align-items: center;
-       
+
         padding: 0;
         display: block;
-visibility: visible;
-background-color: white;
-
+        visibility: visible;
+        background: rgba(255, 255, 255, 0.33);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(6.4px);
+        -webkit-backdrop-filter: blur(6.4px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
     }
     .mainContent {
         margin: 0;

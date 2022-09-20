@@ -20,7 +20,7 @@
 
   .table-main {
     padding: 1rem;;
-    margin-left: 0;
+    margin-left: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;

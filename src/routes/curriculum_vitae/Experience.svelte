@@ -38,9 +38,8 @@
     </div>
   </div>
 {/if}
-
+<CvHeaderShort >04/2022 to Present: Telia ACE</CvHeaderShort>
 <div class="glass">
-  <CvHeaderShort >04/2022 to Present: Telia ACE</CvHeaderShort>
   <p>
     Developing Telias ACE platform for contact centers. Converting OTP FSMs into
     Statem. Extending products REST API.
@@ -48,10 +47,11 @@
 
   <p>Technologies: Erlang, OpenAPI</p>
 </div>
+<CvHeaderShort>
+  08/2015 to 03/2022: Ericsson SBG, consultant from DEK
+</CvHeaderShort>
 <div class="glass">
-  <CvHeaderShort>
-    08/2015 to 03/2022: Ericsson SBG, consultant from DEK
-  </CvHeaderShort>
+ 
   <p>
     Developing IMS Session Border Gateway (SBG). Extending various capabilities
     of the SBG project. Extending SIP, Diameter and Megaco protocol
@@ -67,10 +67,11 @@
 
   <p>Other: DEK Machine Learning group participant.</p>
 </div>
+<CvHeaderShort>
+  01/2014 to 06/2015: Ericsson SBG, consultant from Ericpol</CvHeaderShort
+>
 <div class="glass">
-  <CvHeaderShort>
-    01/2014 to 06/2015: Ericsson SBG, consultant from Ericpol</CvHeaderShort
-  >
+
   <p>
     Expanded a TLS support. Extended SIP Trunking feature. Created simulations
     of the SBG node (in R language) to compare throttling algorithms.
@@ -79,18 +80,20 @@
 
   <p>Improvements: Support scripts for PTA language.</p>
 </div>
+<CvHeaderShort
+>05/2012 to 12/2013: Ericsson MTAS, consultant from Ericpol</CvHeaderShort
+>
 <div class="glass">
-  <CvHeaderShort
-    >05/2012 to 12/2013: Ericsson MTAS, consultant from Ericpol</CvHeaderShort
-  >
+
   <p>
     Developing MTAS (Multimedia Telephony Application Server). Extending
     communication with HLR.
   </p>
   <p>Technologies: C++, TTCN-3</p>
 </div>
-<div class="glass">
+
   <CvHeaderShort>02/2012 to 07/2015: Ericpol</CvHeaderShort>
+  <div class="glass">
   <p>
     A supplier for MTAS and SBG projects. Passed exams from Erlang, TTCN-3, and
     C++ languages.
@@ -105,8 +108,9 @@
   }
 
   div {
+    width: 96%;
     margin-left: 2rem;
-     
+    margin-bottom: 1rem; 
 
   }
   .contain-spiner {

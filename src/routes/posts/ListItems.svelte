@@ -2,16 +2,24 @@
 	import { filtered } from "./PostList";
 </script>
 
-{#each $filtered as item}
-	<a href={"posts/" + item.Route}>
-		<div class="list-item">
-			<h3>{item.Name}</h3>
-			<p>{item.Tags}</p>
-		</div>
-	</a>
-{/each}
+<div class="top">
+	{#each $filtered as item}
+		<a href={"posts/" + item.Route}>
+			<div class="glass list-item">
+				<h3>{item.Name}</h3>
+
+				<p>{item.Tags}</p>
+			</div>
+		</a>
+	{/each}
+</div>
 
 <style>
+	.top {
+		position: relative;
+		display: fixed;
+		padding-top: 7rem;
+	}
 	a {
 		color: #000000;
 		text-decoration: none;
@@ -20,13 +28,17 @@
 	}
 	.list-item {
 		margin-left: 2.5%;
-		background-color: rgba(255, 255, 255, 0.33);
-		width: 95%;
+		margin-top: 1rem;
+		width: 91%;
 		padding: 0.3rem;
 		border-radius: 1rem;
 	}
 
 	.list-item:hover {
-		background-color: rgba(255, 255, 255);
+		background-color: rgb(0, 191, 255, 0.85);
+		box-shadow: 0 4px 30px rgba(0, 191, 255, 0.9);
+		backdrop-filter: blur(6.4px);
+		-webkit-backdrop-filter: blur(6.4px);
+		border: 0px solid rgba(215, 255, 36, 0.4);
 	}
 </style>

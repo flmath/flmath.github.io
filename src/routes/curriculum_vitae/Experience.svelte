@@ -18,9 +18,10 @@
       loaded = true;
     }, 1000);
   });
-  $: innerWidth = 0
+  $: innerWidth = 0;
 </script>
-<svelte:window bind:innerWidth/>
+
+<svelte:window bind:innerWidth />
 
 {#if loaded}
   <div transition:fade>
@@ -30,7 +31,7 @@
   <div class="contain-spiner">
     <div class="spiner">
       <Circle2
-        size="{innerWidth/32}"
+        size={innerWidth / 32}
         colorOuter="rgba(0, 191, 255, 1)"
         colorCenter="rgba(255, 255, 0, 1)"
         colorInner="rgba(188, 33, 34, 1)"
@@ -119,8 +120,6 @@
     vertical-align: middle;
     height: calc(300px + calc(20px * 6)); /*250px + 20px * noOfRows */
     display: flex;
-    
-  
   }
   .spiner {
     justify-content: center;
@@ -128,6 +127,6 @@
     margin: 0;
     padding: 0;
     display: inline-flex;
-   scale: 3;
+    scale: 3;
   }
 </style>

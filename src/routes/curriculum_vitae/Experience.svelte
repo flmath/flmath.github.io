@@ -16,9 +16,11 @@
     setTimeout(async () => {
       TimeLineCv = (await import("./TimeLineCv.svelte")).default;
       loaded = true;
-    }, 2000);
+    }, 1000);
   });
+  $: innerWidth = 0
 </script>
+<svelte:window bind:innerWidth/>
 
 {#if loaded}
   <div transition:fade>
@@ -28,17 +30,17 @@
   <div class="contain-spiner">
     <div class="spiner">
       <Circle2
-        size="60"
+        size="{innerWidth/32}"
         colorOuter="rgba(0, 191, 255, 1)"
         colorCenter="rgba(255, 255, 0, 1)"
         colorInner="rgba(188, 33, 34, 1)"
         unit="px"
-        duration="1s"
+        duration="2s"
       />
     </div>
   </div>
 {/if}
-<CvHeaderShort >04/2022 to Present: Telia ACE</CvHeaderShort>
+<CvHeaderShort>04/2022 to Present: Telia ACE</CvHeaderShort>
 <div class="glass">
   <p>
     Developing Telias ACE platform for contact centers. Converting OTP FSMs into
@@ -51,7 +53,6 @@
   08/2015 to 03/2022: Ericsson SBG, consultant from DEK
 </CvHeaderShort>
 <div class="glass">
- 
   <p>
     Developing IMS Session Border Gateway (SBG). Extending various capabilities
     of the SBG project. Extending SIP, Diameter and Megaco protocol
@@ -71,7 +72,6 @@
   01/2014 to 06/2015: Ericsson SBG, consultant from Ericpol</CvHeaderShort
 >
 <div class="glass">
-
   <p>
     Expanded a TLS support. Extended SIP Trunking feature. Created simulations
     of the SBG node (in R language) to compare throttling algorithms.
@@ -81,10 +81,9 @@
   <p>Improvements: Support scripts for PTA language.</p>
 </div>
 <CvHeaderShort
->05/2012 to 12/2013: Ericsson MTAS, consultant from Ericpol</CvHeaderShort
+  >05/2012 to 12/2013: Ericsson MTAS, consultant from Ericpol</CvHeaderShort
 >
 <div class="glass">
-
   <p>
     Developing MTAS (Multimedia Telephony Application Server). Extending
     communication with HLR.
@@ -92,8 +91,8 @@
   <p>Technologies: C++, TTCN-3</p>
 </div>
 
-  <CvHeaderShort>02/2012 to 07/2015: Ericpol</CvHeaderShort>
-  <div class="glass">
+<CvHeaderShort>02/2012 to 07/2015: Ericpol</CvHeaderShort>
+<div class="glass">
   <p>
     A supplier for MTAS and SBG projects. Passed exams from Erlang, TTCN-3, and
     C++ languages.
@@ -101,28 +100,34 @@
 </div>
 
 <style>
-  
   p {
     text-align: justify;
     margin-left: 15%;
     margin-right: 15%;
-   
-   
-
-    }
+  }
   div {
     width: 96%;
     margin-left: 2rem;
-    margin-bottom: 1rem; 
-
+    margin-bottom: 1rem;
   }
   .contain-spiner {
-    display: flex;
-    height: calc(300px + calc(20px * 6)); /*250px + 20px * noOfRows */
+    margin-left: 0;
+    padding: 0;
+    width: 100%;
+    align-items: center;
     justify-content: center;
+    vertical-align: middle;
+    height: calc(300px + calc(20px * 6)); /*250px + 20px * noOfRows */
+    display: flex;
+    
+  
   }
   .spiner {
-    align-self: center;
-    scale: 2;
+    justify-content: center;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+   scale: 3;
   }
 </style>

@@ -23,7 +23,7 @@
             It is just a loading page for SEO. Click to go to the postlist.
         </a>
 
-        <div class="background" style="background-image: url('{front}')">
+        <div class="background1" style="background-image: url('{front}')">
             <div class="water" style="background-image: url('{back}')" />
         </div>
     </div>
@@ -83,27 +83,27 @@
         min-width: calc(100% - 8rem);
         overflow: clip;
     }
-    .background {
+    .background1 {
         margin-bottom: 0;
         margin-top: auto;
         height: 100%;
         width: 100%;
 
         background-repeat: no-repeat;
-        background-size: 100vw auto;
+        background-size: 100% auto;
         background-position: bottom;
-        min-width: calc(100vw-8rem);
+        min-width: calc(100% - 8rem);
         overflow: clip;
     }
-    .background .water {
+    .background1 .water {
         margin-bottom: 0;
         margin-top: auto;
         background-repeat: no-repeat;
         background-size: 100% auto;
         background-position: bottom;
         height: 100%;
-        width: 100vw;
-        min-width: 100vw;
+        width: 100%;
+        min-width: 100%;
         filter: url("#turbulence");
         overflow: clip;
     }

@@ -13,7 +13,10 @@ class Item {
 export const term = writable('');
 export const items = writable([
     new Item("Erlang dbg use scenarios", "erlang otp dbg debugger programming tracing trace", "ErlangDBG"),
-    new Item("Interpolation", "overfitting interpolation puzzle solutions bias ", "interpolation")
+    new Item("Every answer is right if the question is wrong.", "overfitting interpolation puzzle solutions bias mathematics", "jupyter/Interpolation"),
+    new Item("Matrices in erlang: growth projections ", "growth projections erlang efficiency jupyter mathematics", "jupyter/GrowthProjections"),
+    new Item("Empirical growth testing", "growth projections efficiency jupyter mathematics", "jupyter/MatricesInErlang"),
+    new Item("Matrices in erlang", "erlang efficiency jupyter mathematics", "jupyter/Interpolation"),   
 ]);
 
 export const filtered = derived(

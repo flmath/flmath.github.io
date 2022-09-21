@@ -44,10 +44,6 @@
 
 
 <style>
-  hr {
-    color: white;
-  }
-
  .outer {
  
     width: 100%;

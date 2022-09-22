@@ -41,3 +41,9 @@ ul{
   border: 1px solid rgba(255, 255, 255, 0.4);
 
  } 
+
+
+ .erlang{
+  overflow-x: scroll;
+  /* background: rgba(0, 0, 255, 0.73); */
+}

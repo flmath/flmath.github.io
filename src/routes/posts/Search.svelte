@@ -5,7 +5,7 @@
 </script>
 
 <!-- <label for="searchInput">Search</label> -->
-
+<label for="searchInput" class="hide">Select Item</label>
 <div class="top">
     <input
         class="rounded-input"
@@ -20,6 +20,9 @@
 </div>
 
 <style>
+    .hide {
+        visibility: hidden;
+    }
     .top {
         z-index: 1;
         position: fixed;

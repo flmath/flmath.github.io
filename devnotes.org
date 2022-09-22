@@ -237,6 +237,11 @@ https://blog.logrocket.com/how-to-style-forms-with-css-a-beginners-guide/
 https://www.w3schools.com/w3css/w3css_panels.asp
 
 *** CSS resizing
+https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap
+https://www.w3schools.com/cssref/css3_pr_word-wrap.asp
+https://www.w3schools.com/cssref/playdemo.asp?filename=playcss_word-wrap
+
+
 https://css-tricks.com/transforms-on-svg-elements/
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/background-size
@@ -278,6 +283,13 @@ https://lit.dev/docs/tools/development/#development-and-production-builds
 https://code.tutsplus.com/articles/how-to-check-if-a-function-exists-in-javascript--cms-40249
 
 *** Svelte
+
+**** markdown
+https://svelteland.github.io/svelte-kit-blog-demo/create-your-blog/
+https://stackoverflow.com/questions/69565109/how-to-import-markdown-files-in-svelte-kit
+https://www.npmjs.com/package/svelte-markdown
+https://fantinel.dev/blog-development-sveltekit/
+
 https://svelte.dev/tutorial/svelte-component
 https://svelte.dev/repl/e2adc9ea596c457ebd2ae230c22b2b0b?version=3.32.1
 https://github.com/Schum123/svelte-loading-spinners
@@ -289,6 +301,7 @@ https://github.com/metonym/svelte-highlight
 https://svelte.dev/repl/28f4b2e36e4244b8b23cae3d584c4c88?version=3.16.6 remarkable
 
 **** SEO
+https://stackoverflow.com/questions/56083674/lighthouse-error-form-elements-do-not-have-associated-labels
 https://stackoverflow.com/questions/69295473/svelte-sveltekit-dynamic-import-of-components-with-variable
 https://svelte.dev/repl/16b375da9b39417dae837b5006799cb4?version=3.25.0
 https://nuclia.com/blog/how-to-build-lazy-loaded-custom-elements-with-svelte/
@@ -370,6 +383,8 @@ https://stackoverflow.com/questions/69064178/google-charts-timeline-change-bar-h
 https://svelte.dev/repl/76389084c0e241e8b1e5bd910897c468?version=3.50.1
 https://www.kudadam.com/blog/svelte-reading-progress
 
+*** error
+https://kit.svelte.dev/docs/routing#layout
 
 *** svg
 https://stackoverflow.com/questions/34201318/trying-to-make-a-for-loop-to-draw-an-svg
@@ -405,6 +420,11 @@ https://www.skypack.dev/view/svelte-particles
 https://github.com/JulianLaval/canvas-particle-network#readme
 https://github.com/VincentGarreau/particles.js
 https://vincentgarreau.com/particles.js/
+
+
+*** Jupyter
+https://github.com/jupyter/nbconvert/issues/1332
+https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/exporting.html
 
 
 *** How to make drawing from picture with GIMP:

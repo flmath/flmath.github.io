@@ -44,6 +44,7 @@
 
   .inter {
     display: flex;
+
     width: 60%;
     padding: 0;
     margin: 0;

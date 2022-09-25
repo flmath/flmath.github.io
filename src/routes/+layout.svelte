@@ -11,7 +11,7 @@
   let hover: NavElement[] = [];
   let currentPageId = $page.routeId;
 
-  onMount(async () => currentPageId = "/");
+  onMount(async () => (currentPageId = "/"));
 
   $: if (currentPageId !== $page.routeId) handleChange();
 
@@ -62,10 +62,12 @@
       >
       <NavLink href="/curriculum_vitae" bind:this={hover[2]}
         ><ImposibleCubeSvg slot="picture" />
-        <span slot="text">CV</span></NavLink>
+        <span slot="text">CV</span></NavLink
+      >
 
       <NavLink class="last" href="/exit_page" bind:this={hover[3]}>
-        <Reutersward slot="picture" /><span slot="text">Out</span></NavLink>
+        <Reutersward slot="picture" /><span slot="text">Out</span></NavLink
+      >
     </ul>
   </nav>
 
@@ -88,7 +90,9 @@
     /*based on  https://github.com/Yuvrajchandra/CSS-Background-Patterns/tree/main/1.%20The%20Black%20Hexagons with MIT license*/
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='92' height='162' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd' %3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.08' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E ");
     background-attachment: fixed;
-    }
+
+    background-position: center;
+  }
 
   body::-webkit-scrollbar {
     width: none;
@@ -121,8 +125,8 @@
   @media only screen and (max-width: 600px) {
     main {
       margin: 0;
-      padding-bottom: 8rem;      
-      margin-bottom: 8rem;      
+      padding-bottom: 8rem;
+      margin-bottom: 8rem;
       height: calc(100% - 8rem);
       max-height: calc(100% - 8rem);
       width: 100%;
@@ -130,12 +134,11 @@
     }
     .navbar {
       padding-top: 1rem;
-
       bottom: 0;
       width: 100%;
-      height: 6rem;     
+      height: 6rem;
       transition: height var(--transition-speed) ease;
-    
+      filter: opacity(1);
       background-size: cover;
     }
     .navbar:hover {
@@ -146,15 +149,14 @@
 
     .navbar-nav {
       flex-direction: row;
-      margin-left: 1rem;      
-      }
+      margin-left: 1rem;
+    }
     .navbar-nav :global(.last) {
       scale: 0.8;
-      transform: translateY(-1.5rem);   
+      transform: translateY(-1.5rem);
       margin-right: 1rem;
       margin-left: auto;
     }
-
   }
   /* Large screens */
   @media only screen and (min-width: 600px) {
@@ -166,7 +168,7 @@
       margin: 0;
       margin-left: 8rem;
     }
-  
+
     .navbar-nav {
       flex-direction: column;
       align-items: left;
@@ -184,7 +186,6 @@
       transition: width var(--transition-speed) ease;
       background-size: 18rem auto;
     }
-
 
     .navbar:hover {
       width: 18rem;

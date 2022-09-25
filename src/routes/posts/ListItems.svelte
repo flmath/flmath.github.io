@@ -18,7 +18,7 @@
 	.top {
 		position: relative;
 		display: fixed;
-		padding-top: 7rem;
+		padding-top: 8rem;
 	}
 	a {
 		color: #000000;
@@ -40,5 +40,16 @@
 		backdrop-filter: blur(6.4px);
 		-webkit-backdrop-filter: blur(6.4px);
 		border: 0px solid rgba(215, 255, 36, 0.4);
+	}
+	@media only screen and (max-width: 600px) {
+		.top {
+			padding-bottom: 9rem;
+		}
+	}
+
+	@media only screen and (min-width: 600px) {
+		.top {
+			padding-bottom: 2rem;
+		}
 	}
 </style>

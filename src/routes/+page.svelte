@@ -72,7 +72,7 @@
         position: absolute;
         background-color: #d2d9df;
         width: calc(100% - 8rem);
-        height: 100vh;
+        height: 100%;
         padding: 0;
         padding-top: 1rem;
         top: 0;
@@ -115,7 +115,7 @@
         text-decoration: none;
         color: var(--text-primary);
         background-color: none;
-        height: 100vh;
+        height: 100%;
         width: calc(100% - 10rem);
         position: absolute;
         overflow: clip;

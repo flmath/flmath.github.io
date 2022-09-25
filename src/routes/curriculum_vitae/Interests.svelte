@@ -1,6 +1,6 @@
 <div class="glass">
     <p>
-        This is a translation of a puzzle from a probablity textbook ISBN:
+        This is a translation of a puzzle from the probablity textbook ISBN:
         978-83-89716-19-4 by J. Jakubowski and R. Sztencel. Page 16.
     </p>
     <p>
@@ -12,7 +12,7 @@
         person. Each of the players can pass the round, and ask for new pair of
         numbers. Adam thinks: "I can see Bolek has number K, so I have K-1 or
         K+1. If I win I gain K coins, if I lose I give K-1 coins. So on average
-        I gain a half of coin." Boleks thoughts follow the same reasoning. So
+        I gain a half of a coin." Boleks reasoning follows the same path. So
         nobody passes. But that would mean, it is not zero sum game.
     </p>
     <p>Intresting isn't it?</p>

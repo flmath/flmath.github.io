@@ -1,6 +1,6 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
-  import { page } from '$app/stores';
+  import { page } from "$app/stores";
   let active: string = "";
   let activeText: string = "";
 
@@ -12,17 +12,17 @@
   }
   export function handleMouseOut() {
     activeText = " ";
-    if ("/" + $page.routeId !== href)
-    active = " ";
-    }
+    if ("/" + $page.routeId !== href) active = " ";
+  }
 </script>
+
 <!-- <div>{"nav-item " + active + (undefined == $$props.class ? " " : $$props.class)}</div> -->
 <li
   class={"nav-item " +
     active +
     (undefined == $$props.class ? " " : $$props.class)}
 >
-  <a {href}>
+  <a {href} on:click={() => (active = " active ")}>
     <slot name="picture">Picture</slot>
   </a>
   {#if activeText === " active "}
@@ -34,11 +34,7 @@
 
 <style>
   .nav-item {
-    margin-left: 1rem;
-    margin-bottom: 2rem;
     display: flex;
-    align-items: center;
-    height: 5rem;
     color: var(--text-primary);
     text-decoration: none;
     background: none;
@@ -49,41 +45,52 @@
   .nav-item.active {
     filter: opacity(1);
   }
+  .nav-item {
+    margin-left: 1rem;
+  }
 
   .item-text {
     font-weight: bold;
     text-transform: uppercase;
-
-    margin-top: 1rem;
-    margin-bottom: 1rem;
     text-align: center;
-    vertical-align: middle;
     background: none;
     color: var(--text-secondary);
-    width: 100%;
-    font-size: 2rem;
-    letter-spacing: 0.3ch;
     text-decoration: none;
   }
 
   /* Small screens */
   @media only screen and (max-width: 600px) {
     .navbar {
-      bottom: 0;
-      width: 100vw;
-      height: 5rem;
+      width: 100%;
+      height: 6rem;
     }
+    .nav-item {
+    margin-left: 5px;
+  }
 
-    .navbar-nav {
-      flex-direction: row;
-    }
-
-    .nav-link {
-      justify-content: center;
+   
+    .item-text {
+      display: none;
+      font-size: 1rem;
     }
   }
 
   /* Large screens */
   @media only screen and (min-width: 600px) {
+    .nav-item {
+      margin-left: 1rem;
+      margin-bottom: 2rem;
+      align-items: center;
+      height: 5rem;
+    }
+
+    .item-text {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      vertical-align: middle;
+      width: 100%;
+      font-size: 2rem;
+      letter-spacing: 0.3ch;
+    }
   }
 </style>

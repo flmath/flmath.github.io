@@ -8,6 +8,8 @@
   let active: string = "";
   let activeText: string = "";
 
+  export let href = "/";
+
   function spin(node: HTMLElement, spin: SpinOptions) {
     let duration = spin.duration;
     let delay = spin.delay;
@@ -33,25 +35,24 @@
   }
   export function handleMouseOut() {
     activeText = "";
-    if ($page.routeId !== "") active = "";
+    if ("/" + $page.routeId !== href) {
+      active = "";
+    }
   }
 </script>
 
 <li class={"logo" + active}>
-  <a href="/" class="nav-link">
+  <a {href} class="nav-link" on:click={() => (active = " active ")}>
     {#if active === ""}
       <span class="button" in:spinBack={new SpinOptions(1000, 0)}>
-        <Penrose8 /></span
-      >
+        <Penrose8 /></span>
     {:else}
       <span class="button" in:spinForward={new SpinOptions(1000, 0)}>
-        <Penrose8 /></span
-      >
+        <Penrose8 /></span>
     {/if}
     {#if activeText !== ""}
       <span class="link-text logo-text" in:fade={{ duration: 300, delay: 200 }}>
-        <slot name="text">Missing</slot></span
-      >
+        <slot name="text">Missing</slot></span>
     {/if}
   </a>
 </li>
@@ -59,8 +60,6 @@
 <style>
   .nav-link {
     display: flex;
-    align-items: center;
-    height: 5rem;
     color: var(--text-primary);
     text-decoration: none;
     background: none;
@@ -70,43 +69,76 @@
   .active .nav-link {
     filter: grayscale(0%) opacity(1);
     color: var(--text-secondary);
-    margin-left: 0rem;
   }
+
   .logo {
     font-weight: bold;
     text-transform: uppercase;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
     text-align: center;
-    vertical-align: middle;
     color: var(--text-secondary);
     background: none;
-    font-size: 2rem;
-    letter-spacing: 0.3ch;
-    width: 100%;
   }
+
   /* Small screens */
   @media only screen and (max-width: 600px) {
-    .navbar {
-      bottom: 0;
-      width: 100vw;
-      height: 5rem;
-    }
-
     .logo {
-      display: none;
+      vertical-align: middle;
+    }
+    .navbar {
+     
+      /* width: 100%;
+      height: 5rem; */
+      
+      vertical-align: bottom;
+
     }
 
     .navbar-nav {
       flex-direction: row;
     }
+    .nav-link {  
 
-    .nav-link {
-      justify-content: center;
+     }
+    .active .nav-link {
+      margin: 0;
     }
+
+    .nav-link .link-text {
+      display: none;
+
+    }
+    .nav-link .button {
+      height: 5rem;
+
+    }
+    .active .nav-link .link-text {
+      margin-top: 2rem;
+      display:none;
+    }
+
+
+
   }
   /* Large screens */
   @media only screen and (min-width: 600px) {
+    .logo {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      vertical-align: middle;
+      font-size: 2rem;
+      letter-spacing: 0.3ch;
+      width: 100%;
+    }
+
+    .nav-link {
+      align-items: center;
+      height: 5rem;
+    }
+
+    .active .nav-link {
+      margin-left: 0rem;
+    }
+
     .nav-link .link-text {
       display: none;
       margin-left: 1rem;

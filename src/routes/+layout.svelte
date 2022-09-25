@@ -163,7 +163,7 @@
   /* Large screens */
   @media only screen and (min-width: 600px) {
     body {
-    padding-bottom: 6rem;
+    padding-bottom: 8rem;
    }
     main {
       width: calc(100% - 8rem);

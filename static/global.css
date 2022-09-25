@@ -6,11 +6,31 @@
   --bg-primary: #ffffff;
   --bg-secondary: #141418;
   --transition-speed: 600ms;
-  --the-font-size: larger;
-
   --fa-primary: #ff7eee;
   --fa-secondary: #df49a6;
 }
+
+
+@media only screen and (max-width: 600px) {
+  :root {
+    font-size: 12px;
+  
+    --the-font-size: larger;
+  
+  }
+  
+}
+
+@media only screen and (min-width: 600px) {
+  :root {
+    font-size: 16px;
+    --the-font-size: larger;
+
+  }
+  
+}
+
+
 
 body {
   background-color: var(--bg-primary);

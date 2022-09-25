@@ -1,4 +1,5 @@
 <script>
+
 	import { filtered } from "./PostList";
 </script>
 
@@ -18,7 +19,13 @@
 	.top {
 		position: relative;
 		display: fixed;
+		padding-right: 0;
+		padding-left: 0;
+		padding-bottom: 0;
 		padding-top: 8rem;
+
+		background-color: transparent;
+		
 	}
 	a {
 		color: #000000;
@@ -43,13 +50,13 @@
 	}
 	@media only screen and (max-width: 600px) {
 		.top {
-			padding-bottom: 9rem;
+			margin-bottom: 9rem;
 		}
 	}
 
 	@media only screen and (min-width: 600px) {
 		.top {
-			padding-bottom: 2rem;
+			margin-bottom: 2rem;
 		}
 	}
 </style>

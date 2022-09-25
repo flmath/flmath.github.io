@@ -71,16 +71,11 @@
     .container {
         position: absolute;
         background-color: #d2d9df;
-        width: calc(100% - 8rem);
         height: 100%;
         padding: 0;
-        padding-top: 1rem;
+        padding-top: 2rem;
         top: 0;
-
         margin: 0;
-
-        left: 8rem;
-        min-width: calc(100% - 8rem);
         overflow: clip;
     }
     .background1 {
@@ -116,9 +111,32 @@
         color: var(--text-primary);
         background-color: none;
         height: 100%;
-        width: calc(100% - 10rem);
         position: absolute;
         overflow: clip;
         z-index: 2;
+    }
+
+    @media only screen and (min-width: 600px) {
+        .container {
+            width: calc(100% - 8rem);
+            left: 8rem;
+            min-width: calc(100% - 8rem);
+        }
+
+        a {
+            width: calc(100% - 10rem);
+            margin-left: 2rem;
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        .container {
+            width: 100%;
+            left: 0rem;
+            min-width: 100%;
+        }
+        a {
+            width: calc(100% - 6rem);
+            margin-left: 2rem;
+        }
     }
 </style>

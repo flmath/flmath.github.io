@@ -19,10 +19,13 @@
     }, 1000);
   });
   $: innerWidth = 0;
+  $: outerWidth = 0
 </script>
 
-<svelte:window bind:innerWidth />
-
+<svelte:window bind:outerWidth bind:innerWidth />
+<!-- 
+<div> {outerWidth} </div> -->
+{#if outerWidth > 600}
 {#if loaded}
   <div transition:fade>
     <svelte:component this={TimeLineCv} />
@@ -42,6 +45,7 @@
       />
     </div>
   </div>
+{/if}
 {/if}
 <CvHeaderShort>04/2022 to Present: Telia ACE</CvHeaderShort>
 <div class="glass">
@@ -131,4 +135,18 @@
     display: inline-flex;
     scale: 3;
   }
+
+  @media only screen and (max-width: 600px) {
+    div {
+    width: 90%;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+}
+
+@media only screen and (min-width: 600px) {
+ 
+  
+}
 </style>

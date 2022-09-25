@@ -19,7 +19,7 @@
   }
 
   .table-main {
-    padding: 1rem;;
+    padding: 1rem;
     margin-left: 1rem;
     display: flex;
     align-items: center;
@@ -30,10 +30,28 @@
   div {
     margin-left: 5%;
     margin-right: 5%;
-    
-    
-  
-    visibility:visible;
-    
+    visibility: visible;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .grid-output {
+      display: grid;
+      grid-template-columns: repeat(1, 80%);
+      grid-template-rows: repeat(1, 2rem);
+      grid-gap: 0.1rem;
     }
+
+    .colone {
+      visibility: hidden;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .grid-output {
+      display: grid;
+      grid-template-columns: repeat(2, 20rem);
+      grid-template-rows: repeat(2, 3rem);
+      grid-gap: 0.5rem;
+    }
+  }
 </style>

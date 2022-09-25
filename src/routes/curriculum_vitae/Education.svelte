@@ -40,10 +40,10 @@
       grid-template-rows: repeat(1, 2rem);
       grid-gap: 0.1rem;
     }
-
+/* 
     .colone {
       visibility: hidden;
-    }
+    } */
   }
 
   @media only screen and (min-width: 600px) {

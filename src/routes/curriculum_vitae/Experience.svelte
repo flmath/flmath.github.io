@@ -36,7 +36,9 @@
         colorCenter="rgba(255, 255, 0, 1)"
         colorInner="rgba(188, 33, 34, 1)"
         unit="px"
-        duration="2s"
+        durationOuter="6s"
+        durationCenter="8s"
+        durationInner="4s"
       />
     </div>
   </div>

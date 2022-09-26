@@ -23,7 +23,7 @@ const config =  {
       fallback: 'index.html',
       precompress: false
     }),
-
+    prerender: { entries: ['*', '/curriculum_vitae', '/posts/ErlangDBG'] }
  
   }
 };

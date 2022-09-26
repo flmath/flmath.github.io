@@ -21,7 +21,7 @@ const config =  {
       pages: 'build',
       assets: 'build',
       fallback: 'index.html',
-      precompress: false
+      precompress: true
     }),
     prerender: { entries: ['*', '/curriculum_vitae', '/posts/ErlangDBG'] }
  

@@ -52,13 +52,13 @@
     "src": "src/lib/assets/fonts/Creepster-Regular.ttf"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "internal/immutable/start-a4a450a5.js",
+    "file": "internal/immutable/start-7e15a51e.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_preload-helper-0ffe6af8.js",
       "_index-57c1f8f9.js",
-      "_singletons-fcc4d6fd.js"
+      "_singletons-78fd7459.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -77,13 +77,13 @@
     ]
   },
   "src/routes/+layout.svelte": {
-    "file": "internal/immutable/components/pages/_layout.svelte-d279640a.js",
+    "file": "internal/immutable/components/pages/_layout.svelte-3d5b8b23.js",
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
       "_index-57c1f8f9.js",
       "_index-9678ea77.js",
-      "_stores-4919202d.js"
+      "_stores-1b4f28f9.js"
     ],
     "css": [
       "internal/immutable/assets/_layout-31720baa.css"
@@ -94,12 +94,12 @@
     ]
   },
   "src/routes/+error.svelte": {
-    "file": "internal/immutable/components/pages/_error.svelte-8ce26076.js",
+    "file": "internal/immutable/components/pages/_error.svelte-e01cf890.js",
     "src": "src/routes/+error.svelte",
     "isEntry": true,
     "imports": [
       "_index-57c1f8f9.js",
-      "_stores-4919202d.js"
+      "_stores-1b4f28f9.js"
     ],
     "css": [
       "internal/immutable/assets/_error-5ba6092a.css"
@@ -303,6 +303,22 @@
       "__page-89f219c0.js"
     ]
   },
+  "src/routes/posts/ErlangDBG/+page.ts": {
+    "file": "internal/immutable/modules/pages/posts/ErlangDBG/_page.ts-0a867df6.js",
+    "src": "src/routes/posts/ErlangDBG/+page.ts",
+    "isEntry": true,
+    "imports": [
+      "__page-4ef6298b.js"
+    ]
+  },
+  "src/routes/posts/jupyter/+page.ts": {
+    "file": "internal/immutable/modules/pages/posts/jupyter/_page.ts-82afb6a5.js",
+    "src": "src/routes/posts/jupyter/+page.ts",
+    "isEntry": true,
+    "imports": [
+      "__page-89518f60.js"
+    ]
+  },
   "src/routes/posts/jupyter/EmpiricalGrowthTesting/+page.ts": {
     "file": "internal/immutable/modules/pages/posts/jupyter/EmpiricalGrowthTesting/_page.ts-f00c6604.js",
     "src": "src/routes/posts/jupyter/EmpiricalGrowthTesting/+page.ts",
@@ -335,8 +351,8 @@
       "__page-f58eb162.js"
     ]
   },
-  "_singletons-fcc4d6fd.js": {
-    "file": "internal/immutable/chunks/singletons-fcc4d6fd.js",
+  "_singletons-78fd7459.js": {
+    "file": "internal/immutable/chunks/singletons-78fd7459.js",
     "imports": [
       "_index-a3c86569.js"
     ]
@@ -353,11 +369,11 @@
       "_index-57c1f8f9.js"
     ]
   },
-  "_stores-4919202d.js": {
-    "file": "internal/immutable/chunks/stores-4919202d.js",
+  "_stores-1b4f28f9.js": {
+    "file": "internal/immutable/chunks/stores-1b4f28f9.js",
     "imports": [
       "_index-57c1f8f9.js",
-      "_singletons-fcc4d6fd.js"
+      "_singletons-78fd7459.js"
     ]
   },
   "_index-9678ea77.js": {
@@ -381,6 +397,12 @@
   "__page-89f219c0.js": {
     "file": "internal/immutable/chunks/_page-89f219c0.js"
   },
+  "__page-4ef6298b.js": {
+    "file": "internal/immutable/chunks/_page-4ef6298b.js"
+  },
+  "__page-89518f60.js": {
+    "file": "internal/immutable/chunks/_page-89518f60.js"
+  },
   "__page-ff1a2dd9.js": {
     "file": "internal/immutable/chunks/_page-ff1a2dd9.js"
   },
@@ -394,7 +416,7 @@
     "file": "internal/immutable/chunks/_page-f58eb162.js"
   },
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "internal/immutable/chunks/0-38888f3a.js",
+    "file": "internal/immutable/chunks/0-97ff5905.js",
     "src": ".svelte-kit/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
@@ -403,7 +425,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "internal/immutable/chunks/1-af6a352e.js",
+    "file": "internal/immutable/chunks/1-44e8e7f6.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -455,18 +477,20 @@
     ]
   },
   ".svelte-kit/generated/nodes/7.js": {
-    "file": "internal/immutable/chunks/7-61b610a3.js",
+    "file": "internal/immutable/chunks/7-7829b49b.js",
     "src": ".svelte-kit/generated/nodes/7.js",
     "isDynamicEntry": true,
     "imports": [
+      "__page-4ef6298b.js",
       "src/routes/posts/ErlangDBG/+page.svelte"
     ]
   },
   ".svelte-kit/generated/nodes/8.js": {
-    "file": "internal/immutable/chunks/8-903f959e.js",
+    "file": "internal/immutable/chunks/8-ab64f6a6.js",
     "src": ".svelte-kit/generated/nodes/8.js",
     "isDynamicEntry": true,
     "imports": [
+      "__page-89518f60.js",
       "src/routes/posts/jupyter/+page.svelte"
     ]
   },
@@ -541,10 +565,6 @@
     "file": "internal/immutable/assets/_page-c53f0b1d.css",
     "src": "src/routes/+page.css"
   },
-  "src/routes/+error.css": {
-    "file": "internal/immutable/assets/_error-5ba6092a.css",
-    "src": "src/routes/+error.css"
-  },
   "src/routes/exit_page/+layout.css": {
     "file": "internal/immutable/assets/_layout-984ab1c7.css",
     "src": "src/routes/exit_page/+layout.css"
@@ -553,28 +573,32 @@
     "file": "internal/immutable/assets/_layout-31720baa.css",
     "src": "src/routes/+layout.css"
   },
-  "src/routes/posts/+page.css": {
-    "file": "internal/immutable/assets/_page-64855329.css",
-    "src": "src/routes/posts/+page.css"
-  },
-  "src/routes/exit_page/+page.css": {
-    "file": "internal/immutable/assets/_page-b150f600.css",
-    "src": "src/routes/exit_page/+page.css"
-  },
-  "src/routes/curriculum_vitae/+page.css": {
-    "file": "internal/immutable/assets/_page-2052f221.css",
-    "src": "src/routes/curriculum_vitae/+page.css"
-  },
-  "src/routes/posts/jupyter/EmpiricalGrowthTesting/+page.css": {
-    "file": "internal/immutable/assets/_page-d17f105b.css",
-    "src": "src/routes/posts/jupyter/EmpiricalGrowthTesting/+page.css"
+  "src/routes/+error.css": {
+    "file": "internal/immutable/assets/_error-5ba6092a.css",
+    "src": "src/routes/+error.css"
   },
   "src/routes/curriculum_vitae/TimeLineCv.css": {
     "file": "internal/immutable/assets/TimeLineCv-dd5d6d51.css",
     "src": "src/routes/curriculum_vitae/TimeLineCv.css"
   },
+  "src/routes/exit_page/+page.css": {
+    "file": "internal/immutable/assets/_page-b150f600.css",
+    "src": "src/routes/exit_page/+page.css"
+  },
+  "src/routes/posts/+page.css": {
+    "file": "internal/immutable/assets/_page-64855329.css",
+    "src": "src/routes/posts/+page.css"
+  },
   "src/routes/posts/ErlangDBG/+page.css": {
     "file": "internal/immutable/assets/_page-4f638416.css",
     "src": "src/routes/posts/ErlangDBG/+page.css"
+  },
+  "src/routes/posts/jupyter/MatricesInErlang/+page.css": {
+    "file": "internal/immutable/assets/_page-d17f105b.css",
+    "src": "src/routes/posts/jupyter/MatricesInErlang/+page.css"
+  },
+  "src/routes/curriculum_vitae/+page.css": {
+    "file": "internal/immutable/assets/_page-2052f221.css",
+    "src": "src/routes/curriculum_vitae/+page.css"
   }
 }

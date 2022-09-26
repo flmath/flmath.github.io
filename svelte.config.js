@@ -1,7 +1,7 @@
 import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-static';
 
-const dev = process.env.APP_ENV === 'development';
+// const dev = process.env.APP_ENV === 'development';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config =  {
@@ -11,7 +11,8 @@ const config =  {
   preprocess: preprocess(),	
  
   kit: {
-	paths: { base: dev ? '' : '/flmath.github.io',
+	paths: { base: '',
+    // dev ? '' : '/flmath.github.io',
 	},
 	appDir: 'internal',
     adapter: adapter({

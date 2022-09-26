@@ -1,11 +1,11 @@
 {
-  "src/lib/png/smallmask.webp": {
-    "file": "internal/immutable/assets/smallmask-02ff86d1.webp",
-    "src": "src/lib/png/smallmask.webp"
-  },
   "src/lib/png/small.webp": {
     "file": "internal/immutable/assets/small-8be2bec3.webp",
     "src": "src/lib/png/small.webp"
+  },
+  "src/lib/png/smallmask.webp": {
+    "file": "internal/immutable/assets/smallmask-02ff86d1.webp",
+    "src": "src/lib/png/smallmask.webp"
   },
   "src/lib/assets/p3cc.png": {
     "file": "internal/immutable/assets/p3cc-1c23eee2.png",
@@ -52,13 +52,13 @@
     "src": "src/lib/assets/fonts/Creepster-Regular.ttf"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "internal/immutable/start-567f2ff9.js",
+    "file": "internal/immutable/start-892745fc.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_preload-helper-0ffe6af8.js",
       "_index-57c1f8f9.js",
-      "_singletons-b3af958e.js"
+      "_singletons-5d47b7ea.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -77,13 +77,13 @@
     ]
   },
   "src/routes/+layout.svelte": {
-    "file": "internal/immutable/components/pages/_layout.svelte-3dce565c.js",
+    "file": "internal/immutable/components/pages/_layout.svelte-9f4363fe.js",
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
       "_index-57c1f8f9.js",
       "_index-9678ea77.js",
-      "_stores-11deea2f.js"
+      "_stores-a4b5c45b.js"
     ],
     "css": [
       "internal/immutable/assets/_layout-31720baa.css"
@@ -94,12 +94,12 @@
     ]
   },
   "src/routes/+error.svelte": {
-    "file": "internal/immutable/components/pages/_error.svelte-abd7c248.js",
+    "file": "internal/immutable/components/pages/_error.svelte-15f96ab1.js",
     "src": "src/routes/+error.svelte",
     "isEntry": true,
     "imports": [
       "_index-57c1f8f9.js",
-      "_stores-11deea2f.js"
+      "_stores-a4b5c45b.js"
     ],
     "css": [
       "internal/immutable/assets/_error-5ba6092a.css"
@@ -303,56 +303,16 @@
       "__page-89f219c0.js"
     ]
   },
-  "src/routes/posts/ErlangDBG/+page.ts": {
-    "file": "internal/immutable/modules/pages/posts/ErlangDBG/_page.ts-49c79c36.js",
-    "src": "src/routes/posts/ErlangDBG/+page.ts",
-    "isEntry": true,
-    "imports": [
-      "__page-62600430.js"
-    ]
-  },
   "src/routes/posts/jupyter/+page.ts": {
-    "file": "internal/immutable/modules/pages/posts/jupyter/_page.ts-82afb6a5.js",
+    "file": "internal/immutable/modules/pages/posts/jupyter/_page.ts-5802215a.js",
     "src": "src/routes/posts/jupyter/+page.ts",
     "isEntry": true,
     "imports": [
-      "__page-89518f60.js"
+      "__page-a01b6da5.js"
     ]
   },
-  "src/routes/posts/jupyter/EmpiricalGrowthTesting/+page.ts": {
-    "file": "internal/immutable/modules/pages/posts/jupyter/EmpiricalGrowthTesting/_page.ts-f00c6604.js",
-    "src": "src/routes/posts/jupyter/EmpiricalGrowthTesting/+page.ts",
-    "isEntry": true,
-    "imports": [
-      "__page-ff1a2dd9.js"
-    ]
-  },
-  "src/routes/posts/jupyter/GrowthProjections/+page.ts": {
-    "file": "internal/immutable/modules/pages/posts/jupyter/GrowthProjections/_page.ts-ace3e7af.js",
-    "src": "src/routes/posts/jupyter/GrowthProjections/+page.ts",
-    "isEntry": true,
-    "imports": [
-      "__page-dd7e85cd.js"
-    ]
-  },
-  "src/routes/posts/jupyter/Interpolation/+page.ts": {
-    "file": "internal/immutable/modules/pages/posts/jupyter/Interpolation/_page.ts-cc22240d.js",
-    "src": "src/routes/posts/jupyter/Interpolation/+page.ts",
-    "isEntry": true,
-    "imports": [
-      "__page-d01fcb36.js"
-    ]
-  },
-  "src/routes/posts/jupyter/MatricesInErlang/+page.ts": {
-    "file": "internal/immutable/modules/pages/posts/jupyter/MatricesInErlang/_page.ts-3fe0111f.js",
-    "src": "src/routes/posts/jupyter/MatricesInErlang/+page.ts",
-    "isEntry": true,
-    "imports": [
-      "__page-f58eb162.js"
-    ]
-  },
-  "_singletons-b3af958e.js": {
-    "file": "internal/immutable/chunks/singletons-b3af958e.js",
+  "_singletons-5d47b7ea.js": {
+    "file": "internal/immutable/chunks/singletons-5d47b7ea.js",
     "imports": [
       "_index-a3c86569.js"
     ]
@@ -369,11 +329,11 @@
       "_index-57c1f8f9.js"
     ]
   },
-  "_stores-11deea2f.js": {
-    "file": "internal/immutable/chunks/stores-11deea2f.js",
+  "_stores-a4b5c45b.js": {
+    "file": "internal/immutable/chunks/stores-a4b5c45b.js",
     "imports": [
       "_index-57c1f8f9.js",
-      "_singletons-b3af958e.js"
+      "_singletons-5d47b7ea.js"
     ]
   },
   "_index-9678ea77.js": {
@@ -397,26 +357,11 @@
   "__page-89f219c0.js": {
     "file": "internal/immutable/chunks/_page-89f219c0.js"
   },
-  "__page-62600430.js": {
-    "file": "internal/immutable/chunks/_page-62600430.js"
-  },
-  "__page-89518f60.js": {
-    "file": "internal/immutable/chunks/_page-89518f60.js"
-  },
-  "__page-ff1a2dd9.js": {
-    "file": "internal/immutable/chunks/_page-ff1a2dd9.js"
-  },
-  "__page-dd7e85cd.js": {
-    "file": "internal/immutable/chunks/_page-dd7e85cd.js"
-  },
-  "__page-d01fcb36.js": {
-    "file": "internal/immutable/chunks/_page-d01fcb36.js"
-  },
-  "__page-f58eb162.js": {
-    "file": "internal/immutable/chunks/_page-f58eb162.js"
+  "__page-a01b6da5.js": {
+    "file": "internal/immutable/chunks/_page-a01b6da5.js"
   },
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "internal/immutable/chunks/0-d6f42b11.js",
+    "file": "internal/immutable/chunks/0-1d27fa65.js",
     "src": ".svelte-kit/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
@@ -425,7 +370,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "internal/immutable/chunks/1-b090d624.js",
+    "file": "internal/immutable/chunks/1-34ce99ff.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -477,56 +422,51 @@
     ]
   },
   ".svelte-kit/generated/nodes/7.js": {
-    "file": "internal/immutable/chunks/7-d39d648d.js",
+    "file": "internal/immutable/chunks/7-61b610a3.js",
     "src": ".svelte-kit/generated/nodes/7.js",
     "isDynamicEntry": true,
     "imports": [
-      "__page-62600430.js",
       "src/routes/posts/ErlangDBG/+page.svelte"
     ]
   },
   ".svelte-kit/generated/nodes/8.js": {
-    "file": "internal/immutable/chunks/8-ab64f6a6.js",
+    "file": "internal/immutable/chunks/8-d77e35da.js",
     "src": ".svelte-kit/generated/nodes/8.js",
     "isDynamicEntry": true,
     "imports": [
-      "__page-89518f60.js",
+      "__page-a01b6da5.js",
       "src/routes/posts/jupyter/+page.svelte"
     ]
   },
   ".svelte-kit/generated/nodes/9.js": {
-    "file": "internal/immutable/chunks/9-8ca82617.js",
+    "file": "internal/immutable/chunks/9-993a2171.js",
     "src": ".svelte-kit/generated/nodes/9.js",
     "isDynamicEntry": true,
     "imports": [
-      "__page-ff1a2dd9.js",
       "src/routes/posts/jupyter/EmpiricalGrowthTesting/+page.svelte"
     ]
   },
   ".svelte-kit/generated/nodes/10.js": {
-    "file": "internal/immutable/chunks/10-53ce4ce1.js",
+    "file": "internal/immutable/chunks/10-ef24f084.js",
     "src": ".svelte-kit/generated/nodes/10.js",
     "isDynamicEntry": true,
     "imports": [
-      "__page-dd7e85cd.js",
       "src/routes/posts/jupyter/GrowthProjections/+page.svelte"
     ]
   },
   ".svelte-kit/generated/nodes/11.js": {
-    "file": "internal/immutable/chunks/11-b9a4b47d.js",
+    "file": "internal/immutable/chunks/11-6a200dde.js",
     "src": ".svelte-kit/generated/nodes/11.js",
     "isDynamicEntry": true,
     "imports": [
-      "__page-d01fcb36.js",
       "src/routes/posts/jupyter/Interpolation/+page.svelte"
     ]
   },
   ".svelte-kit/generated/nodes/12.js": {
-    "file": "internal/immutable/chunks/12-4d67de8b.js",
+    "file": "internal/immutable/chunks/12-a071c081.js",
     "src": ".svelte-kit/generated/nodes/12.js",
     "isDynamicEntry": true,
     "imports": [
-      "__page-f58eb162.js",
       "src/routes/posts/jupyter/MatricesInErlang/+page.svelte"
     ]
   },
@@ -561,13 +501,13 @@
     "src": "src/routes/posts/jupyter/MatricesInErlang/page.html?raw",
     "isDynamicEntry": true
   },
-  "src/routes/+layout.css": {
-    "file": "internal/immutable/assets/_layout-31720baa.css",
-    "src": "src/routes/+layout.css"
+  "src/routes/exit_page/+layout.css": {
+    "file": "internal/immutable/assets/_layout-984ab1c7.css",
+    "src": "src/routes/exit_page/+layout.css"
   },
-  "src/routes/posts/jupyter/MatricesInErlang/+page.css": {
-    "file": "internal/immutable/assets/_page-d17f105b.css",
-    "src": "src/routes/posts/jupyter/MatricesInErlang/+page.css"
+  "src/routes/+error.css": {
+    "file": "internal/immutable/assets/_error-5ba6092a.css",
+    "src": "src/routes/+error.css"
   },
   "src/routes/exit_page/+page.css": {
     "file": "internal/immutable/assets/_page-b150f600.css",
@@ -577,6 +517,10 @@
     "file": "internal/immutable/assets/_page-64855329.css",
     "src": "src/routes/posts/+page.css"
   },
+  "src/routes/posts/jupyter/GrowthProjections/+page.css": {
+    "file": "internal/immutable/assets/_page-d17f105b.css",
+    "src": "src/routes/posts/jupyter/GrowthProjections/+page.css"
+  },
   "src/routes/posts/ErlangDBG/+page.css": {
     "file": "internal/immutable/assets/_page-4f638416.css",
     "src": "src/routes/posts/ErlangDBG/+page.css"
@@ -585,20 +529,16 @@
     "file": "internal/immutable/assets/TimeLineCv-dd5d6d51.css",
     "src": "src/routes/curriculum_vitae/TimeLineCv.css"
   },
-  "src/routes/curriculum_vitae/+page.css": {
-    "file": "internal/immutable/assets/_page-2052f221.css",
-    "src": "src/routes/curriculum_vitae/+page.css"
-  },
-  "src/routes/exit_page/+layout.css": {
-    "file": "internal/immutable/assets/_layout-984ab1c7.css",
-    "src": "src/routes/exit_page/+layout.css"
-  },
   "src/routes/+page.css": {
     "file": "internal/immutable/assets/_page-c53f0b1d.css",
     "src": "src/routes/+page.css"
   },
-  "src/routes/+error.css": {
-    "file": "internal/immutable/assets/_error-5ba6092a.css",
-    "src": "src/routes/+error.css"
+  "src/routes/+layout.css": {
+    "file": "internal/immutable/assets/_layout-31720baa.css",
+    "src": "src/routes/+layout.css"
+  },
+  "src/routes/curriculum_vitae/+page.css": {
+    "file": "internal/immutable/assets/_page-2052f221.css",
+    "src": "src/routes/curriculum_vitae/+page.css"
   }
 }

@@ -1,6 +1,6 @@
-const r = [
-  "/internal/immutable/assets/smallmask-02ff86d1.webp",
+const u = [
   "/internal/immutable/assets/small-8be2bec3.webp",
+  "/internal/immutable/assets/smallmask-02ff86d1.webp",
   "/internal/immutable/assets/p3cc-1c23eee2.png",
   "/internal/immutable/assets/introtologic-9e081f92.pdf",
   "/internal/immutable/assets/machinelearning-0178a0d5.pdf",
@@ -12,10 +12,10 @@ const r = [
   "/internal/immutable/assets/erlang-60af0e45.pdf",
   "/internal/immutable/assets/bg-10c0b4e2.webp",
   "/internal/immutable/assets/Creepster-Regular-af46f60f.ttf",
-  "/internal/immutable/start-567f2ff9.js",
-  "/internal/immutable/components/pages/_layout.svelte-3dce565c.js",
+  "/internal/immutable/start-892745fc.js",
+  "/internal/immutable/components/pages/_layout.svelte-9f4363fe.js",
   "/internal/immutable/assets/_layout-31720baa.css",
-  "/internal/immutable/components/pages/_error.svelte-abd7c248.js",
+  "/internal/immutable/components/pages/_error.svelte-15f96ab1.js",
   "/internal/immutable/assets/_error-5ba6092a.css",
   "/internal/immutable/components/pages/exit_page/_layout.svelte-8261eddd.js",
   "/internal/immutable/assets/_layout-984ab1c7.css",
@@ -40,57 +40,46 @@ const r = [
   "/internal/immutable/modules/pages/curriculum_vitae/_page.ts-f547f504.js",
   "/internal/immutable/modules/pages/exit_page/_page.ts-61c4bc00.js",
   "/internal/immutable/modules/pages/posts/_page.ts-c6b8afe9.js",
-  "/internal/immutable/modules/pages/posts/ErlangDBG/_page.ts-49c79c36.js",
-  "/internal/immutable/modules/pages/posts/jupyter/_page.ts-82afb6a5.js",
-  "/internal/immutable/modules/pages/posts/jupyter/EmpiricalGrowthTesting/_page.ts-f00c6604.js",
-  "/internal/immutable/modules/pages/posts/jupyter/GrowthProjections/_page.ts-ace3e7af.js",
-  "/internal/immutable/modules/pages/posts/jupyter/Interpolation/_page.ts-cc22240d.js",
-  "/internal/immutable/modules/pages/posts/jupyter/MatricesInErlang/_page.ts-3fe0111f.js",
-  "/internal/immutable/chunks/singletons-b3af958e.js",
+  "/internal/immutable/modules/pages/posts/jupyter/_page.ts-5802215a.js",
+  "/internal/immutable/chunks/singletons-5d47b7ea.js",
   "/internal/immutable/chunks/preload-helper-0ffe6af8.js",
   "/internal/immutable/chunks/index-57c1f8f9.js",
   "/internal/immutable/chunks/index-a3c86569.js",
-  "/internal/immutable/chunks/stores-11deea2f.js",
+  "/internal/immutable/chunks/stores-a4b5c45b.js",
   "/internal/immutable/chunks/index-9678ea77.js",
   "/internal/immutable/chunks/_layout-5bead24a.js",
   "/internal/immutable/chunks/_layout-386ee8cc.js",
   "/internal/immutable/chunks/_page-1462131d.js",
   "/internal/immutable/chunks/_page-473bc0e5.js",
   "/internal/immutable/chunks/_page-89f219c0.js",
-  "/internal/immutable/chunks/_page-62600430.js",
-  "/internal/immutable/chunks/_page-89518f60.js",
-  "/internal/immutable/chunks/_page-ff1a2dd9.js",
-  "/internal/immutable/chunks/_page-dd7e85cd.js",
-  "/internal/immutable/chunks/_page-d01fcb36.js",
-  "/internal/immutable/chunks/_page-f58eb162.js",
-  "/internal/immutable/chunks/0-d6f42b11.js",
-  "/internal/immutable/chunks/1-b090d624.js",
+  "/internal/immutable/chunks/_page-a01b6da5.js",
+  "/internal/immutable/chunks/0-1d27fa65.js",
+  "/internal/immutable/chunks/1-34ce99ff.js",
   "/internal/immutable/chunks/2-48581681.js",
   "/internal/immutable/chunks/3-1a08215b.js",
   "/internal/immutable/chunks/4-1be13a81.js",
   "/internal/immutable/chunks/5-0b1c159b.js",
   "/internal/immutable/chunks/6-b8b06995.js",
-  "/internal/immutable/chunks/7-d39d648d.js",
-  "/internal/immutable/chunks/8-ab64f6a6.js",
-  "/internal/immutable/chunks/9-8ca82617.js",
-  "/internal/immutable/chunks/10-53ce4ce1.js",
-  "/internal/immutable/chunks/11-b9a4b47d.js",
-  "/internal/immutable/chunks/12-4d67de8b.js",
+  "/internal/immutable/chunks/7-61b610a3.js",
+  "/internal/immutable/chunks/8-d77e35da.js",
+  "/internal/immutable/chunks/9-993a2171.js",
+  "/internal/immutable/chunks/10-ef24f084.js",
+  "/internal/immutable/chunks/11-6a200dde.js",
+  "/internal/immutable/chunks/12-a071c081.js",
   "/internal/immutable/chunks/TimeLineCv-b8791856.js",
   "/internal/immutable/assets/TimeLineCv-dd5d6d51.css",
   "/internal/immutable/chunks/page-a2fcd6d8.js",
   "/internal/immutable/chunks/page-0f5b2365.js",
   "/internal/immutable/chunks/page-c3fdc129.js",
   "/internal/immutable/chunks/page-7c909a19.js"
-], p = [
-  "/.nojekyll",
+], o = [
   "/favicon.png",
   "/favicon192.png",
   "/favicon512.png",
   "/global.css",
   "/manifest.json",
   "/robots.txt"
-], i = "1664210451184", s = self, m = `cache${i}`, c = r.concat(p), o = new Set(c);
+], l = "1664216675963", s = self, m = `cache${l}`, c = u.concat(o), b = new Set(c);
 s.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open(m).then((a) => a.addAll(c)).then(() => {
@@ -107,8 +96,8 @@ s.addEventListener("activate", (e) => {
     })
   );
 });
-async function b(e) {
-  const a = await caches.open(`offline${i}`);
+async function p(e) {
+  const a = await caches.open(`offline${l}`);
   try {
     const t = await fetch(e);
     return a.put(e, t.clone()), t;
@@ -122,8 +111,8 @@ async function b(e) {
 s.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET" || e.request.headers.has("range"))
     return;
-  const a = new URL(e.request.url), t = a.protocol.startsWith("http"), n = a.hostname === self.location.hostname && a.port !== self.location.port, l = a.host === self.location.host && o.has(a.pathname), u = e.request.cache === "only-if-cached" && !l;
-  t && !n && !u && e.respondWith(
-    (async () => l && await caches.match(e.request) || b(e.request))()
+  const a = new URL(e.request.url), t = a.protocol.startsWith("http"), n = a.hostname === self.location.hostname && a.port !== self.location.port, i = a.host === self.location.host && b.has(a.pathname), r = e.request.cache === "only-if-cached" && !i;
+  t && !n && !r && e.respondWith(
+    (async () => i && await caches.match(e.request) || p(e.request))()
   );
 });

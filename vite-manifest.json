@@ -52,13 +52,13 @@
     "src": "src/lib/assets/fonts/Creepster-Regular.ttf"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "internal/immutable/start-d25111c6.js",
+    "file": "internal/immutable/start-26e42316.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_preload-helper-0ffe6af8.js",
       "_index-57c1f8f9.js",
-      "_singletons-410871f0.js"
+      "_singletons-0defe4c6.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -76,13 +76,13 @@
     ]
   },
   "src/routes/+layout.svelte": {
-    "file": "internal/immutable/components/pages/_layout.svelte-beac19b2.js",
+    "file": "internal/immutable/components/pages/_layout.svelte-446e7bfa.js",
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
       "_index-57c1f8f9.js",
       "_index-9678ea77.js",
-      "_stores-a05a3a4e.js"
+      "_stores-e4d97355.js"
     ],
     "css": [
       "internal/immutable/assets/_layout-31720baa.css"
@@ -93,12 +93,12 @@
     ]
   },
   "src/routes/+error.svelte": {
-    "file": "internal/immutable/components/pages/_error.svelte-e3312117.js",
+    "file": "internal/immutable/components/pages/_error.svelte-b60d2d81.js",
     "src": "src/routes/+error.svelte",
     "isEntry": true,
     "imports": [
       "_index-57c1f8f9.js",
-      "_stores-a05a3a4e.js"
+      "_stores-e4d97355.js"
     ],
     "css": [
       "internal/immutable/assets/_error-5ba6092a.css"
@@ -262,8 +262,8 @@
       "__layout-5bead24a.js"
     ]
   },
-  "_singletons-410871f0.js": {
-    "file": "internal/immutable/chunks/singletons-410871f0.js",
+  "_singletons-0defe4c6.js": {
+    "file": "internal/immutable/chunks/singletons-0defe4c6.js",
     "imports": [
       "_index-a3c86569.js"
     ]
@@ -280,11 +280,11 @@
       "_index-57c1f8f9.js"
     ]
   },
-  "_stores-a05a3a4e.js": {
-    "file": "internal/immutable/chunks/stores-a05a3a4e.js",
+  "_stores-e4d97355.js": {
+    "file": "internal/immutable/chunks/stores-e4d97355.js",
     "imports": [
       "_index-57c1f8f9.js",
-      "_singletons-410871f0.js"
+      "_singletons-0defe4c6.js"
     ]
   },
   "_index-9678ea77.js": {
@@ -297,7 +297,7 @@
     "file": "internal/immutable/chunks/_layout-5bead24a.js"
   },
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "internal/immutable/chunks/0-5b2fda86.js",
+    "file": "internal/immutable/chunks/0-9f182071.js",
     "src": ".svelte-kit/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
@@ -306,7 +306,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "internal/immutable/chunks/1-eaeed1dd.js",
+    "file": "internal/immutable/chunks/1-d0c7b519.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -424,17 +424,9 @@
     "src": "src/routes/posts/jupyter/MatricesInErlang/page.html?raw",
     "isDynamicEntry": true
   },
-  "src/routes/+error.css": {
-    "file": "internal/immutable/assets/_error-5ba6092a.css",
-    "src": "src/routes/+error.css"
-  },
   "src/routes/+layout.css": {
     "file": "internal/immutable/assets/_layout-31720baa.css",
     "src": "src/routes/+layout.css"
-  },
-  "src/routes/exit_page/+layout.css": {
-    "file": "internal/immutable/assets/_layout-984ab1c7.css",
-    "src": "src/routes/exit_page/+layout.css"
   },
   "src/routes/exit_page/+page.css": {
     "file": "internal/immutable/assets/_page-b150f600.css",
@@ -448,6 +440,14 @@
     "file": "internal/immutable/assets/_page-2052f221.css",
     "src": "src/routes/curriculum_vitae/+page.css"
   },
+  "src/routes/+error.css": {
+    "file": "internal/immutable/assets/_error-5ba6092a.css",
+    "src": "src/routes/+error.css"
+  },
+  "src/routes/exit_page/+layout.css": {
+    "file": "internal/immutable/assets/_layout-984ab1c7.css",
+    "src": "src/routes/exit_page/+layout.css"
+  },
   "src/routes/posts/+page.css": {
     "file": "internal/immutable/assets/_page-64855329.css",
     "src": "src/routes/posts/+page.css"
@@ -456,9 +456,9 @@
     "file": "internal/immutable/assets/_page-4f638416.css",
     "src": "src/routes/posts/ErlangDBG/+page.css"
   },
-  "src/routes/posts/jupyter/Interpolation/+page.css": {
+  "src/routes/posts/jupyter/MatricesInErlang/+page.css": {
     "file": "internal/immutable/assets/_page-d17f105b.css",
-    "src": "src/routes/posts/jupyter/Interpolation/+page.css"
+    "src": "src/routes/posts/jupyter/MatricesInErlang/+page.css"
   },
   "src/routes/curriculum_vitae/TimeLineCv.css": {
     "file": "internal/immutable/assets/TimeLineCv-dd5d6d51.css",

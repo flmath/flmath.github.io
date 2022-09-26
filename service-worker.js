@@ -12,10 +12,10 @@ const u = [
   "/internal/immutable/assets/erlang-60af0e45.pdf",
   "/internal/immutable/assets/bg-10c0b4e2.webp",
   "/internal/immutable/assets/Creepster-Regular-af46f60f.ttf",
-  "/internal/immutable/start-26e42316.js",
-  "/internal/immutable/components/pages/_layout.svelte-446e7bfa.js",
+  "/internal/immutable/start-6dd3ec57.js",
+  "/internal/immutable/components/pages/_layout.svelte-0ff46a26.js",
   "/internal/immutable/assets/_layout-31720baa.css",
-  "/internal/immutable/components/pages/_error.svelte-b60d2d81.js",
+  "/internal/immutable/components/pages/_error.svelte-121c32ae.js",
   "/internal/immutable/assets/_error-5ba6092a.css",
   "/internal/immutable/components/pages/exit_page/_layout.svelte-8261eddd.js",
   "/internal/immutable/assets/_layout-984ab1c7.css",
@@ -35,15 +35,15 @@ const u = [
   "/internal/immutable/components/pages/posts/jupyter/Interpolation/_page.svelte-00dfe2ae.js",
   "/internal/immutable/components/pages/posts/jupyter/MatricesInErlang/_page.svelte-cd542e14.js",
   "/internal/immutable/modules/pages/_layout.ts-1a40caa5.js",
-  "/internal/immutable/chunks/singletons-0defe4c6.js",
+  "/internal/immutable/chunks/singletons-90accaf2.js",
   "/internal/immutable/chunks/preload-helper-0ffe6af8.js",
   "/internal/immutable/chunks/index-57c1f8f9.js",
   "/internal/immutable/chunks/index-a3c86569.js",
-  "/internal/immutable/chunks/stores-e4d97355.js",
+  "/internal/immutable/chunks/stores-dac848cb.js",
   "/internal/immutable/chunks/index-9678ea77.js",
   "/internal/immutable/chunks/_layout-5bead24a.js",
-  "/internal/immutable/chunks/0-9f182071.js",
-  "/internal/immutable/chunks/1-d0c7b519.js",
+  "/internal/immutable/chunks/0-91d2ace9.js",
+  "/internal/immutable/chunks/1-1ac61cc1.js",
   "/internal/immutable/chunks/2-f2e2f943.js",
   "/internal/immutable/chunks/3-1a08215b.js",
   "/internal/immutable/chunks/4-cd05bc1a.js",
@@ -67,10 +67,10 @@ const u = [
   "/global.css",
   "/manifest.json",
   "/robots.txt"
-], l = "1664160559962", s = self, m = `cache${l}`, c = u.concat(o), b = new Set(c);
+], l = "1664161074599", s = self, c = `cache${l}`, m = u.concat(o), b = new Set(m);
 s.addEventListener("install", (e) => {
   e.waitUntil(
-    caches.open(m).then((a) => a.addAll(c)).then(() => {
+    caches.open(c).then((a) => a.addAll(m)).then(() => {
       s.skipWaiting();
     })
   );
@@ -79,7 +79,7 @@ s.addEventListener("activate", (e) => {
   e.waitUntil(
     caches.keys().then(async (a) => {
       for (const t of a)
-        t !== m && await caches.delete(t);
+        t !== c && await caches.delete(t);
       s.clients.claim();
     })
   );

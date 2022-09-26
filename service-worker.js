@@ -12,13 +12,14 @@ const r = [
   "/internal/immutable/assets/erlang-60af0e45.pdf",
   "/internal/immutable/assets/bg-10c0b4e2.webp",
   "/internal/immutable/assets/Creepster-Regular-af46f60f.ttf",
-  "/internal/immutable/start-5ab7eddb.js",
-  "/internal/immutable/components/pages/_layout.svelte-f8524e51.js",
+  "/internal/immutable/start-46fad4e7.js",
+  "/internal/immutable/components/pages/_layout.svelte-0f16cb89.js",
   "/internal/immutable/assets/_layout-31720baa.css",
-  "/internal/immutable/components/pages/_error.svelte-7152f0ff.js",
+  "/internal/immutable/components/pages/_error.svelte-f3411c9a.js",
   "/internal/immutable/assets/_error-5ba6092a.css",
   "/internal/immutable/components/pages/exit_page/_layout.svelte-8261eddd.js",
   "/internal/immutable/assets/_layout-984ab1c7.css",
+  "/internal/immutable/components/pages/posts/ErlangDBG/_layout.svelte-ad34d8ba.js",
   "/internal/immutable/components/pages/_page.svelte-0a3745bb.js",
   "/internal/immutable/assets/_page-c53f0b1d.css",
   "/internal/immutable/components/pages/curriculum_vitae/_page.svelte-3f00e49e.js",
@@ -36,7 +37,9 @@ const r = [
   "/internal/immutable/components/pages/posts/jupyter/Interpolation/_page.svelte-00dfe2ae.js",
   "/internal/immutable/components/pages/posts/jupyter/MatricesInErlang/_page.svelte-cd542e14.js",
   "/internal/immutable/modules/pages/_layout.ts-1a40caa5.js",
+  "/internal/immutable/modules/pages/curriculum_vitae/_layout.ts-bb3b443f.js",
   "/internal/immutable/modules/pages/exit_page/_layout.ts-df906855.js",
+  "/internal/immutable/modules/pages/posts/ErlangDBG/_layout.ts-891f03be.js",
   "/internal/immutable/modules/pages/curriculum_vitae/_page.ts-f547f504.js",
   "/internal/immutable/modules/pages/exit_page/_page.ts-61c4bc00.js",
   "/internal/immutable/modules/pages/posts/_page.ts-c6b8afe9.js",
@@ -46,14 +49,16 @@ const r = [
   "/internal/immutable/modules/pages/posts/jupyter/GrowthProjections/_page.ts-ace3e7af.js",
   "/internal/immutable/modules/pages/posts/jupyter/Interpolation/_page.ts-cc22240d.js",
   "/internal/immutable/modules/pages/posts/jupyter/MatricesInErlang/_page.ts-3fe0111f.js",
-  "/internal/immutable/chunks/singletons-85fe0e33.js",
+  "/internal/immutable/chunks/singletons-cfd7779f.js",
   "/internal/immutable/chunks/preload-helper-0ffe6af8.js",
   "/internal/immutable/chunks/index-57c1f8f9.js",
   "/internal/immutable/chunks/index-a3c86569.js",
-  "/internal/immutable/chunks/stores-d7d22ef4.js",
+  "/internal/immutable/chunks/stores-133995de.js",
   "/internal/immutable/chunks/index-9678ea77.js",
   "/internal/immutable/chunks/_layout-5bead24a.js",
+  "/internal/immutable/chunks/_layout-1fd9088a.js",
   "/internal/immutable/chunks/_layout-386ee8cc.js",
+  "/internal/immutable/chunks/_layout-a60f1898.js",
   "/internal/immutable/chunks/_page-1462131d.js",
   "/internal/immutable/chunks/_page-473bc0e5.js",
   "/internal/immutable/chunks/_page-89f219c0.js",
@@ -63,26 +68,28 @@ const r = [
   "/internal/immutable/chunks/_page-dd7e85cd.js",
   "/internal/immutable/chunks/_page-d01fcb36.js",
   "/internal/immutable/chunks/_page-f58eb162.js",
-  "/internal/immutable/chunks/0-557b8e63.js",
-  "/internal/immutable/chunks/1-e2315b36.js",
-  "/internal/immutable/chunks/2-48581681.js",
-  "/internal/immutable/chunks/3-1a08215b.js",
-  "/internal/immutable/chunks/4-1be13a81.js",
-  "/internal/immutable/chunks/5-0b1c159b.js",
-  "/internal/immutable/chunks/6-b8b06995.js",
-  "/internal/immutable/chunks/7-3e9261d8.js",
-  "/internal/immutable/chunks/8-ab64f6a6.js",
-  "/internal/immutable/chunks/9-8ca82617.js",
-  "/internal/immutable/chunks/10-53ce4ce1.js",
-  "/internal/immutable/chunks/11-b9a4b47d.js",
-  "/internal/immutable/chunks/12-4d67de8b.js",
+  "/internal/immutable/chunks/0-98f06cbf.js",
+  "/internal/immutable/chunks/1-10280bc2.js",
+  "/internal/immutable/chunks/2-871d2590.js",
+  "/internal/immutable/chunks/3-24c7ddfc.js",
+  "/internal/immutable/chunks/4-7fd50923.js",
+  "/internal/immutable/chunks/5-ec7ccaa1.js",
+  "/internal/immutable/chunks/6-3431afec.js",
+  "/internal/immutable/chunks/7-fd9d56d2.js",
+  "/internal/immutable/chunks/8-7acd03cd.js",
+  "/internal/immutable/chunks/9-56add50f.js",
+  "/internal/immutable/chunks/10-9fdfd89a.js",
+  "/internal/immutable/chunks/11-15931ec3.js",
+  "/internal/immutable/chunks/12-f3a9d057.js",
+  "/internal/immutable/chunks/13-e0f63e33.js",
+  "/internal/immutable/chunks/14-8939fa0e.js",
   "/internal/immutable/chunks/TimeLineCv-b8791856.js",
   "/internal/immutable/assets/TimeLineCv-dd5d6d51.css",
   "/internal/immutable/chunks/page-a2fcd6d8.js",
   "/internal/immutable/chunks/page-0f5b2365.js",
   "/internal/immutable/chunks/page-c3fdc129.js",
   "/internal/immutable/chunks/page-7c909a19.js"
-], p = [
+], o = [
   "/.nojekyll",
   "/favicon.png",
   "/favicon192.png",
@@ -90,7 +97,7 @@ const r = [
   "/global.css",
   "/manifest.json",
   "/robots.txt"
-], i = "1664171514805", s = self, m = `cache${i}`, c = r.concat(p), o = new Set(c);
+], i = "1664172531408", s = self, m = `cache${i}`, c = r.concat(o), p = new Set(c);
 s.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open(m).then((a) => a.addAll(c)).then(() => {
@@ -122,7 +129,7 @@ async function b(e) {
 s.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET" || e.request.headers.has("range"))
     return;
-  const a = new URL(e.request.url), t = a.protocol.startsWith("http"), n = a.hostname === self.location.hostname && a.port !== self.location.port, l = a.host === self.location.host && o.has(a.pathname), u = e.request.cache === "only-if-cached" && !l;
+  const a = new URL(e.request.url), t = a.protocol.startsWith("http"), n = a.hostname === self.location.hostname && a.port !== self.location.port, l = a.host === self.location.host && p.has(a.pathname), u = e.request.cache === "only-if-cached" && !l;
   t && !n && !u && e.respondWith(
     (async () => l && await caches.match(e.request) || b(e.request))()
   );

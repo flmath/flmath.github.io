@@ -12,10 +12,10 @@ const u = [
   "/internal/immutable/assets/erlang-60af0e45.pdf",
   "/internal/immutable/assets/bg-10c0b4e2.webp",
   "/internal/immutable/assets/Creepster-Regular-af46f60f.ttf",
-  "/internal/immutable/start-2256af93.js",
-  "/internal/immutable/components/pages/_layout.svelte-24ae7399.js",
+  "/internal/immutable/start-c7d51afb.js",
+  "/internal/immutable/components/pages/_layout.svelte-7d8a32cb.js",
   "/internal/immutable/assets/_layout-31720baa.css",
-  "/internal/immutable/components/pages/_error.svelte-12c9dd56.js",
+  "/internal/immutable/components/pages/_error.svelte-cc4e327a.js",
   "/internal/immutable/assets/_error-5ba6092a.css",
   "/internal/immutable/components/pages/exit_page/_layout.svelte-8261eddd.js",
   "/internal/immutable/assets/_layout-984ab1c7.css",
@@ -35,15 +35,15 @@ const u = [
   "/internal/immutable/components/pages/posts/jupyter/Interpolation/_page.svelte-00dfe2ae.js",
   "/internal/immutable/components/pages/posts/jupyter/MatricesInErlang/_page.svelte-cd542e14.js",
   "/internal/immutable/modules/pages/_layout.ts-fffc1f7f.js",
-  "/internal/immutable/chunks/singletons-78bf7b6c.js",
+  "/internal/immutable/chunks/singletons-d307bbf1.js",
   "/internal/immutable/chunks/preload-helper-0ffe6af8.js",
   "/internal/immutable/chunks/index-57c1f8f9.js",
   "/internal/immutable/chunks/index-a3c86569.js",
-  "/internal/immutable/chunks/stores-4abe6cd0.js",
+  "/internal/immutable/chunks/stores-1ca08431.js",
   "/internal/immutable/chunks/index-9678ea77.js",
   "/internal/immutable/chunks/_layout-78692f25.js",
-  "/internal/immutable/chunks/0-573c3750.js",
-  "/internal/immutable/chunks/1-941d0278.js",
+  "/internal/immutable/chunks/0-cf0fd519.js",
+  "/internal/immutable/chunks/1-49f19cff.js",
   "/internal/immutable/chunks/2-f2e2f943.js",
   "/internal/immutable/chunks/3-1a08215b.js",
   "/internal/immutable/chunks/4-cd05bc1a.js",
@@ -61,13 +61,14 @@ const u = [
   "/internal/immutable/chunks/page-c3fdc129.js",
   "/internal/immutable/chunks/page-7c909a19.js"
 ], o = [
+  "/.nojekyll",
   "/favicon.png",
   "/favicon192.png",
   "/favicon512.png",
   "/global.css",
   "/manifest.json",
   "/robots.txt"
-], l = "1664162359950", s = self, c = `cache${l}`, m = u.concat(o), b = new Set(m);
+], l = "1664162934079", s = self, c = `cache${l}`, m = u.concat(o), b = new Set(m);
 s.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open(c).then((a) => a.addAll(m)).then(() => {

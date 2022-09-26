@@ -8,10 +8,11 @@
   --transition-speed: 600ms;
   --fa-primary: #ff7eee;
   --fa-secondary: #df49a6;
+  --size-limit: 600px;
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   :root {
     font-size: 12px;
   
@@ -21,7 +22,7 @@
   
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 900px) {
   :root {
     font-size: 16px;
     --the-font-size: larger;

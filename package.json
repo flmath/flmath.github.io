@@ -1,6 +1,6 @@
 {
 	"name": "green-pages",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"private": true,
 	"scripts": {
 		"dev": "APP_ENV=development vite dev",

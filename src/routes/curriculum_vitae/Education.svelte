@@ -33,7 +33,7 @@
     visibility: visible;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 900px) {
     .grid-output {
       display: grid;
       grid-template-columns: repeat(1, 80%);
@@ -46,7 +46,7 @@
     } */
   }
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 900px) {
     .grid-output {
       display: grid;
       grid-template-columns: repeat(2, 20rem);

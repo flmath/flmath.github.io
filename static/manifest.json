@@ -1,15 +1,16 @@
 {
   "short_name": "flmath",
-  "name": "Mathias Green Page",
+  "name": "Mathias Greens Page",
   "icons": [
         {
-            "src": "favicon.png",
-            "sizes": "48x48",
+            "src": "favicon512.png",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#f2f2f2"
+  "background_color": "#000000",
+  "description": "Personal page of Mathias Green."
 }

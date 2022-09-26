@@ -59,7 +59,7 @@
   }
 
   /* Small screens */
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 900px) {
     .navbar {
       width: 100%;
       height: 6rem;
@@ -76,7 +76,7 @@
   }
 
   /* Large screens */
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 900px) {
     .nav-item {
       margin-left: 1rem;
       margin-bottom: 2rem;

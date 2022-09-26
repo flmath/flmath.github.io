@@ -80,7 +80,7 @@
   }
 
   /* Small screens */
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 900px) {
     .logo {
       vertical-align: middle;
     }
@@ -120,7 +120,7 @@
 
   }
   /* Large screens */
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 900px) {
     .logo {
       margin-top: 1rem;
       margin-bottom: 2rem;

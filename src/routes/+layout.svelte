@@ -120,7 +120,7 @@
     filter: brightness(0.9);
   }
   /* Small screens */
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 900px) {
     body {
     padding-bottom: 1rem;
    }
@@ -161,7 +161,7 @@
     }
   }
   /* Large screens */
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 900px) {
     body {
     padding-bottom: 8rem;
    }

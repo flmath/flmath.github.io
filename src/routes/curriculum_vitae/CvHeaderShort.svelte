@@ -62,7 +62,7 @@
     transform: skewX(50deg);
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 900px) {
     .outer {
       height: 3rem;
     }
@@ -82,7 +82,7 @@
     }
   }
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 900px) {
     .outer {
       height: 2rem;
     }

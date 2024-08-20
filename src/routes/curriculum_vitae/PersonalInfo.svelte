@@ -10,7 +10,7 @@
     <div class="table-main">
       <div class="grid-output">
         <div>Name:</div> <div>Mathias Green</div>
-        <div>Address:</div> <div>Sweden</div>
+        <div>Address:</div> <div>Germany</div>
 
         <div>Mail:</div>
         <div>
@@ -44,7 +44,7 @@
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.coursera.org/user/6a9b2e7f08e09268e6db78d8289c30b1">link</a>
+              href="https://www.coursera.org/learner/matt-b-3426">link</a>
           </div>         
         
 

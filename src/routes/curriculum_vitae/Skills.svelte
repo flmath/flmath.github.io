@@ -54,12 +54,19 @@
 
 <div class="glass table-main">
   <div class="grid-output">
-    <div>Profession related:</div>
-    <div>Erlang, Telco, Linux, Agile, Git</div>
-
-    <div>For personal projects:</div>
-    <div>Python, Svelte, R</div>
-  </div>
+  
+    <div>Profession related:<hr>
+    Tools: Erlang, Linux, Agile, Git, Emacs/VS Code<br>
+    Projects: Telecommunication and Remote Desktops
+</div>
+<div>
+     For personal projects: <hr>
+     Tools: Python/Jupyter, Svelte, Elixir<br>
+     Projects: <a href=https://flmath.github.io/posts>Some notes</a>
+     and my <a href=https://github.com/flmath> repo </a>
+</div>
+</div>
+  
 </div>
 <br />
 <div class="glass">
@@ -84,7 +91,7 @@
     written in Svelte. It is converted from my old React page. I also used
     AngularJs a long time ago. I'm keeping most of my projects on Github,
     sometimes Gitlab. Of course, I tried a lot more various technologies and
-    languages, but there is no goal to list them all. I am open to learning
+    languages, but there is no goal to list them all. I am always open to learning
     more.
   </p>
 </div>

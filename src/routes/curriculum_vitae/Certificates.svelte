@@ -4,11 +4,28 @@
   import ComputerNet from "$lib/assets/certs/comnet.pdf";
   import UStats from "$lib/assets/certs/ustats.pdf";
   import Erlang from "$lib/assets/certs/erlang.pdf";
+  import FCA from "$lib/assets/certs/fca.pdf";
+  import GoogleSec from "$lib/assets/certs/google_sec.pdf";
+
 </script>
 
 <div class="glass table-main">
   <div class="grid-output">
-    <div class="colone">2018:</div>
+    <div class="colone">2023:</div>
+    <div>
+      <a target="_blank" rel="noopener noreferrer" href={GoogleSec}>
+        Coursera online certificate: Google Cybersecurity
+      </a>
+    </div>
+
+<div class="colone">2022:</div>
+    <div>
+      <a target="_blank" rel="noopener noreferrer" href={FCA}>
+        Coursera online certificate: Formal Concept Analysis
+      </a>
+    </div>
+
+<div class="colone">2018:</div>
     <div>
       <a target="_blank" rel="noopener noreferrer" href={IntroToLogic}>
         Coursera online certificate: Introduction to Logic

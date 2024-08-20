@@ -33,8 +33,10 @@
             new Date(2022, 3, 31),
         ],
         ["Employment", "DEK", new Date(2015, 8, 1), new Date(2022, 3, 31)],
-        ["Employment", "Telia", new Date(2022, 4, 1), new Date()],
-        ["Project", "ACE Core", new Date(2022, 4, 1), new Date()],
+        ["Employment", "Telia", new Date(2022, 4, 1), new Date(2022, 10, 1)],
+        ["Project", "ACE Core", new Date(2022, 4, 1), new Date(2022, 10, 1)],
+	["Employment", "Anydesk GmbH ", new Date(2023, 2, 1), new Date()],
+        ["Project", "Anydesk Core", new Date(2023, 2, 1), new Date()],
     ];
     export let title: String = "";
     export let sliceVisibilityThreshold: number = 0;

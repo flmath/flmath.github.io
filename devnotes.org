@@ -1,26 +1,32 @@
 NOTES
 * Setup
 ** Steps
-    *** Create github repo <name>.github.io
-    *** git clone <REPO>
-    *** cd <REPO>
-    *** npm create svelte@latest //choose ts, no playwright
-    *** npm install
-    *** npm run check:watch in separate tab/window
-    *** npm run dev -- --open // check in browser
-    *** add https://www.npmjs.com/package/@sveltejs/adapter-static keep svelte-preprocess' for typescript
-    *** you will have to prevent GitHub's provided Jekyll from managing your site by putting an empty .nojekyll [2]
-    *** setup github path in svetle.conf.js [2]
-    *** Fix process app [3]
-    *** create https://github.com/flmath/flmath.github.io/blob/main/.github/workflows/pages.yml and set repo to get static pages from branch gh-pages/ [4, 5]
-    *** switch off  prerender: {   default: false } for SPAP
-    *** consider trailing slashes (did not applied) [6]
-    *** for spa mode add fallback: 'index.html' [7] and hook with ssr false [8]
-    *** fix app.html so so it does not add its margin and padding
-    *** prepare example routing [10]
-    *** apply css from firelearning [5] 
-    *** 
+*** Create github repo <name>.github.io
+*** git clone <REPO>
+*** cd <REPO>
+*** npm create svelte@latest //choose ts, no playwright
+*** npm install
+*** npm run check:watch in separate tab/window
+*** npm run dev -- --open // check in browser
+*** add https://www.npmjs.com/package/@sveltejs/adapter-static keep svelte-preprocess' for typescript
+*** you will have to prevent GitHub's provided Jekyll from managing your site by putting an empty .nojekyll [2]
+*** setup github path in svetle.conf.js [2]
+*** Fix process app [3]
+*** create https://github.com/flmath/flmath.github.io/blob/main/.github/workflows/pages.yml and set repo to get static pages from branch gh-pages/ [4, 5]
+*** switch off  prerender: {   default: false } for SPAP
+*** consider trailing slashes (did not applied) [6]
+*** for spa mode add fallback: 'index.html' [7] and hook with ssr false [8]
+*** fix app.html so so it does not add its margin and padding
+*** prepare example routing [10]
+*** apply css from Fire Learning [5] 
 
+** Update
+*** git clone <REPO>
+*** cd <REPO>
+*** npm install
+*** npm run check:watch in separate tab/window
+*** npm run dev -- --open // check in browser
+    
 ** Refs
 *** [1]  https://dev.to/p_carlose/getting-started-with-sveltekit-and-typescript-4maa
 *** [2]  https://www.npmjs.com/package/@sveltejs/adapter-static

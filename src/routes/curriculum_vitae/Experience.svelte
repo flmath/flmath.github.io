@@ -47,7 +47,16 @@
   </div>
 {/if}
 {/if}
-<CvHeaderShort>04/2022 to Present: Telia ACE</CvHeaderShort>
+
+<CvHeaderShort>02/2023 to Preset: Anydesk GmbH</CvHeaderShort>
+<div class="glass">
+  <p>
+    Developing backend for a remote desktop solution. Implementing perfomance metrics, updating encryption solutions, extending APIs and establishing new methods for comprehensive testing.
+  </p>
+  <p>Technologies: Erlang, Elixir, Bash, openssl</p>
+</div>
+
+<CvHeaderShort>04/2022 to 10/2022: Telia ACE</CvHeaderShort>
 <div class="glass">
   <p>
     Developing Telias ACE platform for contact centers. Converting OTP FSMs into
@@ -67,7 +76,7 @@
   </p>
 
   <p>
-    Technologies: Erlang, Docker (using not developing), PTA language, Seagull,
+    Technologies: Erlang, Docker, PTA language, Seagull,
     Python
   </p>
 
@@ -87,9 +96,8 @@
 
   <p>Improvements: Support scripts for PTA language.</p>
 </div>
-<CvHeaderShort
-  >05/2012 to 12/2013: Ericsson MTAS, consultant from Ericpol</CvHeaderShort
->
+<CvHeaderShort>05/2012 to 12/2013: Ericsson MTAS, consultant from Ericpol
+</CvHeaderShort>
 <div class="glass">
   <p>
     Developing MTAS (Multimedia Telephony Application Server). Extending
@@ -144,9 +152,6 @@
   }
   
 }
-
 @media only screen and (min-width: 900px) {
- 
-  
 }
 </style>

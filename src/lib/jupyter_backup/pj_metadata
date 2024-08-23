@@ -1,0 +1,19 @@
+    "pj_metadata": {
+        "title": "Asymetric Break Certificates notebook",
+        "author": "Mathias Green",
+        "date": "{{ datetime.now().strftime('%Y-%m-%d') }}",
+    
+        "output": 
+           {
+                
+            "general": {
+
+                "input": true
+            },
+            "html": {
+              "theme": "cerulean",
+		   "code_folding": "show", 
+                "toc": false
+            }
+        }
+    },

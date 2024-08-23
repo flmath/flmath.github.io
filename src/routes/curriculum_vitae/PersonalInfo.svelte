@@ -16,8 +16,7 @@
         <div>
           <a
             href="mailto:flmathematic@gmail.com?subject=Hello,%20I%20have%20found%20your%20web%20CV!"
-            target="_top">flmathematic</a
-          >
+            target="_top">flmathematic</a>
         </div>
 
       <div> </div> <div class="grid-output-small"> </div>  

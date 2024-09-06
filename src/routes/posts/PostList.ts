@@ -12,7 +12,7 @@ class Item {
 
 export const term = writable('');
 export const items = writable([
-    new Item("Asymetric Cryptography with Openssl", "openssl mathematics crypto ecies rsa elliptic curves", "jupyter/asymetric_break_certs"),  
+    new Item("Asymetric Cryptography with Openssl", "openssl mathematics crypto ecies rsa elliptic curves", "jupyter/asymetric_crypto"),  
     new Item("Breaking RSA Certs with Openssl", "openssl rsa crypto", "jupyter/asymetric_break_certs"),
     new Item("Erlang dbg use scenarios", "erlang otp dbg debugger programming tracing trace", "ErlangDBG"),
     new Item("Every answer is right if the question is wrong.", "overfitting interpolation puzzle solutions bias mathematics", "jupyter/interpolation"),

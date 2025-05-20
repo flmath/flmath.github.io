@@ -6,7 +6,7 @@ Then the output the compiled code to "gh-pages" branch which is github pages def
 The main page picture based on:
 https://www.pexels.com/photo/city-view-photography-2129886/
 
-The different geometrical fidgures based on:
+The different geometrical figures based on:
 - the Penrose triangle https://en.wikipedia.org/wiki/Penrose_triangle
 - Oscar Reutersward "Blue Meander" http://www.zludzenia.pl/reutersvard,5,5,oscar-reutersward-bryla-4.html#showimage
 - M.C. Escher https://en.wikipedia.org/wiki/Impossible_cube

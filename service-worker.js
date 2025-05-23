@@ -14,65 +14,65 @@ const u = [
   "/internal/immutable/assets/erlang-60af0e45.pdf",
   "/internal/immutable/assets/bg-10c0b4e2.webp",
   "/internal/immutable/assets/Creepster-Regular-af46f60f.ttf",
-  "/internal/immutable/start-aece0bf0.js",
-  "/internal/immutable/components/pages/_layout.svelte-8b16d0ba.js",
+  "/internal/immutable/start-66cfd181.js",
+  "/internal/immutable/components/pages/_layout.svelte-8b99e950.js",
   "/internal/immutable/assets/_layout-31720baa.css",
-  "/internal/immutable/components/pages/_error.svelte-c16cccaa.js",
+  "/internal/immutable/components/pages/_error.svelte-543ad42c.js",
   "/internal/immutable/assets/_error-5ba6092a.css",
-  "/internal/immutable/components/pages/exit_page/_layout.svelte-8261eddd.js",
+  "/internal/immutable/components/pages/exit_page/_layout.svelte-8b0df6c7.js",
   "/internal/immutable/assets/_layout-984ab1c7.css",
-  "/internal/immutable/components/pages/_page.svelte-0a3745bb.js",
+  "/internal/immutable/components/pages/_page.svelte-60b8eb0f.js",
   "/internal/immutable/assets/_page-c53f0b1d.css",
-  "/internal/immutable/components/pages/curriculum_vitae/_page.svelte-af9599ed.js",
+  "/internal/immutable/components/pages/curriculum_vitae/_page.svelte-77fcb93a.js",
   "/internal/immutable/assets/_page-0731d32f.css",
-  "/internal/immutable/components/pages/exit_page/_page.svelte-306393f7.js",
+  "/internal/immutable/components/pages/exit_page/_page.svelte-00f5553a.js",
   "/internal/immutable/assets/_page-b150f600.css",
-  "/internal/immutable/components/pages/posts/_page.svelte-5541b783.js",
+  "/internal/immutable/components/pages/posts/_page.svelte-e5fe1853.js",
   "/internal/immutable/assets/_page-64855329.css",
-  "/internal/immutable/components/pages/posts/ErlangDBG/_page.svelte-a4ee9bbd.js",
+  "/internal/immutable/components/pages/posts/ErlangDBG/_page.svelte-95c3120e.js",
   "/internal/immutable/assets/_page-4f638416.css",
-  "/internal/immutable/components/pages/posts/jupyter/_page.svelte-d1a1e86b.js",
-  "/internal/immutable/components/pages/posts/jupyter/Empirical_growth_testing/_page.svelte-0f75dd57.js",
+  "/internal/immutable/components/pages/posts/jupyter/_page.svelte-f4dc854e.js",
+  "/internal/immutable/components/pages/posts/jupyter/Empirical_growth_testing/_page.svelte-4aaf46cf.js",
   "/internal/immutable/assets/_page-d17f105b.css",
-  "/internal/immutable/components/pages/posts/jupyter/asymetric_break_certs/_page.svelte-6cc465d0.js",
-  "/internal/immutable/components/pages/posts/jupyter/asymetric_crypto/_page.svelte-fe869b97.js",
-  "/internal/immutable/components/pages/posts/jupyter/growth_projections/_page.svelte-956d18b4.js",
-  "/internal/immutable/components/pages/posts/jupyter/interpolation/_page.svelte-e2aa6bf8.js",
-  "/internal/immutable/components/pages/posts/jupyter/matrix_implementations_pt1/_page.svelte-7609cf91.js",
+  "/internal/immutable/components/pages/posts/jupyter/asymetric_break_certs/_page.svelte-e06ee5fd.js",
+  "/internal/immutable/components/pages/posts/jupyter/asymetric_crypto/_page.svelte-c1ad6e18.js",
+  "/internal/immutable/components/pages/posts/jupyter/growth_projections/_page.svelte-aad761f9.js",
+  "/internal/immutable/components/pages/posts/jupyter/interpolation/_page.svelte-040a4c69.js",
+  "/internal/immutable/components/pages/posts/jupyter/matrix_implementations_pt1/_page.svelte-275c864c.js",
   "/internal/immutable/modules/pages/_layout.ts-16943143.js",
   "/internal/immutable/modules/pages/exit_page/_layout.ts-df906855.js",
   "/internal/immutable/modules/pages/curriculum_vitae/_page.ts-f547f504.js",
   "/internal/immutable/modules/pages/exit_page/_page.ts-61c4bc00.js",
   "/internal/immutable/modules/pages/posts/_page.ts-c6b8afe9.js",
   "/internal/immutable/modules/pages/posts/jupyter/_page.ts-5802215a.js",
-  "/internal/immutable/chunks/singletons-8d2de3f1.js",
+  "/internal/immutable/chunks/singletons-50f0ab18.js",
   "/internal/immutable/chunks/preload-helper-176e53da.js",
-  "/internal/immutable/chunks/index-57c1f8f9.js",
-  "/internal/immutable/chunks/index-a3c86569.js",
-  "/internal/immutable/chunks/stores-f6dd2c33.js",
-  "/internal/immutable/chunks/index-9678ea77.js",
+  "/internal/immutable/chunks/index-675899df.js",
+  "/internal/immutable/chunks/index-6b1fa974.js",
+  "/internal/immutable/chunks/stores-f29347e4.js",
+  "/internal/immutable/chunks/index-56f6cc13.js",
   "/internal/immutable/chunks/_layout-409d426b.js",
   "/internal/immutable/chunks/_layout-386ee8cc.js",
   "/internal/immutable/chunks/_page-1462131d.js",
   "/internal/immutable/chunks/_page-473bc0e5.js",
   "/internal/immutable/chunks/_page-89f219c0.js",
   "/internal/immutable/chunks/_page-a01b6da5.js",
-  "/internal/immutable/chunks/0-e46e6cd4.js",
-  "/internal/immutable/chunks/1-c89df4b8.js",
-  "/internal/immutable/chunks/2-48581681.js",
-  "/internal/immutable/chunks/3-1a08215b.js",
-  "/internal/immutable/chunks/4-50ff5e15.js",
-  "/internal/immutable/chunks/5-0b1c159b.js",
-  "/internal/immutable/chunks/6-945042e1.js",
-  "/internal/immutable/chunks/7-61b610a3.js",
-  "/internal/immutable/chunks/8-d77e35da.js",
-  "/internal/immutable/chunks/9-e5b0537f.js",
-  "/internal/immutable/chunks/10-b6288d0f.js",
-  "/internal/immutable/chunks/11-0eb093f2.js",
-  "/internal/immutable/chunks/12-e751144a.js",
-  "/internal/immutable/chunks/13-9205e6a2.js",
-  "/internal/immutable/chunks/14-43da1d1c.js",
-  "/internal/immutable/chunks/TimeLineCv-e0c5b2f5.js",
+  "/internal/immutable/chunks/0-0deccf64.js",
+  "/internal/immutable/chunks/1-8508e77d.js",
+  "/internal/immutable/chunks/2-cc15fe66.js",
+  "/internal/immutable/chunks/3-8f73dc4d.js",
+  "/internal/immutable/chunks/4-5b1ffa3d.js",
+  "/internal/immutable/chunks/5-409b3408.js",
+  "/internal/immutable/chunks/6-6ac031f4.js",
+  "/internal/immutable/chunks/7-feda4e31.js",
+  "/internal/immutable/chunks/8-aa845b47.js",
+  "/internal/immutable/chunks/9-ca165a74.js",
+  "/internal/immutable/chunks/10-29e85489.js",
+  "/internal/immutable/chunks/11-330af712.js",
+  "/internal/immutable/chunks/12-9e56d109.js",
+  "/internal/immutable/chunks/13-df463c19.js",
+  "/internal/immutable/chunks/14-5081c217.js",
+  "/internal/immutable/chunks/TimeLineCv-a3f586a6.js",
   "/internal/immutable/assets/TimeLineCv-dd5d6d51.css",
   "/internal/immutable/chunks/page-925548f6.js",
   "/internal/immutable/chunks/page-2e1972d8.js",
@@ -80,14 +80,14 @@ const u = [
   "/internal/immutable/chunks/page-b9a57e38.js",
   "/internal/immutable/chunks/page-743516db.js",
   "/internal/immutable/chunks/page-92d6d56e.js"
-], b = [
+], o = [
   "/favicon.png",
   "/favicon192.png",
   "/favicon512.png",
   "/global.css",
   "/manifest.json",
   "/robots.txt"
-], l = "1747721039510", s = self, m = `cache${l}`, c = u.concat(b), o = new Set(c);
+], l = "1747983629014", s = self, m = `cache${l}`, c = u.concat(o), p = new Set(c);
 s.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open(m).then((a) => a.addAll(c)).then(() => {
@@ -104,7 +104,7 @@ s.addEventListener("activate", (e) => {
     })
   );
 });
-async function p(e) {
+async function b(e) {
   const a = await caches.open(`offline${l}`);
   try {
     const t = await fetch(e);
@@ -119,8 +119,8 @@ async function p(e) {
 s.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET" || e.request.headers.has("range"))
     return;
-  const a = new URL(e.request.url), t = a.protocol.startsWith("http"), n = a.hostname === self.location.hostname && a.port !== self.location.port, i = a.host === self.location.host && o.has(a.pathname), r = e.request.cache === "only-if-cached" && !i;
+  const a = new URL(e.request.url), t = a.protocol.startsWith("http"), n = a.hostname === self.location.hostname && a.port !== self.location.port, i = a.host === self.location.host && p.has(a.pathname), r = e.request.cache === "only-if-cached" && !i;
   t && !n && !r && e.respondWith(
-    (async () => i && await caches.match(e.request) || p(e.request))()
+    (async () => i && await caches.match(e.request) || b(e.request))()
   );
 });

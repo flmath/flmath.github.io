@@ -1,0 +1,31 @@
+{
+  "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
+  "tasks": {
+    // Task to install npm dependencies using Deno
+    "install": "deno run -A npm:npm install",
+
+    // Task to run the SvelteKit development server
+    "dev": "deno run -A npm:npm run dev -- --host",
+
+    // Task to build the project for production
+    "build": "deno run -A npm:npm run build",
+
+    // Task to preview the production build locally
+    "preview": "deno run -A npm:npm run preview -- --host"
+  },
+  "compilerOptions": {
+    // Basic compiler options, you might adjust these as needed
+    "allowJs": true,
+    "lib": ["deno.window"],
+    "strict": true
+  },
+  "fmt": {
+    // Optional: Configure Deno's built-in formatter
+    "options": {
+      "useTabs": false,
+      "lineWidth": 80,
+      "indentWidth": 2,
+      "singleQuote": true
+    }
+  }
+}

@@ -4,6 +4,10 @@ import path from 'path';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { fileURLToPath } from 'url'; // To get the current directory in ES modules
 
+import rehypeUnwrapImages from 'rehype-unwrap-images';
+
+import remarkToc from 'remark-toc';
+import rehypeSlug from 'rehype-slug';
 // Get the directory name of the current module (svelte.config.js)
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -17,9 +21,9 @@ const mdsvexOptions = {
     blog: path.resolve(__dirname, 'src/lib/assets/mdlayouts/erldbg.svelte'),
     article: path.resolve(__dirname, 'src/lib/assets/mdlayouts/article.svelte'),
     _: path.resolve(__dirname, 'src/lib/assets/mdlayouts/fallback.svelte')
-  }
-  // remarkPlugins: [remarkUnwrapImages, remarkToc],
-  // rehypePlugins: [rehypeSlug]
+  },
+  remarkPlugins: [[remarkToc,{tight: true, maxDepth: 3}]],
+  rehypePlugins: [rehypeSlug, rehypeUnwrapImages]
 };
 
 // svelte.config.js

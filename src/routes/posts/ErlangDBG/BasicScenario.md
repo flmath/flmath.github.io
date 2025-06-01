@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: erldbg
 ---
 Let us start with a basic scenario. I will omit some of the messages printed out by the shell for clarity. 
 ```erlang

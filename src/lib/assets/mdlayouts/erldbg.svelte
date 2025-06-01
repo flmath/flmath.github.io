@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Erldbg from './erldbg.svelte';
 	export let children: () => any;
 </script>
 

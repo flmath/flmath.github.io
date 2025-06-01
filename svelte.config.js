@@ -18,7 +18,7 @@ const mdsvexOptions = {
   extensions: ['.svx', '.md'],
   layout: {
     // Resolve paths from the project root (__dirname is the directory of svelte.config.js)
-    blog: path.resolve(__dirname, 'src/lib/assets/mdlayouts/erldbg.svelte'),
+    erldbg: path.resolve(__dirname, 'src/lib/assets/mdlayouts/erldbg.svelte'),
     article: path.resolve(__dirname, 'src/lib/assets/mdlayouts/article.svelte'),
     _: path.resolve(__dirname, 'src/lib/assets/mdlayouts/fallback.svelte')
   },

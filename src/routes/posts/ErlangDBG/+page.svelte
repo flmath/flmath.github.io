@@ -1,19 +1,18 @@
 <script lang="ts">
-    import { CustomHandler } from "./CustomHandler";
-    import { Timestamps } from "./Timestamps";
-    import { TraceFunction } from "./TraceFunction";
-    import { BasicScenario } from "./BasicScenario";
-    import { FindCaller } from "./FindCaller";
-    import { Setup } from "./Setup";
-    import { CustomHandlerMessageFilter } from "./CustomHandlerMessageFilter";
-    import { CustomHandlerMessageSignals } from "./CustomHandlerSignals";
-    import { RegisteredProcessesTracking } from "./RegisteredProcessesTracking";
-    import { Cleanup } from "./Cleanup";
+    import CustomHandler from "./CustomHandler.md";
+    import Timestamps from "./Timestamps.md";
+    import TraceFunction from "./TraceFunction.md";
+    import FindCaller from "./FindCaller.md";
+    import Setup from "./Setup.md";
+    import CustomHandlerMessageFilter from "./CustomHandlerMessageFilter.md";
+    import CustomHandlerMessageSignals from "./CustomHandlerSignals.md";
+    import RegisteredProcessesTracking from "./RegisteredProcessesTracking.md";
+    import Cleanup from "./Cleanup.md";
     import HeaderShort from "./HeaderShort.svelte";
     import Header from "./Header.svelte";
-    import BS from "./BasicScenario.md";
-    import { Conclusion } from "./Conclusion";
- 
+    import BasicScenario from "./BasicScenario.md";
+    import Conclusion from "./Conclusion.md";
+
 </script>
 
 <div class="container">
@@ -38,28 +37,30 @@
         <Header>Setup</Header>
         
           <div class="glass">
-            <BS></BS>
+            <Setup> </Setup>
         </div>
 
     </section>
-    <!-- <section id="Basic Scenario">
+    <section id="Basic Scenario">
         <Header>Basic Scenario</Header>
 
-        <div class="glass"><SvelteMarkdown source={BasicScenario} /></div>
+          <div class="glass">
+        <BasicScenario> </BasicScenario>
+        </div>
     </section>
 
     <section id="Trace Function">
         <Header>Trace Function</Header>
-        <div class="glass"><SvelteMarkdown source={TraceFunction} /></div>
+        <div class="glass"><TraceFunction /></div>
     </section>
 
     <section id="Function Caller Finding">
         <Header>Function Caller Finding</Header>
-        <div class="glass"><SvelteMarkdown source={FindCaller} /></div>
+        <div class="glass"><FindCaller   /></div>
     </section>
     <section id="Timestamps">
         <Header>Timestamps</Header>
-        <div class="glass"><SvelteMarkdown source={Timestamps} /></div>
+        <div class="glass"><Timestamps  /></div>
     </section>
 
     <div class="glass"></div>
@@ -69,35 +70,35 @@
 
     <section id="Custom Handler: Introduction">
         <HeaderShort>Introduction</HeaderShort>
-        <div class="glass"><SvelteMarkdown source={CustomHandler} /></div>
+        <div class="glass"><CustomHandler /></div>
     </section>
     <section id="CustomHandlerMessageFilter">
         <HeaderShort>Message Filter</HeaderShort>
         <div class="glass">
-            <SvelteMarkdown source={CustomHandlerMessageFilter} />
+            <CustomHandlerMessageFilter />
         </div>
     </section>
     <section id="Custom Handler: Signals">
         <HeaderShort>Signals</HeaderShort>
         <div class="glass">
-            <SvelteMarkdown source={CustomHandlerMessageSignals} />
+            <CustomHandlerMessageSignals />
         </div>
     </section>
     <section id="Registered Process Tracking">
         <Header>Registered Process Tracking</Header>
         <div class="glass">
-            <SvelteMarkdown source={RegisteredProcessesTracking} />
+            <RegisteredProcessesTracking />
         </div>
     </section>
     <section id="Cleanup">
         <Header>Cleanup</Header>
-        <div class="glass"><SvelteMarkdown source={Cleanup} /></div>
+        <div class="glass"><Cleanup /></div>
     </section>
 
     <section id="Conclusion">
         <Header>Conclusion</Header>
-        <div class="glass"><SvelteMarkdown source={Conclusion} /></div>
-    </section> -->
+        <div class="glass"><Conclusion /></div>
+    </section> 
 </div>
 
 <style>
@@ -106,7 +107,6 @@
         margin: 0;
         /* -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px); */
-
         overflow-x: clip;
     }
 

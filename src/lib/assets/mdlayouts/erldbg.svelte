@@ -1,8 +1,9 @@
 <script lang="ts">
+	import Erldbg from './erldbg.svelte';
 	export let children: () => any;
 </script>
 
-<span class="container">
+<span class="container erldbg">
 	{@render children?.()}
 </span>
 
@@ -13,7 +14,7 @@
 		overflow-wrap: break-word;
 		word-break: break-word;
 	}
-	:global(pre code[class*='language-erlang']) {
+	:global(.erldbg * code[class*='language-erlang']) {
 		word-break: break-word;
 		overflow-wrap: break-word; /* Breaks words only if they don't fit */
 		white-space: pre-line; /* Preserves whitespace and wraps lines */

@@ -1,0 +1,56 @@
+
+import { mdsvex } from 'mdsvex';
+import adapter from '@sveltejs/adapter-static';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import remarkUnwrapImages from 'remark-unwrap-images';
+import remarkToc from 'remark-toc';
+import rehypeSlug from 'rehype-slug';
+
+/** @type {import('mdsvex').MdsvexOptions} */
+const mdsvexOptions = {
+  // Options for mdsvex can be specified here
+  // For example, you can enable syntax highlighting or specify extensions
+  extensions: ['.svx', '.md'],
+  layout: {
+    // Resolve paths from the project root (__dirname is the directory of svelte.config.js)
+    blog:  '$lib/assets/mdlayouts/erldbg.svelte',
+		article:  '$lib/assets/mdlayouts/article.svelte',
+		_:  '$lib/assets/mdlayouts/fallback.svelte'
+  },
+  // remarkPlugins: [remarkUnwrapImages, remarkToc],
+  // rehypePlugins: [rehypeSlug]
+};
+
+// svelte.config.js
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+
+	preprocess: [mdsvex(mdsvexOptions), vitePreprocess()],
+	extensions: ['.svelte', '.svx', '.md'],
+	kit: {
+	  // adapter-auto will be replaced with adapter-static
+	appDir: 'internal', // directory to output the built app  
+    adapter: adapter({
+      // default options are fine for most GitHub Pages setups
+      pages: 'build', // directory to output the static files
+      assets: 'build', // directory to output the static files
+      fallback: 'index.html', // can be '200.html' or '404.html' if using a SPA with client-side routing
+      precompress: false,
+      strict: true
+    }),
+    paths: {
+      // IMPORTANT: If you are deploying to a subdirectory like <username>.github.io/<repo-name>
+      // you need to specify the base path. Otherwise, if deploying to <username>.github.io,
+      // you can omit this or set it to ''.
+      //base: process.env.NODE_ENV === 'production' ? 'po-name' : '',
+     base: ''
+     // dev ? '' : '/flmath.github.io',
+    },
+	prerender: {
+	  // You can specify an array of routes to prerender.
+	  entries: ['*','/curriculum_vitae', '/posts/ErlangDBG']
+	}
+}
+};
+
+export default config;

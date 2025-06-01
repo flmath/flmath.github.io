@@ -1,7 +1,7 @@
 {
-	"name": "my-sveltekit-gh-pages-app",
+	"name": "green-pages",
 	"private": true,
-	"version": "0.0.1",
+	"version": "0.3.0",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
@@ -18,6 +18,7 @@
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
 		"@eslint/js": "^9.18.0",
+		"@google-web-components/google-chart": "^5.1.0",
 		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltejs/kit": "^2.16.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
@@ -33,9 +34,16 @@
 		"prettier-plugin-svelte": "^3.3.3",
 		"svelte": "^5.0.0",
 		"svelte-check": "^4.0.0",
+		"svelte-loading-spinners": "^0.3.6",
+		"svelte-watch-resize": "^1.0.3",
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.20.0",
 		"vite": "^6.2.6",
 		"vitest": "^3.0.0"
+	},
+	"dependencies": {
+		"rehype-slug": "^6.0.0",
+		"remark-toc": "^9.0.0",
+		"remark-unwrap-images": "^5.0.0"
 	}
 }

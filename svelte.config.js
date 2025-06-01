@@ -22,7 +22,7 @@ const mdsvexOptions = {
     article: path.resolve(__dirname, 'src/lib/assets/mdlayouts/article.svelte'),
     _: path.resolve(__dirname, 'src/lib/assets/mdlayouts/fallback.svelte')
   },
-  remarkPlugins: [[remarkToc,{tight: true, maxDepth: 3}]],
+  remarkPlugins: [[remarkToc, { tight: true, maxDepth: 3 }]],
   rehypePlugins: [rehypeSlug, rehypeUnwrapImages]
 };
 
@@ -31,11 +31,11 @@ const mdsvexOptions = {
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 
-	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
-	extensions: ['.svelte', '.svx', '.md'],
-	kit: {
-	  // adapter-auto will be replaced with adapter-static
-	appDir: 'internal', // directory to output the built app  
+  preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
+  extensions: ['.svelte', '.svx', '.md'],
+  kit: {
+    // adapter-auto will be replaced with adapter-static
+    appDir: 'internal', // directory to output the built app  
     adapter: adapter({
       // default options are fine for most GitHub Pages setups
       pages: 'build', // directory to output the static files
@@ -51,11 +51,11 @@ const config = {
       //base: process.env.NODE_ENV === 'production' ? '/your-repo-name' : '',
       base: ''
     },
-	prerender: {
-	  // You can specify an array of routes to prerender.
-	  entries: ['*','/curriculum_vitae', '/posts/ErlangDBG']
-	}
-}
+    prerender: {
+      // You can specify an array of routes to prerender.
+      entries: ['*', '/curriculum_vitae', '/posts/ErlangDBG']
+    }
+  }
 };
 
 export default config;

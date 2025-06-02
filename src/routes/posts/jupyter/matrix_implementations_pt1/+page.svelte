@@ -13,7 +13,10 @@
     });
 </script>
 
-<iframe title="jupyter" srcdoc={HTML} />
+<iframe title="jupyter" srcdoc={HTML}>  </iframe>
+{#if !mounted}
+    <p>Loading...</p>
+{/if} 
 
 <style>
     iframe {

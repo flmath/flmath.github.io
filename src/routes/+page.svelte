@@ -20,7 +20,7 @@
 {#if animate}
     <div class="container">
         <a href="/posts">
-            It is just a loading page for SEO. Click to go to the postlist.
+            
         </a>
 
         <div class="background1" style="background-image: url('{front}')">

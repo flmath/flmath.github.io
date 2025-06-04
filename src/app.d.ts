@@ -7,3 +7,10 @@ declare namespace App {
 	// interface PrivateEnv {}
 	// interface PublicEnv {}
 }
+
+declare module '*.md' {
+	// "unknown" would be more type-safe than "any"
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const metadata: Record<string, any>;
+	const default: import('svelte').ComponentType;
+}

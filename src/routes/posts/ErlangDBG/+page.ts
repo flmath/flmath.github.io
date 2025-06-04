@@ -1,7 +1,3 @@
-declare module '*.md' {
-	import type { SvelteComponent } from 'svelte'
-
-	export default class Comp extends SvelteComponent{}
-
-	export const metadata: Record<string, unknown>
-}
+// This file might need actual page load logic for the "ErlangDBG" route
+// or can be removed if /posts/ErlangDBG/+page.svelte handles the page.
+// If it was only for the '*.md' declaration, its content is now moved to app.d.ts.

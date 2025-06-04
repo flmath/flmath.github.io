@@ -20,7 +20,7 @@
 {#if animate}
     <div class="container">
         <a href="/posts">
-            
+           <h3> Each and every answer is right when the question is wrong.</h3>
         </a>
 
         <div class="background1" style="background-image: url('{front}')">
@@ -68,7 +68,14 @@
 {/if}
 
 <style>
-    .container {
+h3{
+   font-family: 'Brush Script MT', cursive;
+   font-size: 3rem;
+   text-align: center;
+   color: var(--text-primary); 
+}
+
+.container {
         position: absolute;
         background-color: #d2d9df;
         height: 100%;

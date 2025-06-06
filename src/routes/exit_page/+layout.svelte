@@ -1,5 +1,11 @@
+<script lang="ts">
+ let { children } = $props();
 
-<body style="background-image: none"><slot /></body>
+</script>
+
+<body style="background-image: none">
+  {@render children?.()} 
+</body>
 
 <style>
   body {

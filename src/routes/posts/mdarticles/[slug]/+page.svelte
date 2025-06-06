@@ -1,6 +1,6 @@
 <script lang="ts">
+  // import type { PageData } from './[slug]/$types';
   import type { PageData } from './$types';
-
   // The 'data' prop is automatically populated by SvelteKit
   // with the result from the `load` function in `+page.ts`.
   export let data: PageData;

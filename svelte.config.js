@@ -31,7 +31,7 @@ const mdsvexOptions = {
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 
-  preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
+  preprocess: [mdsvex(mdsvexOptions), vitePreprocess()],
   extensions: ['.svelte', '.svx', '.md'],
   kit: {
     // adapter-auto will be replaced with adapter-static

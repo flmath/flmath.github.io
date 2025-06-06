@@ -20,7 +20,7 @@
 		<Header>Introduction</Header>
 
 		<div class="glass">
-            <Introduction />            
+            <Introduction></Introduction>
 		</div>
 	</section>
 
@@ -46,33 +46,33 @@
 
 	<section id="Function Caller Finding">
 		<Header>Function Caller Finding</Header>
-		<div class="glass"><FindCaller /></div>
+		<div class="glass"><FindCaller></FindCaller></div>
 	</section>
 
 
 	<section id="Timestamps">
 		<Header>Timestamps</Header>
-		<div class="glass"><Timestamps /></div>
+		<div class="glass"><Timestamps></Timestamps></div>
 	</section>
 
 
 	<section id="CustomHandler">
 		<Header>Custom Handler</Header>
 		<div class="glass">
-			<CustomHandler />
+			<CustomHandler></CustomHandler>
 		</div>
 	</section>
 
 
 	<section id="Custom Handler: Introduction">
 		<HeaderShort>Introduction</HeaderShort>
-		<div class="glass"><CustomHandler /></div>
+		<div class="glass"><CustomHandler></CustomHandler></div>
 	</section>
 
 	<section id="CustomHandlerMessageFilter">
 		<HeaderShort>Message Filter</HeaderShort>
 		<div class="glass">
-			<CustomHandlerMessageFilter />
+			<CustomHandlerMessageFilter></CustomHandlerMessageFilter>
 		</div>
 	</section>
 
@@ -80,7 +80,7 @@
 	<section id="Custom Handler: Signals">
 		<HeaderShort>Signals</HeaderShort>
 		<div class="glass">
-			<CustomHandlerMessageSignals />
+			<CustomHandlerMessageSignals></CustomHandlerMessageSignals>
 		</div>
 	</section>
 
@@ -88,19 +88,19 @@
 	<section id="Registered Process Tracking">
 		<Header>Registered Process Tracking</Header>
 		<div class="glass">
-			<RegisteredProcessesTracking />
+			<RegisteredProcessesTracking></RegisteredProcessesTracking>
 		</div>
 	</section>
 
 	<section id="Cleanup">
 		<Header>Cleanup</Header>
-		<div class="glass"><Cleanup /></div>
+		<div class="glass"><Cleanup></Cleanup></div>
 	</section>
 
- 
+
 	<section id="Conclusion">
 		<Header>Conclusion</Header>
-		<div class="glass"><Conclusion /></div>
+		<div class="glass"><Conclusion></Conclusion></div>
 	</section> 
 </div>
 

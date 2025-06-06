@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { watchResize } from 'svelte-watch-resize';
   import ImposibleCubeSvg from "$lib/svg/ImposibleCubeSvg.svelte";
   import NavLink from "../lib/NavLink.svelte";
   import LogoElement from "../lib/LogoElement.svelte";

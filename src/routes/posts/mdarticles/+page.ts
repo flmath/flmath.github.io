@@ -9,7 +9,6 @@ export const entries: EntryGenerator = () => {
     for (const path in mdpaths) {
 
         const slugVal: string = path.split('/').pop()?.replace('.md', '') ?? 'error-noname';
-//      console.log(`Found markdown file: ${path}, slug: ${slugVal}`);
         slugList.push(slugVal);
     }
     return slugList.map(slugVal => ({ slug: slugVal }));
@@ -22,8 +21,8 @@ export const load: PageLoad = async ({ params }) => {
         // This dynamically imports the Svelte component compiled from the .md file.
         // The path '../${params.slug}.md' is relative to this +page.ts file,
         // correctly pointing to /src/routes/posts/mdarticles/${params.slug}.md
-       // console.log(`Loading post from: ../[slug]${params.slug}.md`);
-        const post = await import(`../[slug]/${params.slug}.md`);
+        console.log(`Loading post from: ../${params.slug}.md`);
+        const post = await import(`../${params.slug}.md`);
 
         return {
             PostContent: post.default, // The Svelte component itself

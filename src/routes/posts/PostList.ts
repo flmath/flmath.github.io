@@ -23,7 +23,7 @@ export const legacy = [
 ];
 let mdarticles: Item[] = [];
 
-const mdpaths = import.meta.glob('/src/routes/posts/mdarticles/*.md', { eager: true });
+const mdpaths = import.meta.glob('/src/routes/posts/mdarticles/[slug]/*.md', { eager: true });
 //console.log(`mdpaths: ${Object.keys(mdpaths).length} files found.`);
 for (const path in mdpaths) {
     const tfile : any = mdpaths[path];

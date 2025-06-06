@@ -1,10 +1,13 @@
 <script lang="ts">
- 
-
-   
-
+ let { children } = $props();
 
 </script>
+
+<body style="background-image: none">
+  {@render children?.()} 
+</body>
+ 
+
 
 <a href="/posts">
     <div>

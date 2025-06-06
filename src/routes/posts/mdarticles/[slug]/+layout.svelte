@@ -7,7 +7,15 @@
 </main>
 
 <style>
-  main {
+h1 {
+
+    color: var(--text-primary);
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+main {
     position: fixed;
     margin: 0;
     min-width: 100vw;

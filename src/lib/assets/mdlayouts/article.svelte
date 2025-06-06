@@ -8,8 +8,15 @@
 </span>
 
 <style>
+	h1 {
+		color: var(--text-primary);
+		text-align: center;
+		font-size: 2.5rem;
+		font-weight: bold;
+		margin-bottom: 1rem;
+	}
 	.container {
-		position: relative;
+		position: fixed;
 		margin: 0;
 		overflow-wrap: break-word;
 		word-break: break-word;

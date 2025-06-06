@@ -1,18 +1,18 @@
 <script lang="ts">
-    import Introduction from './Introduction.md';
-	import CustomHandler from './CustomHandler.md';
-	import Timestamps from './Timestamps.md';
-	import TraceFunction from './TraceFunction.md';
-	import FindCaller from './FindCaller.md';
-	import Setup from './Setup.md';
-	import CustomHandlerMessageFilter from './CustomHandlerMessageFilter.md';
-	import CustomHandlerMessageSignals from './CustomHandlerSignals.md';
-	import RegisteredProcessesTracking from './RegisteredProcessesTracking.md';
-	import Cleanup from './Cleanup.md';
+    import Introduction from './Introduction.md?svelte';
+	import CustomHandler from './CustomHandler.md?svelte';
+	import Timestamps from './Timestamps.md?svelte';
+	import TraceFunction from './TraceFunction.md?svelte';
+	import FindCaller from './FindCaller.md?svelte';
+	import Setup from './Setup.md?svelte';
+	import CustomHandlerMessageFilter from './CustomHandlerMessageFilter.md?svelte';
+	import CustomHandlerMessageSignals from './CustomHandlerSignals.md?svelte';
+	import RegisteredProcessesTracking from './RegisteredProcessesTracking.md?svelte';
+	import Cleanup from './Cleanup.md?svelte';
 	import HeaderShort from './HeaderShort.svelte';
 	import Header from './Header.svelte';
-	import BasicScenario from './BasicScenario.md';
-	import Conclusion from './Conclusion.md';
+	import BasicScenario from './BasicScenario.md?svelte';
+	import Conclusion from './Conclusion.md?svelte';
 </script>
 
 <div class="container">

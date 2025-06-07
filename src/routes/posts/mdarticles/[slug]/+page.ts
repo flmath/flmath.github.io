@@ -7,7 +7,6 @@ export const entries: EntryGenerator = () => {
 
     let slugList: string[] = [];
     for (const path in mdpaths) {
-
         const slugVal: string = path.split('/').pop()?.replace('.md', '') ?? 'error-noname';
 //      console.log(`Found markdown file: ${path}, slug: ${slugVal}`);
         slugList.push(slugVal);
@@ -27,7 +26,8 @@ export const load: PageLoad = async ({ params }) => {
 
         return {
             PostContent: post.default, // The Svelte component itself
-            metadata: post.metadata    // The metadata from the markdown frontmatter
+            metadata: post.metadata,    // The metadata from the markdown frontmatter
+            slug: params.slug           // The slug for the post, useful for links or titles
         };
     } catch (e) {
         // If the markdown file doesn't exist, this will throw a 404 error.

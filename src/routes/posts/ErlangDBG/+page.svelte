@@ -9,8 +9,8 @@
 	import CustomHandlerMessageSignals from './CustomHandlerSignals.md?svelte';
 	import RegisteredProcessesTracking from './RegisteredProcessesTracking.md?svelte';
 	import Cleanup from './Cleanup.md?svelte';
-	import HeaderShort from './HeaderShort.svelte';
-	import Header from './Header.svelte';
+	import HeaderShort from '../HeaderShort.svelte';
+	import Header from '../Header.svelte';
 	import BasicScenario from './BasicScenario.md?svelte';
 	import Conclusion from './Conclusion.md?svelte';
 </script>

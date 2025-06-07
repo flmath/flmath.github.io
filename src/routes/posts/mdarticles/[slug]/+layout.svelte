@@ -7,20 +7,12 @@
 </main>
 
 <style>
-h1 {
 
-    color: var(--text-primary);
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
 main {
-    position: fixed;
+    position: relative;
     margin: 0;
     min-width: 100vw;
     min-height: 100vh;    
-    height: 100%;
 
     color: black;
     background-color: var(--bg-primary);

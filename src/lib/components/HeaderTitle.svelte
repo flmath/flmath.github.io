@@ -1,11 +1,9 @@
- <script lang="ts">
+<script lang="ts">
   export let children: () => any;
-</script>
-
-<!-- style="background-image: url('{background}')" -->
+  </script>
 <br />
 <div class="outer">
-  <div class="middle"><div class="inter"><h2>{@render children?.()}</h2></div></div>
+  <div class="middle"><h1>{@render children?.()}</h1><div class="inter"></div></div>
 </div>
 <br />
 
@@ -15,7 +13,10 @@
     opacity: 0.85;
     height: 3rem;
     margin: 0;
+    border: 0;
+    margin-bottom: 26px;
     padding: 0;
+
 
     display: flex;
     /* linear-gradient(to right top, #fdfdfd, #f3f3f3, #f1f1f1, #eeeeee, #fdfdfd); */
@@ -59,9 +60,10 @@
     background-color: rgba(188, 33, 34, 1);
   }
 
-  h2 {
-    color: rgba(255, 255, 255, 1);
+  h1 {
+    color: rgba(0, 0, 0, 1);
     padding: 0;
+    font-size: 1.8rem;
     margin: auto;
     margin-left: 10%;
     text-align: left;

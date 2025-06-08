@@ -1,50 +1,52 @@
 
 import { h } from 'hastscript';
-
+import { toString } from 'hast-util-to-string';
 /**
- * Custom Rehype plugin to wrap sections based on H2 headings.
- *
+ * Custom Rehype plugin to wrap sections and replace H2 with a <Header> component.
  * @returns {import('unified').Transformer}
  */
+
+
 export default function rehypeSectionWrapper() {
+  /**
+   * @param {import('hast').Root} tree
+   */
   return (tree) => {
-    // A new array to hold the restructured children, including our wrappers
     const newChildren = [];
-    
-    // A variable to hold the current section wrapper we are filling
     let currentWrapper = null;
 
-    // A helper function to create a new wrapper and add it to our new body
     const createNewWrapper = () => {
-      const wrapper = h('div.container-wrapper', []); // Creates a <div class="container"></div> element
+      const wrapper = h('div.container-wrapper', []);
       newChildren.push(wrapper);
       return wrapper;
     };
-
-    // Loop through each top-level node in the document
+    
     for (const node of tree.children) {
       // Check if the node is an H2 element
       if (node.type === 'element' && node.tagName === 'h2') {
-        // If it's an H2, we start a new section.
-        // So we create a new wrapper.
+        // 2. Extract the text content of the H2.
+        const headerText = toString(node);
+        
+        // 3. Create a new <Header> component element with a 'title' prop.
+        const headerComponent = h('h1.title', headerText);
+
+        // 4. Add the new <Header> component to the wrapper.
+        newChildren.push(headerComponent);
         currentWrapper = createNewWrapper();
-      } else if (node.type === 'element' && node.tagName === 'hr') {
-        // Optional: Treat horizontal rules (---) as section breaks too
-        currentWrapper = null; // End the current section
-        continue; // Don't include the <hr> itself
+        // 5. Continue to the next node, effectively *discarding* the original H2.
+        // 6. It's an H2, so stop previous section wrapper.
+        continue;
       }
 
-      // If there's no active wrapper (e.g., for content before the first H2),
-      // create one now.
+      // If there's no active wrapper, create one.
       if (!currentWrapper) {
         currentWrapper = createNewWrapper();
       }
       
-      // Add the current node to the children of the active wrapper
+      // Add any other node to the current section.
       currentWrapper.children.push(node);
     }
 
-    // Replace the original children of the tree with our new, restructured children
     tree.children = newChildren;
   };
 }

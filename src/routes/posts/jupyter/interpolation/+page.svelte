@@ -13,7 +13,7 @@
     });
 </script>
 
-<iframe title="jupyter" srcdoc={HTML} />
+<iframe title="jupyter" srcdoc={HTML}>  </iframe> 
 
 <style>
     iframe {

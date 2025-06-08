@@ -6,20 +6,12 @@
 <body style="background-image: none">
   {@render children?.()} 
 </body>
- 
-
-
-<a href="/posts">
-    <div>
-
-
-    </div>
-</a>
+<!-- <a href="/posts"> <div> </div> </a> -->
 <main>
 </main>
 
 <style>
-    a {
+    /* a {
         z-index: 2;
         margin-top: 1rem;;
         margin-right: 5%;
@@ -33,7 +25,7 @@
         height: 100vh;
         width: 90%;
         position: absolute;
-    }
+    } */
 
     main {
         position: absolute;

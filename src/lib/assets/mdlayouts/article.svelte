@@ -1,19 +1,9 @@
 
 <script lang="ts">
-	//   import SectionWrapper from '$lib/components/SectionWrapper.svelte';
-  import Header from '$lib/components/Header.svelte' ;
-  import HeaderTitle from '$lib/components/HeaderTitle.svelte';
-  
 	export let children: () => any;
-  // This object now maps both custom tags to their Svelte components.
-  const components = {
-//    'section-wrapper': SectionWrapper,
-    'header-component': Header,
-	'header-title': HeaderTitle,
-  };
-</script>
-<slot {components} />
 
+</script>
+{@render children?.()}
 <style>
 
 

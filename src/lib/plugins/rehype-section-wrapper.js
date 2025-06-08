@@ -20,24 +20,48 @@ export default function rehypeSectionWrapper() {
       newChildren.push(wrapper);
       return wrapper;
     };
-    
+  
     for (const node of tree.children) {
-      // Check if the node is an H2 element
-      if (node.type === 'element' && node.tagName === 'h2') {
-        // 2. Extract the text content of the H2.
+      // Check if the node is an H1 element
+      if (node.type === 'element' && node.tagName === 'h1') {
+        // 1. Extract the text content of the H2.
         const headerText = toString(node);
         
-        // 3. Create a new <Header> component element with a 'title' prop.
-        const headerComponent = h('h1.title', headerText);
+        // 2. Create a new <Header> component element with a 'title' prop.
+        const headerComponent = h('div.outer-wrapper', [h('div.middle-wrapper', 
+          [h('h1.h1-wrapper', headerText), h('div.inter-wrapper', [])])]);
 
-        // 4. Add the new <Header> component to the wrapper.
+        // 3. Add the new <Header> component to the wrapper.
+        newChildren.push(h('br', [])); // Add a horizontal rule before the header
         newChildren.push(headerComponent);
+        newChildren.push(h('br', []));
         currentWrapper = createNewWrapper();
-        // 5. Continue to the next node, effectively *discarding* the original H2.
-        // 6. It's an H2, so stop previous section wrapper.
         continue;
       }
 
+      if (node.type === 'element' && node.tagName === 'h2') {
+        // 1. Extract the text content of the H2.
+        const headerText = toString(node);
+        
+        // 2. Create a new <Header> component element with a 'title' prop.
+        const headerComponent = h('div.outer-wrapper', [h('div.middle-wrapper', 
+          [h('div.inter-wrapper', [h('h2.h2-wrapper', headerText)])])])
+
+        // 3. Add the new <Header> component to the wrapper.
+        newChildren.push(h('br', [])); // Add a horizontal rule before the header
+        newChildren.push(headerComponent);
+        newChildren.push(h('br', []));
+        currentWrapper = createNewWrapper();
+        continue;
+      }
+      if (node.type === 'element' && node.tagName === 'hr') {
+
+        
+        // 4. Add the new <Header> component to the wrapper.
+        newChildren.push(h('br', [])); // Add a horizontal rule before the header
+        currentWrapper = null;
+        continue;
+      }
       // If there's no active wrapper, create one.
       if (!currentWrapper) {
         currentWrapper = createNewWrapper();

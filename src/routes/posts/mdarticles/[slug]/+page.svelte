@@ -1,6 +1,6 @@
 <script lang="ts">
   // import type { PageData } from './[slug]/$types';
-  import Header from '../../HeaderTitle.svelte';
+
   import HeaderShort from '../../HeaderShort.svelte';
   import type { PageData } from './$types';
 	import HeaderTitle from '../../HeaderTitle.svelte';
@@ -16,29 +16,18 @@
     return new Date(date).toLocaleDateString('en-SE', options);
   };
 </script>
-<pre>
+<!-- <pre>
   {JSON.stringify(data, null, 2)} 
   <hr />
-</pre>
-  <span>PostContent: {data.PostContent}</span>
-<hr>  
+</pre> -->
+  <!-- <span>PostContent: {data.PostContent}</span> -->
 {#if data.PostContent && data.metadata}
-
-    
+    <br />
     <HeaderShort> Date: {formatDate(data.metadata.date) || 'No date'}</HeaderShort>
     <HeaderTitle>{data.metadata.title || data.slug}</HeaderTitle>
-
-
-      <HeaderShort>Tags: {data.metadata.tags?.join(', ')  || 'No tags '} </HeaderShort>
-
-    <!-- Add other metadata you want to display, e.g., date -->
-  
-
+    <HeaderShort>Tags: {data.metadata.tags?.join(', ')  || 'No tags '}&nbsp; &nbsp;</HeaderShort>
   <article class="prose lg:prose-xl dark:prose-invert max-w-none">
     <svelte:component this={data.PostContent} />
-
-
-
   </article>
 {:else}
   <!-- This part should ideally not be reached if the load function throws a 404 -->

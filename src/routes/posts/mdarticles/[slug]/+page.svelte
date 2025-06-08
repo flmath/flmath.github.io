@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { imports } from './../../../../../.svelte-kit/output/server/nodes/12.js';
   // import type { PageData } from './[slug]/$types';
   import Header from '../../HeaderTitle.svelte';
   import HeaderShort from '../../HeaderShort.svelte';
@@ -24,17 +23,18 @@
   <span>PostContent: {data.PostContent}</span>
 <hr>  
 {#if data.PostContent && data.metadata}
-  <article class="prose lg:prose-xl dark:prose-invert max-w-none">
-    
-    <p class="date"><em>Date: {formatDate(data.metadata.date) || 'No date'}</em></p>
-    <HeaderTitle>{data.metadata.title || data.slug}</HeaderTitle>
-    <hr />
 
-    <p class="tags"><em>Tags: {data.metadata.tags?.join(', ') || 'No tags'}</em></p>
-    <hr />
+    
+    <HeaderShort> Date: {formatDate(data.metadata.date) || 'No date'}</HeaderShort>
+    <HeaderTitle>{data.metadata.title || data.slug}</HeaderTitle>
+
+
+      <HeaderShort>Tags: {data.metadata.tags?.join(', ')  || 'No tags '} </HeaderShort>
+
     <!-- Add other metadata you want to display, e.g., date -->
   
 
+  <article class="prose lg:prose-xl dark:prose-invert max-w-none">
     <svelte:component this={data.PostContent} />
 
 
@@ -46,21 +46,7 @@
 {/if}
 
 <style>
-h1 {
 
-    color: var(--text-primary);
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-.date{
-    text-align: right;
-    margin-right: 10rem;
-    font-size: 1.2rem;
-    color: var(--text-primary);
-}
 article {
     position: relative;
     margin: 0;

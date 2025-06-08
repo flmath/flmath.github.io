@@ -3,12 +3,13 @@
 	export let children: () => any;
 </script>
 
-<div class="container ">
 	{@render children?.()}
-</div>
 
 <style>
-.container {
+
+
+
+:global(.container-wrapper) {
   visibility: visible;
 
   background: rgba(255, 255, 255, 0.33);
@@ -35,7 +36,4 @@
 	}
 
 
-	div {
-		visibility: visible;
-	}
 </style>

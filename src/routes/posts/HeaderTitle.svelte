@@ -13,7 +13,10 @@
     opacity: 0.85;
     height: 3rem;
     margin: 0;
+    border: 0;
+    margin-bottom: 26px;
     padding: 0;
+
 
     display: flex;
     /* linear-gradient(to right top, #fdfdfd, #f3f3f3, #f1f1f1, #eeeeee, #fdfdfd); */

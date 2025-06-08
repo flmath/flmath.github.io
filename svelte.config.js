@@ -5,6 +5,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { fileURLToPath } from 'url'; // To get the current directory in ES modules
 
 import rehypeUnwrapImages from 'rehype-unwrap-images';
+import rehypeSectionWrapper from './src/lib/plugins/rehype-section-wrapper.js';
 
 import remarkToc from 'remark-toc';
 import rehypeSlug from 'rehype-slug';
@@ -23,15 +24,45 @@ const mdsvexOptions = {
     _: path.resolve(__dirname, 'src/lib/assets/mdlayouts/fallback.svelte')
   },
   remarkPlugins: [[remarkToc, { tight: true, maxDepth: 3 }]],
-  rehypePlugins: [rehypeSlug, rehypeUnwrapImages]
+  rehypePlugins: [rehypeSlug, rehypeUnwrapImages],
+};
+
+const mdsvexOptionsExt = {
+  // Options for mdsvex can be specified here
+  // For example, you can enable syntax highlighting or specify extensions
+  extensions: ['.svx', '.md'],
+  layout: {
+    // Resolve paths from the project root (__dirname is the directory of svelte.config.js)
+    erldbg: path.resolve(__dirname, 'src/lib/assets/mdlayouts/erldbg.svelte'),
+    article: path.resolve(__dirname, 'src/lib/assets/mdlayouts/article.svelte'),
+    _: path.resolve(__dirname, 'src/lib/assets/mdlayouts/fallback.svelte')
+  },
+  remarkPlugins: [[remarkToc, { tight: true, maxDepth: 3 }]],
+  rehypePlugins: [rehypeSlug, rehypeUnwrapImages, rehypeSectionWrapper],
 };
 
 // svelte.config.js
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-
-  preprocess: [mdsvex(mdsvexOptions), vitePreprocess()],
+preprocess: [
+    {
+      // This is our custom preprocessor
+      async markup({ content, filename }) {
+        if (filename.startsWith(process.cwd() + '/src/routes/posts/mdarticles/')) {
+          // For files in the 'posts' directory, use the specific config
+          return mdsvex(mdsvexOptionsExt).markup({ content, filename });
+        }
+        // For all other markdown files, use the base config
+        if (filename.endsWith('.md')) {
+            return mdsvex(mdsvexOptions).markup({ content, filename });
+        }
+        // For non-markdown files, let other preprocessors handle it
+        return { code: content };
+      },
+    },
+    vitePreprocess(),
+  ],
   extensions: ['.svelte', '.svx', '.md'],
   kit: {
     // adapter-auto will be replaced with adapter-static

@@ -96,7 +96,7 @@
     color: rgba(0, 0, 0, 1);
     padding: 0;
     margin: auto;
-    margin-left: 10%;
+    margin-left: 20%;
     text-align: left;
     vertical-align: middle;
     transform: skewX(50deg);

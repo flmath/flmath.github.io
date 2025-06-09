@@ -1,9 +1,9 @@
 <script lang="ts">
   // import type { PageData } from './[slug]/$types';
 
-  import HeaderShort from '../../HeaderShort.svelte';
+  import HeaderShort from '$lib/components/HeaderShort.svelte';
   import type { PageData } from './$types';
-	import HeaderTitle from '../../HeaderTitle.svelte';
+	import HeaderTitle from '$lib/components/HeaderTitle.svelte';
   // The 'data' prop is automatically populated by SvelteKit
   // with the result from the `load` function in `+page.ts`.
   export let data: PageData;
@@ -25,7 +25,7 @@
     <br />
     <HeaderShort> Date: {formatDate(data.metadata.date) || 'No date'}</HeaderShort>
     <HeaderTitle>{data.metadata.title || data.slug}</HeaderTitle>
-    <HeaderShort>Tags: {data.metadata.tags?.join(', ')  || 'No tags '}&nbsp; &nbsp;</HeaderShort>
+    <!-- <HeaderShort>Tags: {data.metadata.tags?.join(', ')  || 'No tags '}&nbsp; &nbsp;</HeaderShort> -->
   <article class="prose lg:prose-xl dark:prose-invert max-w-none">
     <svelte:component this={data.PostContent} />
   </article>

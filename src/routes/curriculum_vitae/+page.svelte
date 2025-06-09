@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Interests from "./Interests.svelte";
+  // import Interests from "./Interests.svelte";
   import Certificates from "./Certificates.svelte";
   import Education from "./Education.svelte";
   import Experience from "./Experience.svelte";
@@ -30,10 +30,12 @@
     <CvHeader>Certificates</CvHeader>
     <Certificates />
   </section>
-  <section id="Interests">
+  <!-- <section id="Interests">
     <CvHeader>Pursuits</CvHeader>
     <Interests />
-  </section>
+  </section> -->
+  <br />
+  <br />
 </div>
 
 <style>

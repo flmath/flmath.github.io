@@ -65,7 +65,7 @@
     padding: 0;
     font-size: 1.8rem;
     margin: auto;
-    margin-left: 10%;
+    margin-left: 20%;
     text-align: left;
     vertical-align: middle;
     transform: skewX(50deg);

@@ -33,14 +33,14 @@ jobs:
       - name: Download folder
         # Use the secret from GitHub repository settings
         run: |
-          mkdir -p tmp/ 
-          gdown --folder ${{ secrets.GDRIVE_FOLDER_ID }} -O tmp/
+          mkdir -p templorary/ 
+          gdown --folder ${{ secrets.GDRIVE_FOLDER_ID }} -O templorary/
       
       - name: Move articles to correct location
         run: |
           mkdir -p src/routes/posts/mdarticles/[slug]/
-          mv tmp/mdarticles/* src/routes/posts/mdarticles/[slug]/
-          rmdir tmp
+          mv templorary/mdarticles/* src/routes/posts/mdarticles/[slug]/
+          rm -rf templorary
 
       - name: Setup Node.js
         uses: actions/setup-node@v4

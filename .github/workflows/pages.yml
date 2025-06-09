@@ -22,6 +22,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install gdown
+        run: pip install gdown
+
+      - name: Download folder
+        # Use the secret from GitHub repository settings
+        run: gdown --folder ${{ secrets.GDRIVE_FOLDER_ID }} -O src/routes/posts/mdarticles/[slug]/
+        
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:

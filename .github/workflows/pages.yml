@@ -32,8 +32,16 @@ jobs:
 
       - name: Download folder
         # Use the secret from GitHub repository settings
-        run: gdown --folder ${{ secrets.GDRIVE_FOLDER_ID }} -O src/routes/posts/mdarticles/[slug]/
-        
+        run: |
+          mkdir -p tmp/ 
+          gdown --folder ${{ secrets.GDRIVE_FOLDER_ID }} -O tmp/
+      
+      - name: Move articles to correct location
+        run: |
+          mkdir -p src/routes/posts/mdarticles/[slug]/
+          mv tmp/mdarticles/* src/routes/posts/mdarticles/[slug]/
+          rmdir tmp
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:

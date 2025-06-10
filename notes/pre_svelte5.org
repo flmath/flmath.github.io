@@ -1,0 +1,664 @@
+NOTES
+* Setup
+** Steps
+*** Create github repo <name>.github.io
+*** git clone <REPO>
+*** cd <REPO>
+*** npm create svelte@latest //choose ts, no playwright
+*** npm install
+*** npm run check:watch in separate tab/window
+*** npm run dev -- --open // check in browser
+*** add https://www.npmjs.com/package/@sveltejs/adapter-static keep svelte-preprocess' for typescript
+*** you will have to prevent GitHub's provided Jekyll from managing your site by putting an empty .nojekyll [2]
+*** setup github path in svetle.conf.js [2]
+*** Fix process app [3]
+*** create https://github.com/flmath/flmath.github.io/blob/main/.github/workflows/pages.yml and set repo to get static pages from branch gh-pages/ [4, 5]
+*** switch off  prerender: {   default: false } for SPAP
+*** consider trailing slashes (did not applied) [6]
+*** for spa mode add fallback: 'index.html' [7] and hook with ssr false [8]
+*** fix app.html so so it does not add its margin and padding
+*** prepare example routing [10]
+*** apply css from Fire Learning [5] 
+
+** Update
+*** git clone <REPO>
+*** cd <REPO>
+*** npm install
+*** npm run check:watch in separate tab/window
+*** npm run dev -- --open // check in browser
+    
+** Refs
+*** [1]  https://dev.to/p_carlose/getting-started-with-sveltekit-and-typescript-4maa
+*** [2]  https://www.npmjs.com/package/@sveltejs/adapter-static
+*** [3]  https://github.com/vitejs/vite/issues/512#issuecomment-656547187
+*** [4]  https://github.com/JamesIves/github-pages-deploy-action https://github.com/marketplace/actions/deploy-to-github-pages
+*** [5]  https://github.com/fireship-io/222-responsive-icon-nav-css/blob/master/public/style.css https://www.youtube.com/watch?v=biOMz4puGt8
+*** [6]  https://kit.svelte.dev/docs/configuration#trailingslash
+*** [7]  https://github.com/sveltejs/kit/tree/master/packages/adapter-static#spa-mode
+*** [8]  https://kit.svelte.dev/docs/hooks#handle
+*** [9]  https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar
+*** [10] https://svelte.dev/docs#template-syntax-slot
+
+** GIT STUFF
+*** https://stackoverflow.com/questions/4114095/how-do-i-revert-a-git-repository-to-a-previous-commit
+
+
+** Graphics Sources and inspirations:
+
+I have tried to build the look based on bootstrap, but I have ended with quite a modifications:
+** The navbar:
+https://pixabay.com/images/id-3880571/ heavily edited
+https://pixabay.com/images/id-3227459/
+https://pixabay.com/images/id-677521/
+
+*** Penrose triangle and octagon for the navbar button taken from wikipedia (and colorized)
+https://en.wikipedia.org/wiki/Penrose_triangle
+https://en.wikipedia.org/wiki/File:Penrose_octagon.svg
+https://upload.wikimedia.org/wikipedia/commons/c/c1/Penrose-dreieck.svg
+https://upload.wikimedia.org/wikipedia/commons/a/a3/Penrose_hexagon.svg
+https://upload.wikimedia.org/wikipedia/commons/2/25/Penrose_pentagon.svg
+https://upload.wikimedia.org/wikipedia/commons/1/1c/Penrose_square.svg
+
+*** Impossible cube:
+https://en.wikipedia.org/wiki/Impossible_cube
+
+*** A Penrose triangle boxes for postlist container:
+https://pixabay.com/images/id-161955/
+
+*** The background:
+https://en.wikipedia.org/wiki/Relativity_(M._C._Escher)
+The Escher Relativity drawing downloaded from https://www.flickr.com/photos/pmeimon/40066693941 then trimmed a little for the purpose.
+*** The inspiration for color palette:
+https://pixabay.com/images/id-669296/
+https://pixabay.com/images/id-1468883/
+Clock transformed in the watermark background:
+
+https://pixabay.com/images/id-4068582/
+Hexagons:
+https://pixabay.com/images/id-1562743/
+Chess:
+https://pixabay.com/images/id-316658/
+Fibonacci:
+https://pixabay.com/images/id-1601158/
+Chrysalis:
+https://pixabay.com/images/id-1548273/
+Depth:
+https://pixabay.com/images/id-1558164/
+The CV container background and the list of post:
+https://pixabay.com/images/id-2703890/
+Guilloche for bookmarks:
+https://pixabay.com/images/id-1137074/
+Guilloche for buttons:
+https://pixabay.com/images/id-1253260/
+Guilloche for gold marker:
+https://pixabay.com/images/id-1337833/
+
+
+
+*** The legacy look:
+Butterfly:
+https://pixabay.com/images/id-142506/
+Bricks:
+https://pixabay.com/images/id-2172682/
+
+**** How to make flexible containers:
+https://medium.freecodecamp.org/how-to-create-a-fully-responsive-navbar-with-flexbox-a4435d175dd3
+
+**** How to change image on hover with CSS:
+https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php
+
+**** Internal history back button handling
+https://stackoverflow.com/questions/24307401/window-history-pushstate-refreshing-the-browser
+```javascript
+window.history.pushState({urlPath:'/page1'},"",'/page1')
+```
+
+**** Non breaking space
+```
+<div>&nbsp;•Hello•World</div>
+```
+### CSS for wrapping in code fences in markdown.
+
+https://stackoverflow.com/questions/41238148/how-to-line-wrap-long-lines-inside-markdown-code-blocks-in-githubgitlab
+
+``` javascript
+//slideshow.js
+export const plusSlides = (n)=>{
+    showSlides(slideIndex += n);
+}
+```
+
+and import it where you need to
+
+```
+//Homepage.js
+import {plusSlides} from './slide'
+
+handleClick (event) {
+        plusSlides(1);
+    }
+```    
+*** For further considerations:
+https://codeburst.io/the-2018-web-developer-roadmap-826b1b806e8d
+https://stackoverflow.com/questions/35028591/react-dangerouslysetinnerhtml-to-render-an-iframe-youtube-embed-from-props
+
+**** Fetch
+https://davidwalsh.name/fetch
+https://stackoverflow.com/questions/36631762/returning-html-with-fetch
+```javascript
+fetch('somePage.html')
+    .then(function(response) {
+        // When the page is loaded convert it to text
+        return response.text()
+    })
+    .then(function(html) {
+        // Initialize the DOM parser
+        var parser = new DOMParser();
+
+        // Parse the text
+        var doc = parser.parseFromString(html, "text/html");
+
+        // You can now even select part of that html as you would in the regular DOM
+        // Example:
+        // var docArticle = doc.querySelector('article').innerHTML;
+
+        console.log(doc);
+    })
+    .catch(function(err) {  
+        console.log('Failed to fetch page: ', err);  
+    });
+```
+**** Load/import
+https://stackoverflow.com/questions/7163061/is-there-a-require-for-json-in-node-js
+
+As of node v0.5.x yes you can require your JSON just as you would require a js file.
+```javascript
+var someObject = require('./somefile.json')
+```
+In ES6:
+```javascript
+import someObject from ('./somefile.json')
+```
+**** Check functions list
+https://stackoverflow.com/questions/25529290/node-js-module-how-to-get-list-of-exported-functions
+```javascript
+var myExports = require('./exported-file.js');
+console.log(Object.keys(myExports));
+```
+**** iframe
+
+*** SEO
+https://github.com/GoogleWebComponents/google-analytics
+https://web.dev/
+
+
+*** CSS
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss_font-family
+https://css-tricks.com/snippets/css/css-triangle/
+https://observablehq.com/@pstuffa/svg-filters-feturbulence
+
+https://www.makeuseof.com/css-background-patterns-examples/
+
+*** CSS gradient
+https://css-tricks.com/css3-gradients/
+https://www.w3docs.com/tools/code-editor/266
+https://css-tricks.com/snippets/css/complete-guide-grid/
+https://9elements.com/blog/pure-css-diagonal-layouts/
+
+*** CSS shadows
+https://css.glass/
+http://jsfiddle.net/encounter/UHQ4t/
+https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3
+https://www.w3schools.com/cssref/css3_pr_perspective.asp
+
+
+*** CSS dynamics
+https://www.w3schools.com/howto/howto_css_loader.asp
+https://dev.to/sobhandash/lets-build-a-night-sky-using-pure-scss-2g0n
+https://www.youtube.com/watch?v=X6JQzEnw994
+https://gist.github.com/trongthanh/2403656
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss_anim_transform
+https://redstapler.co/realistic-water-effect-svg-turbulence-filter/
+https://www.youtube.com/watch?v=q-i0rZBZvBk
+https://github.com/beauhaus/Nephele#readme
+https://www.nephele.cloud/
+https://css-tricks.com/drawing-realistic-clouds-with-svg-and-css/
+https://www.npmjs.com/package/canvas-particle-network
+https://codegolf.stackexchange.com/questions/35569/tweetable-mathematical-art/
+https://codepen.io/rw1982/pen/LWzdMb
+https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feBlend
+
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_animation
+
+
+*** CSS flexbox
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://www.w3schools.com/howto/howto_css_parallax.asp
+https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3
+http://dahlström.net/svg/filters/arrow-with-dropshadow.svg
+https://stackoverflow.com/questions/19484707/how-can-i-make-an-svg-scale-with-its-parent-container
+https://www.youtube.com/watch?v=biOMz4puGt8 flexbox sidemenu
+https://www.freecodecamp.org/news/create-gantt-chart-using-css-grid/
+https://blog.logrocket.com/how-to-style-forms-with-css-a-beginners-guide/
+https://www.w3schools.com/w3css/w3css_panels.asp
+
+*** CSS resizing
+https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap
+https://www.w3schools.com/cssref/css3_pr_word-wrap.asp
+https://www.w3schools.com/cssref/playdemo.asp?filename=playcss_word-wrap
+
+
+https://css-tricks.com/transforms-on-svg-elements/
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/background-size
+https://www.w3schools.com/cssref/pr_background-position.asp
+https://www.w3schools.com/cssref/pr_pos_overflow.asp
+https://www.w3schools.com/cssref/playdemo.asp?filename=playcss_overflow&preval=clip
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss_play_overflow
+https://css-tricks.com/perfect-full-page-background-image/
+https://developer.mozilla.org/en-US/docs/Web/CSS/calc
+https://css-tricks.com/perfect-full-page-background-image/
+https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-y
+
+*** D3
+https://www.dataviscourse.net/tutorials/lectures/lecture-d3-layouts/
+https://github.com/flmath/flmath.github.io/blob/f46cdc87fb73372e48935bf0cba8cfede83a05e9/src/routes/curriculum_vitae/D3Cloud.svelte
+
+https://d3js.org/d3.v7.js
+https://gramener.github.io/d3js-playbook/layouts/pie.html
+https://observablehq.com/@d3/hexbin-centers?collection=@d3/d3-hexbin
+https://observablehq.com/@d3?tab=collections&type=public&page=2
+https://github.com/d3/d3
+https://www.dataviscourse.net/tutorials/lectures/lecture-d3-layouts/
+https://rockcontent.com/blog/creating-animations-and-transitions-with-d3-js/
+
+https://css-tricks.com/lodge/svg/
+https://css-tricks.com/guide-svg-animations-smil/
+https://observablehq.com/explore
+https://observablehq.com/@bensimonds/perlin-snakes
+https://observablehq.com/@peatroot/stars-and-constellations
+
+http://jsfiddle.net/fHBsS/
+https://carbondesignsystem.com/data-visualization/simple-charts/#word-cloud
+https://qdmana.com/2021/09/20210917213527189o.html
+
+*** LIT
+https://lit.dev/docs/tools/development/#development-and-production-builds
+
+*** javascript
+https://code.tutsplus.com/articles/how-to-check-if-a-function-exists-in-javascript--cms-40249
+
+*** Svelte
+
+**** markdown
+https://svelteland.github.io/svelte-kit-blog-demo/create-your-blog/
+https://stackoverflow.com/questions/69565109/how-to-import-markdown-files-in-svelte-kit
+https://www.npmjs.com/package/svelte-markdown
+https://fantinel.dev/blog-development-sveltekit/
+
+https://svelte.dev/tutorial/svelte-component
+https://svelte.dev/repl/e2adc9ea596c457ebd2ae230c22b2b0b?version=3.32.1
+https://github.com/Schum123/svelte-loading-spinners
+
+
+https://github-vis.ably.dev/?ref=madewithsvelte.com
+https://www.nielsvandermolen.com/external-javascript-sveltejs/
+https://github.com/metonym/svelte-highlight
+https://svelte.dev/repl/28f4b2e36e4244b8b23cae3d584c4c88?version=3.16.6 remarkable
+
+**** SEO
+https://stackoverflow.com/questions/56083674/lighthouse-error-form-elements-do-not-have-associated-labels
+https://stackoverflow.com/questions/69295473/svelte-sveltekit-dynamic-import-of-components-with-variable
+https://svelte.dev/repl/16b375da9b39417dae837b5006799cb4?version=3.25.0
+https://nuclia.com/blog/how-to-build-lazy-loaded-custom-elements-with-svelte/
+https://www.chrsjxn.io/svelte/dynamic-imports
+https://svelte.dev/repl/4517b2961a7e466d99d994f043448a82?version=3.18.1
+
+https://stackoverflow.com/questions/56839098/import-javascript-file-in-svelte
+https://www.npmjs.com/package/html-minifier
+https://www.kudadam.com/blog/sveltekit-minify-rendered-html
+https://kit.svelte.dev/docs/assets#importing
+https://kit.svelte.dev/docs/seo#out-of-the-box
+https://kit.svelte.dev/docs/seo
+
+https://www.tiny.cloud/blog/svelte-rich-text-editor/
+
+https://layercake.graphics/components
+
+https://blog.logrocket.com/comprehensive-guide-svelte-components-slots/
+https://www.anycodings.com/1questions/1382311/in-sveltekit-how-to-pass-props-in-slot-using-layoutsvelte-file
+https://svelte.dev/tutorial/slots
+https://svelte.dev/tutorial/component-bindings
+https://svelte.dev/tutorial/slot-props
+https://ashutosh.dev/comprehensive-guide-of-events-handling-in-svelte/
+https://stackoverflow.com/questions/66982839/is-it-possible-to-dispatch-a-svelte-custom-event-with-a-target-object
+https://jumpwire.ai/blog/sveltekit-path-based-navigation
+https://stackoverflow.com/questions/69271131/sveltekit-run-function-at-route-change-for-access-token-without-doing-it-at-a
+https://kit.svelte.dev/docs/routing#page-page-js
+https://ashutosh.dev/comprehensive-guide-of-events-handling-in-svelte/
+https://svelte.dev/tutorial/component-events
+https://stackoverflow.com/questions/69271131/sveltekit-run-function-at-route-change-for-access-token-without-doing-it-at-a
+https://kit.svelte.dev/docs/routing#layout
+
+https://www.reddit.com/r/sveltejs/comments/qx95ge/how_can_i_get_the_current_route_in_a_svelte_kit/
+https://kit.svelte.dev/docs/introduction#modules-$app-stores
+https://svelte.dev/tutorial/reactive-declarations
+
+https://kit.svelte.dev/docs/routing#layout
+https://svelte.dev/repl/d3d48eb4106c4b24b984c4b70fd32271?version=3.46.2
+https://svelte.dev/repl/d7680b8f5aee4d86846b0982e6c0c01d?version=3.31.0
+https://pass-composer.vercel.app/
+https://www.youtube.com/watch?v=4Mp-EQnJSTw
+https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores
+
+https://svelte.dev/repl/286559382580492c8288e53a3597d7e1?version=3.28.0
+https://svelte.dev/repl/5fab983a191d459da149ef55e7962cf8?version=3.2.1
+https://svelte.dev/tutorial/onmount
+
+https://kit.svelte.dev/docs/migrating#endpoints
+https://fantinel.dev/blog-development-sveltekit/
+https://svelte.dev/repl/1a86d6f3df7b41f69f0fc93ba1ad0fd3?version=3.31.2
+https://stackblitz.com/edit/sveltekit-starter?file=src%2Flib%2Fform.ts
+https://github.com/ivanhofer/sveltekit-typescript-showcase
+https://alexxnb.github.io/svelte-preprocess-markdown/
+
+https://svelte.dev/examples/dom-events
+https://rodneylab.com/getting-started-with-sveltekit/#10-getting-started-with-sveltekit-sveltekit-seo
+https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript
+https://www.koderhq.com/tutorial/svelte/
+https://kit.svelte.dev/docs/routing
+https://www.nielsvandermolen.com/external-javascript-sveltejs/
+https://www.sanity.io/guides/using-typescript-with-svelte
+https://www.closingtags.com/global-css-in-sveltekit/
+https://kit.svelte.dev/docs/hooks#handle
+https://svelte.dev/tutorial/svelte-head
+https://natclark.com/tutorials/svelte-working-with-svgs/
+https://stackoverflow.com/questions/56895865/how-to-use-local-static-images-in-svelte
+https://svelte.dev/docs#template-syntax-element-directives-transition-fn
+https://svelte.dev/repl/bdc788a7d5dd4f8685e50326fa11ea0e?version=3.49.0
+https://stackoverflow.com/questions/70531875/svelte-crossfade-transition-between-pages
+https://dev.to/buhrmi/svelte-component-transitions-5ie
+https://svelte.dev/repl/2594c50ed8f94798898e11416951babc?version=3.44.2
+https://svelte.dev/examples/hacker-news
+https://svelte.dev/tutorial/dimensions
+https://codesandbox.io/s/cvu5h?file=/App.svelte
+https://svelte.dev/tutorial/bind-this
+https://developers.google.com/chart/interactive/docs/roles#stylerole
+https://groups.google.com/g/google-visualization-api/c/OaG0wS2k2N0
+https://stackoverflow.com/questions/69064178/google-charts-timeline-change-bar-height-with-react-google-charts
+https://svelte.dev/repl/76389084c0e241e8b1e5bd910897c468?version=3.50.1
+https://www.kudadam.com/blog/svelte-reading-progress
+
+*** error
+https://kit.svelte.dev/docs/routing#layout
+
+*** svg
+https://stackoverflow.com/questions/34201318/trying-to-make-a-for-loop-to-draw-an-svg
+
+*** graph
+plotply
+https://developers.google.com/chart/interactive/docs/gallery/ganttchart
+https://developers.google.com/chart/interactive/docs/gallery/timeline#overlapping-gridlines
+https://stackoverflow.com/questions/52993106/google-chart-timeline-with-different-moments-in-row
+https://blog.stranianelli.com/how-to-interact-with-google-chart/
+https://fslab.org/XPlot//chart/plotly-time-series.html
+https://developers.google.com/chart/interactive/docs/gallery/sankey
+https://codemyui.com/tag/timeline/
+https://github.com/microsoft/vscode-webview-ui-toolkit
+https://betterprogramming.pub/visualize-your-medium-stats-with-svelte-and-javascript-eb1ef7c71a63
+
+*** Paricle svelte library
+https://codepen.io/matteobruni/pen/ZExaQyB
+https://github.com/matteobruni/tsparticles/tree/main/components/svelte
+https://particles.js.org/samples/presets/triangles.html
+https://particles.js.org/samples/presets/index.html
+https://codepen.io/matteobruni/pen/ZExaQyB
+https://codepen.io/matteobruni/details/YzWOjyK black hole
+https://particles.js.org/
+https://github.com/matteobruni/tsparticles/blob/main/demo/svelte/src/App.svelte
+https://codesandbox.io/s/svelte-particles-h6lb5?file=/App.svelte
+https://github.com/tsparticles/templates
+https://codesandbox.io/search?refinementList%5Btemplate%5D=&refinementList%5Bnpm_dependencies.dependency%5D%5B0%5D=svelte-particles&page=2&configure%5BhitsPerPage%5D=12
+https://codepen.io/collection/DPOage
+https://dev.to/tsparticles/tsparticles-easily-add-highly-customizable-particles-animations-to-your-website-3l2g
+https://github.com/matteobruni/tsparticles/blob/main/components/svelte/README.md
+https://www.skypack.dev/view/svelte-particles
+https://github.com/JulianLaval/canvas-particle-network#readme
+https://github.com/VincentGarreau/particles.js
+https://vincentgarreau.com/particles.js/
+
+
+*** Jupyter
+https://github.com/jupyter/nbconvert/issues/1332
+https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/exporting.html
+
+
+*** How to make drawing from picture with GIMP:
+https://www.youtube.com/watch?v=eLgsSN2MsMo
+
+** Other pictures:
+https://pixabay.com/illustrations/banner-jigsaw-pattern-design-5190182/
+https://pixabay.com/vectors/impossible-optical-illusion-triangle-161955/
+https://pixabay.com/vectors/pattern-illusion-optical-depth-3d-4060286/
+
+https://pixabay.com/vectors/cube-escher-gradient-mc-escher-1293954/
+https://pixabay.com/photos/tree-silhouette-mysterious-407256/
+https://pixabay.com/photos/nature-tree-fog-waters-snow-lake-3091991/
+https://pixabay.com/photos/tree-fog-november-cold-nature-554391/
+https://pixabay.com/photos/fog-tree-mood-backlighting-nature-553005/
+https://pixabay.com/photos/butterfly-blue-insect-142506/
+https://pixabay.com/photos/pattern-ceiling-steel-geometric-3130657/
+https://pixabay.com/photos/arches-architecture-bridge-columns-1837166/
+https://pixabay.com/photos/torino-royal-palace-piemonte-1220460/
+https://pixabay.com/photos/library-church-architecture-white-2544157/
+https://pixabay.com/photos/roof-glass-library-building-1878904/
+https://pixabay.com/photos/library-book-literature-knowledge-807931/
+https://pixabay.com/photos/peabody-institute-baltimore-usa-1629259/
+https://pixabay.com/photos/ice-eiskristalle-snow-iced-1997289/
+https://pixabay.com/photos/pattern-ceiling-steel-geometric-3130657/
+https://pixabay.com/photos/coast-beach-ocean-sea-nature-509195/
+https://pixabay.com/photos/ice-cave-ice-curtain-icicle-16574/
+https://pixabay.com/photos/movement-clock-gear-feather-4068582/
+
+https://pixabay.com/photos/graphic-creativity-geometric-shape-3197762/
+https://pixabay.com/photos/puzzle-paper-design-game-sample-3935850/
+https://pixabay.com/photos/spiral-notebook-notebook-open-3475360/
+
+https://pixabay.com/photos/chess-metaphor-board-business-315940/
+https://pixabay.com/photos/chess-metaphor-board-business-316657/
+
+https://pixabay.com/vectors/certificate-diploma-award-background-1253260/
+https://pixabay.com/vectors/guilloche-rosette-security-printing-1337833/
+https://pixabay.com/illustrations/spirograph-pattern-design-geometric-1991340/
+
+
+https://pixabay.com/illustrations/fractal-background-digitization-2173803/
+https://pixabay.com/illustrations/black-and-white-background-spiral-2703890/
+https://pixabay.com/illustrations/hexagon-background-tile-mosaic-2822770/
+https://pixabay.com/illustrations/fractal-abstract-generated-2787625/
+https://pixabay.com/illustrations/fractal-abstract-rendering-idea-1707412/
+https://pixabay.com/illustrations/organic-fractal-abstract-background-1280085/
+https://pixabay.com/illustrations/fractal-abstract-background-cosmos-1280111/
+https://pixabay.com/illustrations/fractal-delicate-white-background-1784703/
+https://pixabay.com/illustrations/apophysis-attractor-colours-digital-1437715/
+
+https://pixabay.com/illustrations/wave-background-pattern-abstract-706397/
+https://pixabay.com/illustrations/white-background-abstract-light-2486923/
+
+https://pixabay.com/photos/storm-clouds-clouds-cumulus-3499982/
+https://pixabay.com/photos/clouds-sky-weather-blue-3422258/
+
+
+https://pixabay.com/illustrations/concept-gear-planet-technology-1262315/
+
+https://pixabay.com/photos/pattern-winter-cold-ice-blue-2054281/
+https://pixabay.com/photos/abstract-ice-frost-crystals-frozen-1869263/
+
+https://pixabay.com/photos/sky-stars-constellations-astronomy-828648/S
+https://pixabay.com/photos/astronomy-space-darkness-science-3173669/
+https://pixabay.com/photos/ocean-sea-water-wave-chess-2791952/
+https://pixabay.com/photos/magic-chess-chess-harry-potter-play-3795150/
+https://pixabay.com/photos/chess-game-chessboard-glass-board-433071/
+https://pixabay.com/photos/macro-focus-cogwheel-gear-engine-1452986/
+
+https://pixabay.com/photos/pocket-watch-time-clock-time-of-2058930/
+
+https://pixabay.com/illustrations/matrix-binary-code-green-3415878/
+https://pixabay.com/illustrations/background-color-template-abstract-3266287/
+
+https://pixabay.com/illustrations/network-technology-communication-3880571/
+
+https://pixabay.com/vectors/computer-cyber-circuitry-circuits-3163436/
+
+https://pixabay.com/users/artbaggage-1189926/
+https://pixabay.com/images/search/guilloche/
+
+https://pixabay.com/illustrations/organic-fractal-abstract-background-1280085/
+
+https://pixabay.com/vectors/memory-note-notepad-word-writing-1293086/
+https://pixabay.com/photos/backdrop-background-blank-board-72250/
+
+https://pixabay.com/illustrations/fractals-background-mathematics-1800242/
+https://pixabay.com/vectors/note-notes-memo-cards-cards-learn-1399152/
+https://pixabay.com/illustrations/fractal-abstract-background-physics-1280076/
+https://pixabay.com/illustrations/mandala-coloring-picture-imagine-3225164/
+
+** Other pictures 2022:
+https://pixabay.com/users/kerttu-569708/?tab=most-relevant&pagi=2
+https://pixabay.com/images/search/victorian%20architecture/
+https://pixabay.com/illustrations/search/texture/
+https://pixabay.com/users/gdj-1086657/
+https://pixabay.com/illustrations/grid-hex-hexagonal-hexagon-pattern-3227320/
+https://pixabay.com/illustrations/search/checkered/
+https://pixabay.com/illustrations/search/abstract/
+https://pixabay.com/get/g5671d5dc3d85651868ef3f24e7d576f75e95fb91448b3cf99fc8c3fd9d18cc0e9c32a18bc2e7925dc0d4753aa4a2c216.jpg
+https://pixabay.com/illustrations/search/the%20polygon/
+https://pixabay.com/illustrations/wormhole-space-time-light-tunnel-739872/
+https://pixabay.com/users/sergei_spas-9611130/
+https://pixabay.com/photos/search/water%20white/
+https://pixabay.com/vectors/search/binary/
+https://pixabay.com/users/geralt-9301/?tab=most-relevant&pagi=4
+https://pixabay.com/illustrations/network-work-gear-gears-blockchain-3539325/
+https://pixabay.com/illustrations/blockchain-network-networking-web-4728471/
+https://pixabay.com/vectors/bitcoin-digital-currency-3163494/
+https://pixabay.com/illustrations/abstract-mock-up-wallpaper-form-3291293/
+https://pixabay.com/vectors/search/guilloche/
+https://pixabay.com/users/creativemagic-480360/
+https://pixabay.com/users/manuchi-1728328/
+https://pixabay.com/illustrations/honeycomb-structure-honeycomb-4608274/
+https://pixabay.com/illustrations/turquoise-background-leaves-texture-2065460/
+https://pixabay.com/photos/clouds-sky-bright-daylight-light-1282314/
+https://pixabay.com/illustrations/cube-background-background-pattern-2484131/
+https://pixabay.com/vectors/network-communication-technology-4348660/
+https://pixabay.com/collections/technology-backgrounds-878206/?pagi=5
+https://pixabay.com/illustrations/background-cloister-brocade-885434/
+https://pixabay.com/illustrations/background-rectangles-pattern-4973341/
+https://pixabay.com/illustrations/polygon-background-blue-design-2189646/
+https://pixabay.com/vectors/circuit-boards-electronic-158375/
+https://pixabay.com/vectors/circuit-board-background-wallpaper-5962474/
+
+https://pixabay.com/users/shabinh-7862477/
+https://pixabay.com/users/mindofmush-4961970/
+
+https://pixabay.com/illustrations/banner-header-fractal-complexity-1762895/
+https://pixabay.com/illustrations/comb-abstract-modern-pattern-cell-2373170/
+https://pixabay.com/vectors/mosaic-pattern-wall-stones-145830/
+https://pixabay.com/vectors/americana-abstract-graphic-mosaic-1512910/
+https://pixabay.com/illustrations/americana-modern-abstract-design-1501711/
+https://pixabay.com/illustrations/fractal-art-3d-fractals-3206739/
+https://pixabay.com/illustrations/flower-magnolia-watercolor-floral-3350053/
+https://pixabay.com/vectors/pattern-illusion-optical-depth-3d-4060286/
+https://pixabay.com/vectors/fibonacci-spiral-science-golden-1601158/
+
+https://pixabay.com/vectors/mesh-background-triangles-polygon-1430107/
+https://pixabay.com/illustrations/search/crystal/
+https://pixabay.com/users/activedia-665768/
+https://pixabay.com/illustrations/cog-wheels-gear-wheel-machine-2125183/
+https://pixabay.com/illustrations/cog-wheels-gear-wheels-machine-2125169/
+https://pixabay.com/vectors/triangles-polygon-color-pink-1430105/
+https://pixabay.com/vectors/jigsaw-puzzle-game-shape-puzzle-152865/
+
+
+https://pixabay.com/illustrations/maze-labyrinth-solution-lost-1804499/
+https://pixabay.com/vectors/maze-circular-labyrinth-lost-3312540/
+https://pixabay.com/images/search/labyrinth/
+https://pixabay.com/vectors/maze-puzzle-riddle-quiz-labyrinth-2094070/
+https://pixabay.com/users/pheee-1680284/
+https://pixabay.com/illustrations/maze-puzzle-riddle-quiz-labyrinth-1560302/
+https://pixabay.com/photos/puzzle-delimitation-exact-fit-654962/
+https://pixabay.com/images/search/puzzle/
+
+https://pixabay.com/vectors/geometry-design-art-symbol-7239268/
+https://pixabay.com/vectors/geometry-design-circle-7236399/
+https://pixabay.com/vectors/symbol-meditation-mandala-circle-7250853/
+
+https://pixabay.com/vectors/triangles-triangular-low-poly-1289379/
+https://pixabay.com/vectors/fibonacci-spiral-golden-ratio-7225635/
+
+
+https://pixabay.com/illustrations/triangle-sky-abstract-wallpaper-2136288/
+https://pixabay.com/illustrations/abstract-dust-background-wallpaper-5719221/
+https://pixabay.com/vectors/border-celtic-corner-floral-vine-32966/
+https://pixabay.com/photos/spark-steel-wool-whirl-circle-1948011/
+https://pixabay.com/photos/ice-planet-winter-moon-snow-crater-7160751/
+
+stockholm
+https://pixabay.com/images/search/stockholm/?pagi=6
+https://pixabay.com/photos/stockholm-sweden-old-town-3897532/
+
+** pexel
+https://www.pexels.com/photo/city-view-photography-2129886/
+
+
+** Freepik
+https://www.freepik.com/vectors/guilloche
+
+** Freevectors
+https://www.123freevectors.com/free-vector-guilloche-patterns-illustrator-brushes/
+
+** Intresting art:
+https://observablehq.com/@mbostock/epicyclic-gearing
+https://en.wikipedia.org/wiki/Three-body_problem
+https://en.wikipedia.org/wiki/Curve_of_constant_width
+https://en.wikipedia.org/wiki/Reuleaux_triangle
+https://en.wikipedia.org/wiki/The_Scream
+https://medium.com/@shivamchawla3011/types-of-guilloch%C3%A9-90d6b1460970
+https://en.wikipedia.org/wiki/Guilloch%C3%A9
+M.C.Escher
+Penrose
+Reutersvärd
+Calabi-Yau
+Fractals
+Kanizsa triangle
+Necker cube - possible views
+Mueller-Lyer arrows
+https://archive.bridgesmathart.org/2019/bridges2019-327.pdf
+False perspective
+Tesselation
+https://www.twinkl.pl/teaching-wiki/tessellation
+https://commons.wikimedia.org/wiki/User:David_Eppstein/Gallery
+
+https://svelte.dev/repl/db316e2b250a4c53845e5a795ad8a11e?version=3.19.2
+https://en.wikipedia.org/wiki/Antimatroid
+https://en.wikipedia.org/wiki/Self-organized_criticality
+https://en.wikipedia.org/wiki/Abelian_sandpile_model
+https://en.wikipedia.org/wiki/Tamari_lattice#/media/File:Tamari_lattice.svg
+https://en.wikipedia.org/wiki/Power_set#/media/File:Hasse_diagram_of_powerset_of_3.svg
+
+** Other interesting colors:
+https://visme.co/blog/color-combinations/
+
+http://www.color-hex.com/color/b9e5f3
+http://www.color-hex.com/color/8ed3f4
+http://www.color-hex.com/color/328daa
+http://www.color-hex.com/color/e4ebf4
+http://www.color-hex.com/color/8a8683
+http://www.color-hex.com/color/5a4d4c
+http://www.color-hex.com/color/51a2d9
+http://www.color-hex.com/color/505961
+
+** English language support:
+
+https://www.slickwrite.com
+https://app.grammarly.com
+https://hemingwayapp.com/

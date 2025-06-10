@@ -65,7 +65,6 @@
   
       <NavLink picture={Penrose3} text="Posts" href="/posts" bind:this={hover[1]} />
       <NavLink picture={ImposibleCubeSvg} text="CV" href="/curriculum_vitae" bind:this={hover[2]} />
-      <br />
       <NavLink picture={Reutersward} text="Bench" href="/exit_page" bind:this={hover[3]} />
       <DarkLight text="Dark Mode" klass="last" href="/" bind:this={hover[4]}></DarkLight>
 

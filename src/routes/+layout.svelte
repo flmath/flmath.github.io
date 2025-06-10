@@ -6,6 +6,7 @@
   import Reutersward from "$lib/svg/Reutersward.svelte";
   import { page } from "$app/state";
   import { onMount } from "svelte";
+	import DarkLight from "$lib/DarkLight.svelte";
 
 
   type NavElement = LogoElement | NavLink;
@@ -64,7 +65,11 @@
   
       <NavLink picture={Penrose3} text="Posts" href="/posts" bind:this={hover[1]} />
       <NavLink picture={ImposibleCubeSvg} text="CV" href="/curriculum_vitae" bind:this={hover[2]} />
-      <NavLink picture={Reutersward} klass="last" text="End" href="/exit_page" bind:this={hover[3]} />
+      <br />
+      <NavLink picture={Reutersward} text="Bench" href="/exit_page" bind:this={hover[3]} />
+      <DarkLight text="Dark Mode" klass="last" href="/" bind:this={hover[4]}></DarkLight>
+
+
 
     </ul>
   </nav>

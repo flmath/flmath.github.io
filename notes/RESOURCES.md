@@ -8,6 +8,6 @@ https://en.wikipedia.org/wiki/File:Impossible_cube_illusion_angle.svg
 #### https://svgoptimizer.com/pl/ for svg minification
 #### https://www.gimp.org/
 #### https://inkscape.org/
-
+#### https://optimize.svgomg.net/
 
 

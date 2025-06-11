@@ -1,6 +1,6 @@
 <script lang="ts">
   import { SpinOptions } from "./SpinOptions";
-  import Penrose8 from "./svg/Penrose8.svelte";
+  import Penrose8 from "../svg/Penrose8.svelte";
   import { fade } from "svelte/transition";
   import { sineOut } from "svelte/easing";
   import { page } from "$app/state";

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { SpinOptions } from "./SpinOptions";
-  import Sun from "./svg/Sun.svelte";
+  import Sun from "../svg/Sun.svelte";
   import { fade } from "svelte/transition";
   import { sineOut } from "svelte/easing";
   import { page } from "$app/state";
@@ -19,7 +19,7 @@
       delay,
       css: (t: number) => {
         const eased = sineOut(t);
-        return `transform: rotate(${spin.rotations * eased * 360}deg);`;
+        return `transform: rotate(${spin.rotations * eased * 180}deg);`;
       },
     };
   }

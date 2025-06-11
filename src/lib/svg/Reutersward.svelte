@@ -5,8 +5,7 @@
       svg{
  
          width: 4.5rem;
-         margin-left: 0.5rem;
-         margin-top: 2.5rem;
+         margin-left: 0.5rem;        
          margin-bottom: 2.5rem;
       }
       

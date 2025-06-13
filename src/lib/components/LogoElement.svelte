@@ -36,8 +36,12 @@
   }
   export function handleMouseOut() {
     activeText = "";
-    if (href !== page.route.id) active = " ";
+    handleCheckActive();
   }
+  export function handleCheckActive() {
+		if (page.route.id === href) active = ' active ';
+		else active = ' ';
+		}
 </script>
 
 <li class={"logo" + active}>
@@ -49,7 +53,7 @@
       <span class="button" in:spinForward={new SpinOptions(1000, 0)}>
         <Penrose8 /></span>
     {/if}
-    {#if activeText !== ""}
+    {#if activeText === " active "}
       <span class="link-text logo-text" in:fade={{ duration: 300, delay: 200 }}>
      {text} </span>
     {/if}

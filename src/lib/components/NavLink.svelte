@@ -18,8 +18,12 @@
 	}
 	export function handleMouseOut() {
 		activeText = ' ';
-		if (!match(hrefRegex, page.route.id)) active = ' ';
+		handleCheckActive();			
 	}
+	export function handleCheckActive() {
+		if (!match(hrefRegex, page.route.id)) active = ' ';
+		else active = ' active ';
+		}
 </script>
 
 <li class={'nav-item ' + klass + active + (undefined == href ? ' ' : href)}>

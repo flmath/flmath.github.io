@@ -15,6 +15,7 @@
          width: 5rem;
          margin-left: 0.5rem;
          margin-bottom: 1.5rem;
+         transform: rotate(var(--angle));
       }
       
     </style>

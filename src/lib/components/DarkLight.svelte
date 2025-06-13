@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { stylesheets } from './../../../.svelte-kit/output/server/nodes/3.js';
   import { SpinOptions } from "./SpinOptions";
   import Sun from "../svg/Sun.svelte";
   import { fade } from "svelte/transition";
@@ -9,7 +10,7 @@
   let activeText: string = $state("");
 
 
-  let { href = "/", text = "Missing", picture = Sun, klass = "" } = $props();
+  let { href = "/", text = "Missing", picture = Sun, klass = "", darkMode=false } = $props();
 
   function spin(node: HTMLElement, spin: SpinOptions) {
     let duration = spin.duration;
@@ -19,42 +20,48 @@
       delay,
       css: (t: number) => {
         const eased = sineOut(t);
-        return `transform: rotate(${spin.rotations * eased * 180}deg);`;
+        return `transform: rotate(${spin.rotations * eased * 360}deg);`;
       },
     };
   }
  
   function spinBack(node: HTMLElement, spinOpt: SpinOptions) {
-    return spin(node, new SpinOptions(spinOpt.duration, spinOpt.delay, -3));
+    return spin(node, new SpinOptions(spinOpt.duration, spinOpt.delay, -1));
   }
   function spinForward(node: HTMLElement, spinOpt: SpinOptions) {
-    return spin(node, new SpinOptions(spinOpt.duration, spinOpt.delay, 3));
+    return spin(node, new SpinOptions(spinOpt.duration, spinOpt.delay, 1));
   }
   export function handleMouseOver() {
     active = " active ";
     activeText = " active ";
   }
+  
   export function handleMouseOut() {
     activeText = "";
-    if (href !== page.route.id) active = " ";
+    handleCheckActive();
   }
+  export function handleCheckActive() {
+		
+		}
 </script>
 
-<li class={"darklight" + active + " " + klass}>
-  <a {href} class="nav-link" onclick={() => (active = " active ")}>
-    {#if active !== " active "}
+<li class={"darklight" + active + " " + klass  }>
+  <!-- svelte-ignore a11y_no_static_element_interactions -->
+  <!-- svelte-ignore a11y_click_events_have_key_events -->
+  <span class="nav-link" onclick={() => (darkMode = !darkMode)}>
+    {#if darkMode}
       <span class="button" in:spinBack={new SpinOptions(1000, 0)}>
-        <Sun /></span>
+        <Sun --angle="270deg" /></span>
 
     {:else}
       <span class="button" in:spinForward={new SpinOptions(1000, 0)}>
-        <Sun /></span>
+        <Sun --angle="90deg"/></span>
     {/if}
     {#if activeText !== ""}
       <span class="link-text darklight-text" in:fade={{ duration: 300, delay: 200 }}>
      {text} </span>
     {/if}
-  </a>
+  </span>
 </li>
 
 <style>

@@ -1,13 +1,13 @@
 <script lang="ts">
   import { SpinOptions } from "./SpinOptions";
-  import Sun from "../svg/Sun.svelte";
+  import Sun from "$lib/svg/Sun.svelte";
   import { fade } from "svelte/transition";
   import { sineOut } from "svelte/easing";
-
+  import { theme } from '$lib/components/theme.svelte';
   let active: string = $state(' active ');
 
   let {text = "Missing", picture = Sun, klass = '', darkMode = false, activeText = $bindable() } = $props();
-
+  darkMode = theme.isMoon(); 
   function spin(node: HTMLElement, spin: SpinOptions) {
     let duration = spin.duration;
     let delay = spin.delay;
@@ -27,14 +27,7 @@
   function spinForward(node: HTMLElement, spinOpt: SpinOptions) {
     return spin(node, new SpinOptions(spinOpt.duration, spinOpt.delay, 1));
   }
-  export function handleMouseOver() {
-    active = ' active ';
-    activeText = true;
-  }
   
-  export function handleMouseOut() {
-    handleCheckActive();
-  }
   export function handleCheckActive() {
 		
 		}
@@ -43,7 +36,7 @@
 <li class={"darklight" + active + ' ' + klass  }>
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <!-- svelte-ignore a11y_click_events_have_key_events -->
-  <span class="nav-link" onclick={() => (darkMode = !darkMode)}>
+  <span class="nav-link" onclick={() => (darkMode = !darkMode, theme.toggle())}>
     {#if darkMode}
       <span class="button" in:spinBack={new SpinOptions(1000, 0)}>
         <Sun --angle="270deg" /></span>
@@ -98,9 +91,7 @@
     .navbar-nav {
       flex-direction: row;
     }
-    .nav-link {  
-
-     }
+   
     .active .nav-link {
       margin: 0;
     }

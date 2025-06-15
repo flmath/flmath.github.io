@@ -1,4 +1,5 @@
-/* :root {
+
+  :root {
       font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   --text-primary: #000000;
@@ -10,29 +11,26 @@
   --fa-secondary: #df49a6;
   --size-limit: 600px;
   }
+[color-scheme='sun'] {
+	color-scheme: sun; 
+  --text-secondary: purple;
 
-
+}
 @media (prefers-color-scheme: sun) {
 	:root {
-		 color-scheme: sun; 
-  --text-secondary: purple;
+		color-scheme: sun; 
 
 	}
 }
-
 
 [color-scheme='moon'] {
 	color-scheme: moon; 
   --text-secondary: red;
 
 }
-
 @media (prefers-color-scheme: moon) {
 	:root {
-		 color-scheme: moon;
-
-  --text-secondary: red;
-
+		 color-scheme: moon; 
 
 	}}
 
@@ -76,7 +74,7 @@ ul {
   }
 
 
-   .glass {
+   .glass{
   visibility: visible;
 
   background: rgba(255, 255, 255, 0.33);
@@ -92,4 +90,4 @@ ul {
 .erlang {
   overflow-x: scroll;
   /* background: rgba(0, 0, 255, 0.73); */
-} */
+}

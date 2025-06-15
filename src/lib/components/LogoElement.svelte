@@ -1,7 +1,7 @@
 <script lang="ts">
   import { SpinOptions } from "./SpinOptions";
   import Penrose8 from "../svg/Penrose8.svelte";
-  import { fade } from "svelte/transition";
+  import { fly } from "svelte/transition";
   import { sineOut } from "svelte/easing";
   import { page } from "$app/state";
 
@@ -28,13 +28,7 @@
   function spinForward(node: HTMLElement, spinOpt: SpinOptions) {
     return spin(node, new SpinOptions(spinOpt.duration, spinOpt.delay, 3));
   }
-  export function handleMouseOver() {
-    activeText = true;
-  }
-  export function handleMouseOut() {
-    activeText = false;
-    handleCheckActive();
-  }
+
   export function handleCheckActive() {
 		if (page.route.id === href) active = ' active ';
 		else active = ' ';
@@ -51,7 +45,7 @@
         <Penrose8 /></span>
     {/if}
     {#if activeText === true}
-      <span class="link-text logo-text" in:fade={{ duration: 300, delay: 200 }}>
+      <span class="link-text logo-text" in:fly={{ duration: 400, delay: 200, x: -30, y: 0 }}>
      {text} </span>
     {/if}
   </a>

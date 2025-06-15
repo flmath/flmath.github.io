@@ -1,13 +1,12 @@
 <script lang="ts">
   import ImposibleCubeSvg from "$lib/svg/ImposibleCubeSvg.svelte";
-  import NavLink from "../lib/components/NavLink.svelte";
-  import LogoElement from "../lib/components/LogoElement.svelte";
+  import NavLink from "$lib/components/NavLink.svelte";
+  import LogoElement from "$lib/components/LogoElement.svelte";
   import Penrose3 from "$lib/png/Penrose3.svelte";
   import Reutersward from "$lib/svg/Reutersward.svelte";
   import { page } from "$app/state";
   import { onMount } from "svelte";
 	import DarkLight from "$lib/components/DarkLight.svelte";
-
 
   type NavElement = LogoElement | NavLink;
   let hover: NavElement[] = $state([]);
@@ -26,27 +25,19 @@
 
    function handleChange() {
      hover.forEach((element) => {
- //      element.handleMouseOver();
- //      element.handleMouseOut();
+
       element.handleCheckActive();
      });
    }
 
   function handleMouseOver(e: Event) {
     activeText = true;
-    hover.forEach((element) => {
-//      element.handleMouseOver();
-    });
   }
 
   function handleMouseOut(e: Event) {
     activeText = false;
-    hover.forEach((element) => {
-    //  element.handleMouseOut();
-    });
   }
 </script>
-
 
 <svelte:head>
   <title>Mathias Green personal pages</title>
@@ -84,6 +75,7 @@
 
 
 <style>
+  
   :global(.root) {
     margin: 10rem;
     

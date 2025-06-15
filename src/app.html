@@ -9,6 +9,15 @@
 		<link rel="stylesheet" href="%sveltekit.assets%/global.css" />
 		<link rel="apple-touch-icon" href="/favicon192.png">
 		%sveltekit.head%
+		<script type="module" >
+			const theme = localStorage.getItem('color-scheme');
+			if (theme) {
+				document.documentElement.setAttribute('color-scheme', theme);
+			} else {
+				localStorage.setItem('color-scheme', 'sun');
+				document.documentElement.setAttribute('color-scheme', 'sun');
+			}
+		</script>
 	</head>
 	<div class="root" style="margin:0;padding:0;">
 		%sveltekit.body%

@@ -12,14 +12,7 @@
 		return hrefRegex.test(routeid);
 	}
 
-	export function handleMouseOver() {
-		active = ' active ';
-		activeText = true;
-	}
-	export function handleMouseOut() {
-		
-		handleCheckActive();
-	}
+	
 	export function handleCheckActive() {
 		if (!match(hrefRegex, page.route.id)) active = ' ';
 		else active = ' active ';

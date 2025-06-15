@@ -5,11 +5,9 @@
   import { sineOut } from "svelte/easing";
   import { page } from "$app/state";
 
-  let active: string = $state(" active ");
-  let activeText: string = $state("");
+  let active: string = $state(' active ');
 
-
-  let { href = "/", text = "Missing", picture = Penrose8 } = $props();
+  let { href = "/", text = "Missing", picture = Penrose8, activeText = $bindable() } = $props();
 
   function spin(node: HTMLElement, spin: SpinOptions) {
     let duration = spin.duration;
@@ -31,11 +29,10 @@
     return spin(node, new SpinOptions(spinOpt.duration, spinOpt.delay, 3));
   }
   export function handleMouseOver() {
-    active = " active ";
-    activeText = " active ";
+    activeText = true;
   }
   export function handleMouseOut() {
-    activeText = "";
+    activeText = false;
     handleCheckActive();
   }
   export function handleCheckActive() {
@@ -44,8 +41,8 @@
 		}
 </script>
 
-<li class={"logo" + active}>
-  <a {href} class="nav-link" onclick={() => (active = " active ")}>
+<li class={"logo" + active + (activeText ? ' activeText ' : ' ') }>
+  <a {href} class="nav-link" >
     {#if active !== " active "}
       <span class="button" in:spinBack={new SpinOptions(1000, 0)}>
         <Penrose8 /></span>
@@ -53,7 +50,7 @@
       <span class="button" in:spinForward={new SpinOptions(1000, 0)}>
         <Penrose8 /></span>
     {/if}
-    {#if activeText === " active "}
+    {#if activeText === true}
       <span class="link-text logo-text" in:fade={{ duration: 300, delay: 200 }}>
      {text} </span>
     {/if}
@@ -73,7 +70,11 @@
     filter: grayscale(0%) opacity(1);
     color: var(--text-secondary);
   }
-
+.activeText .nav-link .link-text{
+    margin-left: 2rem;
+    opacity: 1;
+    color: var(--text-secondary);
+  }
   .logo {
     font-weight: bold;
     text-transform: uppercase;
@@ -99,27 +100,25 @@
     .navbar-nav {
       flex-direction: row;
     }
-    .nav-link {  
-
-     }
-    .active .nav-link {
+  
+    .activeText .nav-link {
       margin: 0;
+    
     }
 
-    .nav-link .link-text {
-      display: none;
-
+    .nav-link .link-text{
+      margin: 0;
+      display: none; 
     }
+ 
     .nav-link .button {
       height: 5rem;
 
     }
-    .active .nav-link .link-text {
+    .link-text .logo-text {
       margin-top: 2rem;
-      display:none;
+      display: none;
     }
-
-
 
   }
   /* Large screens */
@@ -143,7 +142,7 @@
     }
 
     .nav-link .link-text {
-      display: none;
+  
       margin-left: 1rem;
     }
     .nav-link .button {

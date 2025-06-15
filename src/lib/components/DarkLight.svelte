@@ -1,16 +1,12 @@
 <script lang="ts">
-	import { stylesheets } from './../../../.svelte-kit/output/server/nodes/3.js';
   import { SpinOptions } from "./SpinOptions";
   import Sun from "../svg/Sun.svelte";
   import { fade } from "svelte/transition";
   import { sineOut } from "svelte/easing";
-  import { page } from "$app/state";
 
-  let active: string = $state(" active ");
-  let activeText: string = $state("");
+  let active: string = $state(' active ');
 
-
-  let { href = "/", text = "Missing", picture = Sun, klass = "", darkMode=false } = $props();
+  let {text = "Missing", picture = Sun, klass = '', darkMode = false, activeText = $bindable() } = $props();
 
   function spin(node: HTMLElement, spin: SpinOptions) {
     let duration = spin.duration;
@@ -32,12 +28,11 @@
     return spin(node, new SpinOptions(spinOpt.duration, spinOpt.delay, 1));
   }
   export function handleMouseOver() {
-    active = " active ";
-    activeText = " active ";
+    active = ' active ';
+    activeText = true;
   }
   
   export function handleMouseOut() {
-    activeText = "";
     handleCheckActive();
   }
   export function handleCheckActive() {
@@ -45,7 +40,7 @@
 		}
 </script>
 
-<li class={"darklight" + active + " " + klass  }>
+<li class={"darklight" + active + ' ' + klass  }>
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <span class="nav-link" onclick={() => (darkMode = !darkMode)}>
@@ -57,7 +52,7 @@
       <span class="button" in:spinForward={new SpinOptions(1000, 0)}>
         <Sun --angle="90deg"/></span>
     {/if}
-    {#if activeText !== ""}
+    {#if activeText}
       <span class="link-text darklight-text" in:fade={{ duration: 300, delay: 200 }}>
      {text} </span>
     {/if}

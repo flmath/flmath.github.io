@@ -12,6 +12,7 @@
   type NavElement = LogoElement | NavLink;
   let hover: NavElement[] = $state([]);
   let darkMode = $state(false);
+  let activeText = $state(false);
   let currentPageId = page.route.id;
   
 	let { children } = $props();
@@ -19,7 +20,8 @@
   onMount(async () => (currentPageId = "/"));
 
    $effect(() => {
-     if (currentPageId !== page.route.id) handleChange() 
+     //if (currentPageId !== page.route.id)
+     handleChange(); 
    });
 
    function handleChange() {
@@ -31,14 +33,16 @@
    }
 
   function handleMouseOver(e: Event) {
+    activeText = true;
     hover.forEach((element) => {
-      element.handleMouseOver();
+//      element.handleMouseOver();
     });
   }
 
   function handleMouseOut(e: Event) {
+    activeText = false;
     hover.forEach((element) => {
-      element.handleMouseOut();
+    //  element.handleMouseOut();
     });
   }
 </script>
@@ -61,14 +65,13 @@
     onmouseleave={handleMouseOut}
   >
     <ul class="navbar-nav">
-        <LogoElement text="Start" href="/" bind:this={hover[0]}>
+        <LogoElement text="Start" activeText={activeText} href='/' bind:this={hover[0]}>
         </LogoElement>
 
-  
-      <NavLink picture={Penrose3} text="Posts" href="/posts" bind:this={hover[1]} />
-      <NavLink picture={ImposibleCubeSvg} text="CV" href="/curriculum_vitae" bind:this={hover[2]} />
-      <NavLink picture={Reutersward} klass="reutersward" text="Bench" href="/exit_page" bind:this={hover[3]} />
-      <DarkLight text="Dark Mode" klass="last" href="/" bind:this={hover[4]} darkMode={darkMode}></DarkLight>
+      <NavLink picture={Penrose3} text="Posts" href="/posts" bind:activeText={activeText} bind:this={hover[1]} />
+      <NavLink picture={ImposibleCubeSvg} text="CV" href="/curriculum_vitae" bind:activeText={activeText} bind:this={hover[2]} />
+      <NavLink picture={Reutersward} klass="reutersward" text="Bench" href="/exit_page" bind:activeText={activeText} bind:this={hover[3]} />
+      <DarkLight text="Dark Mode" klass="last" bind:this={hover[4]} bind:activeText={activeText} darkMode={darkMode}></DarkLight>
 
 
 

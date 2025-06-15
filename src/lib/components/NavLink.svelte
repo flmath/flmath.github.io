@@ -2,9 +2,9 @@
 	import { fade } from 'svelte/transition';
 	import { page } from '$app/state';
 	let active: string = $state(' ');
-	let activeText: string = $state(' ');
+	
 
-	let { href = '/', picture, text = 'Missing', klass = '' } = $props();
+	let { href = '/', picture, text = 'Missing', klass = '', activeText = $bindable()} = $props();
 	let hrefRegex: RegExp = $derived(new RegExp(href + '.*'));
 
 	export function match(hrefRegex: RegExp, routeid: string | null): boolean {
@@ -14,11 +14,11 @@
 
 	export function handleMouseOver() {
 		active = ' active ';
-		activeText = ' active ';
+		activeText = true;
 	}
 	export function handleMouseOut() {
-		activeText = ' ';
-		handleCheckActive();			
+		
+		handleCheckActive();
 	}
 	export function handleCheckActive() {
 		if (!match(hrefRegex, page.route.id)) active = ' ';
@@ -30,7 +30,7 @@
 	<a {href} onclick={() => (active = ' active ')}>
 		{@render picture()}
 	</a>
-	{#if activeText === ' active '}
+	{#if activeText}
 		<a {href} class="item-text" in:fade={{ duration: 300, delay: 200 }}>
 			{text}
 		</a>

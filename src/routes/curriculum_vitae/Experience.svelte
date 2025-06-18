@@ -4,11 +4,12 @@
   import { fade } from "svelte/transition";
   import { onMount } from "svelte";
 
-  let TimeLineCv: svelte.JSX.IntrinsicAttributes;
-  let loaded = false;
+  let TimeLineCv: svelte.JSX.IntrinsicAttributes= $state(null);
+  let loaded = $state(false);
   function sleep(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
+
 
   onMount(async () => {
     await sleep(2000);
@@ -18,8 +19,10 @@
       loaded = true;
     }, 1000);
   });
-  $: innerWidth = 0;
-  $: outerWidth = 0
+  let innerWidth = $state(0);
+  let outerWidth = $state(0);
+
+
 </script>
 
 <svelte:window bind:outerWidth bind:innerWidth />
@@ -28,7 +31,7 @@
 {#if outerWidth > 600}
 {#if loaded}
   <div transition:fade>
-    <svelte:component this={TimeLineCv} />
+    <TimeLineCv/>
   </div>
 {:else}
   <div class="contain-spiner">

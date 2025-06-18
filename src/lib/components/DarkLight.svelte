@@ -4,9 +4,14 @@
   import { fade } from "svelte/transition";
   import { sineOut } from "svelte/easing";
   import { theme } from '$lib/components/theme.svelte';
+
   let active: string = $state(' active ');
 
-  let {text = "Missing", picture = Sun, klass = '', darkMode = false, activeText = $bindable() } = $props();
+  let {textlight = "Missing", textdark = "Missing",
+    picture = Sun, klass = '', darkMode = false, 
+    activeText = $bindable()
+
+  } = $props();
   darkMode = theme.isMoon(); 
   function spin(node: HTMLElement, spin: SpinOptions) {
     let duration = spin.duration;
@@ -47,7 +52,7 @@
     {/if}
     {#if activeText}
       <span class="link-text darklight-text" in:fade={{ duration: 300, delay: 200 }}>
-     {text} </span>
+     {darkMode ? textdark : textlight} </span>
     {/if}
   </span>
 </li>

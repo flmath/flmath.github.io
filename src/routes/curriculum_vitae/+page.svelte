@@ -6,6 +6,8 @@
   import Skills from "./Skills.svelte";
   import PersonalInfo from "./PersonalInfo.svelte";
   import CvHeader from "./CvHeader.svelte";
+ 
+  
 </script>
 <div class="cv">
   <section id="PersonalInfo">

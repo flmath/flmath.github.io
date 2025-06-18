@@ -7,7 +7,8 @@
   import { page } from "$app/state";
   import { onMount } from "svelte";
 	import DarkLight from "$lib/components/DarkLight.svelte";
-
+  import { theme } from '$lib/components/theme.svelte';
+  
   type NavElement = LogoElement | NavLink;
   let hover: NavElement[] = $state([]);
   let darkMode = $state(false);
@@ -62,7 +63,11 @@
       <NavLink picture={Penrose3} text="Posts" href="/posts" bind:activeText={activeText} bind:this={hover[1]} />
       <NavLink picture={ImposibleCubeSvg} text="CV" href="/curriculum_vitae" bind:activeText={activeText} bind:this={hover[2]} />
       <NavLink picture={Reutersward} klass="reutersward" text="Bench" href="/exit_page" bind:activeText={activeText} bind:this={hover[3]} />
-      <DarkLight text="Dark Mode" klass="last" bind:this={hover[4]} bind:activeText={activeText} darkMode={darkMode}></DarkLight>
+      <DarkLight textlight="Light Mode" textdark="Dark Mode" klass="last" 
+      bind:this={hover[4]} 
+      bind:activeText={activeText}
+      theme={theme}
+      darkMode={darkMode}></DarkLight>
 
 
 

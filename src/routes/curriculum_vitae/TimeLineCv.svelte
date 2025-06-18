@@ -1,8 +1,13 @@
 <script lang="ts">
     import { watchResize } from "svelte-watch-resize";
     import "@google-web-components/google-chart";
+    import { theme } from '$lib/components/theme.svelte';
 
-    export let cols: {
+    
+    let 
+    {title = "", sliceVisibilityThreshold = 0} = $props()
+    
+    let cols: {
         label: string;
         type: string;
     }[] = [
@@ -12,13 +17,26 @@
         { type: "date", label: "End" },
     ];
 
-    let mainWidth: number;
-
+    let mainWidth: number = $state(0);
     function handleMainResize(node: HTMLElement) {
         mainWidth = node.clientWidth;
     }
 
-    export let rows: [string, string, Date, Date][] = [
+    // Initialize chartBGColor with a placeholder.
+    // The $effect will set the correct initial value after mount and update it on theme changes.
+    let chartBGColor = $state('');
+$effect(() => {
+    const isDarkActive = $theme.darkstate; // Assuming it's a store, or theme.darkstate if it's a signal
+
+    if (typeof document !== 'undefined' && document.documentElement) {
+        const newBgColor = getComputedStyle(document.documentElement).getPropertyValue('--bg-gchart').trim();
+  
+        chartBGColor = newBgColor;
+    }
+});
+
+
+    let rows: [string, string, Date, Date][] = [
         ["Employment", "Ericpol", new Date(2012, 2, 1), new Date(2015, 7, 31)],
         [
             "Project",
@@ -38,8 +56,8 @@
 	["Employment", "Anydesk GmbH ", new Date(2023, 2, 1), new Date()],
         ["Project", "Anydesk Core", new Date(2023, 2, 1), new Date()],
     ];
-    export let title: String = "";
-    export let sliceVisibilityThreshold: number = 0;
+ 
+   
 </script>
 
 <div
@@ -56,7 +74,7 @@
         class="mainContent"
         type="timeline"
         {cols}
-        {rows}
+        {rows}      
         options={{
             timeline: {
                 barLabelStyle: { fontSize: 20 },
@@ -65,26 +83,27 @@
             },
             width: mainWidth * 0.98,
             height: 70 * (rows.length + 1),
-            title,
-            backgroundColor: "transparent",
-            titleTextStyle: { fontSize: 19, color: "#737373" },
+            title,            
+            backgroundColor: chartBGColor,
+            
+            titleTextStyle: { fontSize: 19, color: "#37373" },
             sliceVisibilityThreshold,
         }}
     ></google-chart>
 </div>
 
 <style>
-    .div-chart {
+    div.div-chart {
         width: 96%;
 
         margin-left: 0;
         margin-right: 0;
         align-items: center;
-
+        color: var(--color-gchart);
         padding: 0;
         display: block;
         visibility: visible;
-        background: rgba(255, 255, 255, 0.33);
+        background: var(--bg-gchart);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(6.4px);
@@ -92,9 +111,16 @@
         border: 1px solid rgba(255, 255, 255, 0.4);
     }
     .mainContent {
+               color: var(--color-gchart);
+        background: var(--bg-gchart);
         margin: 0;
         padding: 0;
         align-items: center;
         display: block;
     }
-</style>
+    google-chart { 
+        color: var(--color-gchart);
+        background: var(--bg-gchart);
+    }
+
+        </style>

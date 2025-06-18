@@ -2,18 +2,23 @@
   :root {
       font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
-  --text-primary: #000000;
-  --text-secondary: #00a2e2a6;
-  --bg-primary: #ffffff;
-  --bg-secondary: #141418;
   --transition-speed: 600ms;
-  --fa-primary: #ff7eee;
-  --fa-secondary: #df49a6;
   --size-limit: 600px;
   }
 [color-scheme='sun'] {
 	color-scheme: sun; 
-  --text-secondary: purple;
+  --text-primary: #000000;
+  --text-secondary: #00a2e2a6;
+  --bg-primary: #ffffff;
+  --bg-secondary: #141418;
+  --fa-primary: #ff7eee;
+  --fa-secondary: #df49a6;
+ 
+  --bg-glass-shadow: rgba(0, 0, 0, 0.7);
+  --bg-glass: rgba(255, 255, 255, 0.33);
+
+  --bg-gchart:  #fff;
+  --color-gchart: #000;
 
 }
 @media (prefers-color-scheme: sun) {
@@ -24,9 +29,19 @@
 }
 
 [color-scheme='moon'] {
-	color-scheme: moon; 
-  --text-secondary: red;
+	color-scheme: moon;
+  --text-primary: #fff;
+  --text-secondary: #00a2e2a6;
+  --bg-primary: #000;
+  --bg-secondary: #02b5a0;
+  --fa-primary: #008333;
+  --fa-secondary: #30b75a;
+ 
+  --bg-gchart:  #000;
+  --color-gchart: #fff;
 
+  --bg-glass-shadow: rgba(255, 255, 255, 0.333);
+  --bg-glass: rgba(0, 0, 0, 0.33);
 }
 @media (prefers-color-scheme: moon) {
 	:root {
@@ -73,13 +88,16 @@ ul {
   
   }
 
-
+.goog-menuitem-content {
+  color: var(--text-primary);
+   background: var(--bg-glass);
+}
    .glass{
   visibility: visible;
-
-  background: rgba(255, 255, 255, 0.33);
+  color: var(--text-primary);
+  background: var(--bg-glass);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 30px var(--bg-glass-shadow);
   backdrop-filter: blur(6.4px);
   -webkit-backdrop-filter: blur(6.4px);
   border: 1px solid rgba(255, 255, 255, 0.4);

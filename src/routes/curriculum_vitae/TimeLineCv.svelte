@@ -181,9 +181,6 @@
         align-items: center;
         display: block;
     }
-    google-chart { 
-        color: var(--color-gchart);
-        background: var(--bg-gchart);
-    }
+   
 
         </style>

@@ -4,7 +4,7 @@
     import { theme } from '$lib/components/theme.svelte';
     import { onMount } from 'svelte';
 
-    let googleChartElement: HTMLElement & { shadowRoot: ShadowRoot | null, imageURI?: string | null, redraw?: () => void }; // For bind:this
+    let googleChartElement: HTMLElement & { shadowRoot: ShadowRoot | null, imageURI?: string | null, redraw?: () => void, selection?: any[] }; // For bind:this
     
     let 
     {title = "", sliceVisibilityThreshold = 0} = $props()
@@ -64,6 +64,16 @@
         console.log('text anchor elements targeted:', textEndElements);
     }
 
+    function handleChartSelect(event: CustomEvent) {
+        console.log('Chart selection changed (declarative)! Event detail:', event.detail);
+        // The selection is automatically updated in the google-chart component
+        // and can be accessed via bind:this={googleChartElement}
+        // For example:
+        if (googleChartElement) {
+            console.log('Current selection:', googleChartElement.selection);
+        }
+    }
+
 
     let rows: [string, string, Date, Date][] = [
         ["Employment", "Ericpol", new Date(2012, 2, 1), new Date(2015, 7, 31)],
@@ -96,6 +106,14 @@
                 console.log('chartdiv (programmatic ready):', chartDivInShadow);
             };
             googleChartElement.addEventListener('google-chart-ready', programmaticReadyHandler);
+
+            const programmaticSelectHandler = (event: Event) => {
+                console.log('Chart selection changed (programmatic)! Event detail:', (event as CustomEvent).detail);
+                 if (googleChartElement) {
+                    console.log('Current selection (programmatic):', googleChartElement.selection);
+                }
+            };
+            googleChartElement.addEventListener('google-chart-select', programmaticSelectHandler);
         }
     });
    
@@ -132,6 +150,7 @@
             titleTextStyle: { fontSize: 19, color: "#37373" },
             sliceVisibilityThreshold,
         }}
+        ongoogle-chart-select={handleChartSelect}
         ongoogle-chart-ready={handleChartReady}
     ></google-chart>
 </div>

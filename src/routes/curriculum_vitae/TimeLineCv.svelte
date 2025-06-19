@@ -4,7 +4,7 @@
     import { theme } from '$lib/components/theme.svelte';
     import { onMount } from 'svelte';
 
-    let googleChartElement: HTMLElement & { shadowRoot: ShadowRoot, imageURI?: string, redraw?: () => void }; // For bind:this
+    let googleChartElement: HTMLElement & { shadowRoot: ShadowRoot | null, imageURI?: string | null, redraw?: () => void }; // For bind:this
     
     let 
     {title = "", sliceVisibilityThreshold = 0} = $props()
@@ -37,7 +37,7 @@
     if (typeof document !== 'undefined' && document.documentElement) {
         const newBgColor = getComputedStyle(document.documentElement).getPropertyValue('--bg-gchart').trim();
         chartBGColor = newBgColor;
-        
+
     }
     });
 
@@ -48,7 +48,20 @@
         // For example, to get the chartdiv from within the shadow root:
         const chartHostElement = event.target as HTMLElement & { shadowRoot: ShadowRoot };
         const chartDivInShadow = chartHostElement.shadowRoot?.getElementById('chartdiv');
+        const textEndElements = chartDivInShadow?.querySelectorAll('text[text-anchor="end"]');
+        const textStartElements = chartDivInShadow?.querySelectorAll('text[text-anchor="start"]');
         console.log('chartdiv from ready event target:', chartDivInShadow);
+        if (textStartElements ) {
+            textStartElements.forEach(element => {
+                element.setAttribute('fill', '#fff');
+            });
+        }
+        if (textEndElements ) {
+            textEndElements.forEach(element => {
+                element.setAttribute('fill', '#fff');
+            });
+        }
+        console.log('text anchor elements targeted:', textEndElements);
     }
 
 
@@ -79,6 +92,7 @@
                 console.log('Chart is ready (programmatic)! Event detail:', (event as CustomEvent).detail);
                 // Access chartdiv if needed, similar to handleChartReady
                 const chartDivInShadow = googleChartElement.shadowRoot?.getElementById('chartdiv');
+                
                 console.log('chartdiv (programmatic ready):', chartDivInShadow);
             };
             googleChartElement.addEventListener('google-chart-ready', programmaticReadyHandler);
@@ -118,7 +132,7 @@
             titleTextStyle: { fontSize: 19, color: "#37373" },
             sliceVisibilityThreshold,
         }}
-        on:google-chart-ready={handleChartReady}
+        ongoogle-chart-ready={handleChartReady}
     ></google-chart>
 </div>
 

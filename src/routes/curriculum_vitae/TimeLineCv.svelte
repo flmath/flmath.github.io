@@ -8,7 +8,6 @@
     
     let 
     {title = "", sliceVisibilityThreshold = 0} = $props()
-    
     let cols: {
         label: string;
         type: string;
@@ -25,18 +24,40 @@
     }
 
     // Initialize chartBGColor with a placeholder.
-    // The $effect will set the correct initial value after mount and update it on theme changes.
+    // The $effect will set the correct initial values after mount and update them on theme changes.
+    let chartTextColor = $state(''); // State variable for text color
     let chartBGColor = $state(''); // This will be updated by the $effect below
+    function setFill(textEndElements: any[] | NodeListOf<Element> | undefined, textStartElements: any[] | NodeListOf<Element> | undefined) {
+        if (textStartElements ) {
+            textStartElements.forEach((element: { setAttribute: (arg0: string, arg1: string) => void; }) => {
+               element.setAttribute('fill', chartTextColor);
+            });
+        }
+        if (textEndElements ) {
+            textEndElements.forEach((element: { setAttribute: (arg0: string, arg1: string) => void; }) => {
+               element.setAttribute('fill', chartTextColor); // Use chartTextColor
+            });
+    }}
 
+    function getTextElements(event: CustomEvent) {
+        const chartHostElement = event.target as HTMLElement & { shadowRoot: ShadowRoot };
+        const chartDivInShadow = chartHostElement.shadowRoot?.getElementById('chartdiv');
+        const textEndElements = chartDivInShadow?.querySelectorAll('text[text-anchor="end"]');
+        const textStartElements = chartDivInShadow?.querySelectorAll('text[text-anchor="start"]');
+
+        console.log('chartdiv from ready event target:', chartDivInShadow);
+        return { textEndElements, textStartElements };
+}
     $effect(() => {
     // This $effect is primarily for reacting to theme changes to update chartBGColor.
-    // Accessing googleChartElement here is possible if it's bound, but for "chart ready" logic,
-    // the 'google-chart-ready' event is more appropriate.
+    // It also updates chartTextColor based on CSS variables.
     const _isDarkActive = $theme.darkstate; // Ensure $theme.darkstate is a dependency
 
     if (typeof document !== 'undefined' && document.documentElement) {
-        const newBgColor = getComputedStyle(document.documentElement).getPropertyValue('--bg-gchart').trim();
-        chartBGColor = newBgColor;
+        const rootStyle = getComputedStyle(document.documentElement);
+        chartBGColor = rootStyle.getPropertyValue('--bg-gchart').trim();
+        chartTextColor = rootStyle.getPropertyValue('--color-gchart').trim(); // Get text color
+
 
     }
     });
@@ -44,13 +65,21 @@
     function handleChartReady(event: CustomEvent) {
         console.log('Chart is ready (declarative)! Event detail:', event.detail);
         const chart = event.detail.chart; // The raw Google Chart object
-        // You can now safely interact with the chart API or its container
-        // For example, to get the chartdiv from within the shadow root:
-        const chartHostElement = event.target as HTMLElement & { shadowRoot: ShadowRoot };
-        const chartDivInShadow = chartHostElement.shadowRoot?.getElementById('chartdiv');
-        const textEndElements = chartDivInShadow?.querySelectorAll('text[text-anchor="end"]');
-        const textStartElements = chartDivInShadow?.querySelectorAll('text[text-anchor="start"]');
-        console.log('chartdiv from ready event target:', chartDivInShadow);
+        const {textEndElements, textStartElements} = getTextElements(event);
+        setFill(textEndElements, textStartElements);
+         
+   }
+    //====================================================
+    // Highly suboptimal, google charts are disappointing
+    // move to https://observablehq.com/@tezzutezzu/world-history-timeline
+    //====================================================
+    function handleChartMouseOut(event: CustomEvent) {
+        console.log('Chart mouse out (declarative)! Event detail:', event.detail);
+        // event.detail.data contains the Google Charts event arguments for 'onmouseout'
+        // This typically includes {row: number, column: number}
+        const mouseOutData = event.detail.data; // This seems incorrect, mouseout event detail might not have 'data'
+        if (mouseOutData && typeof mouseOutData.row === 'number') { // Check if row exists, indicating a data point mouseout
+         const {textEndElements, textStartElements} = getTextElements(event);  
         if (textStartElements ) {
             textStartElements.forEach(element => {
                 element.setAttribute('fill', '#fff');
@@ -58,22 +87,10 @@
         }
         if (textEndElements ) {
             textEndElements.forEach(element => {
-                element.setAttribute('fill', '#fff');
+                element.setAttribute('fill', chartTextColor); // Use chartTextColor
             });
-        }
-        console.log('text anchor elements targeted:', textEndElements);
-    }
-
-    function handleChartSelect(event: CustomEvent) {
-        console.log('Chart selection changed (declarative)! Event detail:', event.detail);
-        // The selection is automatically updated in the google-chart component
-        // and can be accessed via bind:this={googleChartElement}
-        // For example:
-        if (googleChartElement) {
-            console.log('Current selection:', googleChartElement.selection);
-        }
-    }
-
+        } 
+        }}
 
     let rows: [string, string, Date, Date][] = [
         ["Employment", "Ericpol", new Date(2012, 2, 1), new Date(2015, 7, 31)],
@@ -106,14 +123,20 @@
                 console.log('chartdiv (programmatic ready):', chartDivInShadow);
             };
             googleChartElement.addEventListener('google-chart-ready', programmaticReadyHandler);
-
-            const programmaticSelectHandler = (event: Event) => {
-                console.log('Chart selection changed (programmatic)! Event detail:', (event as CustomEvent).detail);
-                 if (googleChartElement) {
-                    console.log('Current selection (programmatic):', googleChartElement.selection);
+            
+            const programmaticMouseOutHandler = (event: Event) => {
+                const customEvent = event as CustomEvent;
+                console.log('Chart mouse out (programmatic)! Event detail:', customEvent.detail);
+                const mouseOutData = customEvent.detail.data;
+                if (mouseOutData && typeof mouseOutData.row === 'number') {
+                    // This block seems incomplete or unnecessary given the declarative handler
+                    console.log('Mouse out item (programmatic):', {  });
                 }
             };
-            googleChartElement.addEventListener('google-chart-select', programmaticSelectHandler);
+            googleChartElement.addEventListener('google-chart-onmouseout', programmaticMouseOutHandler);
+
+            // If you no longer need the programmatic select handler, you can remove it.
+            // googleChartElement.removeEventListener('google-chart-select', programmaticSelectHandler); // Example if it was stored
         }
     });
    
@@ -133,6 +156,7 @@
         bind:this={googleChartElement}
         class="mainContent"
         type="timeline"
+        events={['onmouseout']}
         {cols}
         {rows}      
         options={{
@@ -150,8 +174,8 @@
             titleTextStyle: { fontSize: 19, color: "#37373" },
             sliceVisibilityThreshold,
         }}
-        ongoogle-chart-select={handleChartSelect}
         ongoogle-chart-ready={handleChartReady}
+        ongoogle-chart-onmouseout={handleChartMouseOut}
     ></google-chart>
 </div>
 

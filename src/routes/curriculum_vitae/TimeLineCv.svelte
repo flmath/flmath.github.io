@@ -2,7 +2,9 @@
     import { watchResize } from "svelte-watch-resize";
     import "@google-web-components/google-chart";
     import { theme } from '$lib/components/theme.svelte';
+    import { onMount } from 'svelte';
 
+    let googleChartElement: HTMLElement & { shadowRoot: ShadowRoot, imageURI?: string, redraw?: () => void }; // For bind:this
     
     let 
     {title = "", sliceVisibilityThreshold = 0} = $props()
@@ -24,16 +26,30 @@
 
     // Initialize chartBGColor with a placeholder.
     // The $effect will set the correct initial value after mount and update it on theme changes.
-    let chartBGColor = $state('');
-$effect(() => {
-    const isDarkActive = $theme.darkstate; // Assuming it's a store, or theme.darkstate if it's a signal
+    let chartBGColor = $state(''); // This will be updated by the $effect below
+
+    $effect(() => {
+    // This $effect is primarily for reacting to theme changes to update chartBGColor.
+    // Accessing googleChartElement here is possible if it's bound, but for "chart ready" logic,
+    // the 'google-chart-ready' event is more appropriate.
+    const _isDarkActive = $theme.darkstate; // Ensure $theme.darkstate is a dependency
 
     if (typeof document !== 'undefined' && document.documentElement) {
         const newBgColor = getComputedStyle(document.documentElement).getPropertyValue('--bg-gchart').trim();
-  
         chartBGColor = newBgColor;
+        
     }
-});
+    });
+
+    function handleChartReady(event: CustomEvent) {
+        console.log('Chart is ready (declarative)! Event detail:', event.detail);
+        const chart = event.detail.chart; // The raw Google Chart object
+        // You can now safely interact with the chart API or its container
+        // For example, to get the chartdiv from within the shadow root:
+        const chartHostElement = event.target as HTMLElement & { shadowRoot: ShadowRoot };
+        const chartDivInShadow = chartHostElement.shadowRoot?.getElementById('chartdiv');
+        console.log('chartdiv from ready event target:', chartDivInShadow);
+    }
 
 
     let rows: [string, string, Date, Date][] = [
@@ -56,7 +72,18 @@ $effect(() => {
 	["Employment", "Anydesk GmbH ", new Date(2023, 2, 1), new Date()],
         ["Project", "Anydesk Core", new Date(2023, 2, 1), new Date()],
     ];
- 
+
+    onMount(() => {
+        if (googleChartElement) {
+            const programmaticReadyHandler = (event: Event) => {
+                console.log('Chart is ready (programmatic)! Event detail:', (event as CustomEvent).detail);
+                // Access chartdiv if needed, similar to handleChartReady
+                const chartDivInShadow = googleChartElement.shadowRoot?.getElementById('chartdiv');
+                console.log('chartdiv (programmatic ready):', chartDivInShadow);
+            };
+            googleChartElement.addEventListener('google-chart-ready', programmaticReadyHandler);
+        }
+    });
    
 </script>
 
@@ -71,11 +98,13 @@ $effect(() => {
     use:watchResize={handleMainResize}
 >
     <google-chart
+        bind:this={googleChartElement}
         class="mainContent"
         type="timeline"
         {cols}
         {rows}      
         options={{
+            // Make sure chartBGColor is defined when options are initially computed
             timeline: {
                 barLabelStyle: { fontSize: 20 },
                 showRowLabels: true,
@@ -84,11 +113,12 @@ $effect(() => {
             width: mainWidth * 0.98,
             height: 70 * (rows.length + 1),
             title,            
-            backgroundColor: chartBGColor,
+            backgroundColor: chartBGColor || 'transparent', // Fallback if chartBGColor isn't set yet
             
             titleTextStyle: { fontSize: 19, color: "#37373" },
             sliceVisibilityThreshold,
         }}
+        on:google-chart-ready={handleChartReady}
     ></google-chart>
 </div>
 

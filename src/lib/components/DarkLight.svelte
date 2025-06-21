@@ -85,14 +85,11 @@
       vertical-align: middle;
     }
     .navbar {
-     
       /* width: 100%;
       height: 5rem; */
-      
       vertical-align: bottom;
 
     }
-
     .navbar-nav {
       flex-direction: row;
     }

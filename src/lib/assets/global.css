@@ -14,12 +14,18 @@
   --fa-primary: #ff7eee;
   --fa-secondary: #df49a6;
  
-  --bg-glass-shadow: rgba(0, 0, 0, 0.7);
-  --bg-glass: rgba(255, 255, 255, 0.33);
+  --bg-glass-shadow: rgb(0, 0, 0, 0.7);
+  --bg-glass: rgb(255, 255, 255, 0.33);
 
   --bg-gchart:  #fff;
   --color-gchart: #000;
 
+
+  --contain-background: rgb(255, 255, 255, 0.83);
+  --containo-background: rgb(255, 255, 255, 0.83);
+  
+  --contain-box-shadow: rgb(0, 0, 0, 0.7);
+  --contain-border: rgba(255, 255, 255, 0.4);
 }
 @media (prefers-color-scheme: sun) {
 	:root {
@@ -40,8 +46,15 @@
   --bg-gchart:  #000;
   --color-gchart: #fff;
 
-  --bg-glass-shadow: rgba(255, 255, 255, 0.333);
-  --bg-glass: rgba(0, 0, 0, 0.33);
+  --bg-glass-shadow: rgb(255, 255, 255, 0.333);
+  --bg-glass: rgb(0, 0, 0, 0.66);
+  
+  --contain-background: rgb(0, 0, 0, 0.83);
+  --containo-background: rgb(0, 0, 0, 0.83);
+
+  --contain-box-shadow: rgb(255, 255, 255, 0.7);
+  --contain-border: rgba(0, 0, 0, 0.4);
+
 }
 @media (prefers-color-scheme: moon) {
 	:root {

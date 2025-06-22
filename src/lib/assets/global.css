@@ -26,6 +26,7 @@
   
   --contain-box-shadow: rgb(0, 0, 0, 0.7);
   --contain-border: rgba(255, 255, 255, 0.4);
+  --nav-invert: 0;
 }
 @media (prefers-color-scheme: sun) {
 	:root {
@@ -54,6 +55,8 @@
 
   --contain-box-shadow: rgb(255, 255, 255, 0.7);
   --contain-border: rgba(0, 0, 0, 0.4);
+
+  --nav-invert: 1;
 
 }
 @media (prefers-color-scheme: moon) {

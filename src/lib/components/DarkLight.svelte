@@ -63,11 +63,11 @@
     color: var(--text-primary);
     text-decoration: none;
     background: none;
-    filter: grayscale(100%) opacity(0.7);
+    filter: grayscale(100%) opacity(0.7) invert(var(--nav-invert));
     transition: var(--transition-speed);
   }
   .active .nav-link {
-    filter: grayscale(0%) opacity(1);
+    filter: grayscale(0%) opacity(1) ;
     color: var(--text-secondary);
   }
 
@@ -77,6 +77,11 @@
     text-align: center;
     color: var(--text-secondary);
     background: none;
+  }
+
+   .active .nav-link .link-text {
+    
+    filter: grayscale(0%) opacity(1) invert(var(--nav-invert));
   }
 
   /* Small screens */

@@ -36,23 +36,21 @@
 		color: var(--text-primary);
 		text-decoration: none;
 		background: none;
-		filter: grayscale(100%) opacity(0.7);
+		filter: grayscale(100%) opacity(0.7) invert(var(--nav-invert));
 		transition: var(--transition-speed);
-	}
-
-	.nav-item.active {
-		filter: opacity(1);
-	}
-	.nav-item {
 		margin-left: 1rem;
 	}
 
+	.nav-item.active {
+		filter: opacity(1) invert(var(--nav-invert));		
+	}
 	.item-text {
+    	color: var(--text-primary);
 		font-weight: bold;
 		text-transform: uppercase;
 		text-align: center;
 		background: none;
-		color: var(--text-secondary);
+		color: var(--text-secondary); 
 		text-decoration: none;
 	}
 

@@ -57,11 +57,11 @@
     color: var(--text-primary);
     text-decoration: none;
     background: none;
-    filter: grayscale(100%) opacity(0.7);
+    filter: grayscale(100%) opacity(0.7) invert(var(--nav-invert));
     transition: var(--transition-speed);
   }
   .active .nav-link {
-    filter: grayscale(0%) opacity(1);
+    filter: grayscale(0%) opacity(1) invert(var(--nav-invert));
     color: var(--text-secondary);
   }
 .activeText .nav-link .link-text{
@@ -76,8 +76,7 @@
     color: var(--text-secondary);
     background: none;
   }
-
-  /* Small screens */
+ /* Small screens */
   @media only screen and (max-width: 900px) {
     .logo {
       vertical-align: middle;

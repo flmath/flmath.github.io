@@ -11,50 +11,19 @@
 </svg>
    <style>
 
-      .card {
-  position: relative;
-  width: 300px;
-  height: 200px;
-  border-radius: 15px;
-  overflow: hidden; /* Important for containing the pseudo-element */
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  backdrop-filter: blur(10px);
-  z-index: 1;
-}
-
-.card-content {
-  position: relative;
-  z-index: 2;
-  background-color: rgba(255, 255, 255, 0.8); /* Opaque background for content */
-  height: 100%;
-  border-radius: inherit; /* Inherit the border-radius from the parent */
-  padding: 20px;
-}
-
-
       svg{
  
          width: 5rem;
          margin-left: 0rem;
          margin-bottom: 1.5rem;
          transform: rotate(var(--angle));      
-         border: 5px;
+         border: 2px;
          border-style: solid;
          filter: invert(var(--nav-invert));
          border-color: var(--bg-darklight);
          border-radius: 102px;
          background-color: var(--bg-darklight);
-         box-shadow: 0 0px 4px 3px var(--bg-darklight);
+         box-shadow: 0 0 10px 7px var(--bg-darklight);
       }
       path{
          fill: black;

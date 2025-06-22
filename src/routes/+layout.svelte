@@ -172,7 +172,7 @@
 
     .navbar-nav :global(.last) {
       margin-top: auto;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
     .navbar-nav :global(.reutersward) {

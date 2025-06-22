@@ -63,7 +63,7 @@
     color: var(--text-primary);
     text-decoration: none;
     background: none;
-    filter: grayscale(100%) opacity(0.7) invert(var(--nav-invert));
+    filter: grayscale(100%) opacity(0.7);
     transition: var(--transition-speed);
   }
   .active .nav-link {

@@ -78,6 +78,7 @@ h3{
 .container {
         position: absolute;
         background-color: #d2d9df;
+        
         height: 100%;
         padding: 0;
         padding-top: 2rem;

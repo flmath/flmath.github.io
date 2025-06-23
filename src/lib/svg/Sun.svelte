@@ -23,7 +23,7 @@
          border-color: var(--bg-darklight);
          border-radius: 102px;
          background-color: var(--bg-darklight);
-         box-shadow: 0 0 10px 7px var(--bg-darklight);
+         box-shadow: 0 0 25px 15px var(--bg-darklight);
       }
       path{
          fill: black;

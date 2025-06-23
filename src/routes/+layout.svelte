@@ -120,6 +120,8 @@
       max-height: calc(100% - 8rem);
       width: 100%;
       max-width: 100%;
+    
+
     }
     .navbar {
       padding-top: 1rem;

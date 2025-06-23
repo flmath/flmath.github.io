@@ -4,6 +4,8 @@
   font-family: Arial, Helvetica, sans-serif;
   --transition-speed: 600ms;
   --size-limit: 600px;
+
+
   }
 [color-scheme='sun'] {
 	color-scheme: sun; 
@@ -28,7 +30,8 @@
   --contain-border: rgba(255, 255, 255, 0.4);
   --nav-invert: 0;
 
-  --bg-darklight: #ffdf22;
+  --bg-darklight: #00a2d9;
+ 
 
 }
 @media (prefers-color-scheme: sun) {
@@ -60,7 +63,9 @@
   --contain-border: rgba(0, 0, 0, 0.4);
 
   --nav-invert: 1;
---bg-darklight: #00a2d9;
+--bg-darklight: #fff;
+
+
 }
 @media (prefers-color-scheme: moon) {
 	:root {

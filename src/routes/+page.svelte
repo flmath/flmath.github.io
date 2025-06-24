@@ -3,7 +3,8 @@
     import { fade } from "svelte/transition";
     import front from "$lib/png/small.webp";
     import back from "$lib/png/smallmask.webp";
-
+    import dark from "$lib/png/castlea.webp"
+import { theme } from '$lib/components/theme.svelte';
     function sleep(ms: number) {
         return new Promise((resolve) => setTimeout(resolve, ms));
     }
@@ -16,7 +17,17 @@
         loaded = true;
     });
 </script>
+{#if theme.isMoon()}
+        <div class="container">
+        <a href="/posts">
+           <h3> Each and every answer is right when the question is wrong.</h3>
+        </a>
 
+        <div class="background1" style="background-image: url('{dark}')">
+           
+        </div>
+    </div>
+{:else}
 {#if animate}
     <div class="container">
         <a href="/posts">
@@ -66,6 +77,7 @@
         {/if}
     </div>
 {/if}
+{/if}
 
 <style>
 h3{
@@ -77,7 +89,7 @@ h3{
 
 .container {
         position: absolute;
-        background-color: #d2d9df;
+        background: var(--bg-container-main);
         
         height: 100%;
         padding: 0;

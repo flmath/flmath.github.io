@@ -1,20 +1,15 @@
 <script>
     import { onMount } from "svelte";
 	import { theme } from '$lib/components/theme.svelte';
-  
-    let mounted = $state(false);
+    import HTML from "./page.html?raw";
 
     /**
      * @type {string | null | undefined}
      */
-    let HTML = $state(null);
     let iframeElement = $state(null); // Reference to the iframe DOM element
-  
-
-    onMount(async () => {
-        HTML = (await import("./page.html?raw")).default;
-        mounted = true;
-    });
+    let visible = $state(false);
+    let textColor = $state("black");
+    let bgColor = $state("white");
 
 	function styleIframeContent() {
 		if (!iframeElement?.contentDocument) return;
@@ -23,26 +18,34 @@
 		if (!body) return;
 
 		const rootStyle = getComputedStyle(document.documentElement);
-		const bgColor = rootStyle.getPropertyValue('--bg-primary').trim();
-		const textColor = rootStyle.getPropertyValue('--text-primary').trim();
-
+		bgColor = rootStyle.getPropertyValue('--bg-primary').trim();
+		textColor = rootStyle.getPropertyValue('--text-primary').trim();
 		body.style.backgroundColor = bgColor;
 		body.style.color = textColor;
+        visible = true;  
+	  
+       
+     
 	}
 
     function onLoad() {
 	    styleIframeContent();
+  
     }
 
 $effect(() => {
-        $theme.darkstate
-        styleIframeContent();
+    $theme.darkstate
+    if(visible){styleIframeContent()};
 })
 </script>
 
-<iframe title="jupyter" srcdoc={HTML} bind:this={iframeElement} onload={onLoad}></iframe>
+<iframe title="jupyter" srcdoc={HTML} bind:this={iframeElement} onload={onLoad}
+     style="visibility:{visible ? "visible" : "hidden"};
+     background-color: {bgColor};
+     color: {textColor};"
+     ></iframe> 
 
-{#if !mounted}
+{#if !visible}
     <p>Loading...</p>
 {/if}
 

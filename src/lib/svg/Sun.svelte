@@ -17,13 +17,13 @@
          margin-left: 0rem;
          margin-bottom: 1.5rem;
          transform: rotate(var(--angle));      
-         border: 2px;
+         border: 1px;
          border-style: solid;
          filter: invert(var(--nav-invert));
          border-color: var(--bg-darklight);
-         border-radius: 102px;
+         border-radius: 100%;
          background-color: var(--bg-darklight);
-         box-shadow: 0 0 25px 15px var(--bg-darklight);
+         box-shadow: 0 0 15px 5px var(--bg-darklight);
       }
       path{
          fill: black;

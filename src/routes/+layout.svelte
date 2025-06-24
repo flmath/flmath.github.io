@@ -129,13 +129,15 @@
       width: 100%;
       height: 6rem;
       transition: height var(--transition-speed) ease;
-      filter: opacity(1);
+      filter: opacity(1) invert(var(--nav-invert));
+      -webkit-filter: invert(var(--nav-invert)); 
       background-size: cover;
     }
     .navbar:hover {
       /* width: 100%;
       height: 10rem; */
-      filter: opacity(1) brightness(1.1);
+      filter: opacity(1) brightness(1.1) invert(var(--nav-invert));
+      -webkit-filter: invert(var(--nav-invert));
     }
 
     .navbar-nav {

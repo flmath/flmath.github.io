@@ -31,7 +31,8 @@
   --nav-invert: 0;
 
   --bg-darklight: #00a2d9;
- 
+
+  --bg-container-main: #d2d9df;
 
 }
 @media (prefers-color-scheme: sun) {
@@ -64,8 +65,10 @@
 
   --nav-invert: 1;
 --bg-darklight: #fff;
-
-
+--bg-container-main:
+    radial-gradient(ellipse at bottom, #0d3566, transparent),
+    radial-gradient(ellipse at top, #000f1b, transparent);
+ /* linear-gradient(#204572,#002b4f); */
 }
 @media (prefers-color-scheme: moon) {
 	:root {

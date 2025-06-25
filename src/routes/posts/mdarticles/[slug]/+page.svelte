@@ -33,7 +33,7 @@
   <!-- This part should ideally not be reached if the load function throws a 404 -->
   <p>Sorry, this post could not be loaded or was not found.</p>
 {/if}
-
+ <br />
 <style>
 
 article {

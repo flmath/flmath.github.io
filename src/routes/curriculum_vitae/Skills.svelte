@@ -61,9 +61,9 @@
 </div>
 <div>
      For personal projects: <hr>
-     Tools: Python/Jupyter, Svelte, Elixir<br>
+     Tools: Python/Jupyter, Svelte, Erlang<br>
      Projects: <a href=https://flmath.github.io/posts>Some notes</a>
-     and my <a href=https://github.com/flmath> repo </a>
+     and my <a href=https://github.com/flmath> github account </a>
 </div>
 </div>
   
@@ -71,13 +71,16 @@
 <br />
 <div class="glass">
   <p>
-    I graduated in mathematics. I started as a C++ developer. Soon after I
-    transitioned to an Erlang based project. Since then my professional career
-    is connected to it. I was part of Agile teams developing telecommunication
-    solutions. The technical stack based on Linux, Git as the project version
-    control system, and Jenkins for CI/CD. The teams I worked in were tasked
-    with the end-to-end process of delivering solutions. I was usually
-    responsible for:
+I hold a degree in Mathematics and began my career as a C++ developer. 
+Shortly afterward, 
+I transitioned to an Erlang-based project, 
+which has shaped the direction of my professional journey ever since. 
+I’ve worked within Agile teams focused on developing telecommunication solutions, 
+using a tech stack centered around Linux, 
+Git for version control, and Jenkins for CI/CD processes. 
+The teams I’ve been part of were responsible for the full 
+end-to-end delivery of solutions, and my typical responsibilities 
+included:
   </p>
   <ul>
     <li>analyzing requirements</li>

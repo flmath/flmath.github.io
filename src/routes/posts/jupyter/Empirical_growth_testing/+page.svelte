@@ -1,8 +1,7 @@
 <script>
-    import { onMount } from "svelte";
+
 	import { theme } from '$lib/components/theme.svelte';
     import HTML from "./page.html?raw";
-
     /**
      * @type {string | null | undefined}
      */
@@ -23,14 +22,10 @@
 		body.style.backgroundColor = bgColor;
 		body.style.color = textColor;
         visible = true;  
-	  
-       
      
 	}
-
     function onLoad() {
 	    styleIframeContent();
-  
     }
 
 $effect(() => {

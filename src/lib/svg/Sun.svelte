@@ -26,9 +26,16 @@
          box-shadow: 0 0 15px 5px var(--bg-darklight);
       }
       path{
-         fill: black;
+         fill: var(--fill-darklight);
        
       }
+   @media only screen and (max-width: 900px) {
+   svg {
+   margin-top: 1rem;
+   margin-bottom: 1rem; 
+  }
+  
+}
 
       
     </style>

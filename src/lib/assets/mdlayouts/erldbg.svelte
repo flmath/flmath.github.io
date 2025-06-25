@@ -25,4 +25,8 @@
 		padding: 1rem;
 		visibility: visible;
 	}
+	:global(.erldbg * a) 
+    {
+		color: var(--link-text);
+	}	
 </style>

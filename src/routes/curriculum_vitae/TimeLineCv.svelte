@@ -174,7 +174,7 @@
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(6.4px);
         -webkit-backdrop-filter: blur(6.4px);
-        border: 1px solid rgba(255, 255, 255, 0.4);
+        border: 1px solid var(--contain-border);
     }
     .mainContent {
         color: var(--color-gchart);

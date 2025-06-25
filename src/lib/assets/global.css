@@ -30,9 +30,12 @@
   --contain-border: rgba(255, 255, 255, 0.4);
   --nav-invert: 0;
 
-  --bg-darklight: #00a2d9;
-
+  --bg-darklight:  #fbfb7c;
+  --fill-darklight: #000000;
   --bg-container-main: #d2d9df;
+  --link-text: rgb(0, 0, 255, 1);
+  
+  --bg-article: rgba(255, 255, 255, 0.33);
 
 }
 @media (prefers-color-scheme: sun) {
@@ -54,21 +57,27 @@
   --bg-gchart:  #000;
   --color-gchart: #fff;
 
-  --bg-glass-shadow: rgb(255, 255, 255, 0.333);
+  --bg-glass-shadow: rgb(0, 191, 255, 0.9);
   --bg-glass: rgb(0, 0, 0, 0.66);
   
-  --contain-background: rgb(0, 0, 0, 0.83);
+  --contain-background:rgb(0, 191, 255, 0.7);
   --containo-background: rgb(0, 0, 0, 0.83);
 
-  --contain-box-shadow: rgb(255, 255, 255, 0.7);
+  --contain-box-shadow: rgba(0, 0, 0, 0.82);
   --contain-border: rgba(0, 0, 0, 0.4);
 
   --nav-invert: 1;
---bg-darklight: #fff;
+--bg-darklight: rgb(0, 191, 255, 0.7);;
 --bg-container-main:
     radial-gradient(ellipse at bottom, #0d3566, transparent),
     radial-gradient(ellipse at top, #000f1b, transparent);
- /* linear-gradient(#204572,#002b4f); */
+
+
+--link-text: rgb(0, 191, 255, 0.9);   
+
+--bg-article: rgba(0, 0, 0, 0.7);
+--text-article: #fff;
+
 }
 @media (prefers-color-scheme: moon) {
 	:root {

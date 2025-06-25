@@ -49,4 +49,7 @@
   
     overflow-x: clip;
   }
+  :global(.cv * a) {
+    color: var(--link-text);
+  }
 </style>

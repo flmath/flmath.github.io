@@ -11,7 +11,8 @@
 main {
     position: relative;
     margin: 0;
-    min-width: 100vw;
+   
+    max-width: 100vw;
     min-height: 100vh;    
 
     color: black;
@@ -22,5 +23,7 @@ main {
     background-attachment: fixed;
   
     background-position: center;
+   
+  overflow-x: clip;  
   } 
 </style>

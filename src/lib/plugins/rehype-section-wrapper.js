@@ -65,6 +65,30 @@ export default function rehypeSectionWrapper() {
         currentWrapper = null;
         continue;
       }
+
+      if (node.type === 'element' && node.tagName === 'h3') {
+        // 1. Extract the text content of the H3.
+        const headerText = toString(node);
+
+        // 2. Create a new <Header> component element with a 'title' prop.
+          const headerComponent = h('div.outer-wrapper', [h('h3.h3-wrapper', headerText), h('div.middle-wrapper',
+          [h('div.inter-wrapper', [])])]);
+      
+        if (currentWrapper) {
+          if (currentWrapper.children.length === 1) {
+            // If the current wrapper is empty, remove it
+            newChildren.pop();
+          }
+        }
+        // 3. Add the new <Header> component to the wrapper.
+        newChildren.push(h('br', [])); // Add a horizontal rule before the header
+        newChildren.push(headerComponent);
+        newChildren.push(h('br', []));
+        currentWrapper = null;
+        continue;
+      }
+
+
       if (node.type === 'element' && node.tagName === 'hr') {
         newChildren.push(h('br', [])); // Add a horizontal rule before the header
         currentWrapper = null;

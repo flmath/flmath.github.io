@@ -9,7 +9,14 @@
 
 :global(.container-wrapper a) {
   color: var(--link-text);
+
 }
+
+	:global(.container-wrapper * code) {
+		word-break: break-word;
+		overflow-wrap: break-word; /* Breaks words only if they don't fit */
+		white-space: pre-line; /* Preserves whitespace and wraps lines */
+	}
 :global(.container-wrapper) {
   visibility: visible;
 
@@ -35,6 +42,9 @@
 	width: calc(100vw - 175px);
 	overflow-wrap: break-word;
 	word-break: break-word;
+
+	
+
 	}
   :global(.outer-wrapper) {
     width: 100%;
@@ -103,6 +113,17 @@
     text-align: left;
     vertical-align: middle;
     transform: skewX(50deg);
+  }
+
+:global(.h3-wrapper) 
+    {
+    color: rgba(0, 0, 0, 1);
+    padding: 0;
+    font-size: 1.5rem;
+    margin: auto;
+    margin-left: 2%;
+    text-align: left;
+    vertical-align: middle;
   }
 
 </style>

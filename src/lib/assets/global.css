@@ -26,6 +26,8 @@
   --contain-background: rgb(255, 255, 255, 0.83);
   --containo-background: rgb(255, 255, 255, 0.83);
   
+  --md-svg-bg: #1b00b2;
+
   --contain-box-shadow: rgb(0, 0, 0, 0.7);
   --contain-border: rgba(255, 255, 255, 0.4);
   --nav-invert: 0;
@@ -59,6 +61,8 @@
 
   --bg-glass-shadow: rgb(0, 191, 255, 0.9);
   --bg-glass: rgb(0, 0, 0, 0.66);
+
+  --md-svg-bg: #000;
   
   --contain-background:rgb(0, 191, 255, 0.7);
   --containo-background: rgb(0, 0, 0, 0.83);
@@ -79,6 +83,7 @@
 --text-article: #fff;
 
 }
+
 @media (prefers-color-scheme: moon) {
 	:root {
 		 color-scheme: moon; 

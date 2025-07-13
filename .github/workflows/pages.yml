@@ -39,9 +39,9 @@ jobs:
       - name: Move articles to correct location
         run: |
           mkdir -p src/routes/posts/mdarticles/[slug]/
-          mkdir -p lib/assets/mdsvg
+          mkdir -p src/lib/assets/mdsvg
           mv templorary/mdarticles/*md src/routes/posts/mdarticles/[slug]/
-          mv templorary/mdarticles/*svg lib/assets/mdsvg
+          mv templorary/mdarticles/*svg src/lib/assets/mdsvg/
           rm -rf templorary
 
       - name: Setup Node.js
